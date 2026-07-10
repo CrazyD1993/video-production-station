@@ -21,6 +21,6 @@
 
 ## 当前状态
 
-- 本地项目尚未初始化 Git 仓库。
-- GitHub CLI 已安装，但当前 `CrazyD1993` 授权令牌失效。
-- 恢复授权后创建私有仓库 `video-production-station`，并推送首个版本。
+- 本地 Git 仓库已初始化，默认分支为 `main`。
+- GitHub 私有仓库已创建：`https://github.com/CrazyD1993/video-production-station`。
+- 首版内容生产流程与第 003 条台风选题已推送；后续有效更新按本规则提交并同步。
