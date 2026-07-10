@@ -1,0 +1,22 @@
+# Credentials and browser state
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+cookies*.txt
+
+# Media and render outputs
+04_素材库/视频素材/*
+04_素材库/图片素材/*
+04_素材库/音效音乐/*
+!04_素材库/**/.gitkeep
+*.mp4
+*.mov
+*.wav
+*.mp3
+
+# System and editor files
+.DS_Store
+.idea/
+.vscode/
