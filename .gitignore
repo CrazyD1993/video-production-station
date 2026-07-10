@@ -26,5 +26,8 @@ cookies*.txt
 
 # System and editor files
 .DS_Store
+node_modules/
+**/.remotion/
+**/output/frame-*.png
 .idea/
 .vscode/
