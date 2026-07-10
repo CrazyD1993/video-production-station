@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1920" viewBox="0 0 1080 1920">
+  <rect x="70" y="1250" width="940" height="300" rx="28" fill="#17212B" fill-opacity="0.86"/>
+  <rect x="70" y="1250" width="22" height="300" rx="11" fill="#E2B448"/>
+  <text x="130" y="1375" fill="#FFFFFF" font-family="PingFang SC, STHeiti" font-size="72" font-weight="700">胶带是辅助</text>
+  <text x="130" y="1470" fill="#D9473E" font-family="PingFang SC, STHeiti" font-size="68" font-weight="700">不是加固</text>
+</svg>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1920" viewBox="0 0 1080 1920">
+  <rect width="1080" height="1920" fill="#F7F8FA"/>
+  <text x="92" y="260" fill="#17212B" font-family="PingFang SC, STHeiti" font-size="70" font-weight="700">真正优先做这 4 件事</text>
+  <g font-family="PingFang SC, STHeiti" font-size="50" fill="#17212B">
+    <rect x="82" y="390" width="916" height="180" rx="28" fill="#FFFFFF" stroke="#D8DEE5" stroke-width="3"/>
+    <circle cx="150" cy="480" r="36" fill="#D9473E"/><text x="137" y="497" fill="#FFFFFF" font-size="34" font-weight="700">1</text><text x="225" y="497">关紧并检查门窗</text>
+    <rect x="82" y="620" width="916" height="180" rx="28" fill="#FFFFFF" stroke="#D8DEE5" stroke-width="3"/>
+    <circle cx="150" cy="710" r="36" fill="#E2B448"/><text x="137" y="727" fill="#17212B" font-size="34" font-weight="700">2</text><text x="225" y="727">收回阳台和窗台杂物</text>
+    <rect x="82" y="850" width="916" height="180" rx="28" fill="#FFFFFF" stroke="#D8DEE5" stroke-width="3"/>
+    <circle cx="150" cy="940" r="36" fill="#70879A"/><text x="137" y="957" fill="#FFFFFF" font-size="34" font-weight="700">3</text><text x="225" y="957">拉好窗帘，远离玻璃</text>
+    <rect x="82" y="1080" width="916" height="230" rx="28" fill="#FFFFFF" stroke="#D8DEE5" stroke-width="3"/>
+    <circle cx="150" cy="1195" r="36" fill="#1B2838"/><text x="137" y="1212" fill="#FFFFFF" font-size="34" font-weight="700">4</text><text x="225" y="1180">只看当地实时预警</text><text x="225" y="1250" font-size="38" fill="#D9473E">要求转移，就立刻走</text>
+  </g>
+</svg>

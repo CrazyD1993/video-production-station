@@ -1,0 +1,5 @@
+file 'clips/01-rain-window.mp4'
+file 'clips/02-fragment-diagram.mp4'
+file 'clips/03-wind-diagram.mp4'
+file 'clips/04-home-checklist.mp4'
+file 'clips/05-curtain.mp4'

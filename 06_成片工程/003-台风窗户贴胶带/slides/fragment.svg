@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1920" viewBox="0 0 1080 1920">
+  <rect width="1080" height="1920" fill="#F7F8FA"/>
+  <rect x="86" y="330" width="908" height="960" rx="36" fill="#FFFFFF" stroke="#D8DEE5" stroke-width="3"/>
+  <rect x="86" y="330" width="20" height="960" rx="10" fill="#E2B448"/>
+  <text x="150" y="525" fill="#17212B" font-family="PingFang SC, STHeiti" font-size="64" font-weight="700">胶带真正可能帮到你的：</text>
+  <text x="150" y="690" fill="#D9473E" font-family="PingFang SC, STHeiti" font-size="88" font-weight="700">碎了以后</text>
+  <text x="150" y="810" fill="#17212B" font-family="PingFang SC, STHeiti" font-size="58">辅助减少碎片飞散</text>
+  <path d="M220 1000 L430 820 L550 1010 L710 780 L850 1010" fill="none" stroke="#70879A" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M260 1080 L820 1080" stroke="#E2B448" stroke-width="42" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1920" viewBox="0 0 1080 1920">
+  <rect width="1080" height="1920" fill="#1B2838"/>
+  <rect x="86" y="360" width="908" height="880" rx="36" fill="#25384A" stroke="#466075" stroke-width="3"/>
+  <rect x="86" y="360" width="20" height="880" rx="10" fill="#D9473E"/>
+  <text x="150" y="550" fill="#FFFFFF" font-family="PingFang SC, STHeiti" font-size="68" font-weight="700">但它挡不住：</text>
+  <text x="150" y="740" fill="#F2C05C" font-family="PingFang SC, STHeiti" font-size="74" font-weight="700">风压</text>
+  <text x="150" y="875" fill="#FFFFFF" font-family="PingFang SC, STHeiti" font-size="58">飞来的杂物</text>
+  <text x="150" y="1010" fill="#FFFFFF" font-family="PingFang SC, STHeiti" font-size="58">松动的窗框</text>
+  <path d="M160 1120 C350 1030 560 1210 850 1110" fill="none" stroke="#70879A" stroke-width="16" stroke-linecap="round"/>
+  <path d="M795 1055 L880 1105 L790 1155" fill="none" stroke="#70879A" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

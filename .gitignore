@@ -16,6 +16,14 @@ cookies*.txt
 *.wav
 *.mp3
 
+# Final review exports are versioned; source media remains local.
+!06_成片工程/
+!06_成片工程/**/
+!06_成片工程/**/renders/
+!06_成片工程/**/renders/*.mp4
+06_成片工程/**/work/
+06_成片工程/**/clips/
+
 # System and editor files
 .DS_Store
 .idea/
