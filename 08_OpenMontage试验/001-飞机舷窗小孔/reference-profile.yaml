@@ -1,0 +1,156 @@
+schema_version: "1.0"
+analysis_date: "2026-07-11"
+analysis_status: completed
+analysis_scope: internal_structure_pacing_visual_density_only
+copyright_policy:
+  reuse_original_assets: false
+  reuse_original_script: false
+  reuse_original_narration: false
+  reuse_original_shot_order: false
+  commit_source_media: false
+
+input:
+  mode: local_files
+  primary_samples:
+    - REF01.mp4
+    - REF02.mp4
+    - REF03.mp4
+  supplemental_samples:
+    - REF04.mp4
+    - REF05.mp4
+  common_codec:
+    video: h264
+    audio: aac
+    resolution: "1280x720"
+    frame_rate: 30
+  sample_mismatch_note: "三条正式样本均为5—8分钟横屏长视频，不是35—45秒竖屏短视频；仅使用抽象结构规律。"
+
+tool_execution:
+  openmontage_commit: "2ab5773ef760b4906821d36514c59fcdf3b8f641"
+  video_analyzer:
+    analysis_depth: standard
+    max_keyframes_per_video: 20
+    completed: true
+  transcriber:
+    provider: faster-whisper
+    model: base
+    language: zh
+    runtime: local_offline
+    completed: true
+  paid_api_calls: 0
+  known_limitations:
+    - "VideoAnalyzer对本地MP4未自动传递音轨给Transcriber，本轮单独运行Transcriber。"
+    - "motion_classification步骤完成，但场景级motion_type全部为unknown。"
+    - "仅凭成片不能可靠确认AI生成素材占比。"
+    - "音频能量分析不能可靠分离BGM和音效进入节点。"
+
+samples:
+  - id: REF01
+    topic: "喜马拉雅山/印度极端假设"
+    duration_seconds: 322.500
+    scene_count: 84
+    average_scene_duration_seconds: 3.839
+    median_scene_duration_seconds: 3.867
+    cuts_per_minute: 15.63
+    transcript_segments: 171
+    narration_characters: 1924
+    narration_characters_per_minute: 358.0
+    first_second: "全幅航拍山系+问题字幕"
+    first_three_seconds: "提出把喜马拉雅山炸开巨型口子的极端假设"
+    first_five_seconds: "完成对象、冲突和未知后果"
+    opening_subject_scale: full_frame
+    reversal_time_seconds: 38
+    conclusion_window_seconds: [309, 322.5]
+    subtitle_position: bottom_center
+    visual_change_interval_seconds: 3.839
+    visual_appearance_estimate:
+      realistic_motion: 0.65
+      maps_or_explainers: 0.20
+      archival_or_static: 0.05
+      indeterminate_or_stylized: 0.10
+    confidence: medium
+
+  - id: REF02
+    topic: "台风眼墙置换"
+    duration_seconds: 460.467
+    scene_count: 47
+    average_scene_duration_seconds: 9.797
+    median_scene_duration_seconds: 8.200
+    cuts_per_minute: 6.12
+    transcript_segments: 266
+    narration_characters: 2308
+    narration_characters_per_minute: 300.7
+    first_second: "巨大风暴云团+红黄强调文字"
+    first_three_seconds: "切入手电筒和天气图的尺度对比"
+    first_five_seconds: "情绪封面转实物演示"
+    opening_subject_scale: dominant_over_70_percent
+    reversal_time_seconds: 7
+    conclusion_window_seconds: [446, 460.5]
+    subtitle_position: bottom_center_with_colored_emphasis
+    visual_change_interval_seconds: 9.797
+    visual_appearance_estimate:
+      real_satellite_weather_motion: 0.60
+      news_or_interface_capture: 0.20
+      physical_demonstration: 0.10
+      explainers: 0.10
+    confidence: medium
+
+  - id: REF03
+    topic: "美甲灯/UVA风险"
+    duration_seconds: 432.102
+    scene_count: 154
+    average_scene_duration_seconds: 2.806
+    median_scene_duration_seconds: 2.400
+    cuts_per_minute: 21.38
+    transcript_segments: 267
+    narration_characters: 2304
+    narration_characters_per_minute: 319.9
+    first_second: "冷蓝医院中人物向镜头奔跑"
+    first_three_seconds: "灯一开就逃离的行为冲突"
+    first_five_seconds: "继续用逃离动作证明异常"
+    opening_subject_scale: medium_35_to_50_percent
+    reversal_time_seconds: 17
+    conclusion_window_seconds: [419, 432.1]
+    subtitle_position: bottom_center
+    visual_change_interval_seconds: 2.806
+    visual_appearance_estimate:
+      people_or_physical_motion: 0.70
+      cell_or_principle_explainers: 0.15
+      numeric_or_instrument_demonstration: 0.10
+      indeterminate_or_stylized: 0.05
+    confidence: medium
+
+aggregate_patterns:
+  retain:
+    - "第一秒出现大且可识别的视觉主体"
+    - "前5秒完成对象、冲突、未知后果"
+    - "尺度对比、行为演示和结构视角提供旁白之外的信息"
+    - "字幕一屏一个短意群，关键词才强调"
+    - "现实主体、微距、情境和解释画面混合"
+  change:
+    - "从5—8分钟横屏长视频重新设计为35—42秒9:16短视频"
+    - "不复制极端恐吓和延迟解释"
+    - "飞机舷窗结论必须绑定可验证来源"
+  prohibited_copying:
+    - original_visual_assets
+    - original_script_or_narration
+    - original_title
+    - original_people_or_brand_assets
+    - original_music_or_sound_design
+    - highly_similar_shot_sequence
+
+pilot_gap:
+  current_direction: "C结构拆解科普 + A微距悬疑纪录片"
+  recommendation: retain_with_visual_conditions
+  required_changes:
+    - "KF1必须是真实感舷窗微距大主体。"
+    - "KF2必须同时呈现真实材质、空间层次和可读压力路径。"
+    - "KF3必须比较不同典型水汽/防雾设计，不模拟堵孔实验。"
+    - "7镜头内部必须有足够的指针、水汽、压力路径或摄影机变化。"
+
+gate:
+  video_deep_analysis: completed
+  creative_direction: recommended_pending_user_confirmation
+  keyframe_generation: not_started
+  seedance_generation: blocked_by_keyframe_approval
+  full_render: not_started

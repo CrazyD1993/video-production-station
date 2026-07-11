@@ -10,21 +10,30 @@ target_duration:
   max_seconds: 42
 
 reference_sources:
-  mode: profile_url
+  mode: local_files
   profile_url: "https://www.xiaohongshu.com/user/profile/603ef2e7000000000100a8e3"
   post_urls: []
   local_directory: "08_OpenMontage试验/incoming/reference-videos/"
   account_profile_analysis_status: completed
-  video_deep_analysis_status: blocked
-  video_deep_analysis_blocked_reason: "匿名公开主页未返回稳定 noteId、帖子链接或可播放视频流"
+  video_deep_analysis_status: completed
+  video_deep_analysis_blocked_reason: null
+  primary_local_files:
+    - REF01.mp4
+    - REF02.mp4
+    - REF03.mp4
+  supplemental_local_files:
+    - REF04.mp4
+    - REF05.mp4
   rights_status: internal_analysis_only
 
 analysis_status:
   account_profile_analysis:
     status: completed
   video_deep_analysis:
-    status: blocked
-    blocked_reason: "需要3条具体帖子链接；若链接仍无法读取视频，再提供REF01/REF02/REF03本地MP4"
+    status: completed
+    blocked_reason: null
+    report: "08_OpenMontage试验/001-飞机舷窗小孔/参考视频拆解.md"
+    profile: "08_OpenMontage试验/001-飞机舷窗小孔/reference-profile.yaml"
 
 content_formula:
   hook: "熟悉物件中的不起眼异常"
@@ -128,12 +137,12 @@ estimated_cost: {current_phase_usd: 0, next_phase_usd_range: [4, 12]}
 actual_cost: {currency: USD, amount: 0}
 license_status:
   openmontage: "AGPL-3.0-only; independent local evaluation"
-  reference_video: awaiting_local_files
+  reference_video: internal_analysis_only
   generated_assets: pending
 approval_status:
-  concept: blocked_by_reference_analysis
-  storyboard: blocked_by_reference_analysis
-  keyframes: blocked_by_reference_analysis
+  concept: recommended_pending_user_confirmation
+  storyboard: pending_reference_driven_revision
+  keyframes: blocked_by_concept_confirmation
   seedance_clips: blocked_by_keyframes
 render_status: not_started
 publish_status: not_started
