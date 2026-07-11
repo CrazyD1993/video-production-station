@@ -1,0 +1,26 @@
+shot_id: TE-S03
+selected_keyframe: TE-KF3-B
+input_file: ../frames/TE-S03-first-frame.png
+input_sha256: 9a7ffcbd07327c0f1c3afc0983dda277b2452e748f94b52ac4b2c8292db44025
+generation_mode: manual_seedance_image_to_video
+recommended_generation_duration_seconds: 5
+final_timeline:
+  start_seconds: 8.0
+  end_seconds: 12.0
+  duration_seconds: 4.0
+output_filename: TE-S03-seedance-v1.mp4
+positive_prompt: >-
+  保持首帧中的海面、暂时打开的光区和远处巨大眼墙位置关系不变。机位略高于海面，前景
+  海面持续出现真实的长周期涌浪和不规则波纹。远处另一侧眼墙以缓慢、稳定、压迫性的方式
+  逐渐逼近，云墙体积缓慢增大，暗部逐渐占据更多画面。中央光区轻微收窄，但不要突然熄灭。
+  镜头只进行非常缓慢的前移或横移，营造短暂平静即将结束的感觉。整体真实、克制、危险。
+negative_prompt:
+  - 海啸或海水被吸上天空
+  - 龙卷风、巨大闪电墙、爆炸
+  - 城市、船只、人物、建筑
+  - 完全平静海面
+  - 云墙瞬间扑向镜头
+  - 普通晴天
+  - 文字、字幕、Logo、提示语
+  - 高速推镜或剧烈摇晃
+post_use: 从5秒结果中截取稳定性最佳的4秒；若像普通飑线，优先修正运动与后期标签。

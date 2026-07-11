@@ -40,8 +40,8 @@ class AIRelayContractTests(unittest.TestCase):
     def test_codex_receipt_has_required_sections(self):
         path = RELAY / "CODEX_TO_CHATGPT.md"
         data = front_matter(path)
-        self.assertEqual("bavi-github-review-package-001", data["task_id"])
-        self.assertEqual("completed", data["status"])
+        self.assertEqual("typhoon-eye-seedance-handoff-001", data["task_id"])
+        self.assertEqual("partially_completed", data["status"])
         self.assertEqual("experiment/openmontage-pilot", data["branch"])
         for heading in (
             "# 执行摘要", "# 修改文件", "# 实际执行的命令",
@@ -53,16 +53,16 @@ class AIRelayContractTests(unittest.TestCase):
     def test_state_contract(self):
         data = yaml.safe_load((RELAY / "STATE.yaml").read_text(encoding="utf-8"))
         self.assertEqual("experiment/openmontage-pilot", data["current_branch"])
-        self.assertEqual("typhoon_eye_contact_sheet_ready", data["project_stage"])
-        self.assertEqual("user_select_one_per_keyframe_group", data["blocking_gate"])
+        self.assertEqual("seedance_manual_handoff_ready", data["project_stage"])
+        self.assertEqual("awaiting_manual_seedance_videos", data["blocking_gate"])
         self.assertEqual("User", data["next_actor"])
         self.assertEqual("typhoon_eye_calm", data["approved_topic"])
         self.assertEqual("paused_no_more_image_generation", data["aircraft_window_pilot"])
         self.assertEqual(
-            ["TE-KF1-A", "TE-KF2-A", "TE-KF3-B"],
-            data["codex_recommended_combination"],
+            {"TE-S01": "TE-KF1-A", "TE-S02": "TE-KF2-A", "TE-S03": "TE-KF3-B"},
+            data["selected_keyframes"],
         )
-        self.assertEqual("published", data["github_review_package"]["status"])
+        self.assertEqual("manual", data["seedance_handoff"]["mode"])
 
     def test_three_topic_hook_packages_exist(self):
         folder = ROOT / "08_OpenMontage试验/三题并行钩子测试"
@@ -134,6 +134,27 @@ class AIRelayContractTests(unittest.TestCase):
         readme = (folder / "README.md").read_text(encoding="utf-8")
         self.assertIn("5d60e99237e9bb791a2dd47c82a46e42649058a1710c62ff63fbad003c8b4ff1", readme)
         self.assertIn("TE-KF1-A + TE-KF2-A + TE-KF3-B", readme)
+
+    def test_seedance_manual_handoff_contract(self):
+        folder = ROOT / "08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/video-handoff"
+        status = yaml.safe_load((folder / "status.yaml").read_text(encoding="utf-8"))
+        self.assertTrue(status["seedance_prompts_ready"])
+        self.assertEqual("awaiting_manual_seedance_videos", status["blocking_gate"])
+        self.assertEqual("not_created", status["visual_review_render"])
+        self.assertEqual("not_created", status["packaged_review_render"])
+        expected = {
+            "TE-S01-seedance-v1.mp4",
+            "TE-S02-seedance-v1.mp4",
+            "TE-S03-seedance-v1.mp4",
+        }
+        self.assertEqual(expected, set(status["expected_incoming_files"]))
+        for shot in ("TE-S01", "TE-S02", "TE-S03"):
+            prompt = yaml.safe_load((folder / f"prompts/{shot}.yaml").read_text(encoding="utf-8"))
+            self.assertEqual(5, prompt["recommended_generation_duration_seconds"])
+            self.assertEqual("manual_seedance_image_to_video", prompt["generation_mode"])
+        te_s02 = yaml.safe_load((folder / "prompts/TE-S02.yaml").read_text(encoding="utf-8"))
+        self.assertIn("箭头、文字或标签", te_s02["negative_prompt"])
+        self.assertIn("TE-KF2-A.svg", te_s02["controlled_overlay_source"])
 
     def test_phase4b_manifest_and_contract_exist(self):
         handoff = ROOT / "08_OpenMontage试验/001-飞机舷窗小孔/keyframe-handoff"

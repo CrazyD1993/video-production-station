@@ -1,0 +1,29 @@
+shot_id: TE-S01
+selected_keyframe: TE-KF1-A
+input_file: ../frames/TE-S01-first-frame.png
+input_sha256: f44da90e1ba14cb2d049498a51199272de44a0aec37af12af747ef15db1af287
+generation_mode: manual_seedance_image_to_video
+recommended_generation_duration_seconds: 5
+final_timeline:
+  start_seconds: 0.0
+  end_seconds: 3.2
+  duration_seconds: 3.2
+output_filename: TE-S01-seedance-v1.mp4
+positive_prompt: >-
+  保持首帧中的热带气旋结构和构图不变。竖屏卫星俯视视角，巨大的台风眼始终清楚可辨，
+  内眼墙占据画面主体。外部云带以缓慢、自然、非均匀的逆时针方向流动，云层运动具有
+  真实大气流体感，云丝之间存在轻微速度差异。镜头只进行非常克制的横向漂移和轻微轨道
+  移动，不快速推近，不向台风眼内部俯冲。台风眼的位置、大小和基本形状保持稳定，眼墙
+  厚薄略有差异，不形成完美同心圆。整体像高质量气象纪录片，运动缓慢稳定。
+negative_prompt:
+  - 台风眼发光
+  - 蓝色能量、银河、黑洞效果
+  - 完美圆形旋涡或快速旋转
+  - 向中心高速俯冲
+  - 缩小或关闭台风眼
+  - 新增第二个风眼
+  - 城市、建筑、人物、飞机
+  - 闪电、龙卷风、海啸
+  - 文字、字幕、Logo、时间戳、卫星界面
+  - 横屏或大幅改变色调
+post_use: 从5秒结果中截取稳定性最佳的前3.2秒。

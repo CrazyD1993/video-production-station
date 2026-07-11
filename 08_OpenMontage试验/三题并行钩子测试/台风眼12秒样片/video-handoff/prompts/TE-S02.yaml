@@ -1,0 +1,33 @@
+shot_id: TE-S02
+selected_keyframe: TE-KF2-A
+input_file: ../frames/TE-S02-clean-base.png
+input_sha256: 325a928668e3c0dd674714b2e213e23b2ccce4240b6368f9cda9020d4fbab820
+generation_mode: manual_seedance_image_to_video
+recommended_generation_duration_seconds: 5
+final_timeline:
+  start_seconds: 3.2
+  end_seconds: 8.0
+  duration_seconds: 4.8
+output_filename: TE-S02-seedance-v1.mp4
+positive_prompt: >-
+  保持首帧中的台风眼内部空间、两侧高耸眼墙和海面位置关系不变。镜头位于台风眼内部的
+  概念性气象剖面环境中，两侧眼墙云塔缓慢翻涌并向上发展，云层具有真实体积和湿润空气
+  质感。中央眼区保持相对开阔，只有少量柔和云丝缓慢移动。海面保持持续起伏和长周期涌浪，
+  不是完全平静的镜面。镜头基本固定，只允许非常轻微的前移和空间呼吸感。运动清楚、克制、可信。
+negative_prompt:
+  - 箭头、文字或标签
+  - 第二个台风眼
+  - 上下两张图或分屏
+  - 改变两侧眼墙与中央眼区的空间结构
+  - 直插海面的巨大下沉气柱
+  - 中央区域万里无云
+  - 发光云层、闪电墙、龙卷风、海啸
+  - 建筑、船只、人物
+  - 快速推进或旋转镜头
+controlled_overlay_source: ../../keyframe-handoff/overlays/TE-KF2-A.svg
+controlled_overlay_requirements:
+  - 左右眼墙上升路径缓慢向上流动
+  - 中央眼区缓慢下沉路径速度明显更慢
+  - 眼墙、缓慢下沉、热带气旋结构示意标签独立可编辑
+  - 不闪烁、不弹跳、不发光、不随云层扭曲
+post_use: 使用完整5秒结果，后期按3.2—8.0秒合同裁成4.8秒。

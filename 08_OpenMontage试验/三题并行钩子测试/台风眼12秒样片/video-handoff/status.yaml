@@ -1,0 +1,25 @@
+project_id: typhoon-eye-12s
+handoff_mode: manual_seedance
+selected_keyframes:
+  TE-S01: TE-KF1-A
+  TE-S02: TE-KF2-A
+  TE-S03: TE-KF3-B
+seedance_prompts_ready: true
+first_frames_ready: true
+expected_incoming_files:
+  - TE-S01-seedance-v1.mp4
+  - TE-S02-seedance-v1.mp4
+  - TE-S03-seedance-v1.mp4
+incoming_video_status:
+  TE-S01: missing
+  TE-S02: missing
+  TE-S03: missing
+visual_review_render: not_created
+packaged_review_render: not_created
+voice_candidates:
+  restrained_suspense: not_generated
+  natural_explanation: not_generated
+selected_voice: null
+shots_requiring_regeneration: []
+blocking_gate: awaiting_manual_seedance_videos
+next_actor: User

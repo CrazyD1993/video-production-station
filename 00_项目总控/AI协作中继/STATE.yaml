@@ -1,61 +1,48 @@
-active_task_id: bavi-github-review-package-001
+active_task_id: typhoon-eye-seedance-handoff-001
 last_chatgpt_instruction_commit: null
-last_codex_response_commit: 2fbeb1f55cac0659ceabeec2c2e346f61a1ac742
+last_codex_response_commit: pending_first_commit
 current_branch: experiment/openmontage-pilot
-project_stage: typhoon_eye_contact_sheet_ready
-blocking_gate: user_select_one_per_keyframe_group
+project_stage: seedance_manual_handoff_ready
+blocking_gate: awaiting_manual_seedance_videos
 aircraft_window_pilot: paused_no_more_image_generation
 approved_topic: typhoon_eye_calm
 production_mode: bavi_hotspot_fast_track
-candidate_generation:
-  status: complete
-  count: 6
-  dimensions: 1080x1920
-  format: PNG
-  aspect_ratio: "9:16"
-  non_event_specific_visual_reconstruction: true
-contact_sheet:
-  status: created_and_visually_reviewed
-  path: 08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/keyframe-handoff/contact-sheet/typhoon-eye-keyframes.jpg
-  committed_to_git: false
+selected_keyframes:
+  TE-S01: TE-KF1-A
+  TE-S02: TE-KF2-A
+  TE-S03: TE-KF3-B
+seedance_handoff:
+  mode: manual
+  prompts_ready: true
+  clean_first_frames_ready: true
+  generated_duration_seconds_each: 5
+  incoming_path: 08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/video-handoff/incoming
+expected_incoming_files:
+  - TE-S01-seedance-v1.mp4
+  - TE-S02-seedance-v1.mp4
+  - TE-S03-seedance-v1.mp4
+incoming_video_status:
+  TE-S01: missing
+  TE-S02: missing
+  TE-S03: missing
+visual_sample:
+  timeline_seconds:
+    TE-S01: [0.0, 3.2]
+    TE-S02: [3.2, 8.0]
+    TE-S03: [8.0, 12.0]
+  resolution: 1080x1920
+  fps: 30
+  audio_sample_rate_hz: 48000
+  visual_review_render: not_created
+  packaged_review_render: not_created
+voice_candidates:
+  restrained_suspense: not_generated
+  natural_explanation: not_generated
+selected_voice: null
+shots_requiring_regeneration: []
+full_video_25s: not_started_waiting_for_visual_sample
 github_review_package:
   status: published
-  path: 08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/review-package
-  preview_count: 6
-  contact_sheet: typhoon-eye-contact-sheet.jpg
-  jpeg_quality: approximately_80
-  source_png_committed: false
-  satellite_reference_committed: false
-candidate_manifest: 08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/keyframe-handoff/candidate-manifest.yaml
-codex_recommended_combination:
-  - TE-KF1-A
-  - TE-KF2-A
-  - TE-KF3-B
-candidate_scores:
-  TE-KF1-A: 8.9
-  TE-KF1-B: 8.3
-  TE-KF2-A: 8.3
-  TE-KF2-B: 6.5
-  TE-KF3-A: 7.9
-  TE-KF3-B: 8.6
-selected_keyframes:
-  TE-KF1: null
-  TE-KF2: null
-  TE-KF3: null
-satellite_anchor:
-  source: NASA_Earth_Observatory_NOAA21_VIIRS
-  acquisition_time_utc: "2026-07-08T04:30:00Z"
-  internal_reference_only: true
-  committed_to_git: false
-bavi_status_snapshot:
-  authority: Central_Meteorological_Observatory
-  observed_at: "2026-07-11T23:08:00+08:00"
-  intensity: typhoon
-  landfall_confirmed: false
-  publication_version: pre_landfall_pending_recheck
-seedance_status: blocked_until_user_keyframe_selection
-estimated_time_after_selection:
-  visual_sample_12s: 2_to_3_hours_excluding_external_queue
-  full_video_25s_additional: 3_to_5_hours
+  commit: dc89b6cbefa6439774511fec6f42791d0e6d3a6f
 next_actor: User
-updated_at: "2026-07-11T23:02:55+08:00"
+updated_at: "2026-07-12T01:46:42+08:00"
