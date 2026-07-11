@@ -2,7 +2,7 @@
 task_id: phase4b-keyframe-method-r2-001
 status: blocked
 branch: experiment/openmontage-pilot
-commit_sha: pending_first_commit
+commit_sha: 97ad6bbe2d3315b935f281e3989f894c63f8cb3b
 completed_at: "2026-07-11T20:11:12+08:00"
 ---
 
