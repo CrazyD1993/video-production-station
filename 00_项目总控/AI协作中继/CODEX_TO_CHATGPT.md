@@ -2,7 +2,7 @@
 task_id: bavi-hotspot-keyframes-001
 status: completed
 branch: experiment/openmontage-pilot
-commit_sha: pending_first_commit
+commit_sha: fd2e3833e0831268feda89601922a43ae11f5e3f
 completed_at: "2026-07-11T23:02:55+08:00"
 ---
 
