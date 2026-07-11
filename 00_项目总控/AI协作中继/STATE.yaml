@@ -1,20 +1,19 @@
-active_task_id: phase4-keyframe-contact-sheet-review-001
+active_task_id: phase4b-keyframe-method-r2-001
 last_chatgpt_instruction_commit: null
-last_codex_response_commit: 1a840de99dc4f5663ce8b33c7d7fc9703742b73c
+last_codex_response_commit: pending_first_commit
 current_branch: experiment/openmontage-pilot
-project_stage: keyframe_contact_sheet_ready
-blocking_gate: actual_image_contact_sheet_approval
-candidate_review:
-  KF1-01: retain_recommended
-  KF1-02: retain_with_conditions
-  KF2-01: reject_regenerate
-  KF2-02: retain_with_conditions
-  KF3-01: retain_with_conditions
-  KF3-02: reject_regenerate
-contact_sheet:
-  status: created_and_visually_reviewed
-  path: 08_OpenMontage试验/001-飞机舷窗小孔/keyframe-handoff/contact-sheet/keyframes.jpg
-  layout: 2_columns_x_3_rows
+project_stage: keyframe_r2_blocked
+blocking_gate: compliant_real_window_reference
+round1_candidate_review:
+  KF1-01: rejected_retain_composition_only
+  KF1-02: rejected_retain_pov_method_only
+  KF2-01: rejected
+  KF2-02: rejected
+  KF3-01: rejected
+  KF3-02: rejected
+round1_identity_manifest:
+  status: complete
+  path: 08_OpenMontage试验/001-飞机舷窗小孔/keyframe-handoff/candidate-manifest.yaml
 technical_validation:
   image_count: 6
   passed: 6
@@ -22,6 +21,21 @@ technical_validation:
   dimensions: 720x1280
   format: PNG
   aspect_ratio: "9:16"
-seedance_status: blocked_until_keyframe_approval
+round1_hashed_contact_sheet:
+  status: created_and_visually_verified
+  path: 08_OpenMontage试验/001-飞机舷窗小孔/keyframe-handoff/contact-sheet/keyframes-hashed.jpg
+  committed_to_git: false
+compliant_real_reference:
+  status: missing
+  committed_to_git: false
+round2_candidates:
+  KF1-R2-01: blocked_missing_real_reference
+  KF1-R2-02: blocked_missing_real_reference
+  KF2-R2-01: blocked_missing_trusted_base_image
+  KF2-R2-02: blocked_missing_trusted_base_image
+  KF3-R2-01: blocked_missing_real_window_image
+  KF3-R2-02: blocked_missing_real_window_image
+round2_contact_sheet: not_created
+seedance_status: blocked_until_round2_image_approval
 next_actor: User
-updated_at: "2026-07-11T19:27:23+08:00"
+updated_at: "2026-07-11T20:11:12+08:00"

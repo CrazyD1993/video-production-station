@@ -1,4 +1,14 @@
-# Phase 3 关键帧手动交接
+# 关键帧手动交接
+
+## Phase 4B 当前状态
+
+第一轮六图已完成身份核对和视觉事实审核，但全部禁止直接进入 Seedance。第一轮元数据清单见 `candidate-manifest.yaml`，带短哈希联系表仅保存在本地 `contact-sheet/keyframes-hashed.jpg`。
+
+第二轮改用真实照片锚定、可控图层合成和完整真实舷窗三条路线，详细合同见 `PHASE4B_R2_PRODUCTION_CONTRACT.md`。当前因缺少权利清晰的真实舷窗呼吸孔参考图，第二轮六图均未生成。
+
+---
+
+# Phase 3 历史手动交接说明
 
 当前状态：`ready_for_image_candidate_generation`。
 

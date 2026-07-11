@@ -1,0 +1,45 @@
+schema_version: 1
+media_committed_to_git: false
+candidates:
+- candidate_id: KF1-01
+  filename: KF1-01.png
+  sha256: a17962a9f14942b11ebd312b76c6cc0210f80e563fef16d0aa96d68240e242f4
+  width: 720
+  height: 1280
+  content_description: 真实感微距舷窗下缘，小孔清晰，无手指，窗外机翼与云层虚化。
+  current_decision: regenerate_with_real_reference
+- candidate_id: KF1-02
+  filename: KF1-02.png
+  sha256: 143f6888a656bff92c06d3959dcfe0573022c23268628ed0647ae356a05e7284
+  width: 720
+  height: 1280
+  content_description: 第一人称靠窗观察，手指接近窗边小孔，窗外为云层。
+  current_decision: reject_regenerate_with_real_reference
+- candidate_id: KF2-01
+  filename: KF2-01.png
+  sha256: c489b67fbfe3ec329fb74024d66fbbe308f0c87cb0b7be4c76db310c4173e65f
+  width: 720
+  height: 1280
+  content_description: 完整舷窗与右下角小型发光剖面同屏，小孔与剖面关系不清。
+  current_decision: reject
+- candidate_id: KF2-02
+  filename: KF2-02.png
+  sha256: aa9fccb32db5910cd4c79c6db518f6eefb448e92621ffad36f3008f080f90b75
+  width: 720
+  height: 1280
+  content_description: 舷窗侧向纵深剖面，蓝色发光路径穿过复杂机械槽道。
+  current_decision: reject_ai_structure_risk
+- candidate_id: KF3-01
+  filename: KF3-01.png
+  sha256: 07ff3b332ffa83d6c3e50fe4bfaacc36417ef86120ac30fa9da4eb8c1ad7e8be
+  width: 720
+  height: 1280
+  content_description: 完整舷窗上叠加顶部剖面和气流线，画面存在两个孔状视觉点。
+  current_decision: reject
+- candidate_id: KF3-02
+  filename: KF3-02.png
+  sha256: 0e0dd764aea729f657a90cc164474a5811ce84fdefdd894b39450a29cebf1e58
+  width: 720
+  height: 1280
+  content_description: 生成式爆炸剖面，透明窗格、箭头和边框结构占据主体。
+  current_decision: reject

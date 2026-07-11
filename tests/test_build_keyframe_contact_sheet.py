@@ -1,4 +1,5 @@
 import importlib.util
+import hashlib
 import tempfile
 import unittest
 from pathlib import Path
@@ -47,6 +48,33 @@ class ContactSheetTests(unittest.TestCase):
                 )
                 self.assertEqual((expected_width, expected_height), sheet.size)
             self.assertEqual(6, len(report))
+
+    def test_report_contains_sha256_and_label_uses_short_hash(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            folder = Path(tmp)
+            for name in self.builder.EXPECTED_NAMES:
+                Image.new("RGB", (720, 1280), "white").save(folder / name)
+            report = self.builder.inspect_candidates(folder)
+            first = report[0]
+            expected = hashlib.sha256(first["path"].read_bytes()).hexdigest()
+            self.assertEqual(expected, first["sha256"])
+            self.assertEqual(
+                f"KF1-01 | {expected[:8]}",
+                self.builder.contact_sheet_label(first),
+            )
+
+    def test_writes_candidate_manifest_with_metadata_only(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            folder = Path(tmp)
+            for name in self.builder.EXPECTED_NAMES:
+                Image.new("RGB", (720, 1280), "white").save(folder / name)
+            report = self.builder.inspect_candidates(folder)
+            output = folder / "candidate-manifest.yaml"
+            self.builder.write_candidate_manifest(report, output)
+            text = output.read_text(encoding="utf-8")
+            self.assertIn("candidate_id: KF1-01", text)
+            self.assertIn("current_decision: regenerate_with_real_reference", text)
+            self.assertNotIn("image_data", text)
 
     def test_accepts_1080_by_1920(self):
         self._assert_dimensions_accepted((1080, 1920))
