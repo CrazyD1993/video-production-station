@@ -40,7 +40,7 @@ class AIRelayContractTests(unittest.TestCase):
     def test_codex_receipt_has_required_sections(self):
         path = RELAY / "CODEX_TO_CHATGPT.md"
         data = front_matter(path)
-        self.assertEqual("bavi-hotspot-keyframes-001", data["task_id"])
+        self.assertEqual("bavi-github-review-package-001", data["task_id"])
         self.assertEqual("completed", data["status"])
         self.assertEqual("experiment/openmontage-pilot", data["branch"])
         for heading in (
@@ -62,6 +62,7 @@ class AIRelayContractTests(unittest.TestCase):
             ["TE-KF1-A", "TE-KF2-A", "TE-KF3-B"],
             data["codex_recommended_combination"],
         )
+        self.assertEqual("published", data["github_review_package"]["status"])
 
     def test_three_topic_hook_packages_exist(self):
         folder = ROOT / "08_OpenMontage试验/三题并行钩子测试"
@@ -118,6 +119,21 @@ class AIRelayContractTests(unittest.TestCase):
         self.assertIn("TE-KF1-A + TE-KF2-A + TE-KF3-B", review)
         self.assertIn("登陆前版", copy)
         self.assertIn("登陆后版", copy)
+
+    def test_github_review_package_contract(self):
+        folder = ROOT / "08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/review-package"
+        self.assertEqual(
+            {
+                "README.md", "typhoon-eye-contact-sheet.jpg",
+                "TE-KF1-A-preview.jpg", "TE-KF1-B-preview.jpg",
+                "TE-KF2-A-preview.jpg", "TE-KF2-B-preview.jpg",
+                "TE-KF3-A-preview.jpg", "TE-KF3-B-preview.jpg",
+            },
+            {path.name for path in folder.iterdir() if path.is_file()},
+        )
+        readme = (folder / "README.md").read_text(encoding="utf-8")
+        self.assertIn("5d60e99237e9bb791a2dd47c82a46e42649058a1710c62ff63fbad003c8b4ff1", readme)
+        self.assertIn("TE-KF1-A + TE-KF2-A + TE-KF3-B", readme)
 
     def test_phase4b_manifest_and_contract_exist(self):
         handoff = ROOT / "08_OpenMontage试验/001-飞机舷窗小孔/keyframe-handoff"

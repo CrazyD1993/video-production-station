@@ -1,4 +1,4 @@
-active_task_id: bavi-hotspot-keyframes-001
+active_task_id: bavi-github-review-package-001
 last_chatgpt_instruction_commit: null
 last_codex_response_commit: fd2e3833e0831268feda89601922a43ae11f5e3f
 current_branch: experiment/openmontage-pilot
@@ -18,6 +18,14 @@ contact_sheet:
   status: created_and_visually_reviewed
   path: 08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/keyframe-handoff/contact-sheet/typhoon-eye-keyframes.jpg
   committed_to_git: false
+github_review_package:
+  status: published
+  path: 08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/review-package
+  preview_count: 6
+  contact_sheet: typhoon-eye-contact-sheet.jpg
+  jpeg_quality: approximately_80
+  source_png_committed: false
+  satellite_reference_committed: false
 candidate_manifest: 08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/keyframe-handoff/candidate-manifest.yaml
 codex_recommended_combination:
   - TE-KF1-A

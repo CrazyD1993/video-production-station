@@ -1,5 +1,5 @@
 ---
-task_id: bavi-hotspot-keyframes-001
+task_id: bavi-github-review-package-001
 status: completed
 branch: experiment/openmontage-pilot
 commit_sha: fd2e3833e0831268feda89601922a43ae11f5e3f
@@ -8,10 +8,12 @@ completed_at: "2026-07-11T23:02:55+08:00"
 
 # 执行摘要
 
-已按批准进入巴威热点快速生产模式，完成TE-KF1、TE-KF2、TE-KF3各A/B两张，共6张候选。六张均为1080×1920 PNG、9:16，并统一标记 `non_event_specific_visual_reconstruction: true`，画面可见标注“AI视觉重建｜非真实卫星观测”。已生成带编号和短哈希的2列×3行联系表并实际查看。Codex推荐组合为 `TE-KF1-A + TE-KF2-A + TE-KF3-B`。当前停在唯一人工门禁：用户从三组各批准一张；尚未调用Seedance。
+已将本轮六张候选压缩为1080×1920、JPEG质量约80的GitHub审图预览，并生成压缩联系表。`review-package/` 共包含7张JPG和README，README记录原始PNG对应关系、SHA256、尺寸、评分及推荐组合。只为该目录增加精确.gitignore例外；原始PNG、NASA参考图和原联系表仍保持忽略。当前仍停在用户从三组各批准一张的唯一人工门禁，尚未调用Seedance。
 
 # 修改文件
 
+- `台风眼12秒样片/review-package/` — 新增 — GitHub审图包，包含6张压缩预览、1张压缩联系表和README。
+- `.gitignore` — 修改 — 仅放行review-package指定文件，不解除任何原始媒体目录规则。
 - `台风眼12秒样片/02-官方资料与热点状态.md` — 新增 — 记录NASA/NOAA卫星锚点、NASA使用条件、中央气象台素材限制和23:08热点状态。
 - `台风眼12秒样片/03-候选评分与推荐.md` — 新增 — 六图评分、逐张审核、推荐组合和后续耗时。
 - `台风眼12秒样片/04-热点文案模块.md` — 新增 — 登陆前/登陆后可替换开头及发布前核查规则。
@@ -41,6 +43,8 @@ completed_at: "2026-07-11T23:02:55+08:00"
 
 # 测试与验证
 
+- GitHub审图包：8/8指定文件存在；6张预览均为1080×1920 JPG，联系表为JPG。
+- 媒体边界：暂存清单不包含原始PNG、NASA参考图或keyframe-handoff原联系表。
 - 图片数量：6/6。
 - 格式、尺寸和画幅：6/6通过，均为1080×1920 PNG、9:16。
 - AI透明标记：6/6元数据为true，6/6画面含可见“AI视觉重建｜非真实卫星观测”。
