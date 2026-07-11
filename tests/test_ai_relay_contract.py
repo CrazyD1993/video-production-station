@@ -40,7 +40,7 @@ class AIRelayContractTests(unittest.TestCase):
     def test_codex_receipt_has_required_sections(self):
         path = RELAY / "CODEX_TO_CHATGPT.md"
         data = front_matter(path)
-        self.assertEqual("typhoon-eye-sample-planning-001", data["task_id"])
+        self.assertEqual("bavi-hotspot-keyframes-001", data["task_id"])
         self.assertEqual("completed", data["status"])
         self.assertEqual("experiment/openmontage-pilot", data["branch"])
         for heading in (
@@ -53,11 +53,15 @@ class AIRelayContractTests(unittest.TestCase):
     def test_state_contract(self):
         data = yaml.safe_load((RELAY / "STATE.yaml").read_text(encoding="utf-8"))
         self.assertEqual("experiment/openmontage-pilot", data["current_branch"])
-        self.assertEqual("typhoon_eye_keyframe_plan_complete", data["project_stage"])
-        self.assertEqual("keyframe_generation_approval", data["blocking_gate"])
+        self.assertEqual("typhoon_eye_contact_sheet_ready", data["project_stage"])
+        self.assertEqual("user_select_one_per_keyframe_group", data["blocking_gate"])
         self.assertEqual("User", data["next_actor"])
         self.assertEqual("typhoon_eye_calm", data["approved_topic"])
         self.assertEqual("paused_no_more_image_generation", data["aircraft_window_pilot"])
+        self.assertEqual(
+            ["TE-KF1-A", "TE-KF2-A", "TE-KF3-B"],
+            data["codex_recommended_combination"],
+        )
 
     def test_three_topic_hook_packages_exist(self):
         folder = ROOT / "08_OpenMontage试验/三题并行钩子测试"
@@ -94,6 +98,26 @@ class AIRelayContractTests(unittest.TestCase):
         self.assertIn("ImageGen：环境质感重建", candidates)
         self.assertIn("可控图层：事实结构", candidates)
         self.assertIn("不得调用Seedance", candidates)
+
+    def test_bavi_keyframe_metadata_and_review_package(self):
+        folder = ROOT / "08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片"
+        manifest = yaml.safe_load(
+            (folder / "keyframe-handoff/candidate-manifest.yaml").read_text(encoding="utf-8")
+        )
+        self.assertEqual(6, len(manifest["candidates"]))
+        self.assertTrue(all(item["width"] == 1080 for item in manifest["candidates"]))
+        self.assertTrue(all(item["height"] == 1920 for item in manifest["candidates"]))
+        self.assertTrue(
+            all(item["non_event_specific_visual_reconstruction"] for item in manifest["candidates"])
+        )
+        sources = (folder / "02-官方资料与热点状态.md").read_text(encoding="utf-8")
+        review = (folder / "03-候选评分与推荐.md").read_text(encoding="utf-8")
+        copy = (folder / "04-热点文案模块.md").read_text(encoding="utf-8")
+        self.assertIn("NASA Earth Observatory", sources)
+        self.assertIn("不下载或复用中央气象台图片", sources)
+        self.assertIn("TE-KF1-A + TE-KF2-A + TE-KF3-B", review)
+        self.assertIn("登陆前版", copy)
+        self.assertIn("登陆后版", copy)
 
     def test_phase4b_manifest_and_contract_exist(self):
         handoff = ROOT / "08_OpenMontage试验/001-飞机舷窗小孔/keyframe-handoff"

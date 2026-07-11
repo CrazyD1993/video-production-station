@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1920" viewBox="0 0 1080 1920">
+  <defs>
+    <marker id="up" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,10 L5,0 L10,10 Z" fill="#7DE7FF"/></marker>
+    <marker id="down" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L5,10 L10,0 Z" fill="#FFD486"/></marker>
+  </defs>
+  <g fill="none" stroke="#7DE7FF" stroke-width="10" stroke-linecap="round" opacity="0.86" marker-end="url(#up)">
+    <path d="M170 1350 C130 1130 150 940 240 760"/>
+    <path d="M910 1350 C950 1130 930 930 840 750"/>
+  </g>
+  <g fill="none" stroke="#FFD486" stroke-width="8" stroke-linecap="round" opacity="0.82" marker-end="url(#down)">
+    <path d="M485 720 C510 900 505 1050 490 1200"/>
+    <path d="M595 720 C570 900 575 1050 590 1200"/>
+  </g>
+  <g font-family="PingFang SC, sans-serif" font-weight="600" fill="white">
+    <text x="62" y="100" font-size="38">热带气旋结构示意</text>
+    <text x="68" y="1450" font-size="34">眼墙上升</text>
+    <text x="405" y="1270" font-size="34">眼内缓慢下沉</text>
+    <text x="824" y="1450" font-size="34">眼墙上升</text>
+  </g>
+</svg>
