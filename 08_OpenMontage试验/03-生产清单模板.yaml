@@ -1,0 +1,87 @@
+project_id: xhs-ai-science-001-airplane-window-hole
+topic: "飞机窗户上的小孔，为什么要留着？"
+target_platform: xiaohongshu
+aspect_ratio: "9:16"
+target_duration:
+  min_seconds: 35
+  max_seconds: 45
+reference_video:
+  status: missing
+  source: null
+  local_path: null
+  rights_status: not_applicable
+content_formula:
+  hook: "熟悉物件中的不起眼异常"
+  progression: "先辨认小孔，再拆开多层结构，最后解释压差与水汽管理"
+  reversal: "真正承受主要压差的不是乘客摸到的内侧保护层"
+  takeaway: "小孔是结构的一部分，不触碰、不遮挡机舱设施"
+factual_sources:
+  - title: "14 CFR 25.775 — Windshields and windows"
+    url: "https://www.ecfr.gov/current/title-14/section-25.775"
+    source_type: regulator
+  - title: "FAA Pilot's Handbook of Aeronautical Knowledge — Flight Controls / Pressurization"
+    url: "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak"
+    source_type: regulator
+  - title: "Smithsonian Magazine — expert explanation of the aircraft window breather hole"
+    url: "https://www.smithsonianmag.com/smart-news/what-tiny-hole-airplane-window-does-180957867/"
+    source_type: expert_secondary
+scenes:
+  - id: S01
+    timecode: "00:00-00:03"
+    purpose: hook
+    visual: "舷窗小孔极近景，手指停在接近前"
+  - id: S02
+    timecode: "00:03-00:09"
+    purpose: reveal_layers
+    visual: "舷窗由单层错觉转为三层剖面"
+  - id: S03
+    timecode: "00:09-00:16"
+    purpose: pressure_setup
+    visual: "客舱与高空外界的压差方向"
+  - id: S04
+    timecode: "00:16-00:24"
+    purpose: pressure_path
+    visual: "空气经小孔让特定夹层与客舱侧连通"
+  - id: S05
+    timecode: "00:24-00:31"
+    purpose: condensation
+    visual: "水汽迁移与结露对比"
+  - id: S06
+    timecode: "00:31-00:37"
+    purpose: hypothetical_blockage
+    visual: "明确标注为结构示意的遮挡状态"
+  - id: S07
+    timecode: "00:37-00:43"
+    purpose: takeaway
+    visual: "回到真实舷窗观察，不触碰设施"
+keyframe_status:
+  hold: awaiting_human
+  principle: awaiting_human
+  consequence: awaiting_human
+selected_take:
+  hold: null
+  principle: null
+  consequence: null
+generation_provider:
+  mode: manual_handoff
+  preferred_provider: seedance
+  preferred_operation: image_to_video
+  fallback_operation: reference_to_video
+estimated_cost:
+  current_phase_usd: 0
+  next_phase_usd_range: [4, 12]
+actual_cost:
+  currency: USD
+  amount: 0
+license_status:
+  openmontage: "AGPL-3.0-only; independent local evaluation"
+  reference_video: not_provided
+  generated_assets: pending
+approval_status:
+  concept: awaiting_human
+  storyboard: awaiting_human
+  keyframes: awaiting_human
+  seedance_clips: blocked_by_keyframes
+render_status: not_started
+publish_status: not_started
+
