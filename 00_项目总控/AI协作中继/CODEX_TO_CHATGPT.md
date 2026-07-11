@@ -2,7 +2,7 @@
 task_id: bavi-github-review-package-001
 status: completed
 branch: experiment/openmontage-pilot
-commit_sha: fd2e3833e0831268feda89601922a43ae11f5e3f
+commit_sha: 2fbeb1f55cac0659ceabeec2c2e346f61a1ac742
 completed_at: "2026-07-11T23:02:55+08:00"
 ---
 
