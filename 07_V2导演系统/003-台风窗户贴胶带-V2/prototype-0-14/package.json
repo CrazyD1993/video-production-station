@@ -6,7 +6,10 @@
   "scripts": {
     "validate": "node scripts/validate-contract.mjs shot-contract.json",
     "render:audio": "npm run validate && npx remotion render src/index.ts Prototype output/003-v2-0-14-audio.mp4 --codec h264 --crf 18",
-    "render:silent": "npm run validate && npx remotion render src/index.ts Prototype output/003-v2-0-14-silent.mp4 --codec h264 --crf 18 --muted"
+    "render:silent": "npm run validate && npx remotion render src/index.ts Prototype output/003-v2-0-14-silent.mp4 --codec h264 --crf 18 --muted",
+    "render:r2:audio": "npm run validate:r2 && npx remotion render src/index.ts PrototypeR2 output/r2/003-v2-r2-0-14-audio.mp4 --codec h264 --crf 18",
+    "render:r2:silent": "npm run validate:r2 && npx remotion render src/index.ts PrototypeR2 output/r2/003-v2-r2-0-14-silent.mp4 --codec h264 --crf 18 --muted",
+    "validate:r2": "node scripts/validate-contract.mjs r2/shot-contract-r2.json"
   },
   "dependencies": {
     "@remotion/cli": "4.0.408",
