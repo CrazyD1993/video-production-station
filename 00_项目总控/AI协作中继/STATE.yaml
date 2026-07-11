@@ -1,9 +1,9 @@
-active_task_id: typhoon-eye-seedance-handoff-001
+active_task_id: typhoon-eye-seedance-s03-api-001
 last_chatgpt_instruction_commit: null
 last_codex_response_commit: fe5d5b0f1aaadff447f2a759467ca0c93d9262a0
 current_branch: experiment/openmontage-pilot
-project_stage: seedance_manual_handoff_ready
-blocking_gate: awaiting_manual_seedance_videos
+project_stage: seedance_s03_generated
+blocking_gate: awaiting_s01_s02_seedance_videos
 aircraft_window_pilot: paused_no_more_image_generation
 approved_topic: typhoon_eye_calm
 production_mode: bavi_hotspot_fast_track
@@ -12,11 +12,27 @@ selected_keyframes:
   TE-S02: TE-KF2-A
   TE-S03: TE-KF3-B
 seedance_handoff:
-  mode: manual
+  mode: hybrid_api_authorized_for_s03
   prompts_ready: true
   clean_first_frames_ready: true
   generated_duration_seconds_each: 5
   incoming_path: 08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/video-handoff/incoming
+seedance_api_attempt:
+  authorized_shot: TE-S03
+  requested_resolution: 720p
+  requested_duration_seconds: 4
+  requested_audio: false
+  fal_gateway: authentication_failed_before_generation
+  replicate_gateway: authentication_failed_before_generation
+  volcengine_ark_gateway: succeeded
+  source_config: local_time_echo_env
+  billed_generation: true
+  output_file: 08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/video-handoff/incoming/TE-S03-seedance-v1.mp4
+  output_sha256: 99df4e7a29d34094c561f64f11c11695eed4bbb9778029c0560a3ae443446728
+  actual_resolution: 720x1280
+  actual_duration_seconds: 4.041667
+  actual_fps: 24
+  audio_removed_after_generation: true
 expected_incoming_files:
   - TE-S01-seedance-v1.mp4
   - TE-S02-seedance-v1.mp4
@@ -24,7 +40,7 @@ expected_incoming_files:
 incoming_video_status:
   TE-S01: missing
   TE-S02: missing
-  TE-S03: missing
+  TE-S03: generated_and_visually_reviewed
 visual_sample:
   timeline_seconds:
     TE-S01: [0.0, 3.2]
@@ -45,4 +61,4 @@ github_review_package:
   status: published
   commit: dc89b6cbefa6439774511fec6f42791d0e6d3a6f
 next_actor: User
-updated_at: "2026-07-12T01:46:42+08:00"
+updated_at: "2026-07-12T02:36:14+08:00"

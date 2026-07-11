@@ -1,5 +1,5 @@
 project_id: typhoon-eye-12s
-handoff_mode: manual_seedance
+handoff_mode: hybrid_seedance_api_authorized_for_s03
 selected_keyframes:
   TE-S01: TE-KF1-A
   TE-S02: TE-KF2-A
@@ -13,7 +13,30 @@ expected_incoming_files:
 incoming_video_status:
   TE-S01: missing
   TE-S02: missing
-  TE-S03: missing
+  TE-S03: generated_and_visually_reviewed
+api_generation_attempt:
+  shot_id: TE-S03
+  resolution: 720p
+  duration_seconds: 4
+  generate_audio: false
+  fal_gateway: authentication_failed_before_generation
+  replicate_gateway: authentication_failed_before_generation
+  volcengine_ark_gateway: succeeded
+  source_config: local_time_echo_env
+  output_created: true
+  generation_charge_expected: true
+  output_sha256: 99df4e7a29d34094c561f64f11c11695eed4bbb9778029c0560a3ae443446728
+  actual_resolution: 720x1280
+  actual_duration_seconds: 4.041667
+  actual_fps: 24
+  audio_removed_after_generation: true
+  visual_review:
+    cloud_wall_approach: pass
+    narrowing_light_area: pass
+    ocean_swell_retained: pass
+    no_tsunami_or_tornado: pass
+    no_perfect_or_glowing_vortex: pass
+    ordinary_squall_line_risk: acceptable_with_structure_label_in_sample
 visual_review_render: not_created
 packaged_review_render: not_created
 voice_candidates:
@@ -21,5 +44,5 @@ voice_candidates:
   natural_explanation: not_generated
 selected_voice: null
 shots_requiring_regeneration: []
-blocking_gate: awaiting_manual_seedance_videos
+blocking_gate: awaiting_s01_s02_seedance_videos
 next_actor: User
