@@ -1,17 +1,17 @@
-shot_id: S06
+shot_id: V03
 candidate_id: KF3-02
-status: blocked_by_reference_analysis
-purpose: moisture_control_design_variants
-visual_purpose: "以密封干气夹层作为第二种明显不同的水汽控制概念"
-reference_rule: "待真实拆解后填写结论画面密度；不得套用参考资产"
-composition: "前景是通风孔概念，焦点后移到密封可变容积夹层"
-subject_ratio: "窗体占画面80%，气体状态变化占20%"
-lens: "50mm产品剖面，正侧结合"
-lighting: "低饱和蓝灰工程光，透明层边缘清楚"
-material: "真实曲面透明件、柔性密封边、干燥夹层"
-prompt_zh: "真实飞机客舱舷窗工程剖面，前景保留传统通风孔概念，后景展示另一种密封干气夹层和柔性密封概念，曲面透明件厚度与折射可信，低饱和工程光，竖版9:16，明确为不同设计方案示意。"
-prompt_en: "Photoreal engineering cutaway of an aircraft cabin window, traditional ventilation-hole concept in foreground and an alternative sealed dry-gas enclosure with flexible seal concept behind it, credible curved transparent thickness and refraction, restrained blue-gray engineering light, vertical 9:16, explicitly a comparison of different design approaches."
-required_disclaimer: "不同设计方案示意"
-negative: ["声称同一飞机同时采用", "精确数值", "扁平PPT", "文字", "裂纹", "爆炸", "卡通3D", "误导性实验画面"]
-factual_risk: "依据EP3569495A1的披露，仅作替代方案示意"
-recommended_i2v_motion: "4.5秒缓慢移焦，从传统孔转到密封干气夹层，无破坏动作"
+status: ready_for_image_candidate_generation
+aspect_ratio: "9:16"
+purpose: "用焦点从小孔转向典型承压层，再回到整体窗体的方式完成认知闭环"
+reference_rule: "拆解显示画面变化不必每次切镜，可用景深和焦点在真实主体内推进信息；不复制参考转场或字幕。"
+composition: "前景小孔、中景弧形层间距、后景完整舷窗与云层构成三层景深，用焦点轨迹而非对照图说明。"
+subject_ratio: "完整窗体占画面80%，小孔和典型承压层都有明确焦平面"
+lens: "65mm近景，可控浅景深，无空间畸变"
+lighting: "低饱和中性客舱日光，透明层边缘高光清楚"
+material: "真实曲面透明件、窗框、密封边缘和自然折射"
+prompt_zh: "竖版9:16，真实商业客机舷窗近景，前景是清晰小孔，中景是物理可信的弧形透明层间距和典型承压层，后景是完整窗体与柔和云层，构图预留从小孔转焦至承压层、再回到整体窗体的视觉路径，窗体始终完整，真实曲率、折射、窗框和密封边缘，无文字无品牌。"
+prompt_en: "Vertical 9:16 realistic close view of a commercial passenger-aircraft window. The small hole is sharp in the foreground; physically credible curved pane spacing and the typical load-bearing pane form the midground; the complete window and soft clouds remain in the background. Compose for a focus path from the hole to the load-bearing pane and back to the whole intact window. Authentic curvature, refraction, frame and seals, no text or branding."
+negative: ["多方案对照", "分屏", "小孔消失", "窗体断裂", "扁平信息图", "精确数值", "事故", "文字", "Logo"]
+required_disclaimer: "典型结构示意，不对应具体机型"
+factual_risk: "焦点转移只是视觉引导；不声称所有机型的层数、孔位和承压分工完全相同。"
+recommended_i2v_motion: "4秒慢速拉焦：小孔→典型承压层→完整窗体，同时云层缓慢横移。"

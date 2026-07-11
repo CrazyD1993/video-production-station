@@ -1,15 +1,17 @@
-shot_id: S01
+shot_id: V01
 candidate_id: KF1-02
-status: blocked_by_reference_analysis
-purpose: "以第一人称乘机视角建立生活代入，同时保持小孔可辨认"
-reference_rule: "待三条参考视频真实拆解后填写；不得复制具体构图"
-composition: "POV窗边视角，小孔被窄光照亮，机翼和云层作为环境信息"
-subject_ratio: "舷窗占画面约65%，小孔仍能在手机屏幕一眼找到"
-lens: "35mm等效近距离观察，轻微透视"
-lighting: "自然日光，局部高光落在小孔周围"
-material: "真实窗框、透明件折射和机舱磨损"
-prompt_zh: "第一人称坐在客机窗边，真实舷窗占据竖版画面主体，小孔被自然窄光照亮，窗外可见云层和少量机翼，手指从下方指向但不触碰，生活观察感，真实手机摄影质感。"
-prompt_en: "First-person view from an aircraft window seat, the real passenger window dominates a vertical frame, the small ventilation hole picked out by a natural shaft of light, clouds and a small wing area outside, fingertip pointing from below without contact, authentic observational mobile-camera realism."
-negative: ["小孔过小不可辨认", "接触", "旅游广告感", "文字", "Logo", "畸形机翼", "畸形手指"]
-factual_risk: "只表现发现动作，不表达结构结论"
-recommended_i2v_motion: "3秒轻微座椅呼吸感，手指进入后停住"
+status: ready_for_image_candidate_generation
+aspect_ratio: "9:16"
+purpose: "以第一人称窗边观察建立生活代入，同时保证小孔一眼可辨"
+reference_rule: "拆解显示前3秒必须同时完成对象和行为异常；用真实乘机环境增加旁白之外的信息，不复制参考演示。"
+composition: "第一人称靠窗视角，舷窗占竖版画面主体，局部构图向小孔靠近，云层只作环境锚点。"
+subject_ratio: "舷窗和小孔区域约70%，小孔在手机缩略图中仍可见"
+lens: "35mm等效近距离观察，不使用超广角畸变"
+lighting: "真实日间客舱光，一束窄光突出小孔周边"
+material: "真实窗框、透明件折射和轻微机舱使用痕迹"
+prompt_zh: "竖版9:16，第一人称坐在商业客机窗边的真实观察摄影，舷窗和小孔区域占画面约70%，小孔被自然窄光照亮且在手机缩略图中仍明显，窗外云层和少量机翼提供真实乘机环境，指尖从下方指向但不触碰，透视自然，无文字无品牌。"
+prompt_en: "Vertical 9:16 first-person observational photograph from a commercial-aircraft window seat. The passenger window and hole region occupy about 70 percent of the frame; a natural shaft of light makes the small hole clearly visible even at thumbnail size. Clouds and only a small wing area establish the real flight environment. An anatomically correct fingertip points from below without touching. Natural perspective, no text or branding."
+negative: ["小孔不可见", "过多窗外风景", "旅游广告感", "超广角畸变", "畸形机翼", "畸形手指", "触碰", "文字", "Logo"]
+required_disclaimer: "典型结构示意，不对应具体机型"
+factual_risk: "只表现发现动作，不从外观推断具体机型或层数，不表达危险后果。"
+recommended_i2v_motion: "3秒轻微座椅呼吸感和云层慢移，指尖进入后停住。"

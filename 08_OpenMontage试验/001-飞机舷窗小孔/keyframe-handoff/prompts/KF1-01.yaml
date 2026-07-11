@@ -1,15 +1,17 @@
-shot_id: S01
+shot_id: V01
 candidate_id: KF1-01
-status: blocked_by_reference_analysis
-purpose: "第一秒清楚辨认小孔，并用接近但不接触的动作制造问题"
-reference_rule: "待三条参考视频真实拆解后填写；不得凭文字竞品模型臆测"
-composition: "小孔位于下三分之一中心；指尖从右侧边缘进入但不接触"
-subject_ratio: "舷窗与小孔区域占画面约70%，指尖不超过15%"
-lens: "100mm微距，正面略偏轴"
-lighting: "窗外冷蓝自然光，机舱暖色反射"
-material: "真实航空透明件曲率、细微划痕、克制反射"
-prompt_zh: "真实商业客机舷窗小孔极近景，小孔清晰位于画面下三分之一中心，指尖从右侧靠近但保持距离，竖版9:16，微距浅景深，冷蓝天空与暖色机舱反光，真实透明件曲率和细微使用痕迹。"
-prompt_en: "Photoreal macro close-up of a commercial aircraft passenger-window ventilation hole, clearly visible in the lower-center third, fingertip approaching from the right but remaining separated, vertical 9:16, shallow depth of field, cold blue sky and warm cabin reflections, authentic curved transparent material and subtle wear."
-negative: ["接触或堵孔", "文字", "Logo", "裂纹", "事故", "畸形手指", "塑料3D质感"]
-factual_risk: "不暗示触碰会立刻导致事故"
-recommended_i2v_motion: "3秒极慢推进；指尖接近后停住"
+status: ready_for_image_candidate_generation
+aspect_ratio: "9:16"
+purpose: "正面真实微距，让小孔在第一秒成为绝对主体"
+reference_rule: "拆解显示优秀开头先给足够大的可识别主体，再用行为异常制造问题；不复制参考镜头或字幕。"
+composition: "小孔和周边曲面透明件占画面70%以上，小孔位于下三分之一附近，指尖从右侧边缘接近但不遮挡。"
+subject_ratio: "小孔与周边舷窗材质超过70%，指尖不超过15%"
+lens: "100mm微距，正面轻微偏轴，小孔边缘清晰"
+lighting: "窗外柔和冷蓝日光，客舱内克制暖色反射"
+material: "真实航空透明件曲率、细微使用痕迹、自然折射，无塑料CG质感"
+prompt_zh: "竖版9:16的高真实度商业客机舷窗微距摄影，真实舷窗小孔与周边曲面透明件占画面70%以上，小孔边缘清晰且位置物理可信，一根解剖正常的指尖从右侧接近但没有触碰或遮挡，窗外冷蓝日光与机舱暖色反射，真实曲率、折射和细微使用痕迹，无文字无品牌。"
+prompt_en: "Vertical 9:16 photoreal macro photograph of a commercial passenger-aircraft window. The real small window hole and surrounding curved transparent material occupy more than 70 percent of the frame; the hole edge is sharp and physically plausible. One anatomically correct fingertip approaches from the right without touching or covering it. Cool daylight outside, restrained warm cabin reflections, authentic curvature, refraction and subtle wear, no text or branding."
+negative: ["小孔过小", "错误孔位", "额外小孔", "触碰或遮挡", "畸形手指", "塑料CG质感", "裂纹", "事故", "文字", "Logo"]
+required_disclaimer: "典型结构示意，不对应具体机型"
+factual_risk: "只展示发现和接近动作，不暗示触碰会立即造成危险；小孔位置必须参照真实舷窗视觉锚点。"
+recommended_i2v_motion: "3秒轻微摄影机漂移，指尖缓慢接近后停住，小孔全程不被遮挡。"

@@ -1,13 +1,13 @@
-schema_version: 2
+schema_version: 3
 project_id: xhs-ai-science-001-airplane-window-hole
 topic: "飞机窗户上的小孔，为什么要留着？"
 target_platform: xiaohongshu
 aspect_ratio: "9:16"
 timeline_source_of_truth: "本文件的 timelines；Markdown 时间表只做同步展示"
-active_timeline: full_42
+active_timeline: high_density_25
 target_duration:
-  min_seconds: 35
-  max_seconds: 42
+  min_seconds: 24
+  max_seconds: 30
 
 reference_sources:
   mode: local_files
@@ -17,18 +17,12 @@ reference_sources:
   account_profile_analysis_status: completed
   video_deep_analysis_status: completed
   video_deep_analysis_blocked_reason: null
-  primary_local_files:
-    - REF01.mp4
-    - REF02.mp4
-    - REF03.mp4
-  supplemental_local_files:
-    - REF04.mp4
-    - REF05.mp4
+  primary_local_files: [REF01.mp4, REF02.mp4, REF03.mp4]
+  supplemental_local_files: [REF04.mp4, REF05.mp4]
   rights_status: internal_analysis_only
 
 analysis_status:
-  account_profile_analysis:
-    status: completed
+  account_profile_analysis: {status: completed}
   video_deep_analysis:
     status: completed
     blocked_reason: null
@@ -36,10 +30,19 @@ analysis_status:
     profile: "08_OpenMontage试验/001-飞机舷窗小孔/reference-profile.yaml"
 
 content_formula:
-  hook: "熟悉物件中的不起眼异常"
-  progression: "先辨认小孔，再拆开多层结构，最后解释压差与水汽管理"
-  reversal: "这个小孔的高置信度作用是参与典型压力连通设计；水汽与防雾可能采用不同方案"
-  takeaway: "小孔是结构的一部分，不触碰、不遮挡机舱设施"
+  hook: "真实舷窗小孔大主体，立即否定瑕疵或漏气直觉"
+  progression: "辨认小孔→看见非单层结构→理解客舱/夹层连通→压力由承压层承担"
+  core_mechanism: pressure_equalization_to_load_bearing_pane
+  reversal: "它不是瑕疵，而是典型舷窗压力设计的一部分"
+  takeaway: "在典型设计中，小孔连通特定夹层与客舱侧，帮助主要压力按设计由承压层承担"
+  structure_disclaimer: "典型结构示意，不对应具体机型"
+
+reference_rules:
+  - "第一秒主体必须清晰且足够大"
+  - "前3秒必须存在行为或视觉异常"
+  - "画面必须提供旁白之外的信息"
+  - "真实主体与原理画面结合"
+  - "不复制参考视频具体镜头、人物、演示或字幕样式"
 
 factual_sources:
   - id: SRC-FAA-25-775
@@ -57,80 +60,75 @@ factual_sources:
     url: "https://patents.google.com/patent/US5988566A/en"
     source_type: patent
     source_confidence: high_for_disclosed_conventional_pressure_equalization_design
-  - id: SRC-PATENT-US5884865
-    title: "Airbus Operations — Non-fogging aircraft window arrangement"
-    url: "https://patents.google.com/patent/US5884865A/en"
-    source_type: patent
-    source_confidence: high_for_disclosed_ventilation_and_condensation_design
-  - id: SRC-PATENT-EP3569495
-    title: "Bombardier — Aircraft cabin window sealed enclosure"
-    url: "https://patents.google.com/patent/EP3569495A1/en"
-    source_type: patent
-    source_confidence: medium_high_for_multiple_design_variants
-  - id: SRC-SMITHSONIAN-EXPERT
-    title: "Smithsonian Magazine — expert explanation of the aircraft window breather hole"
-    url: "https://www.smithsonianmag.com/smart-news/what-tiny-hole-airplane-window-does-180957867/"
-    source_type: expert_secondary
-    source_confidence: medium
 
 timelines:
-  high_density_35:
-    duration_seconds: 35
-    purpose: "35秒高密度发布备选"
+  high_density_25:
+    duration_seconds: 25
+    purpose: "24—26秒高密度发布版；当前选定版本"
     scenes:
-      - {id: S01, start_seconds: 0, end_seconds: 3, purpose: hook, visual: "舷窗小孔极近景"}
-      - {id: S02, start_seconds: 3, end_seconds: 7, purpose: reveal_layers, visual: "真实舷窗转为多层结构示意"}
-      - {id: S03, start_seconds: 7, end_seconds: 12, purpose: pressure_setup, visual: "客舱与外界压差"}
-      - {id: S04, start_seconds: 12, end_seconds: 17, purpose: pressure_path, visual: "小孔连通特定夹层"}
-      - {id: S05, start_seconds: 17, end_seconds: 23, purpose: condensation, visual: "水汽迁移与结露对比"}
-      - {id: S06, start_seconds: 23, end_seconds: 29, purpose: moisture_control_design_variants, visual: "不同水汽、防雾与密封设计方案示意"}
-      - {id: S07, start_seconds: 29, end_seconds: 35, purpose: takeaway, visual: "回到真实舷窗观察"}
-  full_42:
-    duration_seconds: 42
-    purpose: "42秒解释完整版；当前主时间轴"
+      - {id: S01, start_seconds: 0, end_seconds: 3, purpose: hook, visual: "真实舷窗小孔极近景，指尖接近但不遮挡"}
+      - {id: S02, start_seconds: 3, end_seconds: 7, purpose: reveal_non_single_pane, visual: "完整舷窗逐步显示非单层曲面结构"}
+      - {id: S03, start_seconds: 7, end_seconds: 11, purpose: pressure_setup, visual: "客舱侧与高空外界的压力差异，无精确数值"}
+      - {id: S04, start_seconds: 11, end_seconds: 16, purpose: pressure_path, visual: "小孔连通客舱侧与特定夹层"}
+      - {id: S05, start_seconds: 16, end_seconds: 22, purpose: load_bearing_pane, visual: "压力路径收束到典型承压层，窗体完整"}
+      - {id: S06, start_seconds: 22, end_seconds: 25, purpose: cognitive_closure, visual: "回到完整真实舷窗，小孔仍清晰可见"}
+  explanation_29:
+    duration_seconds: 29
+    purpose: "28—30秒解释备选；不增加支线"
     scenes:
-      - {id: S01, start_seconds: 0, end_seconds: 3, purpose: hook, visual: "舷窗小孔极近景"}
-      - {id: S02, start_seconds: 3, end_seconds: 8, purpose: reveal_layers, visual: "真实舷窗转为多层结构示意"}
-      - {id: S03, start_seconds: 8, end_seconds: 14, purpose: pressure_setup, visual: "客舱与外界压差"}
-      - {id: S04, start_seconds: 14, end_seconds: 20, purpose: pressure_path, visual: "小孔连通特定夹层"}
-      - {id: S05, start_seconds: 20, end_seconds: 27, purpose: condensation, visual: "水汽迁移与结露对比"}
-      - {id: S06, start_seconds: 27, end_seconds: 34, purpose: moisture_control_design_variants, visual: "不同水汽、防雾与密封设计方案示意"}
-      - {id: S07, start_seconds: 34, end_seconds: 42, purpose: takeaway, visual: "回到真实舷窗观察"}
-  visual_sample_13:
-    duration_seconds: 13
-    purpose: "Phase 2只验证三个核心运动镜头"
+      - {id: S01, start_seconds: 0, end_seconds: 3, purpose: hook, visual: "真实舷窗小孔极近景，指尖接近但不遮挡"}
+      - {id: S02, start_seconds: 3, end_seconds: 7, purpose: reveal_non_single_pane, visual: "完整舷窗逐步显示非单层曲面结构"}
+      - {id: S03, start_seconds: 7, end_seconds: 12, purpose: pressure_setup, visual: "客舱侧与高空外界的压力差异，无精确数值"}
+      - {id: S04, start_seconds: 12, end_seconds: 18, purpose: pressure_path, visual: "小孔连通客舱侧与特定夹层"}
+      - {id: S05, start_seconds: 18, end_seconds: 24, purpose: load_bearing_pane, visual: "压力路径收束到典型承压层，窗体完整"}
+      - {id: S06, start_seconds: 24, end_seconds: 29, purpose: cognitive_closure, visual: "从示意恢复完整真实舷窗，云层移动"}
+  visual_sample_12:
+    duration_seconds: 12
+    purpose: "Phase 3 只验证三个核心视觉镜头"
     scenes:
-      - {id: S01, keyframe: KF1, start_seconds: 0, end_seconds: 3, purpose: hook}
-      - {id: S04, keyframe: KF2, start_seconds: 3, end_seconds: 8.5, purpose: pressure_path}
-      - {id: S06, keyframe: KF3, start_seconds: 8.5, end_seconds: 13, purpose: moisture_control_design_variants}
+      - {id: V01, keyframe: KF1, start_seconds: 0, end_seconds: 3, purpose: realistic_hook}
+      - {id: V02, keyframe: KF2, start_seconds: 3, end_seconds: 8, purpose: pressure_path}
+      - {id: V03, keyframe: KF3, start_seconds: 8, end_seconds: 12, purpose: cognitive_closure}
 
 seedance_contracts:
-  S01:
+  V01:
     keyframe: KF1
     duration_seconds: 3
-    filename: S01_take01.mp4
+    filename: V01_take01.mp4
     approval_required: true
-  S04:
+    execution_status: blocked_by_image_approval
+  V02:
     keyframe: KF2
-    duration_seconds: 5.5
-    filename: S04_take01.mp4
+    duration_seconds: 5
+    filename: V02_take01.mp4
     approval_required: true
-  S06:
+    execution_status: blocked_by_image_approval
+  V03:
     keyframe: KF3
-    purpose: moisture_control_design_variants
-    duration_seconds: 4.5
-    filename: S06_take01.mp4
+    duration_seconds: 4
+    filename: V03_take01.mp4
     approval_required: true
+    execution_status: blocked_by_image_approval
 
 keyframe_status:
+  status: ready_for_image_candidate_generation
   approval_basis: actual_images_contact_sheet
-  hold: blocked_by_reference_analysis
-  principle: blocked_by_reference_analysis
-  consequence: blocked_by_reference_analysis
-selected_take: {hold: null, principle: null, consequence: null}
+  candidate_count: 6
+  contact_sheet_layout: "2x3"
+  required_resolution: {minimum: "720x1280", recommended: "1080x1920"}
+  candidates:
+    KF1-01: ready_for_image_candidate_generation
+    KF1-02: ready_for_image_candidate_generation
+    KF2-01: ready_for_image_candidate_generation
+    KF2-02: ready_for_image_candidate_generation
+    KF3-01: ready_for_image_candidate_generation
+    KF3-02: ready_for_image_candidate_generation
+
+selected_take: {KF1: null, KF2: null, KF3: null}
 generation_provider:
-  mode: manual_handoff
-  preferred_provider: seedance
+  image_mode: manual_handoff
+  video_mode: manual_handoff
+  preferred_video_provider: seedance
   preferred_operation: image_to_video
   fallback_operation: reference_to_video
 estimated_cost: {current_phase_usd: 0, next_phase_usd_range: [4, 12]}
@@ -140,9 +138,9 @@ license_status:
   reference_video: internal_analysis_only
   generated_assets: pending
 approval_status:
-  concept: recommended_pending_user_confirmation
-  storyboard: pending_reference_driven_revision
-  keyframes: blocked_by_concept_confirmation
+  concept: phase3_contract_ready
+  storyboard: phase3_sample_ready
+  keyframes: awaiting_actual_image_contact_sheet
   seedance_clips: blocked_by_keyframes
 render_status: not_started
 publish_status: not_started

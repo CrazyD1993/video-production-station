@@ -56,12 +56,12 @@ def validate_manifest(manifest: dict[str, Any]) -> list[str]:
                 f"声明为 {declared_total:g} 秒"
             )
 
-    sample = timelines.get("visual_sample_13", {})
+    sample = timelines.get("visual_sample_12", {})
     sample_scenes = {scene["id"]: scene for scene in sample.get("scenes", [])}
     contracts = manifest.get("seedance_contracts") or {}
     for scene_id, contract in contracts.items():
         if scene_id not in sample_scenes:
-            errors.append(f"Seedance/{scene_id}: 不在 visual_sample_13 时间轴中")
+            errors.append(f"Seedance/{scene_id}: 不在 visual_sample_12 时间轴中")
             continue
         expected = _duration(sample_scenes[scene_id])
         actual = float(contract.get("duration_seconds", 0))

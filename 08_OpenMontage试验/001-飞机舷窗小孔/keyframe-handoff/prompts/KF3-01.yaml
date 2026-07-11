@@ -1,17 +1,17 @@
-shot_id: S06
+shot_id: V03
 candidate_id: KF3-01
-status: blocked_by_reference_analysis
-purpose: moisture_control_design_variants
-visual_purpose: "说明水汽/防雾处理并非只靠小孔，设计方案可能不同"
-reference_rule: "待真实拆解后填写反转出现方式；不得复制参考视频对比画面"
-composition: "同一弧形窗体左右展示通风夹层与干燥通道两个概念方案"
-subject_ratio: "窗体占画面85%，差异集中在气流与水汽路径"
-lens: "65mm斜侧工程剖面"
-lighting: "左侧自然冷光，右侧中性干燥气流高光，不制造危险色"
-material: "真实透明层、密封边缘、细微雾气"
-prompt_zh: "同一真实弧形飞机舷窗的工程对照示意，左侧显示通风夹层与少量湿空气路径，右侧显示额外干燥空气通道概念，透明层和密封边缘真实，轻微雾气只用于区分方案，竖版9:16，不对应具体机型。"
-prompt_en: "Engineering comparison within one realistic curved aircraft window: the left side shows a ventilated inter-pane path with a small amount of moisture-bearing air, the right side shows an additional dry-air passage concept, authentic transparent layers and seals, only subtle haze to distinguish approaches, vertical 9:16, not tied to a specific aircraft model."
-required_disclaimer: "不同设计方案示意"
-negative: ["事故红色警报", "扁平矩形", "文字", "具体机型", "误导性实验画面"]
-factual_risk: "方案依据US5884865A；不能说所有飞机都有干燥管"
-recommended_i2v_motion: "4.5秒从通风路径移焦到干燥路径，窗体始终完整"
+status: ready_for_image_candidate_generation
+aspect_ratio: "9:16"
+purpose: "从半透明结构剖面恢复为完整真实舷窗，完成工程设计的认知回收"
+reference_rule: "拆解显示结论要回到一个具体、可复述的真实对象；画面用结构恢复提供旁白之外的闭环，不复制参考结尾。"
+composition: "同一舷窗从画面中央的半透明弧形剖面逐步过渡为完整真实窗体，小孔全程处于清晰焦平面。"
+subject_ratio: "完整舷窗占画面75%—85%，小孔在结尾仍清晰"
+lens: "50mm近距离窗边观察，轻微拉回后仍不超过中景"
+lighting: "真实日间客舱光，窗外云层柔光，结构过渡无警报色"
+material: "完整曲面透明件、自然折射、真实窗框与边缘密封"
+prompt_zh: "竖版9:16，同一商业客机舷窗的高真实度工程认知回收画面，弧形半透明剖面正在平滑恢复为完整真实舷窗，典型承压层保持完整，小孔在整个画面中仍清晰可见，窗外柔和云层提供真实乘机环境，曲率、折射、窗框和密封边缘物理可信，无文字无品牌。"
+prompt_en: "Vertical 9:16 photoreal engineering-recovery view of the same commercial-aircraft passenger window. A curved semi-transparent cutaway is transitioning smoothly back into a complete realistic window; the typical load-bearing pane stays intact and the small hole remains clearly visible. Soft clouds outside establish the real cabin context. Physically credible curvature, refraction, frame and seals, no text or branding."
+negative: ["左右对照布局", "窗体破损", "小孔消失", "扁平PPT", "警报红光", "事故", "裂纹", "文字", "Logo"]
+required_disclaimer: "典型结构示意，不对应具体机型"
+factual_risk: "恢复过渡是视觉解释手段，不是真实舷窗变形过程；窗体必须始终完整。"
+recommended_i2v_motion: "4秒从半透明剖面平滑恢复完整窗体，同时轻微拉回，云层缓慢移动。"

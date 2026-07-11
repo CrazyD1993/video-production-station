@@ -1,15 +1,17 @@
-shot_id: S04
+shot_id: V02
 candidate_id: KF2-02
-status: blocked_by_reference_analysis
-purpose: "用微型探针视角强化空间纵深和空气通道"
-reference_rule: "待真实拆解后填写节奏规律；不复刻参考视频具体视角"
-composition: "从小孔边缘望入夹层，孔壁前景、弧形窗格远景、气流路径中景"
-subject_ratio: "孔壁与夹层占画面90%，无人物"
-lens: "极端微距探针视角，强纵深但不鱼眼变形"
-lighting: "冷白边缘光，透明层反射克制"
-material: "孔壁细节、真实弧形透明层、密封结构虚化"
-prompt_zh: "从飞机舷窗通风小孔边缘向夹层内部观察的微型探针视角，前景是清晰真实的孔壁，中景空气粒子穿行，远景是弧形透明承压层，竖版9:16，真实工程材质，强纵深但没有夸张变形。"
-prompt_en: "Microscopic probe perspective looking from the edge of an aircraft-window ventilation hole into the inter-pane space, sharply detailed hole wall in foreground, restrained air particles in midground, curved transparent load-bearing pane in background, vertical 9:16, authentic engineering materials, strong depth without fisheye distortion."
-negative: ["隧道科幻感", "鱼眼畸变", "扁平图标", "文字", "裂纹", "具体机型标识"]
-factual_risk: "尺度为概念化视角，必须标注典型结构示意"
-recommended_i2v_motion: "5.5秒沿孔轴缓慢前移，气流先行，最后对焦弧形窗格"
+status: ready_for_image_candidate_generation
+aspect_ratio: "9:16"
+purpose: "沿小孔进入特定夹层的纵深视角，在强空间感中保持物理可信"
+reference_rule: "拆解显示尺度变化能提高视觉密度，但原理画面仍必须以真实材质为锚点；不复制参考的具体视角或演示。"
+composition: "从小孔边缘向内观察，前景为真实孔壁，中景为连通路径，远景为弧形典型承压层和完整窗体边缘。"
+subject_ratio: "孔壁、夹层与弧形透明件占画面90%"
+lens: "极端微距探针视角，强纵深，禁止鱼眼和科幻隧道畸变"
+lighting: "冷白边缘光描绘曲面厚度，孔壁和密封区保留自然阴影"
+material: "孔壁细节、弧形透明件、折射与边缘密封均符合真实材质"
+prompt_zh: "竖版9:16，沿商业客机舷窗小孔边缘向特定夹层内部观察的高真实度微型探针视角，前景是清晰真实的孔壁，中景是从客舱侧进入夹层的克制空气路径，远景是弧形透明的典型承压层和完整窗体边缘，强纵深但不鱼眼，工程材质物理可信，无文字无精确数值。"
+prompt_en: "Vertical 9:16 photoreal microscopic probe perspective looking from the edge of a passenger-aircraft window hole into the specific inter-pane space. A sharply detailed real hole wall fills the foreground; a restrained air path enters from the cabin side in the midground; the curved transparent typical load-bearing pane and complete window edge remain visible in the background. Strong depth without fisheye or sci-fi tunnel distortion, physically credible engineering materials, no text or exact values."
+negative: ["科幻隧道", "鱼眼畸变", "孔壁融化", "扁平图标", "固定三层", "精确数值", "裂纹", "文字", "具体机型标识"]
+required_disclaimer: "典型结构示意，不对应具体机型"
+factual_risk: "纵深视角为概念化摄影机路径，结构关系仅对应US5988566A披露的典型设计。"
+recommended_i2v_motion: "5秒沿孔轴缓慢前移，空气路径先行，最后对焦弧形典型承压层。"

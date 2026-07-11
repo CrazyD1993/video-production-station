@@ -128,7 +128,7 @@ aggregate_patterns:
     - "字幕一屏一个短意群，关键词才强调"
     - "现实主体、微距、情境和解释画面混合"
   change:
-    - "从5—8分钟横屏长视频重新设计为35—42秒9:16短视频"
+    - "从5—8分钟横屏长视频重新设计为24—30秒9:16短视频"
     - "不复制极端恐吓和延迟解释"
     - "飞机舷窗结论必须绑定可验证来源"
   prohibited_copying:
@@ -145,12 +145,12 @@ pilot_gap:
   required_changes:
     - "KF1必须是真实感舷窗微距大主体。"
     - "KF2必须同时呈现真实材质、空间层次和可读压力路径。"
-    - "KF3必须比较不同典型水汽/防雾设计，不模拟堵孔实验。"
-    - "7镜头内部必须有足够的指针、水汽、压力路径或摄影机变化。"
+    - "KF3必须从结构示意回到完整真实舷窗，小孔仍清晰可见。"
+    - "6镜头内部必须有足够的压力路径、焦点或摄影机变化。"
 
 gate:
   video_deep_analysis: completed
-  creative_direction: recommended_pending_user_confirmation
-  keyframe_generation: not_started
+  creative_direction: phase3_contract_ready
+  keyframe_generation: ready_for_image_candidate_generation
   seedance_generation: blocked_by_keyframe_approval
   full_render: not_started

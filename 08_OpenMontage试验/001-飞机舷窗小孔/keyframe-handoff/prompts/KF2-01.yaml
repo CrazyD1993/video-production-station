@@ -1,15 +1,17 @@
-shot_id: S04
+shot_id: V02
 candidate_id: KF2-01
-status: blocked_by_reference_analysis
-purpose: "一眼看懂小孔把客舱侧与特定夹层连通"
-reference_rule: "待真实拆解后填写画面密度与主体尺度；不得复制参考镜头"
-composition: "真实舷窗半实物半剖面，多层保持曲率，气流路径穿过小孔"
-subject_ratio: "窗体结构占画面80%以上"
-lens: "50mm工程产品视角，20度斜侧"
-lighting: "中性工程照明，边缘高光勾出透明层"
-material: "航空亚克力/透明件的厚度、折射、密封边缘"
-prompt_zh: "真实客机舷窗的半实物半剖面视图，多层透明曲面保持真实厚度和折射，小孔清楚连接客舱侧与窗格夹层，少量空气粒子显示路径，竖版9:16，中性工程照明，不对应具体机型。"
-prompt_en: "Photoreal half-real half-cutaway view of a passenger aircraft window, curved transparent panes retain authentic thickness and refraction, a small opening clearly connects the cabin side to the inter-pane space, restrained air particles reveal the path, vertical 9:16, neutral engineering light, not identified as a specific aircraft model."
-negative: ["扁平矩形", "固定三层", "虚构数值", "文字", "爆裂", "卡通信息图"]
-factual_risk: "标注典型结构示意；依据US5988566A，不推广到所有机型"
-recommended_i2v_motion: "5.5秒小幅环绕，气流经孔进入夹层，焦点落在承压层"
+status: ready_for_image_candidate_generation
+aspect_ratio: "9:16"
+purpose: "真实窗体与半透明剖面同屏，一眼看懂小孔、特定夹层和典型承压层的关系"
+reference_rule: "拆解显示解释画面需与真实主体同时存在，并用空间路径提供旁白之外的信息；不复制参考图形和字幕。"
+composition: "同一真实曲面舷窗一半保持完整实物，一半成为半透明弧形剖面，小孔和压力路径处于中央视觉轴。"
+subject_ratio: "窗体结构占画面85%以上"
+lens: "50mm工程产品视角，20度斜侧，同时看到孔口和弧形层间距"
+lighting: "中性工程照明，边缘高光勾出透明层和密封边缘"
+material: "航空透明件的真实厚度、曲率、折射和边缘密封，不固定三层"
+prompt_zh: "竖版9:16，高真实度商业客机舷窗工程微距画面，同一曲面窗体一半保持真实完整材质，一半自然过渡为弧形半透明剖面，不固定通用层数。小孔清楚连接客舱这一侧与特定夹层，少量克制空气路径粒子指向典型承压层，透明件厚度、曲率、折射和密封边缘物理可信，无文字无精确数值。"
+prompt_en: "Vertical 9:16 photoreal engineering macro of a passenger-aircraft window. One half remains complete real curved material while the other transitions naturally into a curved semi-transparent cutaway without asserting a universal pane count. The small hole clearly connects the cabin side with the specific inter-pane space; restrained air-path particles guide attention toward the typical load-bearing pane. Credible thickness, curvature, refraction and seals, no text or exact values."
+negative: ["扁平矩形", "卡通信息图", "固定三层", "精确数值", "断裂窗体", "裂纹", "爆炸", "文字", "具体机型标识"]
+required_disclaimer: "典型结构示意，不对应具体机型"
+factual_risk: "依据US5988566A披露的一种传统设计；必须保留“典型结构”限定，不推广到所有机型。"
+recommended_i2v_motion: "5秒小幅环绕，空气路径经小孔进入特定夹层，最后对焦典型承压层。"
