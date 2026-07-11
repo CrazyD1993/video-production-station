@@ -40,8 +40,8 @@ class AIRelayContractTests(unittest.TestCase):
     def test_codex_receipt_has_required_sections(self):
         path = RELAY / "CODEX_TO_CHATGPT.md"
         data = front_matter(path)
-        self.assertEqual("typhoon-eye-seedance-s03-api-001", data["task_id"])
-        self.assertEqual("partially_completed", data["status"])
+        self.assertEqual("typhoon-eye-12s-visual-review-001", data["task_id"])
+        self.assertEqual("completed", data["status"])
         self.assertEqual("experiment/openmontage-pilot", data["branch"])
         for heading in (
             "# 执行摘要", "# 修改文件", "# 实际执行的命令",
@@ -53,8 +53,8 @@ class AIRelayContractTests(unittest.TestCase):
     def test_state_contract(self):
         data = yaml.safe_load((RELAY / "STATE.yaml").read_text(encoding="utf-8"))
         self.assertEqual("experiment/openmontage-pilot", data["current_branch"])
-        self.assertEqual("seedance_s03_generated", data["project_stage"])
-        self.assertEqual("awaiting_s01_s02_seedance_videos", data["blocking_gate"])
+        self.assertEqual("visual_review_sample_ready", data["project_stage"])
+        self.assertEqual("user_visual_review", data["blocking_gate"])
         self.assertEqual("User", data["next_actor"])
         self.assertEqual("typhoon_eye_calm", data["approved_topic"])
         self.assertEqual("paused_no_more_image_generation", data["aircraft_window_pilot"])
@@ -63,8 +63,12 @@ class AIRelayContractTests(unittest.TestCase):
             data["selected_keyframes"],
         )
         self.assertEqual("hybrid_api_authorized_for_s03", data["seedance_handoff"]["mode"])
+        self.assertEqual("received_and_visually_reviewed", data["incoming_video_status"]["TE-S01"])
+        self.assertEqual("received_and_visually_reviewed", data["incoming_video_status"]["TE-S02"])
         self.assertEqual("generated_and_visually_reviewed", data["incoming_video_status"]["TE-S03"])
         self.assertEqual("succeeded", data["seedance_api_attempt"]["volcengine_ark_gateway"])
+        self.assertEqual(360, data["visual_sample"]["visual_review_render"]["frames"])
+        self.assertEqual(12.0, data["visual_sample"]["visual_review_render"]["duration_seconds"])
 
     def test_three_topic_hook_packages_exist(self):
         folder = ROOT / "08_OpenMontage试验/三题并行钩子测试"
@@ -141,11 +145,18 @@ class AIRelayContractTests(unittest.TestCase):
         folder = ROOT / "08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/video-handoff"
         status = yaml.safe_load((folder / "status.yaml").read_text(encoding="utf-8"))
         self.assertTrue(status["seedance_prompts_ready"])
-        self.assertEqual("awaiting_s01_s02_seedance_videos", status["blocking_gate"])
+        self.assertEqual("user_visual_review", status["blocking_gate"])
+        self.assertEqual("received_and_visually_reviewed", status["incoming_video_status"]["TE-S01"])
+        self.assertEqual("received_and_visually_reviewed", status["incoming_video_status"]["TE-S02"])
         self.assertEqual("generated_and_visually_reviewed", status["incoming_video_status"]["TE-S03"])
         self.assertTrue(status["api_generation_attempt"]["output_created"])
         self.assertEqual("720x1280", status["api_generation_attempt"]["actual_resolution"])
-        self.assertEqual("not_created", status["visual_review_render"])
+        self.assertEqual("created_and_verified", status["visual_review_render"]["status"])
+        self.assertEqual(360, status["visual_review_render"]["frames"])
+        self.assertEqual(12.0, status["visual_review_render"]["duration_seconds"])
+        self.assertEqual([0.6, 3.8], status["selected_intervals"]["TE-S01"])
+        self.assertEqual([0.12, 4.92], status["selected_intervals"]["TE-S02"])
+        self.assertEqual([0.02, 4.02], status["selected_intervals"]["TE-S03"])
         self.assertEqual("not_created", status["packaged_review_render"])
         expected = {
             "TE-S01-seedance-v1.mp4",

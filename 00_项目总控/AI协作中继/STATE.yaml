@@ -1,9 +1,9 @@
-active_task_id: typhoon-eye-seedance-s03-api-001
+active_task_id: typhoon-eye-12s-visual-review-001
 last_chatgpt_instruction_commit: null
 last_codex_response_commit: 32ef2cec8b08943d4632437156619bbc0359a42e
 current_branch: experiment/openmontage-pilot
-project_stage: seedance_s03_generated
-blocking_gate: awaiting_s01_s02_seedance_videos
+project_stage: visual_review_sample_ready
+blocking_gate: user_visual_review
 aircraft_window_pilot: paused_no_more_image_generation
 approved_topic: typhoon_eye_calm
 production_mode: bavi_hotspot_fast_track
@@ -38,8 +38,8 @@ expected_incoming_files:
   - TE-S02-seedance-v1.mp4
   - TE-S03-seedance-v1.mp4
 incoming_video_status:
-  TE-S01: missing
-  TE-S02: missing
+  TE-S01: received_and_visually_reviewed
+  TE-S02: received_and_visually_reviewed
   TE-S03: generated_and_visually_reviewed
 visual_sample:
   timeline_seconds:
@@ -49,7 +49,12 @@ visual_sample:
   resolution: 1080x1920
   fps: 30
   audio_sample_rate_hz: 48000
-  visual_review_render: not_created
+  visual_review_render:
+    status: created_and_verified
+    path: 08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/output/typhoon-eye-12s-visual-review.mp4
+    sha256: 558343a3b1d3ac9890a051c1c8c8353e58bd022119097643f3fb3a359d8de326
+    frames: 360
+    duration_seconds: 12.0
   packaged_review_render: not_created
 voice_candidates:
   restrained_suspense: not_generated
@@ -61,4 +66,4 @@ github_review_package:
   status: published
   commit: dc89b6cbefa6439774511fec6f42791d0e6d3a6f
 next_actor: User
-updated_at: "2026-07-12T02:36:14+08:00"
+updated_at: "2026-07-12T03:00:00+08:00"
