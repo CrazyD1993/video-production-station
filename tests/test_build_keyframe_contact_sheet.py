@@ -33,14 +33,70 @@ class ContactSheetTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as tmp:
             folder = Path(tmp)
             for index, name in enumerate(self.builder.EXPECTED_NAMES):
-                Image.new("RGB", (720 + index, 1080 + index), (index * 20, 50, 80)).save(folder / name)
+                Image.new("RGB", (1080, 1920), (index * 20, 50, 80)).save(folder / name)
             report = self.builder.inspect_candidates(folder)
             output = folder / "contact-sheet.jpg"
             self.builder.build_contact_sheet(report, output)
             self.assertTrue(output.exists())
             with Image.open(output) as sheet:
-                self.assertGreater(sheet.height, sheet.width)
+                expected_width = self.builder.MARGIN * 2 + self.builder.CELL_WIDTH * 2 + self.builder.GAP
+                expected_height = (
+                    self.builder.MARGIN * 2
+                    + (self.builder.CELL_HEIGHT + self.builder.LABEL_HEIGHT) * 3
+                    + self.builder.GAP * 2
+                )
+                self.assertEqual((expected_width, expected_height), sheet.size)
             self.assertEqual(6, len(report))
+
+    def test_accepts_1080_by_1920(self):
+        self._assert_dimensions_accepted((1080, 1920))
+
+    def test_accepts_720_by_1280(self):
+        self._assert_dimensions_accepted((720, 1280))
+
+    def test_rejects_two_by_three_image(self):
+        self._assert_dimensions_rejected((720, 1080))
+
+    def test_rejects_landscape_image(self):
+        self._assert_dimensions_rejected((1280, 720))
+
+    def test_rejects_square_image(self):
+        self._assert_dimensions_rejected((1280, 1280))
+
+    def test_contact_sheet_preserves_top_and_bottom_edges(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            folder = Path(tmp)
+            for name in self.builder.EXPECTED_NAMES:
+                image = Image.new("RGB", (720, 1280), "#333333")
+                for y in range(80):
+                    for x in range(720):
+                        image.putpixel((x, y), (255, 0, 0))
+                        image.putpixel((x, 1279 - y), (0, 0, 255))
+                image.save(folder / name)
+            report = self.builder.inspect_candidates(folder)
+            output = folder / "sheet.png"
+            self.builder.build_contact_sheet(report, output)
+            with Image.open(output) as sheet:
+                x = self.builder.MARGIN + self.builder.CELL_WIDTH // 2
+                top = self.builder.MARGIN + 10
+                bottom = self.builder.MARGIN + self.builder.CELL_HEIGHT - 10
+                self.assertGreater(sheet.getpixel((x, top))[0], 200)
+                self.assertGreater(sheet.getpixel((x, bottom))[2], 200)
+
+    def _assert_dimensions_accepted(self, size):
+        with tempfile.TemporaryDirectory() as tmp:
+            folder = Path(tmp)
+            for name in self.builder.EXPECTED_NAMES:
+                Image.new("RGB", size, "white").save(folder / name)
+            self.assertEqual(6, len(self.builder.inspect_candidates(folder)))
+
+    def _assert_dimensions_rejected(self, size):
+        with tempfile.TemporaryDirectory() as tmp:
+            folder = Path(tmp)
+            for name in self.builder.EXPECTED_NAMES:
+                Image.new("RGB", size, "white").save(folder / name)
+            with self.assertRaisesRegex(ValueError, "9:16"):
+                self.builder.inspect_candidates(folder)
 
 
 if __name__ == "__main__":

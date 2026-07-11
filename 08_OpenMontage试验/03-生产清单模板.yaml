@@ -9,22 +9,27 @@ target_duration:
   min_seconds: 35
   max_seconds: 42
 
-reference_video:
-  status: awaiting_three_local_files
-  directory: "08_OpenMontage试验/incoming/reference-videos/"
-  required_files:
-    - id: REF01
-      description: "天赐科普代表性高互动视频"
-    - id: REF02
-      description: "同账号另一种题材"
-    - id: REF03
-      description: "相近AI科普账号的高质量视频"
+reference_sources:
+  mode: profile_url
+  profile_url: "https://www.xiaohongshu.com/user/profile/603ef2e7000000000100a8e3"
+  post_urls: []
+  local_directory: "08_OpenMontage试验/incoming/reference-videos/"
+  account_profile_analysis_status: completed
+  video_deep_analysis_status: blocked
+  video_deep_analysis_blocked_reason: "匿名公开主页未返回稳定 noteId、帖子链接或可播放视频流"
   rights_status: internal_analysis_only
+
+analysis_status:
+  account_profile_analysis:
+    status: completed
+  video_deep_analysis:
+    status: blocked
+    blocked_reason: "需要3条具体帖子链接；若链接仍无法读取视频，再提供REF01/REF02/REF03本地MP4"
 
 content_formula:
   hook: "熟悉物件中的不起眼异常"
   progression: "先辨认小孔，再拆开多层结构，最后解释压差与水汽管理"
-  reversal: "遮挡示意用于解释功能受干扰，不制造即时爆裂后果"
+  reversal: "这个小孔的高置信度作用是参与典型压力连通设计；水汽与防雾可能采用不同方案"
   takeaway: "小孔是结构的一部分，不触碰、不遮挡机舱设施"
 
 factual_sources:
@@ -69,7 +74,7 @@ timelines:
       - {id: S03, start_seconds: 7, end_seconds: 12, purpose: pressure_setup, visual: "客舱与外界压差"}
       - {id: S04, start_seconds: 12, end_seconds: 17, purpose: pressure_path, visual: "小孔连通特定夹层"}
       - {id: S05, start_seconds: 17, end_seconds: 23, purpose: condensation, visual: "水汽迁移与结露对比"}
-      - {id: S06, start_seconds: 23, end_seconds: 29, purpose: hypothetical_blockage, visual: "结构示意中的通道受阻"}
+      - {id: S06, start_seconds: 23, end_seconds: 29, purpose: moisture_control_design_variants, visual: "不同水汽、防雾与密封设计方案示意"}
       - {id: S07, start_seconds: 29, end_seconds: 35, purpose: takeaway, visual: "回到真实舷窗观察"}
   full_42:
     duration_seconds: 42
@@ -80,7 +85,7 @@ timelines:
       - {id: S03, start_seconds: 8, end_seconds: 14, purpose: pressure_setup, visual: "客舱与外界压差"}
       - {id: S04, start_seconds: 14, end_seconds: 20, purpose: pressure_path, visual: "小孔连通特定夹层"}
       - {id: S05, start_seconds: 20, end_seconds: 27, purpose: condensation, visual: "水汽迁移与结露对比"}
-      - {id: S06, start_seconds: 27, end_seconds: 34, purpose: hypothetical_blockage, visual: "结构示意中的通道受阻"}
+      - {id: S06, start_seconds: 27, end_seconds: 34, purpose: moisture_control_design_variants, visual: "不同水汽、防雾与密封设计方案示意"}
       - {id: S07, start_seconds: 34, end_seconds: 42, purpose: takeaway, visual: "回到真实舷窗观察"}
   visual_sample_13:
     duration_seconds: 13
@@ -88,7 +93,7 @@ timelines:
     scenes:
       - {id: S01, keyframe: KF1, start_seconds: 0, end_seconds: 3, purpose: hook}
       - {id: S04, keyframe: KF2, start_seconds: 3, end_seconds: 8.5, purpose: pressure_path}
-      - {id: S06, keyframe: KF3, start_seconds: 8.5, end_seconds: 13, purpose: hypothetical_blockage}
+      - {id: S06, keyframe: KF3, start_seconds: 8.5, end_seconds: 13, purpose: moisture_control_design_variants}
 
 seedance_contracts:
   S01:
@@ -103,6 +108,7 @@ seedance_contracts:
     approval_required: true
   S06:
     keyframe: KF3
+    purpose: moisture_control_design_variants
     duration_seconds: 4.5
     filename: S06_take01.mp4
     approval_required: true

@@ -1,0 +1,42 @@
+snapshot_date: "2026-07-11"
+source_mode: anonymous_public_profile_ssr
+profile_url: "https://www.xiaohongshu.com/user/profile/603ef2e7000000000100a8e3"
+visible_count: 30
+total_post_count: null
+publish_time_available: false
+stable_post_urls_available: false
+notes:
+  - "以下为匿名公开主页本次响应中可见的30张视频卡片，不代表账号全部帖子。"
+  - "点赞数为页面可见快照；发布时间、收藏数和评论数未在匿名响应中提供。"
+posts:
+  - {visible_index: 1, title: "大批90后开始提前衰老，原因有点扎心", likes_visible: "134", topic: "健康/生活风险", deep_analysis_role: "recent_visible_candidate"}
+  - {visible_index: 2, title: "屁布甲！一种能让你毁容的生化小虫", likes_visible: "927", topic: "昆虫/猎奇风险"}
+  - {visible_index: 3, title: "三次眼壁置换悄然蓄力，血色晚霞已是预警", likes_visible: "2.1万", topic: "灾害/台风"}
+  - {visible_index: 4, title: "台风巴威来袭，别再傻傻往窗户上贴胶带了", likes_visible: "3624", topic: "灾害/生活误区"}
+  - {visible_index: 5, title: "一块米猪肉引发的断头饭实验！潜伏大脑20年的元凶", likes_visible: "9957", topic: "食品/寄生虫/科学史"}
+  - {visible_index: 6, title: "步氏巨猿：史前三米高的巨人", likes_visible: "493", topic: "古生物"}
+  - {visible_index: 7, title: "知了！夏天在树下尽量别抬头", likes_visible: "1595", topic: "昆虫/生活观察"}
+  - {visible_index: 8, title: "他拿命找到了藏在几十亿人胃里的细菌——幽门螺旋杆菌", likes_visible: "1058", topic: "医学史"}
+  - {visible_index: 9, title: "当抗生素失效，我们还能撑多久？", likes_visible: "2035", topic: "医学/公共健康"}
+  - {visible_index: 10, title: "你真的了解你的屎吗", likes_visible: "965", topic: "人体/猎奇"}
+  - {visible_index: 11, title: "人的恐惧到底是后天形成还是先天基因", likes_visible: "1823", topic: "心理/实验史"}
+  - {visible_index: 12, title: "台风巴威或将达17级超强台风", likes_visible: "4951", topic: "灾害/台风"}
+  - {visible_index: 13, title: "九香虫！你小时候嫌弃的臭屁虫，现在却是上千元一斤的美食", likes_visible: "922", topic: "昆虫/食物反差"}
+  - {visible_index: 14, title: "人类为何删掉三岁前的记忆", likes_visible: "419", topic: "脑科学"}
+  - {visible_index: 15, title: "中暑和热射病之间只隔一道墙", likes_visible: "4720", topic: "健康/高温"}
+  - {visible_index: 16, title: "假如把一只哈士奇扔进古埃及", likes_visible: "7113", topic: "动物/极端假设"}
+  - {visible_index: 17, title: "如果把一只哈基咪放大20倍投放到白垩纪", likes_visible: "8621", topic: "古生物/极端假设"}
+  - {visible_index: 18, title: "夜市五种最脏小吃，你踩过几次坑？", likes_visible: "356", topic: "食品/生活风险"}
+  - {visible_index: 19, title: "全球高温：这份清凉暗藏暴雨、高温双重危机", likes_visible: "9057", topic: "气候/灾害"}
+  - {visible_index: 20, title: "传说中的猴儿酒，竟然是猴子无心之举做出来的", likes_visible: "410", topic: "动物/食物传说"}
+  - {visible_index: 21, title: "0.01毫米，比A4纸薄10倍，比头发丝薄7倍", likes_visible: "8144", topic: "材料/数字反差"}
+  - {visible_index: 22, title: "别再把手伸进美甲灯！", likes_visible: "4.7万", topic: "生活风险/紫外线", deep_analysis_role: "high_interaction_candidate"}
+  - {visible_index: 23, title: "翠鸟！被严重低估的水域杀手", likes_visible: "473", topic: "动物"}
+  - {visible_index: 24, title: "假如现代亚马逊出现一只恐鳄，它能统治雨林吗？", likes_visible: "1.4万", topic: "古生物/极端假设", deep_analysis_role: "different_visual_candidate"}
+  - {visible_index: 25, title: "洞螈：最像龙的生物", likes_visible: "630", topic: "动物/神秘生物"}
+  - {visible_index: 26, title: "人类花了几百年，就为了把一层膜磨到A4纸的十分之一", likes_visible: "1.4万", topic: "材料/历史"}
+  - {visible_index: 27, title: "西风带异变引发极端气候，欧洲热到致命", likes_visible: "1316", topic: "气候/灾害"}
+  - {visible_index: 28, title: "华丽巨蚊！被你误杀的好蚊子", likes_visible: "9500", topic: "昆虫/反常识"}
+  - {visible_index: 29, title: "酥脆可口的海苔怎么就成了一类致癌物？", likes_visible: "6793", topic: "食品/健康风险"}
+  - {visible_index: 30, title: "藏马熊：青藏高原大型食肉动物", likes_visible: "1.9万", topic: "动物"}
+

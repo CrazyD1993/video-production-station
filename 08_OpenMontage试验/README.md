@@ -21,7 +21,7 @@
 - OpenMontage 安装成功；Backlot 本地服务健康检查通过。
 - 当前没有被 OpenMontage 识别为可用的图片、视频生成或 TTS Provider。
 - Seedance 采用模式 B：OpenMontage 输出关键帧与运动交接单，用户在网页或客户端手动生成，文件回收到 OpenMontage 项目 `incoming/seedance/` 后再审核与合成。
-- Phase 2 当前停在参考视频文件门禁；参考拆解完成前不批准创意方向，不生成关键帧或 Seedance 样片。
+- Phase 2A 已完成匿名账号主页访问与账号级分析；视频级拆解因没有稳定帖子视频输入而阻塞。优先请求 3 条具体帖子链接，无法读取时再请求本地 MP4。视频级拆解完成前不批准创意方向，不生成关键帧或 Seedance 样片。
 
 ## 文档导航
 

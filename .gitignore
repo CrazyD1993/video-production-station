@@ -1,2 +1,56 @@
+# Credentials and browser state
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+cookies*.txt
+
+# Media and render outputs
+04_素材库/视频素材/*
+04_素材库/图片素材/*
+04_素材库/音效音乐/*
+!04_素材库/**/.gitkeep
+*.mp4
+*.mov
+*.wav
+*.mp3
+
+# Final review exports are versioned; source media remains local.
+!06_成片工程/
+!06_成片工程/**/
+!06_成片工程/**/renders/
+!06_成片工程/**/renders/*.mp4
+06_成片工程/**/work/
+06_成片工程/**/clips/
+
+# System and editor files
+.DS_Store
+node_modules/
+**/.remotion/
+**/output/frame-*.png
+**/output/**/frame-*.png
+**/public/*.mp4
+**/public/*.wav
+!07_V2导演系统/003-台风窗户贴胶带-V2/prototype-0-14/output/r2/
+!07_V2导演系统/003-台风窗户贴胶带-V2/prototype-0-14/output/r2/*.mp4
+.idea/
+.vscode/
+
+# OpenMontage local inputs and generated visual review assets
+08_OpenMontage试验/incoming/reference-videos/*
+!08_OpenMontage试验/incoming/reference-videos/.gitignore
+!08_OpenMontage试验/incoming/reference-videos/README.md
+08_OpenMontage试验/**/keyframe-handoff/incoming/*
+08_OpenMontage试验/**/keyframe-handoff/selected/*
+08_OpenMontage试验/**/keyframe-handoff/rejected/*
+08_OpenMontage试验/**/keyframe-handoff/contact-sheet/*
+!08_OpenMontage试验/**/keyframe-handoff/incoming/.gitignore
+!08_OpenMontage试验/**/keyframe-handoff/selected/.gitignore
+!08_OpenMontage试验/**/keyframe-handoff/rejected/.gitignore
+!08_OpenMontage试验/**/keyframe-handoff/contact-sheet/.gitignore
+
+# Python tool caches
 __pycache__/
 *.py[cod]
+.pytest_cache/

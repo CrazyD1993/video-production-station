@@ -1,7 +1,8 @@
 shot_id: S06
 candidate_id: KF3-02
 status: blocked_by_reference_analysis
-purpose: "以密封干气夹层作为第二种明显不同的水汽控制概念"
+purpose: moisture_control_design_variants
+visual_purpose: "以密封干气夹层作为第二种明显不同的水汽控制概念"
 reference_rule: "待真实拆解后填写结论画面密度；不得套用参考资产"
 composition: "前景是通风孔概念，焦点后移到密封可变容积夹层"
 subject_ratio: "窗体占画面80%，气体状态变化占20%"
@@ -10,6 +11,7 @@ lighting: "低饱和蓝灰工程光，透明层边缘清楚"
 material: "真实曲面透明件、柔性密封边、干燥夹层"
 prompt_zh: "真实飞机客舱舷窗工程剖面，前景保留传统通风孔概念，后景展示另一种密封干气夹层和柔性密封概念，曲面透明件厚度与折射可信，低饱和工程光，竖版9:16，明确为不同设计方案示意。"
 prompt_en: "Photoreal engineering cutaway of an aircraft cabin window, traditional ventilation-hole concept in foreground and an alternative sealed dry-gas enclosure with flexible seal concept behind it, credible curved transparent thickness and refraction, restrained blue-gray engineering light, vertical 9:16, explicitly a comparison of different design approaches."
-negative: ["声称同一飞机同时采用", "精确数值", "扁平PPT", "文字", "裂纹", "爆炸", "卡通3D"]
+required_disclaimer: "不同设计方案示意"
+negative: ["声称同一飞机同时采用", "精确数值", "扁平PPT", "文字", "裂纹", "爆炸", "卡通3D", "误导性实验画面"]
 factual_risk: "依据EP3569495A1的披露，仅作替代方案示意"
 recommended_i2v_motion: "4.5秒缓慢移焦，从传统孔转到密封干气夹层，无破坏动作"

@@ -2,6 +2,9 @@
 
 时间轴唯一来源：`../../03-生产清单模板.yaml` 的 `visual_sample_13` 与 `seedance_contracts`。参考视频与真实关键帧未获批前不得执行。
 
+S06 purpose: moisture_control_design_variants  
+结构标记：`不同设计方案示意`。
+
 ## S01 / KF1：3 秒
 
 ```text
@@ -32,4 +35,3 @@ One continuous photoreal engineering comparison, exactly 4.5 seconds. Show that 
 - API 模式仅在 Provider 被 OpenMontage 判定为 configured 后启用。
 - 手动模式不接收账号密码或 Cookie。
 - 每个镜头逐个生成和审核，不批量调用。
-

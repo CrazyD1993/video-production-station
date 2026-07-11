@@ -19,6 +19,15 @@ EXPECTED_NAMES = (
     "KF3-02.png",
 )
 ALLOWED_FORMATS = {"PNG"}
+TARGET_ASPECT_RATIO = 9 / 16
+ASPECT_RATIO_TOLERANCE = 0.01
+MIN_WIDTH = 720
+MIN_HEIGHT = 1280
+CELL_WIDTH = 450
+CELL_HEIGHT = 800
+LABEL_HEIGHT = 48
+MARGIN = 30
+GAP = 20
 
 
 def inspect_candidates(folder: Path) -> list[dict[str, Any]]:
@@ -42,10 +51,16 @@ def inspect_candidates(folder: Path) -> list[dict[str, Any]]:
             if image.format not in ALLOWED_FORMATS:
                 raise ValueError(f"{name}: 仅接受 PNG，实际为 {image.format}")
             width, height = image.size
-            if width < 720 or height < 1080:
-                raise ValueError(f"{name}: 尺寸至少 720x1080，实际为 {width}x{height}")
-            if height <= width:
-                raise ValueError(f"{name}: 必须是竖版图片，实际为 {width}x{height}")
+            ratio = width / height
+            if width < MIN_WIDTH or height < MIN_HEIGHT:
+                raise ValueError(
+                    f"{name}: 9:16 图片尺寸至少 {MIN_WIDTH}x{MIN_HEIGHT}，"
+                    f"实际为 {width}x{height}"
+                )
+            if abs(ratio - TARGET_ASPECT_RATIO) > ASPECT_RATIO_TOLERANCE:
+                raise ValueError(
+                    f"{name}: 宽高比必须接近 9:16，实际为 {width}:{height}"
+                )
             report.append(
                 {"name": name, "path": path, "width": width, "height": height, "format": image.format}
             )
@@ -53,21 +68,29 @@ def inspect_candidates(folder: Path) -> list[dict[str, Any]]:
 
 
 def build_contact_sheet(report: list[dict[str, Any]], output: Path) -> None:
-    cell_width, image_height, label_height = 540, 810, 54
-    margin, gap = 30, 20
-    sheet_width = margin * 2 + cell_width * 2 + gap
-    sheet_height = margin * 2 + (image_height + label_height) * 3 + gap * 2
+    sheet_width = MARGIN * 2 + CELL_WIDTH * 2 + GAP
+    sheet_height = MARGIN * 2 + (CELL_HEIGHT + LABEL_HEIGHT) * 3 + GAP * 2
     sheet = Image.new("RGB", (sheet_width, sheet_height), "#111318")
     draw = ImageDraw.Draw(sheet)
 
     for index, item in enumerate(report):
         row, column = divmod(index, 2)
-        x = margin + column * (cell_width + gap)
-        y = margin + row * (image_height + label_height + gap)
+        x = MARGIN + column * (CELL_WIDTH + GAP)
+        y = MARGIN + row * (CELL_HEIGHT + LABEL_HEIGHT + GAP)
         with Image.open(item["path"]) as source:
-            frame = ImageOps.fit(source.convert("RGB"), (cell_width, image_height), method=Image.Resampling.LANCZOS)
-        sheet.paste(frame, (x, y))
-        draw.text((x + 14, y + image_height + 16), item["name"].removesuffix(".png"), fill="white")
+            frame = ImageOps.contain(
+                source.convert("RGB"),
+                (CELL_WIDTH, CELL_HEIGHT),
+                method=Image.Resampling.LANCZOS,
+            )
+        frame_x = x + (CELL_WIDTH - frame.width) // 2
+        frame_y = y + (CELL_HEIGHT - frame.height) // 2
+        sheet.paste(frame, (frame_x, frame_y))
+        draw.text(
+            (x + 14, y + CELL_HEIGHT + 14),
+            item["name"].removesuffix(".png"),
+            fill="white",
+        )
 
     output.parent.mkdir(parents=True, exist_ok=True)
     sheet.save(output, quality=92, subsampling=0)
