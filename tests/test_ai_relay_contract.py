@@ -40,8 +40,8 @@ class AIRelayContractTests(unittest.TestCase):
     def test_codex_receipt_has_required_sections(self):
         path = RELAY / "CODEX_TO_CHATGPT.md"
         data = front_matter(path)
-        self.assertEqual("relay-bootstrap-001", data["task_id"])
-        self.assertEqual("completed", data["status"])
+        self.assertEqual("phase4-keyframes-001", data["task_id"])
+        self.assertEqual("blocked", data["status"])
         self.assertEqual("experiment/openmontage-pilot", data["branch"])
         for heading in (
             "# 执行摘要", "# 修改文件", "# 实际执行的命令",
@@ -53,9 +53,21 @@ class AIRelayContractTests(unittest.TestCase):
     def test_state_contract(self):
         data = yaml.safe_load((RELAY / "STATE.yaml").read_text(encoding="utf-8"))
         self.assertEqual("experiment/openmontage-pilot", data["current_branch"])
-        self.assertEqual("ready_for_image_candidate_generation", data["project_stage"])
-        self.assertEqual("actual_image_contact_sheet", data["blocking_gate"])
+        self.assertEqual("keyframe_candidate_generation_blocked", data["project_stage"])
+        self.assertEqual("compliant_reference_image_and_manual_generation", data["blocking_gate"])
         self.assertEqual("ChatGPT", data["next_actor"])
+
+    def test_phase4_manual_generation_package(self):
+        path = (
+            ROOT
+            / "08_OpenMontage试验/001-飞机舷窗小孔/keyframe-handoff/PHASE4_MANUAL_GENERATION.md"
+        )
+        text = path.read_text(encoding="utf-8")
+        self.assertIn("OpenMontage 图片 Provider：0/11 configured", text)
+        self.assertIn("ChatGPT 图片生成", text)
+        self.assertIn("没有合规的真实客机舷窗小孔参考图", text)
+        for candidate in ("KF1-01", "KF1-02", "KF2-01", "KF2-02", "KF3-01", "KF3-02"):
+            self.assertIn(candidate, text)
 
     def test_agents_declares_relay_entrypoint(self):
         text = (ROOT / "AGENTS.md").read_text(encoding="utf-8")

@@ -1,8 +1,19 @@
-active_task_id: null
+active_task_id: phase4-keyframes-001
 last_chatgpt_instruction_commit: null
 last_codex_response_commit: 37f00b0e3445479e828223a000fb12369004eb9b
 current_branch: experiment/openmontage-pilot
-project_stage: ready_for_image_candidate_generation
-blocking_gate: actual_image_contact_sheet
+project_stage: keyframe_candidate_generation_blocked
+blocking_gate: compliant_reference_image_and_manual_generation
+blocking_reasons:
+  - "OpenMontage image_generation: 0/11 configured"
+  - "KF1缺少合规真实客机舷窗小孔参考图"
+candidate_generation:
+  KF1-01: blocked_missing_compliant_reference_image
+  KF1-02: blocked_missing_compliant_reference_image
+  KF2-01: pending_manual_chatgpt_image_generation
+  KF2-02: pending_manual_chatgpt_image_generation
+  KF3-01: pending_manual_chatgpt_image_generation
+  KF3-02: pending_manual_chatgpt_image_generation
+contact_sheet: not_created
 next_actor: ChatGPT
-updated_at: "2026-07-11T15:37:32+08:00"
+updated_at: "2026-07-11T15:47:34+08:00"
