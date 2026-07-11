@@ -2,7 +2,7 @@
 task_id: three-topic-hook-test-001
 status: completed
 branch: experiment/openmontage-pilot
-commit_sha: pending_first_commit
+commit_sha: ee33fbce179d4375de5fc2377e0089046334c869
 completed_at: "2026-07-11T21:30:03+08:00"
 ---
 
