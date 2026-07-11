@@ -2,7 +2,7 @@
 task_id: typhoon-eye-seedance-handoff-001
 status: partially_completed
 branch: experiment/openmontage-pilot
-commit_sha: pending_first_commit
+commit_sha: fe5d5b0f1aaadff447f2a759467ca0c93d9262a0
 completed_at: "2026-07-12T01:46:42+08:00"
 ---
 
