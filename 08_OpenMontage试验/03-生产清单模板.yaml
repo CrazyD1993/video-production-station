@@ -1,87 +1,133 @@
+schema_version: 2
 project_id: xhs-ai-science-001-airplane-window-hole
 topic: "飞机窗户上的小孔，为什么要留着？"
 target_platform: xiaohongshu
 aspect_ratio: "9:16"
+timeline_source_of_truth: "本文件的 timelines；Markdown 时间表只做同步展示"
+active_timeline: full_42
 target_duration:
   min_seconds: 35
-  max_seconds: 45
+  max_seconds: 42
+
 reference_video:
-  status: missing
-  source: null
-  local_path: null
-  rights_status: not_applicable
+  status: awaiting_three_local_files
+  directory: "08_OpenMontage试验/incoming/reference-videos/"
+  required_files:
+    - id: REF01
+      description: "天赐科普代表性高互动视频"
+    - id: REF02
+      description: "同账号另一种题材"
+    - id: REF03
+      description: "相近AI科普账号的高质量视频"
+  rights_status: internal_analysis_only
+
 content_formula:
   hook: "熟悉物件中的不起眼异常"
   progression: "先辨认小孔，再拆开多层结构，最后解释压差与水汽管理"
-  reversal: "真正承受主要压差的不是乘客摸到的内侧保护层"
+  reversal: "遮挡示意用于解释功能受干扰，不制造即时爆裂后果"
   takeaway: "小孔是结构的一部分，不触碰、不遮挡机舱设施"
+
 factual_sources:
-  - title: "14 CFR 25.775 — Windshields and windows"
+  - id: SRC-FAA-25-775
+    title: "14 CFR 25.775 — Windshields and windows"
     url: "https://www.ecfr.gov/current/title-14/section-25.775"
     source_type: regulator
-  - title: "FAA Pilot's Handbook of Aeronautical Knowledge — Flight Controls / Pressurization"
+    source_confidence: high_for_window_safety_requirements
+  - id: SRC-FAA-PHAK
+    title: "FAA Pilot's Handbook of Aeronautical Knowledge — cabin pressurization"
     url: "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak"
     source_type: regulator
-  - title: "Smithsonian Magazine — expert explanation of the aircraft window breather hole"
+    source_confidence: high_for_pressure_differential_only
+  - id: SRC-PATENT-US5988566
+    title: "Airbus Operations — Aircraft window construction"
+    url: "https://patents.google.com/patent/US5988566A/en"
+    source_type: patent
+    source_confidence: high_for_disclosed_conventional_pressure_equalization_design
+  - id: SRC-PATENT-US5884865
+    title: "Airbus Operations — Non-fogging aircraft window arrangement"
+    url: "https://patents.google.com/patent/US5884865A/en"
+    source_type: patent
+    source_confidence: high_for_disclosed_ventilation_and_condensation_design
+  - id: SRC-PATENT-EP3569495
+    title: "Bombardier — Aircraft cabin window sealed enclosure"
+    url: "https://patents.google.com/patent/EP3569495A1/en"
+    source_type: patent
+    source_confidence: medium_high_for_multiple_design_variants
+  - id: SRC-SMITHSONIAN-EXPERT
+    title: "Smithsonian Magazine — expert explanation of the aircraft window breather hole"
     url: "https://www.smithsonianmag.com/smart-news/what-tiny-hole-airplane-window-does-180957867/"
     source_type: expert_secondary
-scenes:
-  - id: S01
-    timecode: "00:00-00:03"
-    purpose: hook
-    visual: "舷窗小孔极近景，手指停在接近前"
-  - id: S02
-    timecode: "00:03-00:09"
-    purpose: reveal_layers
-    visual: "舷窗由单层错觉转为三层剖面"
-  - id: S03
-    timecode: "00:09-00:16"
-    purpose: pressure_setup
-    visual: "客舱与高空外界的压差方向"
-  - id: S04
-    timecode: "00:16-00:24"
-    purpose: pressure_path
-    visual: "空气经小孔让特定夹层与客舱侧连通"
-  - id: S05
-    timecode: "00:24-00:31"
-    purpose: condensation
-    visual: "水汽迁移与结露对比"
-  - id: S06
-    timecode: "00:31-00:37"
-    purpose: hypothetical_blockage
-    visual: "明确标注为结构示意的遮挡状态"
-  - id: S07
-    timecode: "00:37-00:43"
-    purpose: takeaway
-    visual: "回到真实舷窗观察，不触碰设施"
+    source_confidence: medium
+
+timelines:
+  high_density_35:
+    duration_seconds: 35
+    purpose: "35秒高密度发布备选"
+    scenes:
+      - {id: S01, start_seconds: 0, end_seconds: 3, purpose: hook, visual: "舷窗小孔极近景"}
+      - {id: S02, start_seconds: 3, end_seconds: 7, purpose: reveal_layers, visual: "真实舷窗转为多层结构示意"}
+      - {id: S03, start_seconds: 7, end_seconds: 12, purpose: pressure_setup, visual: "客舱与外界压差"}
+      - {id: S04, start_seconds: 12, end_seconds: 17, purpose: pressure_path, visual: "小孔连通特定夹层"}
+      - {id: S05, start_seconds: 17, end_seconds: 23, purpose: condensation, visual: "水汽迁移与结露对比"}
+      - {id: S06, start_seconds: 23, end_seconds: 29, purpose: hypothetical_blockage, visual: "结构示意中的通道受阻"}
+      - {id: S07, start_seconds: 29, end_seconds: 35, purpose: takeaway, visual: "回到真实舷窗观察"}
+  full_42:
+    duration_seconds: 42
+    purpose: "42秒解释完整版；当前主时间轴"
+    scenes:
+      - {id: S01, start_seconds: 0, end_seconds: 3, purpose: hook, visual: "舷窗小孔极近景"}
+      - {id: S02, start_seconds: 3, end_seconds: 8, purpose: reveal_layers, visual: "真实舷窗转为多层结构示意"}
+      - {id: S03, start_seconds: 8, end_seconds: 14, purpose: pressure_setup, visual: "客舱与外界压差"}
+      - {id: S04, start_seconds: 14, end_seconds: 20, purpose: pressure_path, visual: "小孔连通特定夹层"}
+      - {id: S05, start_seconds: 20, end_seconds: 27, purpose: condensation, visual: "水汽迁移与结露对比"}
+      - {id: S06, start_seconds: 27, end_seconds: 34, purpose: hypothetical_blockage, visual: "结构示意中的通道受阻"}
+      - {id: S07, start_seconds: 34, end_seconds: 42, purpose: takeaway, visual: "回到真实舷窗观察"}
+  visual_sample_13:
+    duration_seconds: 13
+    purpose: "Phase 2只验证三个核心运动镜头"
+    scenes:
+      - {id: S01, keyframe: KF1, start_seconds: 0, end_seconds: 3, purpose: hook}
+      - {id: S04, keyframe: KF2, start_seconds: 3, end_seconds: 8.5, purpose: pressure_path}
+      - {id: S06, keyframe: KF3, start_seconds: 8.5, end_seconds: 13, purpose: hypothetical_blockage}
+
+seedance_contracts:
+  S01:
+    keyframe: KF1
+    duration_seconds: 3
+    filename: S01_take01.mp4
+    approval_required: true
+  S04:
+    keyframe: KF2
+    duration_seconds: 5.5
+    filename: S04_take01.mp4
+    approval_required: true
+  S06:
+    keyframe: KF3
+    duration_seconds: 4.5
+    filename: S06_take01.mp4
+    approval_required: true
+
 keyframe_status:
-  hold: awaiting_human
-  principle: awaiting_human
-  consequence: awaiting_human
-selected_take:
-  hold: null
-  principle: null
-  consequence: null
+  approval_basis: actual_images_contact_sheet
+  hold: blocked_by_reference_analysis
+  principle: blocked_by_reference_analysis
+  consequence: blocked_by_reference_analysis
+selected_take: {hold: null, principle: null, consequence: null}
 generation_provider:
   mode: manual_handoff
   preferred_provider: seedance
   preferred_operation: image_to_video
   fallback_operation: reference_to_video
-estimated_cost:
-  current_phase_usd: 0
-  next_phase_usd_range: [4, 12]
-actual_cost:
-  currency: USD
-  amount: 0
+estimated_cost: {current_phase_usd: 0, next_phase_usd_range: [4, 12]}
+actual_cost: {currency: USD, amount: 0}
 license_status:
   openmontage: "AGPL-3.0-only; independent local evaluation"
-  reference_video: not_provided
+  reference_video: awaiting_local_files
   generated_assets: pending
 approval_status:
-  concept: awaiting_human
-  storyboard: awaiting_human
-  keyframes: awaiting_human
+  concept: blocked_by_reference_analysis
+  storyboard: blocked_by_reference_analysis
+  keyframes: blocked_by_reference_analysis
   seedance_clips: blocked_by_keyframes
 render_status: not_started
 publish_status: not_started
-

@@ -1,0 +1,15 @@
+shot_id: S01
+candidate_id: KF1-01
+status: blocked_by_reference_analysis
+purpose: "第一秒清楚辨认小孔，并用接近但不接触的动作制造问题"
+reference_rule: "待三条参考视频真实拆解后填写；不得凭文字竞品模型臆测"
+composition: "小孔位于下三分之一中心；指尖从右侧边缘进入但不接触"
+subject_ratio: "舷窗与小孔区域占画面约70%，指尖不超过15%"
+lens: "100mm微距，正面略偏轴"
+lighting: "窗外冷蓝自然光，机舱暖色反射"
+material: "真实航空透明件曲率、细微划痕、克制反射"
+prompt_zh: "真实商业客机舷窗小孔极近景，小孔清晰位于画面下三分之一中心，指尖从右侧靠近但保持距离，竖版9:16，微距浅景深，冷蓝天空与暖色机舱反光，真实透明件曲率和细微使用痕迹。"
+prompt_en: "Photoreal macro close-up of a commercial aircraft passenger-window ventilation hole, clearly visible in the lower-center third, fingertip approaching from the right but remaining separated, vertical 9:16, shallow depth of field, cold blue sky and warm cabin reflections, authentic curved transparent material and subtle wear."
+negative: ["接触或堵孔", "文字", "Logo", "裂纹", "事故", "畸形手指", "塑料3D质感"]
+factual_risk: "不暗示触碰会立刻导致事故"
+recommended_i2v_motion: "3秒极慢推进；指尖接近后停住"

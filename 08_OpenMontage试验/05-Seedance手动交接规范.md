@@ -55,7 +55,7 @@ OpenMontage/主仓库交付每个镜头的：
 
 ```yaml
 scene_id: S01
-approved_keyframe: KF1-A
+approved_keyframe: KF1-01
 filename: S01_take01.mp4
 duration_seconds: 3
 aspect_ratio: "9:16"
@@ -76,4 +76,4 @@ negative_constraints:
 2. 每个 take 登记来源、生成平台、日期、实际成本和使用权状态。
 3. 只把用户选中的 take 写入 `selected_take`。
 4. 任何镜头未过 Gate 3，完整合成保持 blocked。
-
+5. Phase 2 三镜头合同必须从 manifest 读取：S01=3 秒、S04=5.5 秒、S06=4.5 秒，总计 13 秒。

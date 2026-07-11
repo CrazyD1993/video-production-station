@@ -1,0 +1,15 @@
+shot_id: S04
+candidate_id: KF2-02
+status: blocked_by_reference_analysis
+purpose: "用微型探针视角强化空间纵深和空气通道"
+reference_rule: "待真实拆解后填写节奏规律；不复刻参考视频具体视角"
+composition: "从小孔边缘望入夹层，孔壁前景、弧形窗格远景、气流路径中景"
+subject_ratio: "孔壁与夹层占画面90%，无人物"
+lens: "极端微距探针视角，强纵深但不鱼眼变形"
+lighting: "冷白边缘光，透明层反射克制"
+material: "孔壁细节、真实弧形透明层、密封结构虚化"
+prompt_zh: "从飞机舷窗通风小孔边缘向夹层内部观察的微型探针视角，前景是清晰真实的孔壁，中景空气粒子穿行，远景是弧形透明承压层，竖版9:16，真实工程材质，强纵深但没有夸张变形。"
+prompt_en: "Microscopic probe perspective looking from the edge of an aircraft-window ventilation hole into the inter-pane space, sharply detailed hole wall in foreground, restrained air particles in midground, curved transparent load-bearing pane in background, vertical 9:16, authentic engineering materials, strong depth without fisheye distortion."
+negative: ["隧道科幻感", "鱼眼畸变", "扁平图标", "文字", "裂纹", "具体机型标识"]
+factual_risk: "尺度为概念化视角，必须标注典型结构示意"
+recommended_i2v_motion: "5.5秒沿孔轴缓慢前移，气流先行，最后对焦弧形窗格"
