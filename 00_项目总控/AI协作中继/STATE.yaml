@@ -1,26 +1,39 @@
-active_task_id: three-topic-hook-test-001
+active_task_id: typhoon-eye-sample-planning-001
 last_chatgpt_instruction_commit: null
-last_codex_response_commit: ee33fbce179d4375de5fc2377e0089046334c869
+last_codex_response_commit: pending_first_commit
 current_branch: experiment/openmontage-pilot
-project_stage: three_topic_hook_test_complete
-blocking_gate: topic_approval
+project_stage: typhoon_eye_keyframe_plan_complete
+blocking_gate: keyframe_generation_approval
 aircraft_window_pilot: paused_no_more_image_generation
-seedance_status: blocked_until_future_keyframe_approval
-topics:
-  underwater_density_current:
-    status: planning_complete
-    priority: 3
-    sample_score: 22
-  finger_wrinkling:
-    status: planning_complete
-    priority: 1
-    sample_score: 28
-  typhoon_eye_calm:
-    status: planning_complete
-    priority: 2
-    sample_score: 26
-recommended_topic: finger_wrinkling
-recommended_sample_duration_seconds: 12
+approved_topic: typhoon_eye_calm
+topic_priority:
+  typhoon_eye_calm: 1
+  underwater_density_current: 2
+  finger_wrinkling: 3
+sample_duration_seconds: 12
+shots:
+  - TE-S01
+  - TE-S02
+  - TE-S03
+keyframes:
+  TE-KF1: planned_not_generated
+  TE-KF2: planned_not_generated
+  TE-KF3: planned_not_generated
+candidate_generation_plan:
+  candidates_per_keyframe: 2
+  total_candidates: 6
+  status: awaiting_approval
+visual_source_boundaries:
+  satellite_data: structure_anchor_only_or_clearly_identified_real_data
+  imagegen: non_event_specific_environment_reconstruction_only
+  controlled_layers: eyewall_airflow_labels_and_disclaimers
+excluded_routes:
+  - seedance
+  - full_video
+  - bulk_image_generation
+  - aircraft_window_restart
+  - parallel_underwater_topic
+  - parallel_finger_topic
 media_generated: false
 next_actor: User
-updated_at: "2026-07-11T21:30:03+08:00"
+updated_at: "2026-07-11T22:03:43+08:00"

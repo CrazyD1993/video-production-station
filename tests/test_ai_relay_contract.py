@@ -40,7 +40,7 @@ class AIRelayContractTests(unittest.TestCase):
     def test_codex_receipt_has_required_sections(self):
         path = RELAY / "CODEX_TO_CHATGPT.md"
         data = front_matter(path)
-        self.assertEqual("three-topic-hook-test-001", data["task_id"])
+        self.assertEqual("typhoon-eye-sample-planning-001", data["task_id"])
         self.assertEqual("completed", data["status"])
         self.assertEqual("experiment/openmontage-pilot", data["branch"])
         for heading in (
@@ -53,10 +53,10 @@ class AIRelayContractTests(unittest.TestCase):
     def test_state_contract(self):
         data = yaml.safe_load((RELAY / "STATE.yaml").read_text(encoding="utf-8"))
         self.assertEqual("experiment/openmontage-pilot", data["current_branch"])
-        self.assertEqual("three_topic_hook_test_complete", data["project_stage"])
-        self.assertEqual("topic_approval", data["blocking_gate"])
+        self.assertEqual("typhoon_eye_keyframe_plan_complete", data["project_stage"])
+        self.assertEqual("keyframe_generation_approval", data["blocking_gate"])
         self.assertEqual("User", data["next_actor"])
-        self.assertEqual("finger_wrinkling", data["recommended_topic"])
+        self.assertEqual("typhoon_eye_calm", data["approved_topic"])
         self.assertEqual("paused_no_more_image_generation", data["aircraft_window_pilot"])
 
     def test_three_topic_hook_packages_exist(self):
@@ -77,8 +77,23 @@ class AIRelayContractTests(unittest.TestCase):
             ):
                 self.assertIn(heading, text)
         report = (folder / "00-三题对比报告.md").read_text(encoding="utf-8")
-        self.assertIn("手指泡水后为什么会起皱", report)
+        self.assertIn("台风眼里为什么会突然平静", report)
         self.assertIn("选题审批门禁", report)
+
+    def test_typhoon_eye_sample_planning_package(self):
+        folder = ROOT / "08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片"
+        director = (folder / "00-导演方案.md").read_text(encoding="utf-8")
+        candidates = (folder / "01-关键帧候选生成方案.md").read_text(encoding="utf-8")
+        for shot in ("TE-S01", "TE-S02", "TE-S03"):
+            self.assertIn(shot, director)
+        for keyframe in ("TE-KF1", "TE-KF2", "TE-KF3"):
+            self.assertIn(keyframe, director)
+        self.assertIn("相对平静", director)
+        self.assertIn("不声称它完整解释台风眼形成", director)
+        self.assertIn("真实卫星资料：结构锚定", candidates)
+        self.assertIn("ImageGen：环境质感重建", candidates)
+        self.assertIn("可控图层：事实结构", candidates)
+        self.assertIn("不得调用Seedance", candidates)
 
     def test_phase4b_manifest_and_contract_exist(self):
         handoff = ROOT / "08_OpenMontage试验/001-飞机舷窗小孔/keyframe-handoff"
@@ -106,6 +121,9 @@ class AIRelayContractTests(unittest.TestCase):
         text = (ROOT / "AGENTS.md").read_text(encoding="utf-8")
         self.assertIn("读取GitHub中继任务", text)
         self.assertIn("00_项目总控/AI协作中继/CHATGPT_TO_CODEX.md", text)
+        self.assertIn("STATE.yaml", text)
+        self.assertIn("archived", text)
+        self.assertIn("当前阶段、当前任务、阻塞门禁、明确排除的路线", text)
 
 
 if __name__ == "__main__":
