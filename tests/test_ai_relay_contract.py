@@ -40,8 +40,8 @@ class AIRelayContractTests(unittest.TestCase):
     def test_codex_receipt_has_required_sections(self):
         path = RELAY / "CODEX_TO_CHATGPT.md"
         data = front_matter(path)
-        self.assertEqual("phase4b-keyframe-method-r2-001", data["task_id"])
-        self.assertEqual("blocked", data["status"])
+        self.assertEqual("three-topic-hook-test-001", data["task_id"])
+        self.assertEqual("completed", data["status"])
         self.assertEqual("experiment/openmontage-pilot", data["branch"])
         for heading in (
             "# 执行摘要", "# 修改文件", "# 实际执行的命令",
@@ -53,13 +53,32 @@ class AIRelayContractTests(unittest.TestCase):
     def test_state_contract(self):
         data = yaml.safe_load((RELAY / "STATE.yaml").read_text(encoding="utf-8"))
         self.assertEqual("experiment/openmontage-pilot", data["current_branch"])
-        self.assertEqual("keyframe_r2_blocked", data["project_stage"])
-        self.assertEqual("compliant_real_window_reference", data["blocking_gate"])
+        self.assertEqual("three_topic_hook_test_complete", data["project_stage"])
+        self.assertEqual("topic_approval", data["blocking_gate"])
         self.assertEqual("User", data["next_actor"])
-        self.assertEqual(6, data["technical_validation"]["passed"])
-        self.assertEqual(0, data["technical_validation"]["failed"])
-        self.assertEqual("rejected", data["round1_candidate_review"]["KF2-01"])
-        self.assertEqual("rejected", data["round1_candidate_review"]["KF3-02"])
+        self.assertEqual("finger_wrinkling", data["recommended_topic"])
+        self.assertEqual("paused_no_more_image_generation", data["aircraft_window_pilot"])
+
+    def test_three_topic_hook_packages_exist(self):
+        folder = ROOT / "08_OpenMontage试验/三题并行钩子测试"
+        expected = {
+            "00-三题对比报告.md",
+            "01-海底巨大下沉水流.md",
+            "02-手指泡水起皱.md",
+            "03-台风眼突然平静.md",
+        }
+        self.assertEqual(expected, {path.name for path in folder.glob("*.md")})
+        for filename in expected - {"00-三题对比报告.md"}:
+            text = (folder / filename).read_text(encoding="utf-8")
+            for heading in (
+                "## 事实核查清单", "## 前5秒钩子", "## 25秒高密度脚本",
+                "## 三个核心镜头合同", "## 图片生成可行性", "## 风险",
+                "## 推荐优先级",
+            ):
+                self.assertIn(heading, text)
+        report = (folder / "00-三题对比报告.md").read_text(encoding="utf-8")
+        self.assertIn("手指泡水后为什么会起皱", report)
+        self.assertIn("选题审批门禁", report)
 
     def test_phase4b_manifest_and_contract_exist(self):
         handoff = ROOT / "08_OpenMontage试验/001-飞机舷窗小孔/keyframe-handoff"
