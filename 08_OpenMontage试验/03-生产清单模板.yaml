@@ -117,8 +117,8 @@ keyframe_status:
   contact_sheet_layout: "2x3"
   required_resolution: {minimum: "720x1280", recommended: "1080x1920"}
   candidates:
-    KF1-01: ready_for_image_candidate_generation
-    KF1-02: ready_for_image_candidate_generation
+    KF1-01: {status: ready_for_image_candidate_generation, reference_image_required: true}
+    KF1-02: {status: ready_for_image_candidate_generation, reference_image_required: true}
     KF2-01: ready_for_image_candidate_generation
     KF2-02: ready_for_image_candidate_generation
     KF3-01: ready_for_image_candidate_generation

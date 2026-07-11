@@ -22,3 +22,11 @@
 - 每次有效新增或修改项目文件后，检查变更、提交并推送到项目 GitHub 私有仓库。
 - 推送前不纳入凭据、Cookie、原始下载视频、未获授权素材或个人信息。
 - GitHub 授权失效时，继续完成本地工作，但在交付中明确提示用户重新授权；授权恢复后优先补推全部待同步提交。
+
+## ChatGPT / Codex GitHub 中继
+
+- 当用户说“读取GitHub中继任务”时，先拉取或读取当前分支最新内容，再读取 `00_项目总控/AI协作中继/CHATGPT_TO_CODEX.md`。
+- 只执行 front matter 中 `status: ready` 且尚未完成的任务，不扩大范围。
+- 完成后保留任务正文，将任务状态改为 `completed` 并写入完成提交 SHA；覆盖更新 `CODEX_TO_CHATGPT.md` 和 `STATE.yaml`。
+- 测试和检查完成后，提交并推送 `experiment/openmontage-pilot`；聊天窗口只简短报告完成状态、回执路径和提交 SHA。
+- 中继文档和 GitHub 不得包含密钥、Cookie、账号密码、参考视频、候选图片或生成视频。

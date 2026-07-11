@@ -48,6 +48,19 @@ class Phase3SemanticValidationTests(unittest.TestCase):
         errors = self.validator.validate_keyframe_prompts(ROOT)
         self.assertEqual([], errors)
 
+    def test_kf1_requires_reference_image_without_structure_disclaimer(self):
+        prompt_dir = ROOT / "08_OpenMontage试验/001-飞机舷窗小孔/keyframe-handoff/prompts"
+        for name in ("KF1-01.yaml", "KF1-02.yaml"):
+            data = yaml.safe_load((prompt_dir / name).read_text(encoding="utf-8"))
+            self.assertIs(True, data.get("reference_image_required"), name)
+            self.assertNotIn("required_disclaimer", data, name)
+
+    def test_kf2_and_kf3_keep_structure_disclaimer(self):
+        prompt_dir = ROOT / "08_OpenMontage试验/001-飞机舷窗小孔/keyframe-handoff/prompts"
+        for name in ("KF2-01.yaml", "KF2-02.yaml", "KF3-01.yaml", "KF3-02.yaml"):
+            data = yaml.safe_load((prompt_dir / name).read_text(encoding="utf-8"))
+            self.assertEqual(self.validator.STRUCTURE_DISCLAIMER, data.get("required_disclaimer"), name)
+
     def test_rejects_stale_reference_placeholder(self):
         errors = self.validator.validate_document_semantics(
             {"prompt.yaml": "典型结构示意，不对应具体机型\n待真实拆解后填写"}

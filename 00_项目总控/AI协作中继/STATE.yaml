@@ -1,0 +1,8 @@
+active_task_id: null
+last_chatgpt_instruction_commit: null
+last_codex_response_commit: null
+current_branch: experiment/openmontage-pilot
+project_stage: ready_for_image_candidate_generation
+blocking_gate: actual_image_contact_sheet
+next_actor: ChatGPT
+updated_at: "2026-07-11T15:33:22+08:00"

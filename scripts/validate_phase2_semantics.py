@@ -116,8 +116,24 @@ def validate_keyframe_prompts(root: Path) -> list[str]:
             errors.append(f"{path.name}: reference_rule 未填写真实拆解规律")
         if data.get("aspect_ratio") != "9:16":
             errors.append(f"{path.name}: aspect_ratio 必须为 9:16")
-        if data.get("required_disclaimer") != STRUCTURE_DISCLAIMER:
-            errors.append(f"{path.name}: 缺少统一结构示意标记")
+        if path.name.startswith("KF1-"):
+            if data.get("reference_image_required") is not True:
+                errors.append(f"{path.name}: 真实微距候选必须设置 reference_image_required: true")
+            if "required_disclaimer" in data:
+                errors.append(f"{path.name}: 真实舷窗微距不应强制叠加结构示意标记")
+            rules = data.get("reference_image_rules") or []
+            required_rules = (
+                "必须使用真实客机舷窗小孔图片作为视觉锚点",
+                "不允许只凭文字猜测小孔孔位",
+                "参考图片只用于结构和位置控制",
+                "不提交未授权参考图",
+                "若没有合规参考图，则保持阻塞，不生成KF1候选",
+            )
+            for required_rule in required_rules:
+                if required_rule not in rules:
+                    errors.append(f"{path.name}: 缺少真实参考图规则 {required_rule}")
+        elif data.get("required_disclaimer") != STRUCTURE_DISCLAIMER:
+            errors.append(f"{path.name}: 涉及剖面或承压层时必须保留结构示意标记")
         text = path.read_text(encoding="utf-8")
         for expression in BANNED_ACTIVE_BRANCHES:
             if expression in text:

@@ -2,6 +2,13 @@ shot_id: V01
 candidate_id: KF1-02
 status: ready_for_image_candidate_generation
 aspect_ratio: "9:16"
+reference_image_required: true
+reference_image_rules:
+  - "必须使用真实客机舷窗小孔图片作为视觉锚点"
+  - "不允许只凭文字猜测小孔孔位"
+  - "参考图片只用于结构和位置控制"
+  - "不提交未授权参考图"
+  - "若没有合规参考图，则保持阻塞，不生成KF1候选"
 purpose: "以第一人称窗边观察建立生活代入，同时保证小孔一眼可辨"
 reference_rule: "拆解显示前3秒必须同时完成对象和行为异常；用真实乘机环境增加旁白之外的信息，不复制参考演示。"
 composition: "第一人称靠窗视角，舷窗占竖版画面主体，局部构图向小孔靠近，云层只作环境锚点。"
@@ -12,6 +19,5 @@ material: "真实窗框、透明件折射和轻微机舱使用痕迹"
 prompt_zh: "竖版9:16，第一人称坐在商业客机窗边的真实观察摄影，舷窗和小孔区域占画面约70%，小孔被自然窄光照亮且在手机缩略图中仍明显，窗外云层和少量机翼提供真实乘机环境，指尖从下方指向但不触碰，透视自然，无文字无品牌。"
 prompt_en: "Vertical 9:16 first-person observational photograph from a commercial-aircraft window seat. The passenger window and hole region occupy about 70 percent of the frame; a natural shaft of light makes the small hole clearly visible even at thumbnail size. Clouds and only a small wing area establish the real flight environment. An anatomically correct fingertip points from below without touching. Natural perspective, no text or branding."
 negative: ["小孔不可见", "过多窗外风景", "旅游广告感", "超广角畸变", "畸形机翼", "畸形手指", "触碰", "文字", "Logo"]
-required_disclaimer: "典型结构示意，不对应具体机型"
 factual_risk: "只表现发现动作，不从外观推断具体机型或层数，不表达危险后果。"
 recommended_i2v_motion: "3秒轻微座椅呼吸感和云层慢移，指尖进入后停住。"
