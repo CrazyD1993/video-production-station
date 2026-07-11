@@ -2,7 +2,7 @@
 task_id: phase4-keyframe-contact-sheet-review-001
 status: partially_completed
 branch: experiment/openmontage-pilot
-commit_sha: pending_first_commit
+commit_sha: 1a840de99dc4f5663ce8b33c7d7fc9703742b73c
 completed_at: "2026-07-11T19:27:23+08:00"
 ---
 
