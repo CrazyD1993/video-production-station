@@ -29,6 +29,7 @@ cookies*.txt
 node_modules/
 **/.remotion/
 **/output/frame-*.png
+**/output/**/frame-*.png
 **/public/*.mp4
 **/public/*.wav
 !07_V2导演系统/003-台风窗户贴胶带-V2/prototype-0-14/output/r2/
