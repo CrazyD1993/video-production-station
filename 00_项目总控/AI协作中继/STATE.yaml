@@ -41,7 +41,7 @@ satellite_anchor:
   committed_to_git: false
 bavi_status_snapshot:
   authority: Central_Meteorological_Observatory
-  observed_at: "2026-07-11T22:06:00+08:00"
+  observed_at: "2026-07-11T23:08:00+08:00"
   intensity: typhoon
   landfall_confirmed: false
   publication_version: pre_landfall_pending_recheck
