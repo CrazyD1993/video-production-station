@@ -2,7 +2,7 @@
 task_id: typhoon-eye-sample-planning-001
 status: completed
 branch: experiment/openmontage-pilot
-commit_sha: pending_first_commit
+commit_sha: af24b846a735e115951d999d0b6619ac0f8892aa
 completed_at: "2026-07-11T22:03:43+08:00"
 ---
 
