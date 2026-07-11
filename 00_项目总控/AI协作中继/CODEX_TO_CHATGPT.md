@@ -2,7 +2,7 @@
 task_id: typhoon-eye-seedance-s03-api-001
 status: partially_completed
 branch: experiment/openmontage-pilot
-commit_sha: pending
+commit_sha: 32ef2cec8b08943d4632437156619bbc0359a42e
 completed_at: "2026-07-12T02:36:14+08:00"
 ---
 
