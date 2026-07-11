@@ -1,19 +1,27 @@
-active_task_id: phase4-keyframes-001
+active_task_id: phase4-keyframe-contact-sheet-review-001
 last_chatgpt_instruction_commit: null
-last_codex_response_commit: 711a3cb7463bdce2dfedcdc5aa3145a2c99c7be1
+last_codex_response_commit: pending_first_commit
 current_branch: experiment/openmontage-pilot
-project_stage: keyframe_candidate_generation_blocked
-blocking_gate: compliant_reference_image_and_manual_generation
-blocking_reasons:
-  - "OpenMontage image_generation: 0/11 configured"
-  - "KF1缺少合规真实客机舷窗小孔参考图"
-candidate_generation:
-  KF1-01: blocked_missing_compliant_reference_image
-  KF1-02: blocked_missing_compliant_reference_image
-  KF2-01: pending_manual_chatgpt_image_generation
-  KF2-02: pending_manual_chatgpt_image_generation
-  KF3-01: pending_manual_chatgpt_image_generation
-  KF3-02: pending_manual_chatgpt_image_generation
-contact_sheet: not_created
-next_actor: ChatGPT
-updated_at: "2026-07-11T15:51:59+08:00"
+project_stage: keyframe_contact_sheet_ready
+blocking_gate: actual_image_contact_sheet_approval
+candidate_review:
+  KF1-01: retain_recommended
+  KF1-02: retain_with_conditions
+  KF2-01: reject_regenerate
+  KF2-02: retain_with_conditions
+  KF3-01: retain_with_conditions
+  KF3-02: reject_regenerate
+contact_sheet:
+  status: created_and_visually_reviewed
+  path: 08_OpenMontage试验/001-飞机舷窗小孔/keyframe-handoff/contact-sheet/keyframes.jpg
+  layout: 2_columns_x_3_rows
+technical_validation:
+  image_count: 6
+  passed: 6
+  failed: 0
+  dimensions: 720x1280
+  format: PNG
+  aspect_ratio: "9:16"
+seedance_status: blocked_until_keyframe_approval
+next_actor: User
+updated_at: "2026-07-11T19:27:23+08:00"

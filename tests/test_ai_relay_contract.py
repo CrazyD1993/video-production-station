@@ -40,8 +40,8 @@ class AIRelayContractTests(unittest.TestCase):
     def test_codex_receipt_has_required_sections(self):
         path = RELAY / "CODEX_TO_CHATGPT.md"
         data = front_matter(path)
-        self.assertEqual("phase4-keyframes-001", data["task_id"])
-        self.assertEqual("blocked", data["status"])
+        self.assertEqual("phase4-keyframe-contact-sheet-review-001", data["task_id"])
+        self.assertEqual("partially_completed", data["status"])
         self.assertEqual("experiment/openmontage-pilot", data["branch"])
         for heading in (
             "# 执行摘要", "# 修改文件", "# 实际执行的命令",
@@ -53,9 +53,13 @@ class AIRelayContractTests(unittest.TestCase):
     def test_state_contract(self):
         data = yaml.safe_load((RELAY / "STATE.yaml").read_text(encoding="utf-8"))
         self.assertEqual("experiment/openmontage-pilot", data["current_branch"])
-        self.assertEqual("keyframe_candidate_generation_blocked", data["project_stage"])
-        self.assertEqual("compliant_reference_image_and_manual_generation", data["blocking_gate"])
-        self.assertEqual("ChatGPT", data["next_actor"])
+        self.assertEqual("keyframe_contact_sheet_ready", data["project_stage"])
+        self.assertEqual("actual_image_contact_sheet_approval", data["blocking_gate"])
+        self.assertEqual("User", data["next_actor"])
+        self.assertEqual(6, data["technical_validation"]["passed"])
+        self.assertEqual(0, data["technical_validation"]["failed"])
+        self.assertEqual("reject_regenerate", data["candidate_review"]["KF2-01"])
+        self.assertEqual("reject_regenerate", data["candidate_review"]["KF3-02"])
 
     def test_phase4_manual_generation_package(self):
         path = (
