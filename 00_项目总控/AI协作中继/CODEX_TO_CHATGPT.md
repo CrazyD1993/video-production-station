@@ -1,72 +1,74 @@
 ---
-task_id: typhoon-eye-25s-packaged-B-001
-status: partially_completed
+task_id: typhoon-eye-25s-annotation-v2-001
+status: completed
 branch: experiment/openmontage-pilot
-commit_sha: null
-completed_at: "2026-07-12T11:01:56+08:00"
+commit_sha: 1d1f084eda933ea8f718f4b53ae3ae565ee9130e
+completed_at: "2026-07-12T14:29:09+08:00"
 ---
 
 # 执行摘要
 
-已解除12秒包装A/B配音选择门禁，正式选择B版火山Seed-TTS 2.0自然女声。使用三段已批准Seedance动态素材和独立可控结构图层完成25秒完整成片，没有重新生成Seedance素材。成片已实际抽帧、转写、解码和参数检查，停在最终人工审核门禁，不自动发布。
+已在不重生成Seedance、不改旁白文本、不重做配音、不大改BGM和不扩展镜头的前提下，完成25秒B版V2结构图层对齐和统一标注系统优化。V2逐包复用V1音轨，输出新的本地MP4、前后对比图、4张关键帧、联系表、一页样式说明图及可复用标注规范。当前停在V2最终人工审核门禁。
 
 # 修改文件
 
-- `08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/output/typhoon-eye-25s-packaged-B.mp4` — 本地新增、Git忽略 — 25秒完整包装成片。
-- `08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/06-25秒完整成片记录.md` — 新增 — 记录时间轴、配音、字幕、图层、混音、技术验证和门禁。
-- `08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/02-官方资料与热点状态.md` — 修改 — 增加导出前巴威最新权威状态复核和成片时效处理。
-- `08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/review-package/typhoon-eye-25s-contact-sheet.jpg` — 新增 — 25秒成片11帧GitHub静态审核联系表。
-- `08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/review-package/typhoon-eye-25s-ffprobe.json` — 新增 — 机器可读技术参数和本地MP4 SHA256。
-- `08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/review-package/README.md` — 修改 — 增加25秒审核包说明。
-- `.gitignore` — 修改 — 只为25秒联系表和ffprobe记录增加例外；MP4、WAV、中间帧仍忽略。
-- `08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/video-handoff/status.yaml` — 修改 — selected_voice改为B并记录25秒成片状态和最终审核门禁。
-- `00_项目总控/AI协作中继/STATE.yaml` — 修改 — 项目阶段改为25秒成片已就绪，门禁改为最终人工审核。
-- `当前工作台.md` — 修改 — 删除等待A/B上传状态，更新为25秒最终人工审核。
-- `tests/test_ai_relay_contract.py` — 修改 — 验证B版选择、25秒规格、审核包与新门禁。
-- `00_项目总控/AI协作中继/CODEX_TO_CHATGPT.md` — 覆盖修改 — 写入本轮完整回执。
+- `output/typhoon-eye-25s-packaged-B-v2.mp4` — 本地新增、Git忽略 — 结构标注优化后的25秒B版V2。
+- `07-25秒V2结构标注修正记录.md` — 新增 — 记录对齐修复、标注系统、技术参数和审核门禁。
+- `08_OpenMontage试验/共享组件/annotation-style-guide.md` — 新增 — 可复用结构标注样式规范。
+- `08_OpenMontage试验/共享组件/annotation-tokens.yaml` — 新增 — 字体、颜色、尺寸、圆角、箭头、引线和动效Token。
+- `review-package/typhoon-eye-25s-v2-before-after.jpg` — 新增 — 4.5/9/16/21秒V1与V2对比。
+- `review-package/typhoon-eye-25s-v2-frame-04.5s.jpg` — 新增 — 眼墙与下沉分组关键帧。
+- `review-package/typhoon-eye-25s-v2-frame-09.0s.jpg` — 新增 — 中央缓慢下沉关键帧。
+- `review-package/typhoon-eye-25s-v2-frame-16.0s.jpg` — 新增 — 相对平静外置标签关键帧。
+- `review-package/typhoon-eye-25s-v2-frame-21.0s.jpg` — 新增 — 另一侧眼墙统一标签关键帧。
+- `review-package/typhoon-eye-25s-v2-contact-sheet.jpg` — 新增 — 四帧V2联系表。
+- `review-package/annotation-style-overview.jpg` — 新增 — 一页标注样式说明图。
+- `review-package/typhoon-eye-25s-v2-ffprobe.json` — 新增 — V2技术参数和音轨一致性记录。
+- `review-package/README.md` — 修改 — 增加V2审核包索引和SHA256。
+- `.gitignore` — 修改 — 只为V2静态审核图和JSON增加例外；MP4及中间素材继续忽略。
+- `STATE.yaml`、`video-handoff/status.yaml`、`当前工作台.md` — 修改 — 更新为V2已就绪和最终人工审核门禁。
+- `tests/test_ai_relay_contract.py` — 修改 — 验证V2状态、审核包、音轨不变和可复用标注系统。
+- `CODEX_TO_CHATGPT.md` — 覆盖修改 — 写入本轮完整回执。
 
 # 实际执行的命令
 
-- 读取项目工作台、中继状态、12秒包装记录、台风眼事实核查和现有测试。
-- 使用agent-reach环境检查和中央气象台官方页面核对巴威导出前最新状态。
-- 调用已配置的火山Seed-TTS 2.0官方自然女声生成5句旁白；密钥内容未输出。
-- 使用faster-whisper small复核旁白和最终混音成片的核心文字。
-- 使用FFmpeg裁切、缩放和重排TE-S01/TE-S02/TE-S03；没有调用Seedance。
-- 使用本地SVG/Sharp生成透明可控结构图层和11条单行字幕图层。
-- 使用FFmpeg生成150–260Hz中低频纹理、空气运动质感、侧链压缩和最终AAC混音。
-- 使用ffprobe、完整解码、ebur128、silencedetect、SHA256、抽帧联系表和标签交接帧检查。
-- 执行项目单元测试、时间轴校验、生产合同校验、YAML/JSON解析和 `git diff --check`。
+- 读取当前工作台、中继状态、V1记录、现有结构SVG和本地渲染脚本。
+- 使用SVG重建眼墙、下沉、相对平静和另一侧眼墙统一标签系统。
+- 使用Sharp将SVG渲染为真正透明的1080×1920图层，并验证Alpha通道。
+- 使用FFmpeg只重渲染4.05—20.20秒结构段和S03标签层；Seedance底图不变。
+- 使用FFmpeg逐包复制V1 AAC音轨到V2，没有TTS调用和混音步骤。
+- 抽取4.5、9、16、21、21.40、21.60、21.70秒画面并实际查看。
+- 使用Sharp生成前后对比图、四帧联系表和一页样式说明图。
+- 使用ffprobe、完整解码、音轨SHA256、MP4 SHA256、YAML/JSON解析、项目测试和 `git diff --check` 验证。
 
 # 测试与验证
 
-- 输出规格：1080×1920，H.264 High，yuv420p，30fps CFR，750帧，25.000秒。
-- 音频规格：AAC LC，48kHz，双声道；综合响度约-15.6 LUFS，真峰值约-1.9 dBTP。
-- 旁白：5句均使用B版火山Seed-TTS 2.0自然女声原速；没有使用A版克隆音色，结尾余量约0.52秒。
-- 动态素材：继续使用已批准的TE-S01、TE-S02、TE-S03；没有新增付费生成。
-- 字幕：11/11为单句单行；白色为主、关键词轻黄；无弹跳、逐字飞入或夸张动画。
-- 结构标签：S02“眼墙/缓慢下沉”放大约12%；S03右上标签在21.45秒结束，底部字幕在21.65秒开始。
-- 视觉：已实际查看11帧联系表和21.40/21.60/21.70秒交接帧；修复了首轮结构PNG的伪透明白底后重新渲染并复查。
-- 时效：成片没有巴威实时开头，没有沿用过期“逼近/即将登陆/已经登陆”状态。
-- MP4 SHA256：`3645d91c14b8ca928c7dd4836bd7813519a9863f36ce9b25eb894a5a5421d46c`。
-- 联系表SHA256：`20f0cc4827a1d37b22838e572b7dd47a3ee05f56c750f5f59ad5084edd285ad9`。
-- 项目单元测试：38/38通过；时间轴校验、Phase 3生产合同校验、YAML/JSON解析、完整解码和 `git diff --check` 均通过。
+- V2规格：1080×1920、H.264 High、30fps CFR、750帧、25.000秒、AAC 48kHz双声道。
+- V2 MP4 SHA256：`9adabff7816c9ea90294d338373817f4a47102fd23279bdee184e7584b9d9866`。
+- V1/V2 AAC音频流SHA256均为 `afb5122c96211519d0dd02d9eaef81b1dccec830db626cf239217316c1eae263`，确认旁白、配音和BGM完全复用。
+- 4.5秒：左右眼墙标签与蓝色上升箭头成组，中央下沉标签与黄色箭头成组。
+- 9秒：只保留中央缓慢下沉机制，标签不进入底部字幕安全区。
+- 16秒：“相对平静”移出风眼中心，短引线、虚线圆、中心点和橙色箭头层级清楚，箭头终点不落在文字上。
+- 21秒：“另一侧眼墙”使用统一蓝色标签；21.55秒前完全淡出，21.65秒底部字幕才出现。
+- 统一标注使用PingFang SC Medium、38px结构标签、28px身份说明、统一16px圆角与语义色强调条。
+- 所有结构图层淡入淡出约0.30秒；无弹跳、发光、闪烁或HUD效果。
+- 前后对比图、4张关键帧、联系表和样式说明图均已实际查看。
+- 项目单元测试39/39通过；时间轴校验、Phase 3生产合同校验、YAML/JSON解析、V2完整解码和 `git diff --check` 均通过。
 
 # 与任务要求的差异
 
-- 没有调用新的720p Seedance：现有三段已批准动态素材能够覆盖25秒逻辑，新增生成会增加成本和气象结构漂移风险。
-- 25秒版使用5个主时间段而非新增更多Seedance镜头；通过同一素材的不同稳定区间、构图和可控图层表达6个逻辑点。
-- 当前FFmpeg构建不含libass/drawtext，字幕与标签改为本地SVG/Sharp透明图层后由FFmpeg按同一时间轴烧录。
-- 巴威最新状态只记录在文字资料中，成片采用常青科普钩子，不加入时效新闻文案。
-- MP4依照要求仅保存在本地；GitHub审核包只含联系表、技术参数和版本记录。
+- 无内容层差异：没有重生成Seedance、修改旁白、重做配音、大改BGM或新增镜头。
+- 当前FFmpeg不含libass/drawtext，继续使用透明SVG/Sharp图层实现标签；视觉结果和时间轴符合要求。
+- V2 MP4按项目规则只保存在本地，不上传GitHub；GitHub审核包只保存静态图、技术参数和版本记录。
 
 # 当前阻塞点
 
-25秒成片技术制作已完成。Git暂存需要受保护索引写入权限，但本次权限审批因Codex用量限制被系统拒绝；因此尚未提交和推送，暂无本轮GitHub提交SHA。
+等待用户实际审核本地 `typhoon-eye-25s-packaged-B-v2.mp4`。技术制作无阻塞。
 
 # 需要ChatGPT判断的问题
 
-请对25秒成片做最终人工审核，重点判断前4秒停留感、8.5–20.2秒结构解释是否清楚、S03危险回收是否有效，以及手机外放下旁白是否始终清楚。
+请重点审核4.5秒眼墙/下沉分组、9秒机制清晰度、16秒中心层级和21秒标签淡出是否达到完成版科普视频标准。
 
 # 完整回答
 
-25秒B版完整成片已生成并完成技术检查。文件位于 `08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/output/typhoon-eye-25s-packaged-B.mp4`，未上传GitHub。审核联系表和ffprobe参数已纳入GitHub审核包。当前停在最终人工审核门禁，不自动发布。
+对齐修复已完成，统一标注系统优化已完成，并已沉淀为可复用样式规范与Token。V2成片仅修改结构图层，V1/V2音轨完全一致。当前停在V2最终人工审核门禁，不自动发布。

@@ -123,9 +123,30 @@ full_video_25s:
   ending_voice_margin_seconds: 0.52
   contact_sheet: 08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/review-package/typhoon-eye-25s-contact-sheet.jpg
   ffprobe_record: 08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/review-package/typhoon-eye-25s-ffprobe.json
-blocking_gate: user_final_review_25s
+full_video_25s_v2:
+  status: created_and_verified
+  revision_scope: structure_alignment_and_annotation_system_only
+  path: 08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/output/typhoon-eye-25s-packaged-B-v2.mp4
+  upload_to_github: false
+  source_seedance_regenerated: false
+  narration_text_changed: false
+  voice_regenerated: false
+  bgm_remixed: false
+  new_shots_added: false
+  sha256: 9adabff7816c9ea90294d338373817f4a47102fd23279bdee184e7584b9d9866
+  audio_stream_sha256: afb5122c96211519d0dd02d9eaef81b1dccec830db626cf239217316c1eae263
+  audio_stream_matches_v1: true
+  width: 1080
+  height: 1920
+  fps: 30
+  fps_mode: cfr
+  frames: 750
+  duration_seconds: 25.0
+  comparison_sheet: 08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/review-package/typhoon-eye-25s-v2-before-after.jpg
+  contact_sheet: 08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/review-package/typhoon-eye-25s-v2-contact-sheet.jpg
+  style_overview: 08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/review-package/annotation-style-overview.jpg
+blocking_gate: user_final_review_25s_v2
 git_sync:
-  status: local_update_ready_push_blocked_by_permission_quota
-  last_published_commit: 2109a84f11c49a791ee3a2580a961405d5dd1c59
-  block_reason: protected_git_index_write_approval_rejected_by_codex_usage_limit
+  status: local_v2_update_ready_for_commit
+  last_published_commit: 1d1f084eda933ea8f718f4b53ae3ae565ee9130e
 next_actor: User

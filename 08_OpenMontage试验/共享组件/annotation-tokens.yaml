@@ -1,0 +1,58 @@
+version: 1
+canvas: 1080x1920
+font_stack:
+  primary: PingFang SC
+  fallback:
+    - Noto Sans SC
+    - Source Han Sans SC
+    - sans-serif
+type_scale:
+  subtitle_px: 60
+  structure_label_px: 38
+  identity_note_px: 28
+font_weight:
+  subtitle: 600
+  structure_label: 500
+  identity_note: 500
+colors:
+  eyewall_up: "#6FD7F2"
+  descending_center: "#F2C46D"
+  core_focus: "#F2994A"
+  text_neutral: "#F7FAFC"
+  label_surface: "rgba(10,20,31,0.72)"
+  identity_surface: "rgba(10,20,31,0.56)"
+  leader_neutral: "#C9D2DC"
+label:
+  height_px: 64
+  padding_x_px: 18
+  padding_y_px: 12
+  radius_px: 16
+  accent_width_px: 5
+identity_note:
+  height_px: 44
+  padding_x_px: 16
+  radius_px: 12
+arrow:
+  stroke_width_px: 9
+  opacity: 0.86
+  linecap: round
+leader:
+  stroke_width_px: 2.5
+  minimum_length_px: 28
+dashed_circle:
+  stroke_width_px: 5
+  dash_px: 16
+  gap_px: 14
+motion:
+  fade_in_seconds: 0.3
+  fade_out_seconds: 0.3
+  optional_rise_px: 12
+  up_flow_px_per_second: 135
+  down_flow_px_per_second: 70
+forbidden:
+  - glow
+  - blinking
+  - bounce
+  - variety_show_typography
+  - marketing_sticker_style
+  - hud_scanning_effect

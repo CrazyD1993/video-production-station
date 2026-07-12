@@ -1,0 +1,31 @@
+{
+  "artifact": "typhoon-eye-25s-packaged-B-v2.mp4",
+  "upload_to_github": false,
+  "sha256": "9adabff7816c9ea90294d338373817f4a47102fd23279bdee184e7584b9d9866",
+  "audio_stream_sha256": "afb5122c96211519d0dd02d9eaef81b1dccec830db626cf239217316c1eae263",
+  "audio_stream_matches_v1": true,
+  "video": {
+    "codec": "h264",
+    "profile": "High",
+    "width": 1080,
+    "height": 1920,
+    "pixel_format": "yuv420p",
+    "fps": "30/1",
+    "fps_mode": "cfr",
+    "frames": 750,
+    "bit_rate": 13123438
+  },
+  "audio": {
+    "codec": "aac",
+    "profile": "LC",
+    "sample_rate_hz": 48000,
+    "channels": 2,
+    "channel_layout": "stereo",
+    "bit_rate": 191338
+  },
+  "format": {
+    "duration_seconds": 25.0,
+    "size_bytes": 41638053,
+    "bit_rate": 13324176
+  }
+}

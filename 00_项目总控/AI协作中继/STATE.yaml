@@ -1,9 +1,9 @@
-active_task_id: typhoon-eye-25s-packaged-B-001
+active_task_id: typhoon-eye-25s-annotation-v2-001
 last_chatgpt_instruction_commit: null
 last_codex_response_commit: abae9a89ea271b09541d81037638be624d2985d5
 current_branch: experiment/openmontage-pilot
-project_stage: full_video_25s_ready_for_final_review
-blocking_gate: user_final_review_25s
+project_stage: full_video_25s_annotation_v2_ready_for_final_review
+blocking_gate: user_final_review_25s_v2
 aircraft_window_pilot: paused_no_more_image_generation
 approved_topic: typhoon_eye_calm
 production_mode: bavi_hotspot_fast_track
@@ -109,10 +109,37 @@ full_video_25s:
   ending_voice_margin_seconds: 0.52
   contact_sheet: 08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/review-package/typhoon-eye-25s-contact-sheet.jpg
   ffprobe_record: 08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/review-package/typhoon-eye-25s-ffprobe.json
+full_video_25s_v2:
+  status: created_and_verified
+  revision_scope: structure_alignment_and_annotation_system_only
+  path: 08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/output/typhoon-eye-25s-packaged-B-v2.mp4
+  upload_to_github: false
+  source_seedance_regenerated: false
+  narration_text_changed: false
+  voice_regenerated: false
+  bgm_remixed: false
+  new_shots_added: false
+  sha256: 9adabff7816c9ea90294d338373817f4a47102fd23279bdee184e7584b9d9866
+  audio_stream_sha256: afb5122c96211519d0dd02d9eaef81b1dccec830db626cf239217316c1eae263
+  audio_stream_matches_v1: true
+  width: 1080
+  height: 1920
+  fps: 30
+  fps_mode: cfr
+  frames: 750
+  duration_seconds: 25.0
+  video_codec: h264
+  audio_codec: aac
+  audio_sample_rate_hz: 48000
+  audio_channels: 2
+  comparison_sheet: 08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/review-package/typhoon-eye-25s-v2-before-after.jpg
+  contact_sheet: 08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/review-package/typhoon-eye-25s-v2-contact-sheet.jpg
+  style_overview: 08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/review-package/annotation-style-overview.jpg
+  reusable_style_guide: 08_OpenMontage试验/共享组件/annotation-style-guide.md
+  reusable_tokens: 08_OpenMontage试验/共享组件/annotation-tokens.yaml
 github_review_package:
-  status: local_update_ready_push_blocked_by_permission_quota
-  commit: 2109a84f11c49a791ee3a2580a961405d5dd1c59
-  pending_update: typhoon_eye_25s_review_package
-  block_reason: protected_git_index_write_approval_rejected_by_codex_usage_limit
+  status: local_v2_update_ready_for_commit
+  commit: 1d1f084eda933ea8f718f4b53ae3ae565ee9130e
+  pending_update: typhoon_eye_25s_annotation_v2_review_package
 next_actor: User
-updated_at: "2026-07-12T11:01:56+08:00"
+updated_at: "2026-07-12T11:50:00+08:00"

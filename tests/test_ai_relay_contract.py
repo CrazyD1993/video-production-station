@@ -40,8 +40,8 @@ class AIRelayContractTests(unittest.TestCase):
     def test_codex_receipt_has_required_sections(self):
         path = RELAY / "CODEX_TO_CHATGPT.md"
         data = front_matter(path)
-        self.assertEqual("typhoon-eye-25s-packaged-B-001", data["task_id"])
-        self.assertEqual("partially_completed", data["status"])
+        self.assertEqual("typhoon-eye-25s-annotation-v2-001", data["task_id"])
+        self.assertEqual("completed", data["status"])
         self.assertEqual("experiment/openmontage-pilot", data["branch"])
         for heading in (
             "# 执行摘要", "# 修改文件", "# 实际执行的命令",
@@ -53,8 +53,8 @@ class AIRelayContractTests(unittest.TestCase):
     def test_state_contract(self):
         data = yaml.safe_load((RELAY / "STATE.yaml").read_text(encoding="utf-8"))
         self.assertEqual("experiment/openmontage-pilot", data["current_branch"])
-        self.assertEqual("full_video_25s_ready_for_final_review", data["project_stage"])
-        self.assertEqual("user_final_review_25s", data["blocking_gate"])
+        self.assertEqual("full_video_25s_annotation_v2_ready_for_final_review", data["project_stage"])
+        self.assertEqual("user_final_review_25s_v2", data["blocking_gate"])
         self.assertEqual("User", data["next_actor"])
         self.assertEqual("typhoon_eye_calm", data["approved_topic"])
         self.assertEqual("paused_no_more_image_generation", data["aircraft_window_pilot"])
@@ -83,6 +83,17 @@ class AIRelayContractTests(unittest.TestCase):
         self.assertEqual("cfr", full["fps_mode"])
         self.assertFalse(full["upload_to_github"])
         self.assertEqual(64, len(full["sha256"]))
+        v2 = data["full_video_25s_v2"]
+        self.assertEqual("created_and_verified", v2["status"])
+        self.assertEqual("structure_alignment_and_annotation_system_only", v2["revision_scope"])
+        self.assertTrue(v2["audio_stream_matches_v1"])
+        self.assertFalse(v2["source_seedance_regenerated"])
+        self.assertFalse(v2["narration_text_changed"])
+        self.assertFalse(v2["voice_regenerated"])
+        self.assertFalse(v2["bgm_remixed"])
+        self.assertFalse(v2["new_shots_added"])
+        self.assertEqual(750, v2["frames"])
+        self.assertEqual(25.0, v2["duration_seconds"])
 
     def test_three_topic_hook_packages_exist(self):
         folder = ROOT / "08_OpenMontage试验/三题并行钩子测试"
@@ -151,6 +162,14 @@ class AIRelayContractTests(unittest.TestCase):
                 "typhoon-eye-packaged-contact-sheet.jpg",
                 "typhoon-eye-25s-contact-sheet.jpg",
                 "typhoon-eye-25s-ffprobe.json",
+                "typhoon-eye-25s-v2-before-after.jpg",
+                "typhoon-eye-25s-v2-contact-sheet.jpg",
+                "typhoon-eye-25s-v2-frame-04.5s.jpg",
+                "typhoon-eye-25s-v2-frame-09.0s.jpg",
+                "typhoon-eye-25s-v2-frame-16.0s.jpg",
+                "typhoon-eye-25s-v2-frame-21.0s.jpg",
+                "annotation-style-overview.jpg",
+                "typhoon-eye-25s-v2-ffprobe.json",
             },
             {path.name for path in folder.iterdir() if path.is_file()},
         )
@@ -161,12 +180,17 @@ class AIRelayContractTests(unittest.TestCase):
         probe = yaml.safe_load((folder / "typhoon-eye-25s-ffprobe.json").read_text(encoding="utf-8"))
         self.assertEqual(750, probe["video"]["frames"])
         self.assertEqual(25.0, probe["format"]["duration_seconds"])
+        v2_probe = yaml.safe_load(
+            (folder / "typhoon-eye-25s-v2-ffprobe.json").read_text(encoding="utf-8")
+        )
+        self.assertTrue(v2_probe["audio_stream_matches_v1"])
+        self.assertEqual(750, v2_probe["video"]["frames"])
 
     def test_seedance_manual_handoff_contract(self):
         folder = ROOT / "08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/video-handoff"
         status = yaml.safe_load((folder / "status.yaml").read_text(encoding="utf-8"))
         self.assertTrue(status["seedance_prompts_ready"])
-        self.assertEqual("user_final_review_25s", status["blocking_gate"])
+        self.assertEqual("user_final_review_25s_v2", status["blocking_gate"])
         self.assertEqual("received_and_visually_reviewed", status["incoming_video_status"]["TE-S01"])
         self.assertEqual("received_and_visually_reviewed", status["incoming_video_status"]["TE-S02"])
         self.assertEqual("generated_and_visually_reviewed", status["incoming_video_status"]["TE-S03"])
@@ -198,6 +222,10 @@ class AIRelayContractTests(unittest.TestCase):
         self.assertEqual(750, full["frames"])
         self.assertEqual(25.0, full["duration_seconds"])
         self.assertFalse(full["upload_to_github"])
+        v2 = status["full_video_25s_v2"]
+        self.assertEqual("created_and_verified", v2["status"])
+        self.assertTrue(v2["audio_stream_matches_v1"])
+        self.assertFalse(v2["source_seedance_regenerated"])
         expected = {
             "TE-S01-seedance-v1.mp4",
             "TE-S02-seedance-v1.mp4",
@@ -211,6 +239,16 @@ class AIRelayContractTests(unittest.TestCase):
         te_s02 = yaml.safe_load((folder / "prompts/TE-S02.yaml").read_text(encoding="utf-8"))
         self.assertIn("箭头、文字或标签", te_s02["negative_prompt"])
         self.assertIn("TE-KF2-A.svg", te_s02["controlled_overlay_source"])
+
+    def test_reusable_annotation_style_system(self):
+        folder = ROOT / "08_OpenMontage试验/共享组件"
+        guide = (folder / "annotation-style-guide.md").read_text(encoding="utf-8")
+        tokens = yaml.safe_load((folder / "annotation-tokens.yaml").read_text(encoding="utf-8"))
+        for text in ("PingFang SC Medium", "#6FD7F2", "#F2C46D", "#F2994A", "正式字幕"):
+            self.assertIn(text, guide)
+        self.assertEqual(38, tokens["type_scale"]["structure_label_px"])
+        self.assertEqual(0.3, tokens["motion"]["fade_in_seconds"])
+        self.assertEqual("#6FD7F2", tokens["colors"]["eyewall_up"])
 
     def test_phase4b_manifest_and_contract_exist(self):
         handoff = ROOT / "08_OpenMontage试验/001-飞机舷窗小孔/keyframe-handoff"

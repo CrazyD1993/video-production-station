@@ -28,6 +28,23 @@
 
 `typhoon-eye-25s-ffprobe.json` 保存25秒成片的机器可读技术参数及本地MP4 SHA256。MP4仍只保存在本地 `output/typhoon-eye-25s-packaged-B.mp4`，不上传GitHub。
 
+## 25秒B版V2结构标注审核包
+
+本轮只修正结构图层与标注系统；Seedance底图、旁白文本、B版配音、正式字幕内容和BGM不变。
+
+| 文件 | 用途 | SHA256 |
+|---|---|---|
+| `typhoon-eye-25s-v2-before-after.jpg` | 4.5/9/16/21秒V1与V2双列对比 | `797fb9bd5d75243b4cac7ffbba595f95bd343d72af8701940864b1787619559d` |
+| `typhoon-eye-25s-v2-contact-sheet.jpg` | V2四帧联系表 | `04c84134cfdfc152178eaba34dd8bbf8637e557457fb4ff6561999ad5dcf2363` |
+| `typhoon-eye-25s-v2-frame-04.5s.jpg` | 眼墙上升与中央下沉标签分组 | `9ff3e0742027fa956eac7bb93751957d23f7e8aacd2cd419862ee6c51d15b0d5` |
+| `typhoon-eye-25s-v2-frame-09.0s.jpg` | 中央缓慢下沉机制 | `21324db421255d4fb25bfb7a5c848af3289e1fc4320356ee6744cf4ac2b67cd9` |
+| `typhoon-eye-25s-v2-frame-16.0s.jpg` | 相对平静标签移出风眼中心 | `469eef5b492c73c9889081defa4adfcb66b12569189a4e8b3fb8ad963f9e0935` |
+| `typhoon-eye-25s-v2-frame-21.0s.jpg` | 另一侧眼墙统一标签 | `909f27ab7edadafdbae2118fd41aac83c8c6d37127c62a2d2fa78a60699b0062` |
+| `annotation-style-overview.jpg` | 一页标注样式说明图 | `d908a9dd37a568ce0ca292f23d00afbb1714bd6888f967b3172b30ed6ec5bf99` |
+| `typhoon-eye-25s-v2-ffprobe.json` | V2技术参数、MP4哈希与音轨一致性 | 机器可读记录 |
+
+本地V2 MP4为 `output/typhoon-eye-25s-packaged-B-v2.mp4`，SHA256为 `9adabff7816c9ea90294d338373817f4a47102fd23279bdee184e7584b9d9866`。V1/V2音频流SHA256完全一致，MP4不上传GitHub。
+
 ## Codex推荐组合
 
 **TE-KF1-A + TE-KF2-A + TE-KF3-B**
