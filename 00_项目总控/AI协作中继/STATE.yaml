@@ -1,9 +1,9 @@
-active_task_id: typhoon-eye-12s-visual-review-001
+active_task_id: typhoon-eye-12s-visual-review-v2-001
 last_chatgpt_instruction_commit: null
 last_codex_response_commit: 32ef2cec8b08943d4632437156619bbc0359a42e
 current_branch: experiment/openmontage-pilot
-project_stage: visual_review_sample_ready
-blocking_gate: user_visual_review
+project_stage: visual_review_sample_v2_ready
+blocking_gate: user_visual_review_v2
 aircraft_window_pilot: paused_no_more_image_generation
 approved_topic: typhoon_eye_calm
 production_mode: bavi_hotspot_fast_track
@@ -55,6 +55,13 @@ visual_sample:
     sha256: 558343a3b1d3ac9890a051c1c8c8353e58bd022119097643f3fb3a359d8de326
     frames: 360
     duration_seconds: 12.0
+  visual_review_render_v2:
+    status: created_and_verified
+    path: 08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/output/typhoon-eye-12s-visual-review-v2.mp4
+    sha256: 476b2375d3634802b5f0b3b85272da5b652909cbdffc118c8371ed271553cf66
+    frames: 360
+    duration_seconds: 12.0
+    fps_mode: cfr
   packaged_review_render: not_created
 voice_candidates:
   restrained_suspense: not_generated
@@ -66,4 +73,4 @@ github_review_package:
   status: published
   commit: dc89b6cbefa6439774511fec6f42791d0e6d3a6f
 next_actor: User
-updated_at: "2026-07-12T03:00:00+08:00"
+updated_at: "2026-07-12T03:30:00+08:00"

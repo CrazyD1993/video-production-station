@@ -51,11 +51,29 @@ visual_review_render:
   frames: 360
   duration_seconds: 12.0
   audio: none
+visual_review_render_v2:
+  status: created_and_verified
+  path: 08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/output/typhoon-eye-12s-visual-review-v2.mp4
+  sha256: 476b2375d3634802b5f0b3b85272da5b652909cbdffc118c8371ed271553cf66
+  width: 1080
+  height: 1920
+  fps: 30
+  fps_mode: cfr
+  frames: 360
+  duration_seconds: 12.0
+  audio: none
+  source_intervals:
+    TE-S01: [0.20, 3.40]
+    TE-S02: [0.12, 4.92]
+    TE-S03: [0.02, 4.02]
+  transitions:
+    TE-S01_to_TE-S02_frames: 6
+    TE-S02_to_TE-S03_frames: 4
 packaged_review_render: not_created
 voice_candidates:
   restrained_suspense: not_generated
   natural_explanation: not_generated
 selected_voice: null
 shots_requiring_regeneration: []
-blocking_gate: user_visual_review
+blocking_gate: user_visual_review_v2
 next_actor: User

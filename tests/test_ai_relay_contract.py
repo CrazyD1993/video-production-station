@@ -40,7 +40,7 @@ class AIRelayContractTests(unittest.TestCase):
     def test_codex_receipt_has_required_sections(self):
         path = RELAY / "CODEX_TO_CHATGPT.md"
         data = front_matter(path)
-        self.assertEqual("typhoon-eye-12s-visual-review-001", data["task_id"])
+        self.assertEqual("typhoon-eye-12s-visual-review-v2-001", data["task_id"])
         self.assertEqual("completed", data["status"])
         self.assertEqual("experiment/openmontage-pilot", data["branch"])
         for heading in (
@@ -53,8 +53,8 @@ class AIRelayContractTests(unittest.TestCase):
     def test_state_contract(self):
         data = yaml.safe_load((RELAY / "STATE.yaml").read_text(encoding="utf-8"))
         self.assertEqual("experiment/openmontage-pilot", data["current_branch"])
-        self.assertEqual("visual_review_sample_ready", data["project_stage"])
-        self.assertEqual("user_visual_review", data["blocking_gate"])
+        self.assertEqual("visual_review_sample_v2_ready", data["project_stage"])
+        self.assertEqual("user_visual_review_v2", data["blocking_gate"])
         self.assertEqual("User", data["next_actor"])
         self.assertEqual("typhoon_eye_calm", data["approved_topic"])
         self.assertEqual("paused_no_more_image_generation", data["aircraft_window_pilot"])
@@ -69,6 +69,8 @@ class AIRelayContractTests(unittest.TestCase):
         self.assertEqual("succeeded", data["seedance_api_attempt"]["volcengine_ark_gateway"])
         self.assertEqual(360, data["visual_sample"]["visual_review_render"]["frames"])
         self.assertEqual(12.0, data["visual_sample"]["visual_review_render"]["duration_seconds"])
+        self.assertEqual(360, data["visual_sample"]["visual_review_render_v2"]["frames"])
+        self.assertEqual("cfr", data["visual_sample"]["visual_review_render_v2"]["fps_mode"])
 
     def test_three_topic_hook_packages_exist(self):
         folder = ROOT / "08_OpenMontage试验/三题并行钩子测试"
@@ -145,7 +147,7 @@ class AIRelayContractTests(unittest.TestCase):
         folder = ROOT / "08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/video-handoff"
         status = yaml.safe_load((folder / "status.yaml").read_text(encoding="utf-8"))
         self.assertTrue(status["seedance_prompts_ready"])
-        self.assertEqual("user_visual_review", status["blocking_gate"])
+        self.assertEqual("user_visual_review_v2", status["blocking_gate"])
         self.assertEqual("received_and_visually_reviewed", status["incoming_video_status"]["TE-S01"])
         self.assertEqual("received_and_visually_reviewed", status["incoming_video_status"]["TE-S02"])
         self.assertEqual("generated_and_visually_reviewed", status["incoming_video_status"]["TE-S03"])
@@ -157,6 +159,12 @@ class AIRelayContractTests(unittest.TestCase):
         self.assertEqual([0.6, 3.8], status["selected_intervals"]["TE-S01"])
         self.assertEqual([0.12, 4.92], status["selected_intervals"]["TE-S02"])
         self.assertEqual([0.02, 4.02], status["selected_intervals"]["TE-S03"])
+        self.assertEqual("created_and_verified", status["visual_review_render_v2"]["status"])
+        self.assertEqual(360, status["visual_review_render_v2"]["frames"])
+        self.assertEqual(12.0, status["visual_review_render_v2"]["duration_seconds"])
+        self.assertEqual([0.2, 3.4], status["visual_review_render_v2"]["source_intervals"]["TE-S01"])
+        self.assertEqual(6, status["visual_review_render_v2"]["transitions"]["TE-S01_to_TE-S02_frames"])
+        self.assertEqual(4, status["visual_review_render_v2"]["transitions"]["TE-S02_to_TE-S03_frames"])
         self.assertEqual("not_created", status["packaged_review_render"])
         expected = {
             "TE-S01-seedance-v1.mp4",
