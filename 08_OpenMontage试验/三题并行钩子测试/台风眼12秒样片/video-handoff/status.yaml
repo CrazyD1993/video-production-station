@@ -160,5 +160,5 @@ manual_annotation_handoff:
 blocking_gate: manual_capcut_positioning
 git_sync:
   status: published
-  last_published_commit: b51ea9bec750ac14e7f0e538fdeb75a8f2d905b4
+  last_published_commit: f26523948e1f70d442df3022bd33bb92a8629195
 next_actor: User

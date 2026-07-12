@@ -2,7 +2,7 @@
 task_id: typhoon-eye-25s-manual-annotation-handoff-001
 status: completed
 branch: experiment/openmontage-pilot
-commit_sha: pending
+commit_sha: f26523948e1f70d442df3022bd33bb92a8629195
 completed_at: "2026-07-12T20:00:00+08:00"
 ---
 
