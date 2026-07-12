@@ -1,0 +1,57 @@
+{
+  "status": "passed",
+  "scope_seconds": [4.05, 14.7],
+  "canvas": {"width": 1080, "height": 1920, "midline_x": 540},
+  "eyewall": {
+    "left_bezier_path": "M205 1190 C170 1000 175 760 235 520",
+    "right_generation": "translate(1080 0) scale(-1 1)",
+    "right_path_hand_authored": false,
+    "mirror_coordinate_error_px": 0,
+    "shaft_and_tip_same_svg_path": true,
+    "arrowhead_implementation": "marker-end orient=auto",
+    "left_terminal_tangent_degrees": -75.964,
+    "right_terminal_tangent_degrees": -104.036,
+    "tangent_mirror_error_degrees": 0
+  },
+  "descending": {
+    "left_bezier_path": "M475 450 C500 640 500 820 490 1020",
+    "right_generation": "translate(1080 0) scale(-1 1)",
+    "right_path_hand_authored": false,
+    "shaft_and_tip_same_svg_path": true,
+    "arrowhead_implementation": "marker-end orient=auto"
+  },
+  "flow": {
+    "implementation": "same-path stroke-dasharray and stroke-dashoffset",
+    "independent_dot_layers": 0,
+    "independent_arrowhead_layers": 0,
+    "maximum_centerline_error_px": 0,
+    "allowed_centerline_error_px": 2,
+    "glow": false,
+    "hud_effect": false,
+    "jump_or_detach_observed": false
+  },
+  "labels": {
+    "style_tokens_changed": false,
+    "participate_in_flow": false,
+    "leaders_participate_in_flow": false
+  },
+  "reviewed_stills": [
+    {"time_seconds": 4.5, "file": "validation-stills/arrow-repair-04.5s.png", "result": "pass"},
+    {"time_seconds": 7.5, "file": "validation-stills/arrow-repair-07.5s.png", "result": "pass"},
+    {"time_seconds": 9.0, "file": "validation-stills/arrow-repair-09.0s.png", "result": "pass"},
+    {"time_seconds": 12.0, "file": "validation-stills/arrow-repair-12.0s.png", "result": "pass"},
+    {"time_seconds": 14.0, "file": "validation-stills/arrow-repair-14.0s.png", "result": "pass"}
+  ],
+  "preview": {
+    "file": "arrow-repair-4.05-14.70-preview.mp4",
+    "width": 1080,
+    "height": 1920,
+    "fps": 60,
+    "frames": 639,
+    "duration_seconds": 10.65,
+    "audio": false,
+    "github_review_file": "arrow-repair-4.05-14.70-preview-review.mp4",
+    "github_review_resolution": "720x1280",
+    "full_25_second_render_created": false
+  }
+}

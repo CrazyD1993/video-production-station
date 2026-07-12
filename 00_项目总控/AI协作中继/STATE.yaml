@@ -1,9 +1,9 @@
-active_task_id: typhoon-eye-25s-manual-annotation-handoff-001
+active_task_id: typhoon-eye-arrow-geometry-repair-001
 last_chatgpt_instruction_commit: null
 last_codex_response_commit: f26523948e1f70d442df3022bd33bb92a8629195
 current_branch: experiment/openmontage-pilot
-project_stage: manual_annotation_handoff_ready
-blocking_gate: manual_capcut_positioning
+project_stage: arrow_geometry_local_preview_ready
+blocking_gate: user_review_arrow_repair_preview
 aircraft_window_pilot: paused_no_more_image_generation
 approved_topic: typhoon_eye_calm
 production_mode: bavi_hotspot_fast_track
@@ -155,5 +155,17 @@ manual_annotation_handoff:
   auto_eye_center_estimation_used: false
   v4_generated: false
   guide: 08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/manual-annotation-handoff/剪映人工定位说明.md
+arrow_geometry_repair:
+  status: created_and_verified
+  scope_seconds: [4.05, 14.70]
+  full_25_second_render_created: false
+  annotation_tokens_changed: false
+  tracking_changed: false
+  independent_flow_dots_removed: true
+  right_eyewall_generated_by_midline_mirror: true
+  maximum_flow_centerline_error_px: 0
+  geometry_validation: 08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/arrow-repair/geometry-validation.json
+  local_preview: 08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/arrow-repair/arrow-repair-4.05-14.70-preview.mp4
+  github_review_preview: 08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/arrow-repair/arrow-repair-4.05-14.70-preview-review.mp4
 next_actor: User
-updated_at: "2026-07-12T20:00:00+08:00"
+updated_at: "2026-07-13T00:30:00+08:00"

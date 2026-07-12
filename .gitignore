@@ -73,6 +73,9 @@ node_modules/
 !08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/review-package/annotation-style-overview.jpg
 !08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/review-package/typhoon-eye-25s-v2-ffprobe.json
 
+# Low-bitrate local arrow-repair review preview only; full-resolution render remains ignored.
+!08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/arrow-repair/arrow-repair-4.05-14.70-preview-review.mp4
+
 # Python tool caches
 __pycache__/
 *.py[cod]
