@@ -69,11 +69,38 @@ visual_review_render_v2:
   transitions:
     TE-S01_to_TE-S02_frames: 6
     TE-S02_to_TE-S03_frames: 4
-packaged_review_render: not_created
+packaged_review_render:
+  status: two_versions_created_and_verified
+  common_video_source: visual_review_render_v2
+  upload_to_github: false
+  contact_sheet: 08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/review-package/typhoon-eye-packaged-contact-sheet.jpg
+  version_A:
+    path: 08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/output/typhoon-eye-12s-packaged-A.mp4
+    voice_profile: verified_clone_restrained_suspense
+    sha256: 7f79920452c363a8b4560a50a9c7e0dfc2a2dcee02e792ab348ffd9c8ed869f8
+    integrated_lufs: -16.6
+    true_peak_dbtp: -2.0
+  version_B:
+    path: 08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/output/typhoon-eye-12s-packaged-B.mp4
+    voice_profile: volcengine_seed_tts_2_natural_female
+    sha256: 657ffaec58b3237d5dfc1c66682ab4f84387520bc3f5ad9edc1cd7eea291ece6
+    integrated_lufs: -16.2
+    true_peak_dbtp: -4.7
+  common_specs:
+    width: 1080
+    height: 1920
+    fps: 30
+    fps_mode: cfr
+    frames: 360
+    duration_seconds: 12.0
+    video_codec: h264
+    audio_codec: aac
+    audio_sample_rate_hz: 48000
+    audio_channels: 2
 voice_candidates:
-  restrained_suspense: not_generated
-  natural_explanation: not_generated
+  restrained_suspense: generated_clone_voice_and_verified
+  natural_explanation: generated_seed_tts_2_and_verified
 selected_voice: null
 shots_requiring_regeneration: []
-blocking_gate: user_visual_review_v2
+blocking_gate: user_select_packaged_voice_A_or_B
 next_actor: User

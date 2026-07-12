@@ -1,4 +1,4 @@
-# 台风眼关键帧 GitHub 审图包
+# 台风眼 GitHub 审图包
 
 本目录仅用于ChatGPT/GitHub审图。图片为JPEG质量约80的压缩预览，不是原始无损文件；NASA卫星结构参考图未包含在本目录中。
 
@@ -22,8 +22,10 @@
 
 `typhoon-eye-contact-sheet.jpg` 为2列×3行总览，顺序依次为KF1-A/KF1-B、KF2-A/KF2-B、KF3-A/KF3-B。
 
+`typhoon-eye-packaged-contact-sheet.jpg` 为12秒完整包装样片的6帧静态联系表，1080×1280 JPG，SHA256为 `1504992e000d417c34b192fa0f2bb3e1496fe431d92aede5d666edb9b361d059`。A/B两版画面和字幕完全一致，因此只保留一张包装联系表；MP4不上传GitHub。
+
 ## Codex推荐组合
 
 **TE-KF1-A + TE-KF2-A + TE-KF3-B**
 
-用户仍需从KF1、KF2、KF3中各批准一张，未批准前不调用Seedance。
+关键帧已完成审批，12秒完整包装A/B版已进入用户配音风格比较门禁。

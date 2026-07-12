@@ -1,9 +1,9 @@
-active_task_id: typhoon-eye-12s-visual-review-v2-001
+active_task_id: typhoon-eye-12s-packaged-ab-001
 last_chatgpt_instruction_commit: null
 last_codex_response_commit: f06a2072e563b55a86568960ad1f1708fe844782
 current_branch: experiment/openmontage-pilot
-project_stage: visual_review_sample_v2_ready
-blocking_gate: user_visual_review_v2
+project_stage: packaged_sample_ab_ready
+blocking_gate: user_select_packaged_voice_A_or_B
 aircraft_window_pilot: paused_no_more_image_generation
 approved_topic: typhoon_eye_calm
 production_mode: bavi_hotspot_fast_track
@@ -62,15 +62,34 @@ visual_sample:
     frames: 360
     duration_seconds: 12.0
     fps_mode: cfr
-  packaged_review_render: not_created
+  packaged_review_render:
+    status: two_versions_created_and_verified
+    upload_to_github: false
+    contact_sheet: 08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/review-package/typhoon-eye-packaged-contact-sheet.jpg
+    version_A:
+      path: 08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/output/typhoon-eye-12s-packaged-A.mp4
+      voice_profile: verified_clone_restrained_suspense
+      sha256: 7f79920452c363a8b4560a50a9c7e0dfc2a2dcee02e792ab348ffd9c8ed869f8
+    version_B:
+      path: 08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/output/typhoon-eye-12s-packaged-B.mp4
+      voice_profile: volcengine_seed_tts_2_natural_female
+      sha256: 657ffaec58b3237d5dfc1c66682ab4f84387520bc3f5ad9edc1cd7eea291ece6
+    common_specs:
+      width: 1080
+      height: 1920
+      fps: 30
+      fps_mode: cfr
+      frames: 360
+      duration_seconds: 12.0
+      audio_sample_rate_hz: 48000
 voice_candidates:
-  restrained_suspense: not_generated
-  natural_explanation: not_generated
+  restrained_suspense: generated_clone_voice_and_verified
+  natural_explanation: generated_seed_tts_2_and_verified
 selected_voice: null
 shots_requiring_regeneration: []
-full_video_25s: not_started_waiting_for_visual_sample
+full_video_25s: not_started_waiting_for_packaged_voice_selection
 github_review_package:
   status: published
   commit: dc89b6cbefa6439774511fec6f42791d0e6d3a6f
 next_actor: User
-updated_at: "2026-07-12T03:30:00+08:00"
+updated_at: "2026-07-12T04:20:00+08:00"
