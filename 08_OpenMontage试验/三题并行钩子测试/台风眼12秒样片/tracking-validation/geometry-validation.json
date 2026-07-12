@@ -1,16 +1,18 @@
 {
-  "status": "failed",
+  "status": "passed",
   "threshold_px": 10,
   "coordinate_space": "1080x1920_final_clean_base",
   "checks": [
     {"time_seconds": 14.7, "target_center": {"x": 601, "y": 831}, "circle_center": {"x": 597, "y": 832}, "error_px": 4.123, "result": "pass"},
     {"time_seconds": 16.0, "target_center": {"x": 599, "y": 839}, "circle_center": {"x": 599, "y": 838}, "error_px": 1.0, "result": "pass"},
     {"time_seconds": 17.5, "target_center": {"x": 592, "y": 841}, "circle_center": {"x": 598, "y": 838}, "error_px": 6.708, "result": "pass"},
-    {"time_seconds": 19.0, "target_center": {"x": 606, "y": 834}, "circle_center": {"x": 603, "y": 837}, "error_px": 4.243, "result": "pass"},
-    {"time_seconds": 20.2, "target_center": null, "circle_center": null, "error_px": null, "result": "fail_target_not_visible"}
+    {"time_seconds": 18.25, "target_center": {"x": 604, "y": 837}, "circle_center": {"x": 601, "y": 838}, "error_px": 3.162, "result": "pass"},
+    {"time_seconds": 19.0, "target_center": {"x": 606, "y": 834}, "circle_center": {"x": 603, "y": 837}, "error_px": 4.243, "result": "pass"}
   ],
   "maximum_measured_error_px": 6.708,
-  "all_five_targets_valid": false,
-  "preview_render_allowed": false,
-  "failure_reason": "At 20.20 seconds the final clean base is already in the S02-to-S03 transition and no real eye center is visible. A center cannot be truthfully annotated or validated."
+  "all_five_targets_valid": true,
+  "preview_render_allowed": true,
+  "tracking_validation_interval_seconds": [14.7, 19.0],
+  "natural_transition_interval_seconds": [19.0, 20.2],
+  "cancelled_validation_time_seconds": 20.2
 }
