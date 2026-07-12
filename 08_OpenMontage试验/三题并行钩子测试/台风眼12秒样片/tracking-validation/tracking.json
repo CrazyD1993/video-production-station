@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "coordinate_space": {
+    "source": "output/typhoon-eye-25s-clean-base.mp4",
+    "width": 1080,
+    "height": 1920,
+    "fps": 30,
+    "basis": "final_clean_base_only"
+  },
+  "interval_seconds": [14.7, 20.2],
+  "interpolation": {
+    "engine": "remotion",
+    "method": "linear",
+    "extrapolate_left": "clamp",
+    "extrapolate_right": "clamp"
+  },
+  "parent_binding": ["small_dashed_circle", "relative_calm_label"],
+  "removed_elements": ["large_orange_arrow", "orange_center_dot"],
+  "keyframes": [
+    {"time_seconds": 14.7, "frame": 441, "target_center": {"x": 601, "y": 831}, "tracking_center": {"x": 597, "y": 832}, "visible": true},
+    {"time_seconds": 16.0, "frame": 480, "target_center": {"x": 599, "y": 839}, "tracking_center": {"x": 599, "y": 838}, "visible": true},
+    {"time_seconds": 17.5, "frame": 525, "target_center": {"x": 592, "y": 841}, "tracking_center": {"x": 598, "y": 838}, "visible": true},
+    {"time_seconds": 19.0, "frame": 570, "target_center": {"x": 606, "y": 834}, "tracking_center": {"x": 603, "y": 837}, "visible": true},
+    {"time_seconds": 20.2, "frame": 606, "target_center": null, "tracking_center": null, "visible": false, "reason": "S02_to_S03_transition_has_replaced_the_eye_with_ocean_cloud_wall"}
+  ],
+  "status": "geometry_gate_failed_no_preview_render"
+}
