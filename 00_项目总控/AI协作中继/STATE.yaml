@@ -1,6 +1,6 @@
 active_task_id: typhoon-eye-25s-annotation-v2-001
 last_chatgpt_instruction_commit: null
-last_codex_response_commit: abae9a89ea271b09541d81037638be624d2985d5
+last_codex_response_commit: b51ea9bec750ac14e7f0e538fdeb75a8f2d905b4
 current_branch: experiment/openmontage-pilot
 project_stage: full_video_25s_annotation_v2_ready_for_final_review
 blocking_gate: user_final_review_25s_v2
@@ -138,8 +138,7 @@ full_video_25s_v2:
   reusable_style_guide: 08_OpenMontage试验/共享组件/annotation-style-guide.md
   reusable_tokens: 08_OpenMontage试验/共享组件/annotation-tokens.yaml
 github_review_package:
-  status: local_v2_update_ready_for_commit
-  commit: 1d1f084eda933ea8f718f4b53ae3ae565ee9130e
-  pending_update: typhoon_eye_25s_annotation_v2_review_package
+  status: published
+  commit: b51ea9bec750ac14e7f0e538fdeb75a8f2d905b4
 next_actor: User
 updated_at: "2026-07-12T11:50:00+08:00"

@@ -2,7 +2,7 @@
 task_id: typhoon-eye-25s-annotation-v2-001
 status: completed
 branch: experiment/openmontage-pilot
-commit_sha: 1d1f084eda933ea8f718f4b53ae3ae565ee9130e
+commit_sha: b51ea9bec750ac14e7f0e538fdeb75a8f2d905b4
 completed_at: "2026-07-12T14:29:09+08:00"
 ---
 
