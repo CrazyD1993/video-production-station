@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="160" viewBox="0 0 420 160">
+  <path d="M30 135 L78 94" fill="none" stroke="#6FD7F2" stroke-width="2.5" stroke-linecap="round" opacity="0.86"/>
+  <rect x="78" y="30" width="310" height="64" rx="16" fill="#0A141F" fill-opacity="0.72"/>
+  <rect x="78" y="30" width="5" height="64" rx="2.5" fill="#6FD7F2"/>
+  <text x="118" y="73" font-family="PingFang SC, Noto Sans SC, sans-serif" font-size="38" font-weight="500" fill="#F7FAFC">另一侧眼墙</text>
+</svg>

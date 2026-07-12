@@ -1,9 +1,9 @@
-active_task_id: typhoon-eye-25s-annotation-v2-001
+active_task_id: typhoon-eye-25s-manual-annotation-handoff-001
 last_chatgpt_instruction_commit: null
 last_codex_response_commit: b51ea9bec750ac14e7f0e538fdeb75a8f2d905b4
 current_branch: experiment/openmontage-pilot
-project_stage: full_video_25s_annotation_v2_ready_for_final_review
-blocking_gate: user_final_review_25s_v2
+project_stage: manual_annotation_handoff_ready
+blocking_gate: manual_capcut_positioning
 aircraft_window_pilot: paused_no_more_image_generation
 approved_topic: typhoon_eye_calm
 production_mode: bavi_hotspot_fast_track
@@ -140,5 +140,20 @@ full_video_25s_v2:
 github_review_package:
   status: published
   commit: b51ea9bec750ac14e7f0e538fdeb75a8f2d905b4
+manual_annotation_handoff:
+  status: created_and_verified
+  clean_base_path: 08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/output/typhoon-eye-25s-clean-base.mp4
+  clean_base_sha256: 6e70497193a039669c3a28b70034ed6d8f4da2583eb9be2f5afc61852b9b9c29
+  clean_base_upload_to_github: false
+  audio_stream_sha256: afb5122c96211519d0dd02d9eaef81b1dccec830db626cf239217316c1eae263
+  audio_stream_matches_approved_B: true
+  formal_captions_preserved: true
+  asset_directory: 08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/manual-annotation-handoff/assets
+  svg_asset_count: 8
+  transparent_png_asset_count: 8
+  prepositioned_to_video_coordinates: false
+  auto_eye_center_estimation_used: false
+  v4_generated: false
+  guide: 08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/manual-annotation-handoff/剪映人工定位说明.md
 next_actor: User
-updated_at: "2026-07-12T11:50:00+08:00"
+updated_at: "2026-07-12T20:00:00+08:00"

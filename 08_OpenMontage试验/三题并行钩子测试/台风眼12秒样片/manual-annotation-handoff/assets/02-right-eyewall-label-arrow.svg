@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="900" viewBox="0 0 360 900">
+  <defs><marker id="up" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,10 L5,0 L10,10 Z" fill="#6FD7F2"/></marker></defs>
+  <path d="M140 760 C190 610 185 350 125 120" fill="none" stroke="#6FD7F2" stroke-width="9" stroke-linecap="round" opacity="0.86" marker-end="url(#up)"/>
+  <path d="M192 782 L148 742" fill="none" stroke="#6FD7F2" stroke-width="2.5" stroke-linecap="round" opacity="0.86"/>
+  <rect x="192" y="750" width="148" height="64" rx="16" fill="#0A141F" fill-opacity="0.72"/>
+  <rect x="192" y="750" width="5" height="64" rx="2.5" fill="#6FD7F2"/>
+  <text x="234" y="793" font-family="PingFang SC, Noto Sans SC, sans-serif" font-size="38" font-weight="500" fill="#F7FAFC">眼墙</text>
+</svg>

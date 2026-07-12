@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="180" viewBox="0 0 420 180">
+  <path d="M30 150 L76 112 L112 74" fill="none" stroke="#F2994A" stroke-width="2.5" stroke-linecap="round" opacity="0.86"/>
+  <rect x="112" y="30" width="270" height="64" rx="16" fill="#0A141F" fill-opacity="0.72"/>
+  <rect x="112" y="30" width="5" height="64" rx="2.5" fill="#F2994A"/>
+  <text x="152" y="73" font-family="PingFang SC, Noto Sans SC, sans-serif" font-size="38" font-weight="500" fill="#F7FAFC">相对平静</text>
+</svg>

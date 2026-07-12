@@ -145,7 +145,19 @@ full_video_25s_v2:
   comparison_sheet: 08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/review-package/typhoon-eye-25s-v2-before-after.jpg
   contact_sheet: 08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/review-package/typhoon-eye-25s-v2-contact-sheet.jpg
   style_overview: 08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/review-package/annotation-style-overview.jpg
-blocking_gate: user_final_review_25s_v2
+manual_annotation_handoff:
+  status: created_and_verified
+  clean_base_path: 08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/output/typhoon-eye-25s-clean-base.mp4
+  clean_base_sha256: 6e70497193a039669c3a28b70034ed6d8f4da2583eb9be2f5afc61852b9b9c29
+  audio_stream_matches_approved_B: true
+  asset_directory: 08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/manual-annotation-handoff/assets
+  svg_asset_count: 8
+  transparent_png_asset_count: 8
+  prepositioned_to_video_coordinates: false
+  auto_eye_center_estimation_used: false
+  v4_generated: false
+  guide: 08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/manual-annotation-handoff/剪映人工定位说明.md
+blocking_gate: manual_capcut_positioning
 git_sync:
   status: published
   last_published_commit: b51ea9bec750ac14e7f0e538fdeb75a8f2d905b4

@@ -40,7 +40,7 @@ class AIRelayContractTests(unittest.TestCase):
     def test_codex_receipt_has_required_sections(self):
         path = RELAY / "CODEX_TO_CHATGPT.md"
         data = front_matter(path)
-        self.assertEqual("typhoon-eye-25s-annotation-v2-001", data["task_id"])
+        self.assertEqual("typhoon-eye-25s-manual-annotation-handoff-001", data["task_id"])
         self.assertEqual("completed", data["status"])
         self.assertEqual("experiment/openmontage-pilot", data["branch"])
         for heading in (
@@ -53,8 +53,15 @@ class AIRelayContractTests(unittest.TestCase):
     def test_state_contract(self):
         data = yaml.safe_load((RELAY / "STATE.yaml").read_text(encoding="utf-8"))
         self.assertEqual("experiment/openmontage-pilot", data["current_branch"])
-        self.assertEqual("full_video_25s_annotation_v2_ready_for_final_review", data["project_stage"])
-        self.assertEqual("user_final_review_25s_v2", data["blocking_gate"])
+        self.assertEqual("manual_annotation_handoff_ready", data["project_stage"])
+        self.assertEqual("manual_capcut_positioning", data["blocking_gate"])
+        handoff = data["manual_annotation_handoff"]
+        self.assertTrue(handoff["audio_stream_matches_approved_B"])
+        self.assertEqual(8, handoff["svg_asset_count"])
+        self.assertEqual(8, handoff["transparent_png_asset_count"])
+        self.assertFalse(handoff["prepositioned_to_video_coordinates"])
+        self.assertFalse(handoff["auto_eye_center_estimation_used"])
+        self.assertFalse(handoff["v4_generated"])
         self.assertEqual("User", data["next_actor"])
         self.assertEqual("typhoon_eye_calm", data["approved_topic"])
         self.assertEqual("paused_no_more_image_generation", data["aircraft_window_pilot"])
@@ -190,7 +197,11 @@ class AIRelayContractTests(unittest.TestCase):
         folder = ROOT / "08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/video-handoff"
         status = yaml.safe_load((folder / "status.yaml").read_text(encoding="utf-8"))
         self.assertTrue(status["seedance_prompts_ready"])
-        self.assertEqual("user_final_review_25s_v2", status["blocking_gate"])
+        self.assertEqual("manual_capcut_positioning", status["blocking_gate"])
+        handoff = status["manual_annotation_handoff"]
+        self.assertEqual(8, handoff["svg_asset_count"])
+        self.assertEqual(8, handoff["transparent_png_asset_count"])
+        self.assertFalse(handoff["prepositioned_to_video_coordinates"])
         self.assertEqual("received_and_visually_reviewed", status["incoming_video_status"]["TE-S01"])
         self.assertEqual("received_and_visually_reviewed", status["incoming_video_status"]["TE-S02"])
         self.assertEqual("generated_and_visually_reviewed", status["incoming_video_status"]["TE-S03"])
