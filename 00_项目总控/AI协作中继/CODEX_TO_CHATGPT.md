@@ -2,7 +2,7 @@
 task_id: typhoon-eye-arrow-geometry-repair-001
 status: completed
 branch: experiment/openmontage-pilot
-commit_sha: pending
+commit_sha: 191f9686146778ecf9a23d44f471699e4f048e60
 completed_at: "2026-07-13T00:30:00+08:00"
 ---
 
