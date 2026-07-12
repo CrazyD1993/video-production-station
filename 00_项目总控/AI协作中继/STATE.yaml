@@ -1,6 +1,6 @@
 active_task_id: typhoon-eye-12s-packaged-ab-001
 last_chatgpt_instruction_commit: null
-last_codex_response_commit: f06a2072e563b55a86568960ad1f1708fe844782
+last_codex_response_commit: abae9a89ea271b09541d81037638be624d2985d5
 current_branch: experiment/openmontage-pilot
 project_stage: packaged_sample_ab_ready
 blocking_gate: user_select_packaged_voice_A_or_B

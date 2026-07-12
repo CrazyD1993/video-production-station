@@ -2,7 +2,7 @@
 task_id: typhoon-eye-12s-packaged-ab-001
 status: completed
 branch: experiment/openmontage-pilot
-commit_sha: pending
+commit_sha: abae9a89ea271b09541d81037638be624d2985d5
 completed_at: "2026-07-12T04:20:00+08:00"
 ---
 
