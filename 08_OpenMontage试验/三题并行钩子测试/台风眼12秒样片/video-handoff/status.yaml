@@ -100,7 +100,32 @@ packaged_review_render:
 voice_candidates:
   restrained_suspense: generated_clone_voice_and_verified
   natural_explanation: generated_seed_tts_2_and_verified
-selected_voice: null
+selected_voice: B_volcengine_seed_tts_2_natural_female
 shots_requiring_regeneration: []
-blocking_gate: user_select_packaged_voice_A_or_B
+full_video_25s:
+  status: created_and_verified
+  path: 08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/output/typhoon-eye-25s-packaged-B.mp4
+  upload_to_github: false
+  source_seedance_regenerated: false
+  sha256: 3645d91c14b8ca928c7dd4836bd7813519a9863f36ce9b25eb894a5a5421d46c
+  width: 1080
+  height: 1920
+  fps: 30
+  fps_mode: cfr
+  frames: 750
+  duration_seconds: 25.0
+  video_codec: h264
+  audio_codec: aac
+  audio_sample_rate_hz: 48000
+  audio_channels: 2
+  integrated_lufs: -15.6
+  true_peak_dbtp: -1.9
+  ending_voice_margin_seconds: 0.52
+  contact_sheet: 08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/review-package/typhoon-eye-25s-contact-sheet.jpg
+  ffprobe_record: 08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/review-package/typhoon-eye-25s-ffprobe.json
+blocking_gate: user_final_review_25s
+git_sync:
+  status: local_update_ready_push_blocked_by_permission_quota
+  last_published_commit: 2109a84f11c49a791ee3a2580a961405d5dd1c59
+  block_reason: protected_git_index_write_approval_rejected_by_codex_usage_limit
 next_actor: User

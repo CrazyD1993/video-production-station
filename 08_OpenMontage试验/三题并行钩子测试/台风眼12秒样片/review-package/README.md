@@ -24,8 +24,12 @@
 
 `typhoon-eye-packaged-contact-sheet.jpg` 为12秒完整包装样片的6帧静态联系表，1080×1280 JPG，SHA256为 `1504992e000d417c34b192fa0f2bb3e1496fe431d92aede5d666edb9b361d059`。A/B两版画面和字幕完全一致，因此只保留一张包装联系表；MP4不上传GitHub。
 
+`typhoon-eye-25s-contact-sheet.jpg` 为25秒B版完整成片的11帧静态联系表，1120×1472 JPG，SHA256为 `20f0cc4827a1d37b22838e572b7dd47a3ee05f56c750f5f59ad5084edd285ad9`。抽帧覆盖台风眼钩子、眼墙上升、眼内缓慢下沉、增温变干、风速向中心减弱、相对平静和另一侧眼墙回收。
+
+`typhoon-eye-25s-ffprobe.json` 保存25秒成片的机器可读技术参数及本地MP4 SHA256。MP4仍只保存在本地 `output/typhoon-eye-25s-packaged-B.mp4`，不上传GitHub。
+
 ## Codex推荐组合
 
 **TE-KF1-A + TE-KF2-A + TE-KF3-B**
 
-关键帧已完成审批，12秒完整包装A/B版已进入用户配音风格比较门禁。
+关键帧已完成审批，用户已选择B版火山Seed-TTS 2.0自然女声。25秒完整成片已生成并停在最终人工审核门禁。

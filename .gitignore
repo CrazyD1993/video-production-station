@@ -62,6 +62,8 @@ node_modules/
 !08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/review-package/TE-KF3-A-preview.jpg
 !08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/review-package/TE-KF3-B-preview.jpg
 !08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/review-package/typhoon-eye-packaged-contact-sheet.jpg
+!08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/review-package/typhoon-eye-25s-contact-sheet.jpg
+!08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/review-package/typhoon-eye-25s-ffprobe.json
 
 # Python tool caches
 __pycache__/

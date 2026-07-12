@@ -40,8 +40,8 @@ class AIRelayContractTests(unittest.TestCase):
     def test_codex_receipt_has_required_sections(self):
         path = RELAY / "CODEX_TO_CHATGPT.md"
         data = front_matter(path)
-        self.assertEqual("typhoon-eye-12s-packaged-ab-001", data["task_id"])
-        self.assertEqual("completed", data["status"])
+        self.assertEqual("typhoon-eye-25s-packaged-B-001", data["task_id"])
+        self.assertEqual("partially_completed", data["status"])
         self.assertEqual("experiment/openmontage-pilot", data["branch"])
         for heading in (
             "# 执行摘要", "# 修改文件", "# 实际执行的命令",
@@ -53,8 +53,8 @@ class AIRelayContractTests(unittest.TestCase):
     def test_state_contract(self):
         data = yaml.safe_load((RELAY / "STATE.yaml").read_text(encoding="utf-8"))
         self.assertEqual("experiment/openmontage-pilot", data["current_branch"])
-        self.assertEqual("packaged_sample_ab_ready", data["project_stage"])
-        self.assertEqual("user_select_packaged_voice_A_or_B", data["blocking_gate"])
+        self.assertEqual("full_video_25s_ready_for_final_review", data["project_stage"])
+        self.assertEqual("user_final_review_25s", data["blocking_gate"])
         self.assertEqual("User", data["next_actor"])
         self.assertEqual("typhoon_eye_calm", data["approved_topic"])
         self.assertEqual("paused_no_more_image_generation", data["aircraft_window_pilot"])
@@ -75,6 +75,14 @@ class AIRelayContractTests(unittest.TestCase):
         self.assertEqual("two_versions_created_and_verified", packaged["status"])
         self.assertFalse(packaged["upload_to_github"])
         self.assertEqual(48000, packaged["common_specs"]["audio_sample_rate_hz"])
+        self.assertEqual("B_volcengine_seed_tts_2_natural_female", data["selected_voice"])
+        full = data["full_video_25s"]
+        self.assertEqual("created_and_verified", full["status"])
+        self.assertEqual(750, full["frames"])
+        self.assertEqual(25.0, full["duration_seconds"])
+        self.assertEqual("cfr", full["fps_mode"])
+        self.assertFalse(full["upload_to_github"])
+        self.assertEqual(64, len(full["sha256"]))
 
     def test_three_topic_hook_packages_exist(self):
         folder = ROOT / "08_OpenMontage试验/三题并行钩子测试"
@@ -141,6 +149,8 @@ class AIRelayContractTests(unittest.TestCase):
                 "TE-KF2-A-preview.jpg", "TE-KF2-B-preview.jpg",
                 "TE-KF3-A-preview.jpg", "TE-KF3-B-preview.jpg",
                 "typhoon-eye-packaged-contact-sheet.jpg",
+                "typhoon-eye-25s-contact-sheet.jpg",
+                "typhoon-eye-25s-ffprobe.json",
             },
             {path.name for path in folder.iterdir() if path.is_file()},
         )
@@ -148,12 +158,15 @@ class AIRelayContractTests(unittest.TestCase):
         self.assertIn("5d60e99237e9bb791a2dd47c82a46e42649058a1710c62ff63fbad003c8b4ff1", readme)
         self.assertIn("TE-KF1-A + TE-KF2-A + TE-KF3-B", readme)
         self.assertIn("MP4不上传GitHub", readme)
+        probe = yaml.safe_load((folder / "typhoon-eye-25s-ffprobe.json").read_text(encoding="utf-8"))
+        self.assertEqual(750, probe["video"]["frames"])
+        self.assertEqual(25.0, probe["format"]["duration_seconds"])
 
     def test_seedance_manual_handoff_contract(self):
         folder = ROOT / "08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/video-handoff"
         status = yaml.safe_load((folder / "status.yaml").read_text(encoding="utf-8"))
         self.assertTrue(status["seedance_prompts_ready"])
-        self.assertEqual("user_select_packaged_voice_A_or_B", status["blocking_gate"])
+        self.assertEqual("user_final_review_25s", status["blocking_gate"])
         self.assertEqual("received_and_visually_reviewed", status["incoming_video_status"]["TE-S01"])
         self.assertEqual("received_and_visually_reviewed", status["incoming_video_status"]["TE-S02"])
         self.assertEqual("generated_and_visually_reviewed", status["incoming_video_status"]["TE-S03"])
@@ -179,6 +192,12 @@ class AIRelayContractTests(unittest.TestCase):
         self.assertEqual(48000, packaged["common_specs"]["audio_sample_rate_hz"])
         self.assertEqual(64, len(packaged["version_A"]["sha256"]))
         self.assertEqual(64, len(packaged["version_B"]["sha256"]))
+        self.assertEqual("B_volcengine_seed_tts_2_natural_female", status["selected_voice"])
+        full = status["full_video_25s"]
+        self.assertEqual("created_and_verified", full["status"])
+        self.assertEqual(750, full["frames"])
+        self.assertEqual(25.0, full["duration_seconds"])
+        self.assertFalse(full["upload_to_github"])
         expected = {
             "TE-S01-seedance-v1.mp4",
             "TE-S02-seedance-v1.mp4",

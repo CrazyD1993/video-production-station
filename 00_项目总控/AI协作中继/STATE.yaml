@@ -1,9 +1,9 @@
-active_task_id: typhoon-eye-12s-packaged-ab-001
+active_task_id: typhoon-eye-25s-packaged-B-001
 last_chatgpt_instruction_commit: null
 last_codex_response_commit: abae9a89ea271b09541d81037638be624d2985d5
 current_branch: experiment/openmontage-pilot
-project_stage: packaged_sample_ab_ready
-blocking_gate: user_select_packaged_voice_A_or_B
+project_stage: full_video_25s_ready_for_final_review
+blocking_gate: user_final_review_25s
 aircraft_window_pilot: paused_no_more_image_generation
 approved_topic: typhoon_eye_calm
 production_mode: bavi_hotspot_fast_track
@@ -85,11 +85,34 @@ visual_sample:
 voice_candidates:
   restrained_suspense: generated_clone_voice_and_verified
   natural_explanation: generated_seed_tts_2_and_verified
-selected_voice: null
+selected_voice: B_volcengine_seed_tts_2_natural_female
 shots_requiring_regeneration: []
-full_video_25s: not_started_waiting_for_packaged_voice_selection
+full_video_25s:
+  status: created_and_verified
+  path: 08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/output/typhoon-eye-25s-packaged-B.mp4
+  upload_to_github: false
+  selected_voice: B_volcengine_seed_tts_2_natural_female
+  source_seedance_regenerated: false
+  sha256: 3645d91c14b8ca928c7dd4836bd7813519a9863f36ce9b25eb894a5a5421d46c
+  width: 1080
+  height: 1920
+  fps: 30
+  fps_mode: cfr
+  frames: 750
+  duration_seconds: 25.0
+  video_codec: h264
+  audio_codec: aac
+  audio_sample_rate_hz: 48000
+  audio_channels: 2
+  integrated_lufs: -15.6
+  true_peak_dbtp: -1.9
+  ending_voice_margin_seconds: 0.52
+  contact_sheet: 08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/review-package/typhoon-eye-25s-contact-sheet.jpg
+  ffprobe_record: 08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/review-package/typhoon-eye-25s-ffprobe.json
 github_review_package:
-  status: published
-  commit: dc89b6cbefa6439774511fec6f42791d0e6d3a6f
+  status: local_update_ready_push_blocked_by_permission_quota
+  commit: 2109a84f11c49a791ee3a2580a961405d5dd1c59
+  pending_update: typhoon_eye_25s_review_package
+  block_reason: protected_git_index_write_approval_rejected_by_codex_usage_limit
 next_actor: User
-updated_at: "2026-07-12T04:20:00+08:00"
+updated_at: "2026-07-12T11:01:56+08:00"
