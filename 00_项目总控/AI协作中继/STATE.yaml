@@ -1,9 +1,9 @@
-active_task_id: typhoon-eye-40s-hd-full-review-001
+active_task_id: typhoon-eye-40s-review-v2-directed-fix-001
 last_chatgpt_instruction_commit: null
 last_codex_response_commit: 67674461505b55ab6fc229ab4e35ec22ca54f8a1
 current_branch: experiment/openmontage-pilot
-project_stage: typhoon_eye_40s_hd_review_ready
-blocking_gate: user_review_hd_full_video
+project_stage: typhoon_eye_40s_v2_review_ready
+blocking_gate: user_review_v2_full_video
 aircraft_window_pilot: paused_no_more_image_generation
 approved_topic: typhoon_eye_calm
 production_mode: bavi_hotspot_fast_track
@@ -218,6 +218,42 @@ full_video_40s_hd:
   large_arrow_system_used: false
   visually_inspected: true
   fully_decoded: true
+full_video_40s_v2:
+  status: created_and_verified_pending_user_review
+  upload_to_github: false
+  path: 08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/output/typhoon-eye-40s-review-v2-1080x1920.mp4
+  sha256: c7c669436fd8ca0438bdf0e653a97f0d321d859e6b61bd2c5c7b047353f970bb
+  width: 1080
+  height: 1920
+  aspect_ratio: "9:16"
+  fps: 30
+  fps_mode: cfr
+  frames: 1254
+  duration_seconds: 41.8
+  video_codec: h264_high
+  pixel_format: yuv420p
+  audio_codec: aac
+  audio_sample_rate_hz: 48000
+  audio_channels: 2
+  subtitle_exact_match: true
+  subtitle_character_count: 234
+  old_seedance_shot_C_used: false
+  paid_model_calls: 0
+  programmatic_space_demo:
+    duration_seconds: 4.0
+    fixed_marker_count: 1
+    center_crossing_time_seconds: 1.9
+    center_crossing_error_px: 0.0
+    second_marker_present: false
+  audio_validation:
+    voice_mean_db: -22.3
+    environment_mean_db: -27.5
+    final_mix_mean_db: -18.6
+    final_tail_0_4_seconds_mean_db: -22.1
+    voice_non_silent: true
+    environment_non_silent: true
+    final_mix_non_silent: true
+    ending_tail_non_silent: true
   voice:
     resource_id: seed-tts-2.0
     voice_id: zh_female_zhixingnv_uranus_bigtts

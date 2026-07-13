@@ -175,8 +175,25 @@ full_video_40s_hd:
   subtitle_exact_match: true
   shot_C_seedance_call_count: 2
   shot_C_selected_take: v2
-blocking_gate: user_review_hd_full_video
+blocking_gate: user_review_v2_full_video
 git_sync:
   status: published
   last_published_commit: 67674461505b55ab6fc229ab4e35ec22ca54f8a1
 next_actor: User
+full_video_40s_v2:
+  status: created_and_verified_pending_user_review
+  path: 08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/output/typhoon-eye-40s-review-v2-1080x1920.mp4
+  upload_to_github: false
+  sha256: c7c669436fd8ca0438bdf0e653a97f0d321d859e6b61bd2c5c7b047353f970bb
+  width: 1080
+  height: 1920
+  fps: 30
+  frames: 1254
+  duration_seconds: 41.8
+  narration_reused: true
+  subtitle_text_changed: false
+  old_seedance_shot_C_used: false
+  paid_model_calls: 0
+  programmatic_space_demo_center_crossing_error_px: 0.0
+  audio_stems_verified_non_silent: true
+  ending_storm_tail_verified_non_silent: true
