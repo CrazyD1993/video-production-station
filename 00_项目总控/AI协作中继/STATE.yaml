@@ -1,9 +1,9 @@
-active_task_id: typhoon-eye-natural-mechanism-preview-001
+active_task_id: typhoon-eye-40s-hd-full-review-001
 last_chatgpt_instruction_commit: null
 last_codex_response_commit: 90d5cfebdbdb2b412d3cd9aa5290516a7d3bf6e8
 current_branch: experiment/openmontage-pilot
-project_stage: natural_mechanism_previews_ready
-blocking_gate: user_review_two_mechanism_previews
+project_stage: typhoon_eye_40s_hd_review_ready
+blocking_gate: user_review_hd_full_video
 aircraft_window_pilot: paused_no_more_image_generation
 approved_topic: typhoon_eye_calm
 production_mode: bavi_hotspot_fast_track
@@ -169,9 +169,9 @@ arrow_geometry_repair:
   github_review_preview: 08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/arrow-repair/arrow-repair-4.05-14.70-preview-review.mp4
   route_status: paused_superseded_by_natural_mechanism_preview
 natural_mechanism_preview:
-  status: created_and_verified_pending_user_review
+  status: approved_and_used_in_40s_hd_review
   full_25_second_render_created: false
-  source_segment_replaced: false
+  source_segment_replaced: true_in_40s_hd_review_only
   narration_changed: false
   captions_changed: false
   bgm_changed: false
@@ -194,5 +194,55 @@ natural_mechanism_preview:
     keyframe: 08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/mechanism-preview/keyframes/TE-MECH-B-eye-subsidence.png
     preview: 08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/mechanism-preview/videos/TE-MECH-B-eye-subsidence-seedance-fast.mp4
     sha256: 37ef10a5f5678d3bb0b5f75c9dd12342c6d671eb30358cd28af7d79709502950
+full_video_40s_hd:
+  status: created_and_verified_pending_user_review
+  upload_to_github: false
+  path: 08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/output/typhoon-eye-40s-full-review-HD.mp4
+  sha256: c8eb7a388c16936245fb9c964e01f690dba83972bed6d5296f5a6f045d1ddac4
+  width: 1080
+  height: 1920
+  aspect_ratio: "9:16"
+  fps: 30
+  fps_mode: cfr
+  frames: 1254
+  duration_seconds: 41.8
+  video_codec: h264_high
+  video_bitrate_bps: 16246000
+  audio_codec: aac
+  audio_sample_rate_hz: 48000
+  audio_channels: 2
+  integrated_lufs: -16.1
+  true_peak_dbfs: -5.7
+  ending_voice_margin_seconds: 0.62
+  subtitle_exact_match: true
+  large_arrow_system_used: false
+  visually_inspected: true
+  fully_decoded: true
+  voice:
+    resource_id: seed-tts-2.0
+    voice_id: zh_female_zhixingnv_uranus_bigtts
+    requested_format: pcm
+    sample_rate_hz: 48000
+    first_speech_rate: -2
+    first_duration_seconds: 51.786542
+    retry_speech_rate: 3
+    retry_duration_seconds: 48.918958
+    api_call_count: 2
+    usage_object_returned: false
+    final_tempo_factor: 1.066748
+    final_duration_seconds: 41.180438
+    final_path: 08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/output/typhoon-eye-40s-narration-final.wav
+    final_sha256: e2e844e90d44532d28f9e366e6e8d7f5796c02534a0d8404a4256da6e5ed4473
+  subtitles:
+    cue_count: 24
+    path: 08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/output/typhoon-eye-40s-subtitles.srt
+  shot_C:
+    provider: volcengine_ark
+    model: doubao-seedance-2-0-fast-260128
+    api_call_count: 2
+    selected_take: v2
+    output_path: 08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/output/typhoon-eye-shot-C-seedance-fast.mp4
+    output_sha256: 1db77197931d8146a9797dde633173712d47c66220236eb4a258e750b645784c
+    limitation: clearer_than_v1_but_non_event_specific_visualization
 next_actor: User
-updated_at: "2026-07-13T23:49:41+08:00"
+updated_at: "2026-07-14T01:14:15+08:00"
