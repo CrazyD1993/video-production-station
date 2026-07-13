@@ -1,0 +1,32 @@
+shot_id: TE-MECH-A
+title: 眼墙上升
+status: generated_pending_user_review
+provider: volcengine_ark
+model: doubao-seedance-2-0-fast-260128
+generation_mode: image_to_video
+resolution: 720p
+aspect_ratio: "9:16"
+requested_duration_seconds: 4
+audio_in_final_preview: false
+keyframe: ../keyframes/TE-MECH-A-eyewall-rise.png
+preview: ../videos/TE-MECH-A-eyewall-rise-seedance-fast.mp4
+prompt: >-
+  Locked vertical documentary camera inside one gigantic tropical cyclone eye.
+  The single central eye stays relatively clear and spatially stable. On both
+  left and right eyewall cloud towers, moist cloud filaments continuously curl
+  upward and billow upward along the cloud faces, strong coherent ascending
+  convection, natural turbulent overturning and layered rising vapor,
+  moderately exaggerated for immediate readability but meteorologically
+  plausible. Preserve the approved first-frame composition and irregular cloud
+  geometry. Only slow atmospheric movement, no camera dive, no zoom, no
+  rotation.
+negative_constraints:
+  - arrows
+  - dots
+  - text or labels
+  - HUD or diagram symbols
+  - glow
+  - perfect circular eye
+  - second eye
+  - lightning or tornado
+  - melting clouds

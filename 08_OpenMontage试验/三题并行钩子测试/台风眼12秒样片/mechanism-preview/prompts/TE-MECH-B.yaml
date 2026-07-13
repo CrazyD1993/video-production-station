@@ -1,0 +1,34 @@
+shot_id: TE-MECH-B
+title: 风眼下沉
+status: generated_pending_user_review
+provider: volcengine_ark
+model: doubao-seedance-2-0-fast-260128
+generation_mode: image_to_video
+resolution: 720p
+aspect_ratio: "9:16"
+requested_duration_seconds: 4
+audio_in_final_preview: false
+keyframe: ../keyframes/TE-MECH-B-eye-subsidence.png
+preview: ../videos/TE-MECH-B-eye-subsidence-seedance-fast.mp4
+prompt: >-
+  Locked vertical documentary camera inside one gigantic tropical cyclone eye.
+  Preserve the approved first-frame composition: one relatively clear central
+  eye, naturally irregular left and right eyewall cloud towers, ocean below.
+  In the center, an extremely faint semi-transparent warm amber volumetric
+  layer of dry air slowly subsides downward as broad natural atmospheric veils,
+  never forming a beam or graphic arrow. A small patch of thin central mist
+  gradually becomes thinner, breaks apart and dissipates, making the central
+  sky and depth progressively clearer. Side eyewalls stay spatially stable with
+  only subtle natural cloud motion. Restrained explanatory exaggeration,
+  photorealistic weather documentary reconstruction.
+negative_constraints:
+  - arrows
+  - dots
+  - text or labels
+  - HUD or diagram symbols
+  - hard-edged golden column
+  - emissive glow or halo
+  - perfect circular eye
+  - second eye
+  - lightning or tornado
+  - melting clouds

@@ -1,39 +1,55 @@
 ---
-task_id: typhoon-eye-arrow-geometry-repair-001
+task_id: typhoon-eye-natural-mechanism-preview-001
 status: completed
 branch: experiment/openmontage-pilot
-commit_sha: 191f9686146778ecf9a23d44f471699e4f048e60
-completed_at: "2026-07-13T00:30:00+08:00"
+commit_sha: pending
+completed_at: "2026-07-13T23:49:41+08:00"
 ---
 
 # 执行摘要
 
-仅修复4.05—14.70秒眼墙与下沉箭头。左眼墙使用单一SVG贝塞尔路径，右侧由该路径围绕x=540中轴镜像；箭杆与箭头尖通过同一路径和marker-end实现。删除独立流动小点，改为同路径stroke-dasharray/stroke-dashoffset流光。五张静帧通过后才渲染局部预览；未渲染完整25秒。
+已暂停大箭头路线，改用同一风眼空间底图制作“眼墙上升”和“风眼下沉”两个自然机制镜头。每个镜头完成1张9:16关键帧和1段Seedance 2.0 Fast 720P约4秒无声预览；未替换原25秒片段，未渲染完整视频。
 
 # 修改文件
 
-- `arrow-repair/remotion/src/index.tsx` — 新增 — 局部Remotion箭头几何与流动实现。
-- `arrow-repair/geometry-validation.json` — 新增 — 镜像、切线、路径中心误差及静帧验收记录。
-- `arrow-repair/validation-stills/*.png` — 新增5张 — 4.5、7.5、9、12、14秒验收静帧。
-- `arrow-repair/arrow-repair-4.05-14.70-preview.mp4` — 本地新增、Git忽略 — 1080×1920局部预览。
-- `arrow-repair/arrow-repair-4.05-14.70-preview-review.mp4` — 新增 — 720×1280低码率GitHub审阅版。
-- `.gitignore` — 修改 — 只为该低码率审阅版增加例外。
-- `STATE.yaml`、`CODEX_TO_CHATGPT.md` — 修改 — 记录局部修复完成并停在人工审核门禁。
+- `mechanism-preview/README.md` — 新增 — 记录本地审核路径、技术规格、视觉检查和停止门禁。
+- `mechanism-preview/prompts/TE-MECH-A.yaml` — 新增 — 眼墙上升的图生视频合同与提示词。
+- `mechanism-preview/prompts/TE-MECH-B.yaml` — 新增 — 风眼下沉的图生视频合同与提示词。
+- `mechanism-preview/.gitignore` — 新增 — 关键帧、视频和抽帧只保留本地，不提交GitHub。
+- `当前工作台.md` — 修改 — 当前路线切换为自然机制镜头审核。
+- `STATE.yaml` — 修改 — 更新阶段和两段预览元数据。
+
+# 实际执行的命令
+
+- 使用内置图片生成能力分别编辑同一干净风眼底图。
+- 使用FFmpeg裁切为720×1280，并用ffprobe校验。
+- 调用火山方舟`doubao-seedance-2-0-fast-260128`图生视频接口，各生成4秒预览。
+- 使用FFmpeg移除模型附带的意外音轨，生成时间抽帧并完整解码检查。
 
 # 测试与验证
 
-- 左右眼墙镜像坐标误差：0px。
-- 箭头尖使用`marker-end orient=auto`，沿贝塞尔末端切线。
-- 流光与箭杆复用完全相同的`d`路径，中心线误差：0px，阈值≤2px。
-- 独立流动小点：0；独立箭头尖定位层：0。
-- 五张静帧已实际查看并通过；局部预览已完整解码检查。
-- 未发现跳动、脱轨、发光或HUD效果。
-- 未修改配音、字幕、BGM、tracking或annotation tokens；未生成完整25秒视频。
+- 关键帧尺寸检查：2/2通过，均为720×1280、9:16。
+- 视频解码检查：2/2通过，均为H.264、720×1280、24fps、4.041667秒。
+- 最终预览音轨检查：2/2通过，均无音轨。
+- 已实际查看两张关键帧和两组时间抽帧。
+- A保持单一中央眼区和两侧眼墙，没有箭头、文字、HUD、第二风眼或完美同心圆。
+- B的暖色体积层逐渐减弱、中心更通透，没有硬边光柱、箭头、文字或HUD。
+- 未执行完整25秒渲染；原因是当前必须停在两段机制镜头人工审核门禁。
+
+# 与任务要求的差异
+
+- Fast原始结果均带AAC音轨，已在最终审核版中无损移除。
+- API为异步任务，单段等待约2分钟；生成成功，并非鉴权失败或本地卡死。
+- 媒体文件按项目规则只保存在本地，GitHub仅提交提示词、状态和记录。
 
 # 当前阻塞点
 
-等待用户审核4.05—14.70秒局部预览。
+等待用户实际播放并确认眼墙上升是否足够明确、风眼下沉是否足够自然直观。
+
+# 需要ChatGPT判断的问题
+
+两个镜头是否允许替换25秒成片中4.05—14.70秒对应部分。
 
 # 完整回答
 
-箭头局部修复已完成并通过几何验收。GitHub包含源码、验收JSON、五张静帧和低码率局部预览；1080×1920预览保存在本地。当前停止，不合成完整25秒。
+两张关键帧和两段4秒无声预览已经实际生成并通过技术检查。当前停止，不合成完整25秒，不恢复箭头几何路线。
