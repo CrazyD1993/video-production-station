@@ -177,6 +177,6 @@ full_video_40s_hd:
   shot_C_selected_take: v2
 blocking_gate: user_review_hd_full_video
 git_sync:
-  status: pending_current_commit
-  last_published_commit: f26523948e1f70d442df3022bd33bb92a8629195
+  status: published
+  last_published_commit: 67674461505b55ab6fc229ab4e35ec22ca54f8a1
 next_actor: User
