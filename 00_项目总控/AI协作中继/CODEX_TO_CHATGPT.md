@@ -2,7 +2,7 @@
 task_id: typhoon-eye-natural-mechanism-preview-001
 status: completed
 branch: experiment/openmontage-pilot
-commit_sha: pending
+commit_sha: 90d5cfebdbdb2b412d3cd9aa5290516a7d3bf6e8
 completed_at: "2026-07-13T23:49:41+08:00"
 ---
 
