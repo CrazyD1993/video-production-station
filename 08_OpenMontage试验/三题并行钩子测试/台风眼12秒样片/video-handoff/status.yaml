@@ -178,7 +178,7 @@ full_video_40s_hd:
 blocking_gate: user_review_v3_full_video
 git_sync:
   status: published
-  last_published_commit: f5233232f3f4c273ea0b62e1a7bc828627ff1867
+  last_published_commit: 22ed6ff9ccff9c983ef14c349db174088d109864
 next_actor: User
 full_video_40s_v2:
   status: created_and_verified_pending_user_review

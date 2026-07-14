@@ -1,6 +1,6 @@
 active_task_id: typhoon-eye-40s-review-v3-final-director-polish-001
 last_chatgpt_instruction_commit: null
-last_codex_response_commit: f5233232f3f4c273ea0b62e1a7bc828627ff1867
+last_codex_response_commit: 22ed6ff9ccff9c983ef14c349db174088d109864
 current_branch: experiment/openmontage-pilot
 project_stage: typhoon_eye_40s_v3_review_ready
 blocking_gate: user_review_v3_full_video

@@ -2,7 +2,7 @@
 task_id: typhoon-eye-40s-review-v3-final-director-polish-001
 status: completed
 branch: experiment/openmontage-pilot
-commit_sha: pending
+commit_sha: 22ed6ff9ccff9c983ef14c349db174088d109864
 completed_at: "2026-07-14T23:23:17+08:00"
 ---
 
