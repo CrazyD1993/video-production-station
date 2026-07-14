@@ -175,7 +175,7 @@ full_video_40s_hd:
   subtitle_exact_match: true
   shot_C_seedance_call_count: 2
   shot_C_selected_take: v2
-blocking_gate: user_review_v2_full_video
+blocking_gate: user_review_v3_full_video
 git_sync:
   status: published
   last_published_commit: f5233232f3f4c273ea0b62e1a7bc828627ff1867
@@ -197,3 +197,21 @@ full_video_40s_v2:
   programmatic_space_demo_center_crossing_error_px: 0.0
   audio_stems_verified_non_silent: true
   ending_storm_tail_verified_non_silent: true
+full_video_40s_v3:
+  status: created_and_verified_pending_user_review
+  path: 08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/output/typhoon-eye-40s-review-v3-1080x1920.mp4
+  upload_to_github: false
+  sha256: 3c059037d045e4f8d1effd5d0ec8f2e998ef1d1413be8eb16a3b88f992e53671
+  width: 1080
+  height: 1920
+  fps: 30
+  frames: 1254
+  duration_seconds: 41.8
+  integrated_lufs: -16.0
+  true_peak_dbfs: -5.7
+  subtitle_count: 24
+  subtitle_text_changed: false
+  narration_changed: false
+  selected_voice_changed: false
+  paid_model_calls: 0
+  contact_sheet: 08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/output/v3-work/review/typhoon-eye-40s-v3-contact-sheet.jpg

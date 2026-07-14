@@ -1,9 +1,9 @@
-active_task_id: typhoon-eye-40s-review-v2-directed-fix-001
+active_task_id: typhoon-eye-40s-review-v3-final-director-polish-001
 last_chatgpt_instruction_commit: null
 last_codex_response_commit: f5233232f3f4c273ea0b62e1a7bc828627ff1867
 current_branch: experiment/openmontage-pilot
-project_stage: typhoon_eye_40s_v2_review_ready
-blocking_gate: user_review_v2_full_video
+project_stage: typhoon_eye_40s_v3_review_ready
+blocking_gate: user_review_v3_full_video
 aircraft_window_pilot: paused_no_more_image_generation
 approved_topic: typhoon_eye_calm
 production_mode: bavi_hotspot_fast_track
@@ -254,6 +254,39 @@ full_video_40s_v2:
     environment_non_silent: true
     final_mix_non_silent: true
     ending_tail_non_silent: true
+full_video_40s_v3:
+  status: created_and_verified_pending_user_review
+  upload_to_github: false
+  path: 08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/output/typhoon-eye-40s-review-v3-1080x1920.mp4
+  sha256: 3c059037d045e4f8d1effd5d0ec8f2e998ef1d1413be8eb16a3b88f992e53671
+  width: 1080
+  height: 1920
+  fps: 30
+  fps_mode: cfr
+  frames: 1254
+  duration_seconds: 41.8
+  video_codec: h264_high
+  pixel_format: yuv420p
+  audio_codec: aac
+  audio_sample_rate_hz: 48000
+  audio_channels: 2
+  integrated_lufs: -16.0
+  true_peak_dbfs: -5.7
+  subtitle_count: 24
+  subtitle_exact_match: true
+  paid_model_calls: 0
+  programmatic_space_demo:
+    timeline_seconds: [28.0, 32.0]
+    fixed_marker_count: 1
+    center_crossing_error_px: 0.0
+    stage_text_max_simultaneous: 1
+  audio_validation:
+    voice_mean_db: -22.3
+    environment_mean_db: -32.4
+    emotion_pad_mean_db: -37.0
+    final_mix_mean_db: -15.8
+    ending_tail_mean_db: -22.9
+  contact_sheet: 08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/output/v3-work/review/typhoon-eye-40s-v3-contact-sheet.jpg
   voice:
     resource_id: seed-tts-2.0
     voice_id: zh_female_zhixingnv_uranus_bigtts
@@ -281,4 +314,4 @@ full_video_40s_v2:
     output_sha256: 1db77197931d8146a9797dde633173712d47c66220236eb4a258e750b645784c
     limitation: clearer_than_v1_but_non_event_specific_visualization
 next_actor: User
-updated_at: "2026-07-14T01:14:15+08:00"
+updated_at: "2026-07-14T23:23:17+08:00"
