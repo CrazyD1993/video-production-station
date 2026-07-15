@@ -3,7 +3,7 @@ task_id: petrichor-review-agents-setup-001
 status: completed
 branch: experiment/openmontage-pilot
 target_commit: fe82d547692b9dd0322e9ae32e9de43e14e16bb1
-commit_sha: PENDING_COMMIT
+commit_sha: 79fc5cac28e8f0d8f3ee843ddbf5be6e7f12b97d
 completed_at: "2026-07-15T14:03:54+08:00"
 ---
 

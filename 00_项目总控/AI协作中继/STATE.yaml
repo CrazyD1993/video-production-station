@@ -390,4 +390,4 @@ petrichor_asset_board_v1_review:
   production_assets_modified: false
   new_preview_created: false
   full_video_created: false
-  completion_commit: PENDING_COMMIT
+  completion_commit: 79fc5cac28e8f0d8f3ee843ddbf5be6e7f12b97d
