@@ -1,0 +1,1259 @@
+{
+  "request": {
+    "provider": "Volcengine Seed-TTS 2.0",
+    "resource_id": "seed-tts-2.0",
+    "voice_id": "zh_female_zhixingnv_uranus_bigtts",
+    "format": "pcm",
+    "sample_rate": 48000,
+    "speech_rate": 0,
+    "enable_timestamp": true,
+    "return_usage": true,
+    "text": "刚下雨时，空气里总会冒出一股熟悉的泥土味。它到底从哪儿来？\n\n其实，你闻到的这股气味，主要不是雨水本身，而是早已藏在土地里。干燥时，植物释放的一些油性物质会被土壤和岩石吸附；土壤微生物还会产生带着泥土气息的土臭素。\n\n当雨滴落在疏松的地面上，会把孔隙里的空气困成微小气泡。气泡升到水滴表面，“啵”地破裂，像一枚微型喷雾器，把藏在土地里的气味带进空气。\n\n所以，久旱后的第一阵雨，这股味道往往更明显。\n\n你闻到的，不只是雨，而是一整片土地被重新唤醒的气息。"
+  },
+  "response": {
+    "code": 20000000,
+    "data": {
+      "req_text_length": 219,
+      "sentences": [
+        {
+          "endTime": 3.855,
+          "startTime": 0.375,
+          "text": "刚下雨时，空气里总会冒出一股熟悉的泥土味。",
+          "words": [
+            {
+              "confidence": 0.94460016,
+              "endTime": 0.515,
+              "startTime": 0.375,
+              "word": "刚"
+            },
+            {
+              "confidence": 0.95249057,
+              "endTime": 0.735,
+              "startTime": 0.515,
+              "word": "下"
+            },
+            {
+              "confidence": 0.9523617,
+              "endTime": 0.855,
+              "startTime": 0.735,
+              "word": "雨"
+            },
+            {
+              "confidence": 0.9227496,
+              "endTime": 1.195,
+              "startTime": 0.855,
+              "word": "时，"
+            },
+            {
+              "confidence": 0.94889647,
+              "endTime": 1.525,
+              "startTime": 1.355,
+              "word": "空"
+            },
+            {
+              "confidence": 0.97714937,
+              "endTime": 1.675,
+              "startTime": 1.525,
+              "word": "气"
+            },
+            {
+              "confidence": 0.8254169,
+              "endTime": 1.815,
+              "startTime": 1.675,
+              "word": "里"
+            },
+            {
+              "confidence": 0.93284297,
+              "endTime": 1.995,
+              "startTime": 1.815,
+              "word": "总"
+            },
+            {
+              "confidence": 0.9788019,
+              "endTime": 2.165,
+              "startTime": 1.995,
+              "word": "会"
+            },
+            {
+              "confidence": 0.9666286,
+              "endTime": 2.365,
+              "startTime": 2.165,
+              "word": "冒"
+            },
+            {
+              "confidence": 0.9207531,
+              "endTime": 2.505,
+              "startTime": 2.365,
+              "word": "出"
+            },
+            {
+              "confidence": 0.9572432,
+              "endTime": 2.635,
+              "startTime": 2.505,
+              "word": "一"
+            },
+            {
+              "confidence": 0.91373557,
+              "endTime": 2.785,
+              "startTime": 2.635,
+              "word": "股"
+            },
+            {
+              "confidence": 0.92323667,
+              "endTime": 3.005,
+              "startTime": 2.785,
+              "word": "熟"
+            },
+            {
+              "confidence": 0.91699266,
+              "endTime": 3.165,
+              "startTime": 3.005,
+              "word": "悉"
+            },
+            {
+              "confidence": 0.96017504,
+              "endTime": 3.265,
+              "startTime": 3.165,
+              "word": "的"
+            },
+            {
+              "confidence": 0.8627509,
+              "endTime": 3.415,
+              "startTime": 3.265,
+              "word": "泥"
+            },
+            {
+              "confidence": 0.9158045,
+              "endTime": 3.625,
+              "startTime": 3.415,
+              "word": "土"
+            },
+            {
+              "confidence": 0.9449334,
+              "endTime": 3.855,
+              "startTime": 3.625,
+              "word": "味。"
+            }
+          ]
+        },
+        {
+          "endTime": 5.693,
+          "startTime": 4.563,
+          "text": "它到底从哪儿来？\n\n",
+          "words": [
+            {
+              "confidence": 0.95862496,
+              "endTime": 4.713,
+              "startTime": 4.563,
+              "word": "它"
+            },
+            {
+              "confidence": 0.94769967,
+              "endTime": 4.872999999999999,
+              "startTime": 4.713,
+              "word": "到"
+            },
+            {
+              "confidence": 0.9686541,
+              "endTime": 5.003,
+              "startTime": 4.872999999999999,
+              "word": "底"
+            },
+            {
+              "confidence": 0.96628606,
+              "endTime": 5.183,
+              "startTime": 5.003,
+              "word": "从"
+            },
+            {
+              "confidence": 0.947138,
+              "endTime": 5.353,
+              "startTime": 5.183,
+              "word": "哪"
+            },
+            {
+              "confidence": 0.42365906,
+              "endTime": 5.383,
+              "startTime": 5.353,
+              "word": "儿"
+            },
+            {
+              "confidence": 0.9682012,
+              "endTime": 5.693,
+              "startTime": 5.383,
+              "word": "来？"
+            }
+          ]
+        },
+        {
+          "endTime": 11.632,
+          "startTime": 6.372,
+          "text": "其实，你闻到的这股气味，主要不是雨水本身，而是早已藏在土地里。",
+          "words": [
+            {
+              "confidence": 0.9019421,
+              "endTime": 6.522,
+              "startTime": 6.372,
+              "word": "其"
+            },
+            {
+              "confidence": 0.98276323,
+              "endTime": 6.8420000000000005,
+              "startTime": 6.522,
+              "word": "实，"
+            },
+            {
+              "confidence": 0.87509865,
+              "endTime": 7.132,
+              "startTime": 6.972,
+              "word": "你"
+            },
+            {
+              "confidence": 0.8818571,
+              "endTime": 7.292,
+              "startTime": 7.132,
+              "word": "闻"
+            },
+            {
+              "confidence": 0.87966466,
+              "endTime": 7.462,
+              "startTime": 7.292,
+              "word": "到"
+            },
+            {
+              "confidence": 0.9428012,
+              "endTime": 7.572,
+              "startTime": 7.462,
+              "word": "的"
+            },
+            {
+              "confidence": 0.92895955,
+              "endTime": 7.692,
+              "startTime": 7.572,
+              "word": "这"
+            },
+            {
+              "confidence": 0.89718634,
+              "endTime": 7.822,
+              "startTime": 7.692,
+              "word": "股"
+            },
+            {
+              "confidence": 0.91190636,
+              "endTime": 8.082,
+              "startTime": 7.822,
+              "word": "气"
+            },
+            {
+              "confidence": 0.96597713,
+              "endTime": 8.312000000000001,
+              "startTime": 8.082,
+              "word": "味，"
+            },
+            {
+              "confidence": 0.9604186,
+              "endTime": 8.612,
+              "startTime": 8.472,
+              "word": "主"
+            },
+            {
+              "confidence": 0.9607931,
+              "endTime": 8.772,
+              "startTime": 8.612,
+              "word": "要"
+            },
+            {
+              "confidence": 0.9262759,
+              "endTime": 8.892,
+              "startTime": 8.772,
+              "word": "不"
+            },
+            {
+              "confidence": 0.93902385,
+              "endTime": 9.052,
+              "startTime": 8.892,
+              "word": "是"
+            },
+            {
+              "confidence": 0.8589714,
+              "endTime": 9.152,
+              "startTime": 9.052,
+              "word": "雨"
+            },
+            {
+              "confidence": 0.94831353,
+              "endTime": 9.342,
+              "startTime": 9.152,
+              "word": "水"
+            },
+            {
+              "confidence": 0.9242796,
+              "endTime": 9.522,
+              "startTime": 9.342,
+              "word": "本"
+            },
+            {
+              "confidence": 0.95524323,
+              "endTime": 9.862,
+              "startTime": 9.522,
+              "word": "身，"
+            },
+            {
+              "confidence": 0.9201206,
+              "endTime": 10.222,
+              "startTime": 10.132,
+              "word": "而"
+            },
+            {
+              "confidence": 0.9692113,
+              "endTime": 10.402,
+              "startTime": 10.222,
+              "word": "是"
+            },
+            {
+              "confidence": 0.8529897,
+              "endTime": 10.612,
+              "startTime": 10.402,
+              "word": "早"
+            },
+            {
+              "confidence": 0.8738498,
+              "endTime": 10.712,
+              "startTime": 10.612,
+              "word": "已"
+            },
+            {
+              "confidence": 0.97211325,
+              "endTime": 10.912,
+              "startTime": 10.712,
+              "word": "藏"
+            },
+            {
+              "confidence": 0.94154626,
+              "endTime": 11.072,
+              "startTime": 10.912,
+              "word": "在"
+            },
+            {
+              "confidence": 0.9802667,
+              "endTime": 11.222,
+              "startTime": 11.072,
+              "word": "土"
+            },
+            {
+              "confidence": 0.948839,
+              "endTime": 11.402,
+              "startTime": 11.222,
+              "word": "地"
+            },
+            {
+              "confidence": 0.87026274,
+              "endTime": 11.632,
+              "startTime": 11.402,
+              "word": "里。"
+            }
+          ]
+        },
+        {
+          "endTime": 17.099,
+          "startTime": 12.319,
+          "text": "干燥时，植物释放的一些油性物质会被土壤和岩石吸附；",
+          "words": [
+            {
+              "confidence": 0.8530923,
+              "endTime": 12.479,
+              "startTime": 12.319,
+              "word": "干"
+            },
+            {
+              "confidence": 0.8919191,
+              "endTime": 12.649,
+              "startTime": 12.479,
+              "word": "燥"
+            },
+            {
+              "confidence": 0.95046145,
+              "endTime": 13.029,
+              "startTime": 12.649,
+              "word": "时，"
+            },
+            {
+              "confidence": 0.8149681,
+              "endTime": 13.339,
+              "startTime": 13.199000000000002,
+              "word": "植"
+            },
+            {
+              "confidence": 0.96476895,
+              "endTime": 13.509,
+              "startTime": 13.339,
+              "word": "物"
+            },
+            {
+              "confidence": 0.9247573,
+              "endTime": 13.689,
+              "startTime": 13.509,
+              "word": "释"
+            },
+            {
+              "confidence": 0.96499443,
+              "endTime": 13.899,
+              "startTime": 13.689,
+              "word": "放"
+            },
+            {
+              "confidence": 0.9125323,
+              "endTime": 14.019,
+              "startTime": 13.899,
+              "word": "的"
+            },
+            {
+              "confidence": 0.92926186,
+              "endTime": 14.109,
+              "startTime": 14.019,
+              "word": "一"
+            },
+            {
+              "confidence": 0.96065414,
+              "endTime": 14.319,
+              "startTime": 14.109,
+              "word": "些"
+            },
+            {
+              "confidence": 0.8348097,
+              "endTime": 14.459,
+              "startTime": 14.319,
+              "word": "油"
+            },
+            {
+              "confidence": 0.96391654,
+              "endTime": 14.659,
+              "startTime": 14.459,
+              "word": "性"
+            },
+            {
+              "confidence": 0.8790087,
+              "endTime": 14.829,
+              "startTime": 14.659,
+              "word": "物"
+            },
+            {
+              "confidence": 0.86003363,
+              "endTime": 15.079,
+              "startTime": 14.829,
+              "word": "质"
+            },
+            {
+              "confidence": 0.96559155,
+              "endTime": 15.429,
+              "startTime": 15.249,
+              "word": "会"
+            },
+            {
+              "confidence": 0.9556675,
+              "endTime": 15.619,
+              "startTime": 15.429,
+              "word": "被"
+            },
+            {
+              "confidence": 0.8499781,
+              "endTime": 15.849,
+              "startTime": 15.619,
+              "word": "土"
+            },
+            {
+              "confidence": 0.84111565,
+              "endTime": 16.059,
+              "startTime": 15.849,
+              "word": "壤"
+            },
+            {
+              "confidence": 0.90870374,
+              "endTime": 16.249000000000002,
+              "startTime": 16.059,
+              "word": "和"
+            },
+            {
+              "confidence": 0.93118453,
+              "endTime": 16.399,
+              "startTime": 16.249000000000002,
+              "word": "岩"
+            },
+            {
+              "confidence": 0.94252837,
+              "endTime": 16.569000000000003,
+              "startTime": 16.399,
+              "word": "石"
+            },
+            {
+              "confidence": 0.95697665,
+              "endTime": 16.789,
+              "startTime": 16.569000000000003,
+              "word": "吸"
+            },
+            {
+              "confidence": 0.9491055,
+              "endTime": 17.099,
+              "startTime": 16.789,
+              "word": "附；"
+            }
+          ]
+        },
+        {
+          "endTime": 21.383000000000003,
+          "startTime": 17.733,
+          "text": "土壤微生物还会产生带着泥土气息的土臭素。\n\n",
+          "words": [
+            {
+              "confidence": 0.858277,
+              "endTime": 17.873,
+              "startTime": 17.733,
+              "word": "土"
+            },
+            {
+              "confidence": 0.8319553,
+              "endTime": 18.063,
+              "startTime": 17.873,
+              "word": "壤"
+            },
+            {
+              "confidence": 0.79720056,
+              "endTime": 18.203000000000003,
+              "startTime": 18.063,
+              "word": "微"
+            },
+            {
+              "confidence": 0.8581832,
+              "endTime": 18.453000000000003,
+              "startTime": 18.203000000000003,
+              "word": "生"
+            },
+            {
+              "confidence": 0.83588755,
+              "endTime": 18.593000000000004,
+              "startTime": 18.453000000000003,
+              "word": "物"
+            },
+            {
+              "confidence": 0.8569604,
+              "endTime": 18.773000000000003,
+              "startTime": 18.593000000000004,
+              "word": "还"
+            },
+            {
+              "confidence": 0.97917765,
+              "endTime": 18.923,
+              "startTime": 18.773000000000003,
+              "word": "会"
+            },
+            {
+              "confidence": 0.9549616,
+              "endTime": 19.133000000000003,
+              "startTime": 18.923,
+              "word": "产"
+            },
+            {
+              "confidence": 0.95621413,
+              "endTime": 19.423,
+              "startTime": 19.133000000000003,
+              "word": "生"
+            },
+            {
+              "confidence": 0.91007805,
+              "endTime": 19.633000000000003,
+              "startTime": 19.453000000000003,
+              "word": "带"
+            },
+            {
+              "confidence": 0.9737082,
+              "endTime": 19.753,
+              "startTime": 19.633000000000003,
+              "word": "着"
+            },
+            {
+              "confidence": 0.85769457,
+              "endTime": 19.913000000000004,
+              "startTime": 19.753,
+              "word": "泥"
+            },
+            {
+              "confidence": 0.9636693,
+              "endTime": 20.083,
+              "startTime": 19.913000000000004,
+              "word": "土"
+            },
+            {
+              "confidence": 0.91133696,
+              "endTime": 20.293000000000003,
+              "startTime": 20.083,
+              "word": "气"
+            },
+            {
+              "confidence": 0.9368091,
+              "endTime": 20.493,
+              "startTime": 20.293000000000003,
+              "word": "息"
+            },
+            {
+              "confidence": 0.93462676,
+              "endTime": 20.673,
+              "startTime": 20.493,
+              "word": "的"
+            },
+            {
+              "confidence": 0.96302193,
+              "endTime": 20.863000000000003,
+              "startTime": 20.673,
+              "word": "土"
+            },
+            {
+              "confidence": 0.9501128,
+              "endTime": 21.083,
+              "startTime": 20.863000000000003,
+              "word": "臭"
+            },
+            {
+              "confidence": 0.93221915,
+              "endTime": 21.383000000000003,
+              "startTime": 21.083,
+              "word": "素。"
+            }
+          ]
+        },
+        {
+          "endTime": 27.348000000000003,
+          "startTime": 22.118,
+          "text": "当雨滴落在疏松的地面上，会把孔隙里的空气困成微小气泡。",
+          "words": [
+            {
+              "confidence": 0.96708727,
+              "endTime": 22.348000000000003,
+              "startTime": 22.118,
+              "word": "当"
+            },
+            {
+              "confidence": 0.8212881,
+              "endTime": 22.508000000000003,
+              "startTime": 22.348000000000003,
+              "word": "雨"
+            },
+            {
+              "confidence": 0.65341175,
+              "endTime": 22.718000000000004,
+              "startTime": 22.508000000000003,
+              "word": "滴"
+            },
+            {
+              "confidence": 0.8391925,
+              "endTime": 22.918000000000003,
+              "startTime": 22.718000000000004,
+              "word": "落"
+            },
+            {
+              "confidence": 0.9045005,
+              "endTime": 23.158,
+              "startTime": 22.918000000000003,
+              "word": "在"
+            },
+            {
+              "confidence": 0.933075,
+              "endTime": 23.388,
+              "startTime": 23.158,
+              "word": "疏"
+            },
+            {
+              "confidence": 0.93844885,
+              "endTime": 23.558000000000003,
+              "startTime": 23.388,
+              "word": "松"
+            },
+            {
+              "confidence": 0.95390815,
+              "endTime": 23.668000000000003,
+              "startTime": 23.558000000000003,
+              "word": "的"
+            },
+            {
+              "confidence": 0.94138205,
+              "endTime": 23.798,
+              "startTime": 23.668000000000003,
+              "word": "地"
+            },
+            {
+              "confidence": 0.9609208,
+              "endTime": 24.008000000000003,
+              "startTime": 23.798,
+              "word": "面"
+            },
+            {
+              "confidence": 0.9417589,
+              "endTime": 24.318,
+              "startTime": 24.008000000000003,
+              "word": "上，"
+            },
+            {
+              "confidence": 0.95278627,
+              "endTime": 24.718000000000004,
+              "startTime": 24.538000000000004,
+              "word": "会"
+            },
+            {
+              "confidence": 0.8424223,
+              "endTime": 24.918000000000003,
+              "startTime": 24.718000000000004,
+              "word": "把"
+            },
+            {
+              "confidence": 0.9273407,
+              "endTime": 25.138,
+              "startTime": 24.918000000000003,
+              "word": "孔"
+            },
+            {
+              "confidence": 0.9141131,
+              "endTime": 25.328000000000003,
+              "startTime": 25.138,
+              "word": "隙"
+            },
+            {
+              "confidence": 0.95562935,
+              "endTime": 25.448,
+              "startTime": 25.328000000000003,
+              "word": "里"
+            },
+            {
+              "confidence": 0.9656953,
+              "endTime": 25.568,
+              "startTime": 25.448,
+              "word": "的"
+            },
+            {
+              "confidence": 0.97851497,
+              "endTime": 25.788000000000004,
+              "startTime": 25.568,
+              "word": "空"
+            },
+            {
+              "confidence": 0.95636326,
+              "endTime": 26.108000000000004,
+              "startTime": 25.788000000000004,
+              "word": "气"
+            },
+            {
+              "confidence": 0.8911649,
+              "endTime": 26.338,
+              "startTime": 26.108000000000004,
+              "word": "困"
+            },
+            {
+              "confidence": 0.9319564,
+              "endTime": 26.598000000000003,
+              "startTime": 26.338,
+              "word": "成"
+            },
+            {
+              "confidence": 0.87738323,
+              "endTime": 26.708,
+              "startTime": 26.598000000000003,
+              "word": "微"
+            },
+            {
+              "confidence": 0.9507542,
+              "endTime": 26.888,
+              "startTime": 26.708,
+              "word": "小"
+            },
+            {
+              "confidence": 0.74155635,
+              "endTime": 27.068,
+              "startTime": 26.888,
+              "word": "气"
+            },
+            {
+              "confidence": 0.88041645,
+              "endTime": 27.348000000000003,
+              "startTime": 27.068,
+              "word": "泡。"
+            }
+          ]
+        },
+        {
+          "endTime": 35.059000000000005,
+          "startTime": 28.109,
+          "text": "气泡升到水滴表面，“啵”地破裂，像一枚微型喷雾器，把藏在土地里的气味带进空气。\n\n",
+          "words": [
+            {
+              "confidence": 0.79413754,
+              "endTime": 28.289,
+              "startTime": 28.109,
+              "word": "气"
+            },
+            {
+              "confidence": 0.8780294,
+              "endTime": 28.509,
+              "startTime": 28.289,
+              "word": "泡"
+            },
+            {
+              "confidence": 0.92445844,
+              "endTime": 28.729000000000003,
+              "startTime": 28.509,
+              "word": "升"
+            },
+            {
+              "confidence": 0.79401165,
+              "endTime": 28.899,
+              "startTime": 28.729000000000003,
+              "word": "到"
+            },
+            {
+              "confidence": 0.9778736,
+              "endTime": 29.099,
+              "startTime": 28.899,
+              "word": "水"
+            },
+            {
+              "confidence": 0.65382063,
+              "endTime": 29.219,
+              "startTime": 29.099,
+              "word": "滴"
+            },
+            {
+              "confidence": 0.90975887,
+              "endTime": 29.439,
+              "startTime": 29.219,
+              "word": "表"
+            },
+            {
+              "confidence": 0.25674084,
+              "endTime": 29.649,
+              "startTime": 29.619000000000003,
+              "word": "面，“"
+            },
+            {
+              "confidence": 0.30293992,
+              "endTime": 29.899,
+              "startTime": 29.869,
+              "word": "啵”"
+            },
+            {
+              "confidence": 0.7753037,
+              "endTime": 30.249,
+              "startTime": 30.149,
+              "word": "地"
+            },
+            {
+              "confidence": 0.9740827,
+              "endTime": 30.489,
+              "startTime": 30.249,
+              "word": "破"
+            },
+            {
+              "confidence": 0.8076184,
+              "endTime": 30.739,
+              "startTime": 30.489,
+              "word": "裂，"
+            },
+            {
+              "confidence": 0.896172,
+              "endTime": 31.149,
+              "startTime": 30.949,
+              "word": "像"
+            },
+            {
+              "confidence": 0.9210605,
+              "endTime": 31.299000000000003,
+              "startTime": 31.149,
+              "word": "一"
+            },
+            {
+              "confidence": 0.92712,
+              "endTime": 31.529000000000003,
+              "startTime": 31.299000000000003,
+              "word": "枚"
+            },
+            {
+              "confidence": 0.82842946,
+              "endTime": 31.649,
+              "startTime": 31.529000000000003,
+              "word": "微"
+            },
+            {
+              "confidence": 0.8930873,
+              "endTime": 31.859,
+              "startTime": 31.649,
+              "word": "型"
+            },
+            {
+              "confidence": 0.9037018,
+              "endTime": 32.019000000000005,
+              "startTime": 31.859,
+              "word": "喷"
+            },
+            {
+              "confidence": 0.93212324,
+              "endTime": 32.149,
+              "startTime": 32.019000000000005,
+              "word": "雾"
+            },
+            {
+              "confidence": 0.9570023,
+              "endTime": 32.479,
+              "startTime": 32.149,
+              "word": "器，"
+            },
+            {
+              "confidence": 0.89821774,
+              "endTime": 32.849000000000004,
+              "startTime": 32.669000000000004,
+              "word": "把"
+            },
+            {
+              "confidence": 0.92776334,
+              "endTime": 33.069,
+              "startTime": 32.849000000000004,
+              "word": "藏"
+            },
+            {
+              "confidence": 0.92516756,
+              "endTime": 33.269000000000005,
+              "startTime": 33.069,
+              "word": "在"
+            },
+            {
+              "confidence": 0.9666802,
+              "endTime": 33.459,
+              "startTime": 33.269000000000005,
+              "word": "土"
+            },
+            {
+              "confidence": 0.9240449,
+              "endTime": 33.579,
+              "startTime": 33.459,
+              "word": "地"
+            },
+            {
+              "confidence": 0.95641804,
+              "endTime": 33.689,
+              "startTime": 33.579,
+              "word": "里"
+            },
+            {
+              "confidence": 0.8534249,
+              "endTime": 33.799,
+              "startTime": 33.689,
+              "word": "的"
+            },
+            {
+              "confidence": 0.8884472,
+              "endTime": 34.059000000000005,
+              "startTime": 33.799,
+              "word": "气"
+            },
+            {
+              "confidence": 0.929246,
+              "endTime": 34.249,
+              "startTime": 34.059000000000005,
+              "word": "味"
+            },
+            {
+              "confidence": 0.93599993,
+              "endTime": 34.389,
+              "startTime": 34.249,
+              "word": "带"
+            },
+            {
+              "confidence": 0.900654,
+              "endTime": 34.519000000000005,
+              "startTime": 34.389,
+              "word": "进"
+            },
+            {
+              "confidence": 0.96081316,
+              "endTime": 34.729,
+              "startTime": 34.519000000000005,
+              "word": "空"
+            },
+            {
+              "confidence": 0.97923124,
+              "endTime": 35.059000000000005,
+              "startTime": 34.729,
+              "word": "气。"
+            }
+          ]
+        },
+        {
+          "endTime": 39.773,
+          "startTime": 35.903,
+          "text": "所以，久旱后的第一阵雨，这股味道往往更明显。\n\n",
+          "words": [
+            {
+              "confidence": 0.80244756,
+              "endTime": 36.053,
+              "startTime": 35.903,
+              "word": "所"
+            },
+            {
+              "confidence": 0.9785218,
+              "endTime": 36.363,
+              "startTime": 36.053,
+              "word": "以，"
+            },
+            {
+              "confidence": 0.8840653,
+              "endTime": 36.703,
+              "startTime": 36.513,
+              "word": "久"
+            },
+            {
+              "confidence": 0.9151927,
+              "endTime": 36.903,
+              "startTime": 36.703,
+              "word": "旱"
+            },
+            {
+              "confidence": 0.94224817,
+              "endTime": 37.123,
+              "startTime": 36.903,
+              "word": "后"
+            },
+            {
+              "confidence": 0.9292311,
+              "endTime": 37.263,
+              "startTime": 37.123,
+              "word": "的"
+            },
+            {
+              "confidence": 0.9205691,
+              "endTime": 37.453,
+              "startTime": 37.263,
+              "word": "第"
+            },
+            {
+              "confidence": 0.9023221,
+              "endTime": 37.503,
+              "startTime": 37.453,
+              "word": "一"
+            },
+            {
+              "confidence": 0.84680367,
+              "endTime": 37.713,
+              "startTime": 37.503,
+              "word": "阵"
+            },
+            {
+              "confidence": 0.8931442,
+              "endTime": 37.963,
+              "startTime": 37.713,
+              "word": "雨，"
+            },
+            {
+              "confidence": 0.88455915,
+              "endTime": 38.273,
+              "startTime": 38.133,
+              "word": "这"
+            },
+            {
+              "confidence": 0.86055404,
+              "endTime": 38.423,
+              "startTime": 38.273,
+              "word": "股"
+            },
+            {
+              "confidence": 0.9462625,
+              "endTime": 38.593,
+              "startTime": 38.423,
+              "word": "味"
+            },
+            {
+              "confidence": 0.94647247,
+              "endTime": 38.803,
+              "startTime": 38.593,
+              "word": "道"
+            },
+            {
+              "confidence": 0.8756469,
+              "endTime": 38.963,
+              "startTime": 38.833,
+              "word": "往"
+            },
+            {
+              "confidence": 0.93518776,
+              "endTime": 39.133,
+              "startTime": 38.963,
+              "word": "往"
+            },
+            {
+              "confidence": 0.9469189,
+              "endTime": 39.323,
+              "startTime": 39.133,
+              "word": "更"
+            },
+            {
+              "confidence": 0.9672893,
+              "endTime": 39.473,
+              "startTime": 39.323,
+              "word": "明"
+            },
+            {
+              "confidence": 0.95607096,
+              "endTime": 39.773,
+              "startTime": 39.473,
+              "word": "显。"
+            }
+          ]
+        },
+        {
+          "endTime": 45.587,
+          "startTime": 40.527,
+          "text": "你闻到的，不只是雨，而是一整片土地被重新唤醒的气息。\n",
+          "words": [
+            {
+              "confidence": 0.8058884,
+              "endTime": 40.687,
+              "startTime": 40.527,
+              "word": "你"
+            },
+            {
+              "confidence": 0.7891124,
+              "endTime": 40.867,
+              "startTime": 40.687,
+              "word": "闻"
+            },
+            {
+              "confidence": 0.9308964,
+              "endTime": 41.077,
+              "startTime": 40.867,
+              "word": "到"
+            },
+            {
+              "confidence": 0.96009666,
+              "endTime": 41.437,
+              "startTime": 41.077,
+              "word": "的，"
+            },
+            {
+              "confidence": 0.98074335,
+              "endTime": 41.607,
+              "startTime": 41.467,
+              "word": "不"
+            },
+            {
+              "confidence": 0.95357436,
+              "endTime": 41.727,
+              "startTime": 41.607,
+              "word": "只"
+            },
+            {
+              "confidence": 0.9235301,
+              "endTime": 41.907,
+              "startTime": 41.727,
+              "word": "是"
+            },
+            {
+              "confidence": 0.9449123,
+              "endTime": 42.207,
+              "startTime": 41.907,
+              "word": "雨，"
+            },
+            {
+              "confidence": 0.92127794,
+              "endTime": 42.617,
+              "startTime": 42.556999999999995,
+              "word": "而"
+            },
+            {
+              "confidence": 0.9259474,
+              "endTime": 42.817,
+              "startTime": 42.617,
+              "word": "是"
+            },
+            {
+              "confidence": 0.922735,
+              "endTime": 42.957,
+              "startTime": 42.817,
+              "word": "一"
+            },
+            {
+              "confidence": 0.9465814,
+              "endTime": 43.147,
+              "startTime": 42.957,
+              "word": "整"
+            },
+            {
+              "confidence": 0.9552374,
+              "endTime": 43.357,
+              "startTime": 43.147,
+              "word": "片"
+            },
+            {
+              "confidence": 0.9333291,
+              "endTime": 43.587,
+              "startTime": 43.357,
+              "word": "土"
+            },
+            {
+              "confidence": 0.95695746,
+              "endTime": 43.867,
+              "startTime": 43.587,
+              "word": "地"
+            },
+            {
+              "confidence": 0.96765023,
+              "endTime": 44.187,
+              "startTime": 44.007,
+              "word": "被"
+            },
+            {
+              "confidence": 0.9386563,
+              "endTime": 44.417,
+              "startTime": 44.187,
+              "word": "重"
+            },
+            {
+              "confidence": 0.9674007,
+              "endTime": 44.607,
+              "startTime": 44.417,
+              "word": "新"
+            },
+            {
+              "confidence": 0.9123072,
+              "endTime": 44.827,
+              "startTime": 44.607,
+              "word": "唤"
+            },
+            {
+              "confidence": 0.8545055,
+              "endTime": 44.986999999999995,
+              "startTime": 44.827,
+              "word": "醒"
+            },
+            {
+              "confidence": 0.8919687,
+              "endTime": 45.077,
+              "startTime": 44.986999999999995,
+              "word": "的"
+            },
+            {
+              "confidence": 0.93694925,
+              "endTime": 45.267,
+              "startTime": 45.077,
+              "word": "气"
+            },
+            {
+              "confidence": 0.9797868,
+              "endTime": 45.587,
+              "startTime": 45.267,
+              "word": "息。"
+            }
+          ]
+        }
+      ],
+      "synthesize_text_length": 219,
+      "task_id": "fc73338c-7a99-4b67-833c-c8fafd236940",
+      "task_status": 2,
+      "url_expire_time": 1784085073
+    },
+    "message": "ok"
+  }
+}
