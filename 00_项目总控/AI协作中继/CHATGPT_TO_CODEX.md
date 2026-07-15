@@ -17,7 +17,7 @@ reviewer_c_approve_seedance_mechanism_generation: false
 reviewer_c_approve_formal_composition: false
 human_final_decision: pending
 formal_composition_started: false
-completion_commit: pending_recording
+completion_commit: 2eb2489ecff6bba7d52ef5e568157cfd345ce03b
 ---
 
 # 雨后泥土味｜定向整改 V2 执行令

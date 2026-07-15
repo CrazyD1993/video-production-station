@@ -1,6 +1,6 @@
 active_task_id: petrichor-director-remediation-v2-001
 last_chatgpt_instruction_commit: d8d20ce772f9100ba3f0ef6087b7c7c5b5d880a3
-last_codex_response_commit: pending_recording
+last_codex_response_commit: 2eb2489ecff6bba7d52ef5e568157cfd345ce03b
 current_branch: experiment/openmontage-pilot
 project_stage: petrichor_director_remediation_v2_independent_review_complete
 blocking_gate: formal_composition_and_additional_seedance_blocked_by_review
@@ -513,4 +513,4 @@ petrichor_director_remediation_v2_001:
   required_rework: [S01, S05, S06, S07, S09, S11, S12]
   retained_or_limited: [S02, S03, S04, S08, S10, S13]
   next_decision_only: ChatGPT and user decide whether to authorize a no-more-Seedance remediation task.
-  completion_commit: pending_recording
+  completion_commit: 2eb2489ecff6bba7d52ef5e568157cfd345ce03b
