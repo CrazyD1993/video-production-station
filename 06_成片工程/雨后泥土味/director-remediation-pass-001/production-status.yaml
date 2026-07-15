@@ -1,0 +1,20 @@
+task_id: petrichor-director-remediation-pass-001
+stage: production
+production_complete: true
+production_commit: pending_until_commit_created
+review_ready: false
+formal_composition: false
+human_final_decision: pending
+timeline:
+  start: 0.00
+  end: 46.80
+  locked: true
+seedance:
+  model: doubao-seedance-2-0-fast-260128
+  total_calls: 2
+  hard_limit: 4
+  cost: unknown
+unresolved:
+  - S01 lacks a real high-speed single-drop-on-dry-soil mother asset.
+  - S07 remains visually programmatic and needs independent documentary-style judgment.
+  - S11 aerosol visibility and B1/B2 soil-geometry continuity remain limited.

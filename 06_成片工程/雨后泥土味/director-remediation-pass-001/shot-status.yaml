@@ -1,0 +1,83 @@
+task_id: petrichor-director-remediation-pass-001
+timeline_locked: true
+formal_composition: false
+preview_only: true
+shots:
+  - id: S01
+    start: 0.00
+    end: 1.20
+    status: partial
+    evidence: programmatic/S01.mp4
+    note: "落滴、撞击、湿斑状态变化已动态实现；仍缺真实高速单滴击中干土母素材。"
+  - id: S02
+    start: 1.20
+    end: 3.85
+    status: done
+    evidence: petrichor-director-remediation-preview-v1.mp4
+    note: "叶片、石板、湿土三段生活细节已按锁定时长快切。"
+  - id: S03
+    start: 3.85
+    end: 5.69
+    status: done
+    evidence: petrichor-director-remediation-preview-v1.mp4
+    note: "湿润泥土近景与锁定标题位置已保留。"
+  - id: S04
+    start: 5.69
+    end: 8.70
+    status: done
+    evidence: petrichor-director-remediation-preview-v1.mp4
+    note: "真实叶尖水滴内部运动保留。"
+  - id: S05
+    start: 8.70
+    end: 12.32
+    status: done
+    evidence: programmatic/S05.mp4
+    note: "地表、裂隙、根系与孔隙通过连续下潜和水流连接，不是静态推拉卡。"
+  - id: S06
+    start: 12.32
+    end: 17.10
+    status: partial
+    evidence: petrichor-director-remediation-preview-v1.mp4
+    note: "真实根系和林地成立；吸附目前主要依靠克制局部标记，内部运动仍有限。"
+  - id: S07
+    start: 17.10
+    end: 21.38
+    status: partial
+    evidence: programmatic/S07.mp4
+    note: "已程序化表现休眠、水分唤醒、菌丝与土臭素标签，未调用 Seedance；底图纪录片真实感仍需导演判断。"
+  - id: S08
+    start: 21.38
+    end: 24.30
+    status: done
+    evidence: programmatic/S08.mp4
+    note: "使用真实干土纹理明确呈现接近、运动方向与撞击点；未调用 Seedance。"
+  - id: S09
+    start: 24.30
+    end: 27.35
+    status: done
+    evidence: seedance/outputs/B1_S09-candidate-1.mp4
+    note: "水进入孔隙、空气成泡并开始上升；真实任务 cgt-20260715200029-2bfck。"
+  - id: S10
+    start: 27.35
+    end: 30.50
+    status: done
+    evidence: seedance/outputs/B2_S10_S11-candidate-2.mp4
+    note: "同一 B2 候选中气泡连续上升；真实任务 cgt-20260715200457-ct6d8。"
+  - id: S11
+    start: 30.50
+    end: 35.06
+    status: partial
+    evidence: seedance/outputs/B2_S10_S11-candidate-2.mp4
+    note: "气泡到达表面并消失完成破裂；极细气溶胶不够明确，且 B1/B2 土粒几何连续性有限。"
+  - id: S12
+    start: 35.06
+    end: 39.77
+    status: done
+    evidence: programmatic/S12.mp4
+    note: "同一构图、同一裂纹关系内连续扩散变湿，没有拼接两块土地冒充变化。"
+  - id: S13
+    start: 39.77
+    end: 46.80
+    status: done
+    evidence: assets/real-proxy/R13-pexels-32679329-rain-leaves-forest-proxy.mp4
+    note: "真实叶片承雨运动接真实雾林摄影机运动，替换静态 R08，情绪从压抑转向展开。"

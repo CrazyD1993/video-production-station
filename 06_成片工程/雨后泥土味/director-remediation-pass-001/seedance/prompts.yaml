@@ -1,0 +1,32 @@
+model: doubao-seedance-2-0-fast-260128
+ratio: "9:16"
+resolution: 720p
+generate_audio: false
+shared_visual_anchor: >-
+  Photoreal macro documentary shot of the same compact porous brown soil cross-section,
+  low-saturation natural earth colors, damp mineral texture, one small transparent pore,
+  physically plausible water and air behavior, fixed camera and fixed soil geometry,
+  no text, no arrows, no HUD, no fluorescent particles, no science-fiction glow,
+  no cartoon style, no people.
+shots:
+  B1_S09:
+    duration_seconds: 5
+    prompt: >-
+      Photoreal macro documentary shot of a compact porous brown soil cross-section.
+      A raindrop has just struck the surface; water pushes into one narrow pore and traps
+      a tiny pocket of air. The air pocket closes into one small transparent bubble.
+      End with that same bubble only beginning to rise inside the water-filled pore.
+      Fixed camera, fixed soil geometry, restrained realistic motion, low-saturation
+      natural earth colors, physically plausible fluid behavior. No text, no arrows,
+      no HUD, no fluorescent particles, no science-fiction glow, no cartoon style.
+  B2_S10_S11:
+    duration_seconds: 5
+    prompt: >-
+      Continue the exact same photoreal macro documentary view of the same compact porous
+      brown soil cross-section and the same tiny transparent bubble. The bubble starts
+      low in the same water-filled pore, rises slowly to the wet surface, reaches the
+      air-water boundary, then makes one subtle natural pop. The pop releases an extremely
+      fine barely visible mist of aerosol upward, not colored molecules. Fixed camera,
+      fixed soil geometry, restrained realistic motion, low-saturation natural earth
+      colors, physically plausible fluid behavior. No text, no arrows, no HUD,
+      no fluorescent particles, no science-fiction glow, no cartoon style.

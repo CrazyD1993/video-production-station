@@ -1,0 +1,87 @@
+{
+  "model_scope": "S09-S11 only",
+  "hard_limit": 4,
+  "total_calls": 2,
+  "calls": [
+    {
+      "call_number": 1,
+      "created_at": "2026-07-15T12:00:28.939533+00:00",
+      "shot_group": "B1_S09",
+      "model": "doubao-seedance-2-0-fast-260128",
+      "ratio": "9:16",
+      "resolution": "720p",
+      "duration_seconds": 5,
+      "generate_audio": false,
+      "prompt": "Photoreal macro documentary shot of a compact porous brown soil cross-section. A raindrop has just struck the surface; water pushes into one narrow pore and traps a tiny pocket of air. The air pocket closes into one small transparent bubble. End with that same bubble only beginning to rise inside the water-filled pore. Fixed camera, fixed soil geometry, restrained realistic motion, low-saturation natural earth colors, physically plausible fluid behavior. No text, no arrows, no HUD, no fluorescent particles, no science-fiction glow, no cartoon style.",
+      "task_id": "cgt-20260715200029-2bfck",
+      "status": "succeeded",
+      "output_path": "seedance/outputs/B1_S09-candidate-1.mp4",
+      "cost": "unknown",
+      "decision_reason": "accepted for S09: air pocket closes into one bubble and begins rising; no disqualifying physics error, subject loss or file damage, so no retry",
+      "provider_response": {
+        "id": "cgt-20260715200029-2bfck",
+        "model": "doubao-seedance-2-0-fast-260128",
+        "status": "succeeded",
+        "content": {
+          "video_url": "[redacted_after_download]"
+        },
+        "usage": {
+          "completion_tokens": 108900,
+          "total_tokens": 108900
+        },
+        "created_at": 1784116829,
+        "updated_at": 1784117013,
+        "seed": 73927,
+        "resolution": "720p",
+        "ratio": "9:16",
+        "duration": 5,
+        "framespersecond": 24,
+        "service_tier": "default",
+        "execution_expires_after": 172800,
+        "generate_audio": false,
+        "draft": false,
+        "priority": 0
+      }
+    },
+    {
+      "call_number": 2,
+      "created_at": "2026-07-15T12:04:57.445528+00:00",
+      "shot_group": "B2_S10_S11",
+      "model": "doubao-seedance-2-0-fast-260128",
+      "ratio": "9:16",
+      "resolution": "720p",
+      "duration_seconds": 5,
+      "generate_audio": false,
+      "prompt": "Continue the exact same photoreal macro documentary view of the same compact porous brown soil cross-section and the same tiny transparent bubble. The bubble starts low in the same water-filled pore, rises slowly to the wet surface, reaches the air-water boundary, then makes one subtle natural pop. The pop releases an extremely fine barely visible mist of aerosol upward, not colored molecules. Fixed camera, fixed soil geometry, restrained realistic motion, low-saturation natural earth colors, physically plausible fluid behavior. No text, no arrows, no HUD, no fluorescent particles, no science-fiction glow, no cartoon style.",
+      "task_id": "cgt-20260715200457-ct6d8",
+      "status": "succeeded",
+      "output_path": "seedance/outputs/B2_S10_S11-candidate-2.mp4",
+      "cost": "unknown",
+      "decision_reason": "accepted with continuity limitation for S10-S11: bubble rises and disappears at the wet surface; soil geometry differs from B1 but the gap is not a severe physics, subject-loss or corruption failure, so no cosmetic retry",
+      "provider_response": {
+        "id": "cgt-20260715200457-ct6d8",
+        "model": "doubao-seedance-2-0-fast-260128",
+        "status": "succeeded",
+        "content": {
+          "video_url": "[redacted_after_download]"
+        },
+        "usage": {
+          "completion_tokens": 108900,
+          "total_tokens": 108900
+        },
+        "created_at": 1784117098,
+        "updated_at": 1784117317,
+        "seed": 4680,
+        "resolution": "720p",
+        "ratio": "9:16",
+        "duration": 5,
+        "framespersecond": 24,
+        "service_tier": "default",
+        "execution_expires_after": 172800,
+        "generate_audio": false,
+        "draft": false,
+        "priority": 0
+      }
+    }
+  ]
+}
