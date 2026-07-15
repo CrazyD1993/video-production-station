@@ -1,7 +1,7 @@
 task_id: petrichor-director-remediation-pass-001
 stage: production
 production_complete: true
-production_commit: pending_until_commit_created
+production_commit: 0da86d05b1904adb9f221f073438c11268a05d44
 review_ready: false
 formal_composition: false
 human_final_decision: pending

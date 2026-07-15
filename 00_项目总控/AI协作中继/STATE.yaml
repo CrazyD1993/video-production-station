@@ -1,12 +1,12 @@
-active_task_id: petrichor-review-agents-setup-001
-last_chatgpt_instruction_commit: null
-last_codex_response_commit: fe82d547692b9dd0322e9ae32e9de43e14e16bb1
+active_task_id: petrichor-director-remediation-pass-001
+last_chatgpt_instruction_commit: 882da14c25d99e788c4fa8ea52434eda58f36adc
+last_codex_response_commit: pending_until_review_commit_created
 current_branch: experiment/openmontage-pilot
-project_stage: petrichor_asset_board_v1_independent_review_complete
-blocking_gate: formal_composition_blocked_by_visual_director_major_findings
+project_stage: petrichor_director_remediation_independent_review_complete
+blocking_gate: formal_composition_blocked_by_contract_and_visual_review
 aircraft_window_pilot: paused_no_more_image_generation
 approved_topic: petrichor_rain_soil_smell
-production_mode: asset_board_only_no_full_video
+production_mode: director_dynamic_validation_preview_only_no_formal_composition
 selected_keyframes:
   TE-S01: TE-KF1-A
   TE-S02: TE-KF2-A
@@ -313,8 +313,8 @@ full_video_40s_v3:
     output_path: 08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/output/typhoon-eye-shot-C-seedance-fast.mp4
     output_sha256: 1db77197931d8146a9797dde633173712d47c66220236eb4a258e750b645784c
     limitation: clearer_than_v1_but_non_event_specific_visualization
-next_actor: User
-updated_at: "2026-07-15T14:03:54+08:00"
+next_actor: ChatGPT
+updated_at: "2026-07-15T20:35:24+08:00"
 petrichor_asset_board_v1:
   task_id: petrichor-asset-board-v1-001
   status: completed_pending_human_review
@@ -391,3 +391,66 @@ petrichor_asset_board_v1_review:
   new_preview_created: false
   full_video_created: false
   completion_commit: 79fc5cac28e8f0d8f3ee843ddbf5be6e7f12b97d
+petrichor_director_remediation_pass_001:
+  task_id: petrichor-director-remediation-pass-001
+  status: completed_with_formal_composition_blocked
+  evidence_mode: isolated_git_commit_snapshot
+  production:
+    production_complete: true
+    production_commit: 0da86d05b1904adb9f221f073438c11268a05d44
+    preview_only: true
+    formal_composition: false
+    output_dir: 06_成片工程/雨后泥土味/director-remediation-pass-001
+    preview:
+      path: 06_成片工程/雨后泥土味/director-remediation-pass-001/petrichor-director-remediation-preview-v1.mp4
+      duration_seconds: 46.8
+      width: 540
+      height: 960
+      fps: 24
+      video_codec: h264
+      audio_codec: aac
+      audio_sample_rate_hz: 48000
+      narration_included: false
+      temporary_ambience_only: true
+    shot_status_summary:
+      done: [S02, S03, S04, S05, S08, S09, S10, S12, S13]
+      partial: [S01, S06, S07, S11]
+      blocked: []
+    new_real_asset_proxies: [R11, R12, R13]
+    external_license_records_complete: true
+    seedance:
+      model: doubao-seedance-2-0-fast-260128
+      calls_used: 2
+      hard_cap: 4
+      cost: unknown
+      B1:
+        task_id: cgt-20260715200029-2bfck
+        status: succeeded
+        path: 06_成片工程/雨后泥土味/director-remediation-pass-001/seedance/outputs/B1_S09-candidate-1.mp4
+      B2:
+        task_id: cgt-20260715200457-ct6d8
+        status: succeeded
+        path: 06_成片工程/雨后泥土味/director-remediation-pass-001/seedance/outputs/B2_S10_S11-candidate-2.mp4
+  independent_review:
+    independent_review_complete: true
+    review_commit: pending_until_review_commit_created
+    reviewed_production_commit: 0da86d05b1904adb9f221f073438c11268a05d44
+    reviewer_a:
+      conclusion: BLOCK
+      report: 06_成片工程/雨后泥土味/reviews/director-remediation-pass-001/contract-qa.md
+    reviewer_b:
+      conclusion: BLOCK
+      critical: 1
+      major: 9
+      minor: 2
+      note: 1
+      report: 06_成片工程/雨后泥土味/reviews/director-remediation-pass-001/visual-director-review.md
+    reviewer_c:
+      approve_seedance_mechanism_generation: true
+      maximum_additional_calls: 2
+      approve_formal_composition: false
+      decision: 06_成片工程/雨后泥土味/reviews/director-remediation-pass-001/review-decision.yaml
+      summary: 06_成片工程/雨后泥土味/reviews/director-remediation-pass-001/review-summary.md
+    human_final_decision: pending
+  next_decision_only: ChatGPT decides whether to authorize a constrained remediation v2 and up to two remaining Seedance calls; do not approve formal composition yet.
+  completion_commit: pending_until_review_commit_created

@@ -1,14 +1,14 @@
 ---
 task_id: petrichor-director-remediation-pass-001
 revision: 3
-status: ready
+status: completed
 created_by: ChatGPT
 role: 总导演
 target_repo: CrazyD1993/video-production-station
 target_branch: experiment/openmontage-pilot
 issued_from_commit: 882da14c25d99e788c4fa8ea52434eda58f36adc
 priority: P0
-completion_commit: null
+completion_commit: pending_until_review_commit_created
 ---
 
 # 总导演整改执行令（修订版 3）
@@ -225,3 +225,14 @@ human_final_decision: pending
    - 建议 ChatGPT 下一步仅做何种判断
 
 如无法完成任一阶段，必须如实标记 `partial` 或 `blocked`，写明具体失败点；不得伪造 SHA、报告、模型调用、媒体或测试结果。
+
+## Codex 执行结果
+
+- 任务执行状态：`completed`
+- Production commit：`0da86d05b1904adb9f221f073438c11268a05d44`
+- Reviewed production commit：`0da86d05b1904adb9f221f073438c11268a05d44`
+- 独立审核：完成；Reviewer A `BLOCK`，Reviewer B `BLOCK`
+- Reviewer C：允许最多 2 次定向 Seedance 新增/重试；不批准正式合成
+- `human_final_decision: pending`
+- Review commit：`pending_until_review_commit_created`，创建后由元数据同步提交回填
+- 完整回执：`00_项目总控/AI协作中继/CODEX_TO_CHATGPT.md`
