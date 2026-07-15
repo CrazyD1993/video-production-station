@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1920" viewBox="0 0 1080 1920">
+<defs>
+  <linearGradient id="soil" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#80624d"/><stop offset="0.48" stop-color="#5f493a"/><stop offset="1" stop-color="#2e2a25"/></linearGradient>
+  <filter id="grain"><feTurbulence baseFrequency="0.42" numOctaves="3" seed="11" result="n"/><feBlend in="SourceGraphic" in2="n" mode="soft-light"/></filter>
+  <filter id="soft"><feGaussianBlur stdDeviation="5"/></filter>
+</defs>
+<rect width="1080" height="1920" fill="#1f241f"/>
+<rect y="250" width="1080" height="1670" fill="url(#soil)"/>
+<path d="M0 300 C160 250 270 360 450 290 S780 245 1080 320 L1080 560 L0 560Z" fill="#72583f" opacity=".84" filter="url(#grain)"/>
+<path d="M110 190 C220 420 280 690 315 1030 C340 1240 300 1500 250 1760" fill="none" stroke="#b8aa7d" stroke-width="28" opacity=".73"/>
+<path d="M320 770 C470 900 470 1130 390 1390" fill="none" stroke="#a99a70" stroke-width="10" opacity=".55"/>
+<path d="M315 1020 C200 1150 170 1320 130 1470" fill="none" stroke="#b7aa7e" stroke-width="7" opacity=".46"/>
+<g fill="#4d3b31" stroke="#9b7b5d" stroke-width="3" opacity=".9">
+  <ellipse cx="570" cy="620" rx="84" ry="54" transform="rotate(-11 570 620)"/><ellipse cx="790" cy="760" rx="96" ry="62" transform="rotate(18 790 760)"/>
+  <ellipse cx="575" cy="1060" rx="72" ry="47" transform="rotate(13 575 1060)"/><ellipse cx="820" cy="1240" rx="120" ry="80" transform="rotate(-14 820 1240)"/>
+  <ellipse cx="520" cy="1500" rx="105" ry="64" transform="rotate(8 520 1500)"/><ellipse cx="885" cy="1610" rx="72" ry="48" transform="rotate(12 885 1610)"/>
+</g>
+<g fill="none" stroke="#c5bda4" stroke-width="4" opacity=".38">
+  <path d="M470 850 C560 760 610 860 690 805 S835 780 910 850"/><path d="M430 905 C535 850 600 960 735 875 S880 920 965 870"/>
+  <path d="M500 1210 C590 1140 650 1250 750 1170 S900 1220 970 1165"/><path d="M440 1270 C550 1200 620 1320 760 1250"/>
+</g>
+<g fill="#c5ae7c" opacity=".62">
+  <circle cx="650" cy="890" r="7"/><circle cx="704" cy="855" r="4"/><circle cx="745" cy="922" r="5"/><circle cx="792" cy="890" r="3"/>
+  <circle cx="610" cy="1230" r="4"/><circle cx="690" cy="1190" r="6"/><circle cx="760" cy="1245" r="4"/>
+</g>
+<g font-family="PingFang SC, Hiragino Sans GB, sans-serif" fill="#efe9d7">
+  <text x="72" y="105" font-size="33" letter-spacing="5" opacity=".72">机制 A｜土壤剖面</text>
+  <text x="72" y="180" font-family="Songti SC, serif" font-size="58">微生物产生泥土气息</text>
+</g>
+<g transform="translate(560 945)">
+  <rect x="0" y="0" width="400" height="105" fill="#20251f" opacity=".82" stroke="#a79062" stroke-width="2"/>
+  <text x="28" y="44" font-family="PingFang SC, sans-serif" font-size="24" fill="#c9bfa5" letter-spacing="3">微生物代谢</text>
+  <text x="28" y="82" font-family="Songti SC, serif" font-size="35" fill="#f0ead2">土臭素 Geosmin</text>
+</g>
+<text x="72" y="1840" font-family="PingFang SC, sans-serif" font-size="24" fill="#d6cfbb" opacity=".68">真实显微纪录片方向｜无卡通细菌·无荧光·无HUD</text>
+</svg>

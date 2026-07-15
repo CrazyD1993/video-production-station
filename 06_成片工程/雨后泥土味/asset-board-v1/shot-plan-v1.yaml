@@ -1,0 +1,185 @@
+task_id: petrichor-asset-board-v1-001
+version: 1
+generated_at: 2026-07-15
+status: asset_board_ready_for_human_review
+timeline_locked: true
+narration_locked: true
+narration_speed_changed: false
+paid_model_calls: 0
+target:
+  aspect_ratio: "9:16"
+  narration_duration_seconds: 45.937
+  planned_total_duration_seconds: 46.80
+  allowed_total_ceiling_seconds: 48.5
+  real_visual_ratio_target: "60-65%"
+  ai_mechanism_ratio_target: "20-25%"
+  programmatic_ratio_target: "10-15%"
+inventory_summary:
+  acquired_real_mother_assets: 10
+  external_license_records_complete: true
+  formal_dynamic_missing_shots: [S01, S05, S07, S08, S09, S10, S11, S12, S13]
+  formal_composition_gate: blocked_pending_missing_assets_and_human_review
+rhythm_hold_plan:
+  executed_in_preview: false
+  suggestions:
+    - after_shot: S01
+      treatment: "0.24s black_or_freeze_after_real_raindrop_impact"
+    - after_shot: S11
+      treatment: "0.24s freeze_after_bubble_pop"
+shots:
+  - id: S01
+    start: 0.00
+    end: 1.20
+    duration: 1.20
+    locked_visual: "第一颗雨滴落在干燥泥土，真实微距优先。"
+    source_category: "真实"
+    acquisition_status: "部分取得"
+    seedance: "否"
+    programmatic_animation: "否"
+    asset_ids: ["R07"]
+    execution_note: "已有干土基底；缺真实落滴撞击动态。"
+    sound_design_plan_only: "0秒附近一颗清晰近距离雨滴声。"
+  - id: S02
+    start: 1.20
+    end: 3.85
+    duration: 2.65
+    locked_visual: "雨落叶片、石板路、泥土，三个快速生活细节。"
+    source_category: "真实"
+    acquisition_status: "已取得"
+    seedance: "否"
+    programmatic_animation: "否"
+    asset_ids: ["R01", "R09", "R03"]
+    execution_note: "叶片与湿土有动态；石板当前为静帧快切。"
+    sound_design_plan_only: "1—21秒细密轻柔雨声环境底。"
+  - id: S03
+    start: 3.85
+    end: 5.69
+    duration: 1.84
+    locked_visual: "湿润泥土近景，预留标题。"
+    source_category: "真实"
+    acquisition_status: "已取得"
+    seedance: "否"
+    programmatic_animation: "否"
+    asset_ids: ["R04"]
+    execution_note: "标题固定：「雨后的泥土味，从哪儿来？」"
+    sound_design_plan_only: "维持轻雨底。"
+  - id: S04
+    start: 5.69
+    end: 8.70
+    duration: 3.01
+    locked_visual: "透明雨滴挂在叶尖并落下。"
+    source_category: "真实"
+    acquisition_status: "已取得"
+    seedance: "否"
+    programmatic_animation: "否"
+    asset_ids: ["R02"]
+    execution_note: "真实宏观落滴视频已取得代理。"
+    sound_design_plan_only: "局部水滴声可后续保留，本轮不混音。"
+  - id: S05
+    start: 8.70
+    end: 12.32
+    duration: 3.62
+    locked_visual: "镜头由地表进入土壤剖面。"
+    source_category: "程序化"
+    acquisition_status: "草图就绪"
+    seedance: "否"
+    programmatic_animation: "是"
+    asset_ids: ["P05"]
+    execution_note: "已建立剖面结构；缺正式连续下潜动画。"
+    sound_design_plan_only: "仍保持地表轻雨环境。"
+  - id: S06
+    start: 12.32
+    end: 17.10
+    duration: 4.78
+    locked_visual: "植物、落叶、根部、土粒和岩石，展示物质被土壤吸附。"
+    source_category: "真实+程序化"
+    acquisition_status: "已取得"
+    seedance: "否"
+    programmatic_animation: "是"
+    asset_ids: ["R05", "R06"]
+    execution_note: "真实根系与林地为依据；吸附过程后续只做克制局部标记。"
+    sound_design_plan_only: "继续轻雨底。"
+  - id: S07
+    start: 17.10
+    end: 21.38
+    duration: 4.28
+    locked_visual: "土壤微生物与土臭素机制镜头 A。"
+    source_category: "机制草图"
+    acquisition_status: "草图就绪"
+    seedance: "候选A"
+    programmatic_animation: "是"
+    asset_ids: ["MA"]
+    execution_note: "正式动态缺失；保留「土臭素 Geosmin」小标签。"
+    sound_design_plan_only: "21秒附近环境声开始稍闷。"
+  - id: S08
+    start: 21.38
+    end: 24.30
+    duration: 2.92
+    locked_visual: "雨滴高速落向多孔土壤。"
+    source_category: "程序化占位"
+    acquisition_status: "草图就绪"
+    seedance: "否"
+    programmatic_animation: "是"
+    asset_ids: ["MB"]
+    execution_note: "缺真实高速宏观落滴；建议优先实拍/免费高速素材。"
+    sound_design_plan_only: "环境稍闷，为进入土壤内部做铺垫。"
+  - id: S09
+    start: 24.30
+    end: 27.35
+    duration: 3.05
+    locked_visual: "孔隙空气被水困成气泡。"
+    source_category: "机制草图"
+    acquisition_status: "草图就绪"
+    seedance: "候选B"
+    programmatic_animation: "是"
+    asset_ids: ["MB"]
+    execution_note: "阶段标签：「困住空气」。"
+    sound_design_plan_only: "低频环境轻微变闷。"
+  - id: S10
+    start: 27.35
+    end: 30.50
+    duration: 3.15
+    locked_visual: "气泡升向水滴表面。"
+    source_category: "机制草图"
+    acquisition_status: "草图就绪"
+    seedance: "候选B"
+    programmatic_animation: "是"
+    asset_ids: ["MB"]
+    execution_note: "阶段标签：「形成气泡」。"
+    sound_design_plan_only: "29.8秒附近预留真实小气泡「啪」声。"
+  - id: S11
+    start: 30.50
+    end: 35.06
+    duration: 4.56
+    locked_visual: "气泡破裂并释放极细气溶胶。"
+    source_category: "机制草图"
+    acquisition_status: "草图就绪"
+    seedance: "候选B"
+    programmatic_animation: "是"
+    asset_ids: ["MB"]
+    execution_note: "阶段标签：「释放气溶胶」。"
+    sound_design_plan_only: "30—35秒预留极轻空气喷散声。"
+  - id: S12
+    start: 35.06
+    end: 39.77
+    duration: 4.71
+    locked_visual: "久旱后的土地迎来第一阵小雨。"
+    source_category: "真实"
+    acquisition_status: "部分取得"
+    seedance: "否"
+    programmatic_animation: "否"
+    asset_ids: ["R07", "R03"]
+    execution_note: "已有干土/湿土对照；缺同一地表首雨转变的真实连续镜头。"
+    sound_design_plan_only: "环境声回到地表的轻雨层次。"
+  - id: S13
+    start: 39.77
+    end: 46.80
+    duration: 7.03
+    locked_visual: "雨后树林、叶片水珠、薄雾，缓慢拉远收束。"
+    source_category: "真实+程序化"
+    acquisition_status: "部分取得"
+    seedance: "否"
+    programmatic_animation: "是"
+    asset_ids: ["R08", "R10", "R01"]
+    execution_note: "雾林和雨珠已取得；预览可缓慢拉远，正式版优先补真实动态雾林。"
+    sound_design_plan_only: "40秒后音乐稍抬且不煽情；旁白后留0.7—1秒环境尾音。"

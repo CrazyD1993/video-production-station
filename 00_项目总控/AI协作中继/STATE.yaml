@@ -1,12 +1,12 @@
-active_task_id: typhoon-eye-40s-review-v3-final-director-polish-001
+active_task_id: petrichor-asset-board-v1-001
 last_chatgpt_instruction_commit: null
-last_codex_response_commit: 22ed6ff9ccff9c983ef14c349db174088d109864
+last_codex_response_commit: pending
 current_branch: experiment/openmontage-pilot
-project_stage: typhoon_eye_40s_v3_review_ready
-blocking_gate: user_review_v3_full_video
+project_stage: petrichor_asset_board_v1_ready_for_review
+blocking_gate: user_asset_board_review_and_missing_asset_selection
 aircraft_window_pilot: paused_no_more_image_generation
-approved_topic: typhoon_eye_calm
-production_mode: bavi_hotspot_fast_track
+approved_topic: petrichor_rain_soil_smell
+production_mode: asset_board_only_no_full_video
 selected_keyframes:
   TE-S01: TE-KF1-A
   TE-S02: TE-KF2-A
@@ -314,4 +314,46 @@ full_video_40s_v3:
     output_sha256: 1db77197931d8146a9797dde633173712d47c66220236eb4a258e750b645784c
     limitation: clearer_than_v1_but_non_event_specific_visualization
 next_actor: User
-updated_at: "2026-07-14T23:23:17+08:00"
+updated_at: "2026-07-15T12:35:00+08:00"
+petrichor_asset_board_v1:
+  task_id: petrichor-asset-board-v1-001
+  status: completed_pending_human_review
+  output_dir: 06_成片工程/雨后泥土味/asset-board-v1
+  locked_narration:
+    audio: 06_成片工程/雨后泥土味/tts-natural/petrichor-narration-natural.wav
+    timestamps: 06_成片工程/雨后泥土味/tts-natural/petrichor-narration-natural.timestamps.json
+    duration_seconds: 45.937042
+    regenerated: false
+    speed_changed: false
+    pauses_compressed: false
+  asset_inventory:
+    acquired_real_mother_asset_proxies: 10
+    acquired_video_proxies: 3
+    acquired_photo_proxies: 7
+    external_license_records_complete: true
+    platform: Pexels
+    license_page: https://www.pexels.com/license/
+  formal_dynamic_missing_shots: [S01, S05, S07, S08, S09, S10, S11, S12, S13]
+  mechanism_sketches:
+    A: 06_成片工程/雨后泥土味/asset-board-v1/mechanism/mechanism-a-geosmin-v1.png
+    B: 06_成片工程/雨后泥土味/asset-board-v1/mechanism/mechanism-b-aerosol-v1.png
+  board:
+    jpg: 06_成片工程/雨后泥土味/asset-board-v1/petrichor-asset-board-v1.jpg
+    pdf: 06_成片工程/雨后泥土味/asset-board-v1/petrichor-asset-board-v1.pdf
+  preview:
+    path: 06_成片工程/雨后泥土味/asset-board-v1/petrichor-asset-board-preview-v1.mp4
+    duration_seconds: 18.25
+    width: 540
+    height: 960
+    fps: 24
+    audio_streams: 0
+  rhythm_hold_plan:
+    executed: false
+    suggestions:
+      - S01_after_real_raindrop_impact_0.24s
+      - S11_after_bubble_pop_0.24s
+  paid_model_calls: 0
+  seedance_called: false
+  full_video_created: false
+  formal_composition_gate: blocked_pending_missing_assets_and_human_review
+  completion_commit: pending

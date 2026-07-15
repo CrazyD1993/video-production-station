@@ -1,0 +1,7 @@
+__pycache__/
+tests/__pycache__/
+preview/overlays/
+qa/posters/
+qa/alpha-render-test.*
+qa/petrichor-asset-board-v1-render.png
+petrichor-asset-board-v1.svg
