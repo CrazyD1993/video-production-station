@@ -1,9 +1,9 @@
-active_task_id: petrichor-director-remediation-pass-001
-last_chatgpt_instruction_commit: 882da14c25d99e788c4fa8ea52434eda58f36adc
-last_codex_response_commit: a6250d9287b2f44c0e6fe6376699c9d1c94080f9
+active_task_id: petrichor-director-remediation-v2-001
+last_chatgpt_instruction_commit: d8d20ce772f9100ba3f0ef6087b7c7c5b5d880a3
+last_codex_response_commit: pending_recording
 current_branch: experiment/openmontage-pilot
-project_stage: petrichor_director_remediation_independent_review_complete
-blocking_gate: formal_composition_blocked_by_contract_and_visual_review
+project_stage: petrichor_director_remediation_v2_independent_review_complete
+blocking_gate: formal_composition_and_additional_seedance_blocked_by_review
 aircraft_window_pilot: paused_no_more_image_generation
 approved_topic: petrichor_rain_soil_smell
 production_mode: director_dynamic_validation_preview_only_no_formal_composition
@@ -454,3 +454,63 @@ petrichor_director_remediation_pass_001:
     human_final_decision: pending
   next_decision_only: ChatGPT decides whether to authorize a constrained remediation v2 and up to two remaining Seedance calls; do not approve formal composition yet.
   completion_commit: a6250d9287b2f44c0e6fe6376699c9d1c94080f9
+petrichor_director_remediation_v2_001:
+  task_id: petrichor-director-remediation-v2-001
+  revision: 2
+  status: completed_with_blocks
+  evidence_mode: isolated_git_commit_snapshot
+  production:
+    production_complete: true
+    production_commit: 8b3b5bd4d97bf8e164b8d08fd8a68d50f6cff781
+    output_dir: 06_成片工程/雨后泥土味/director-remediation-v2-001
+    preview_only: true
+    formal_composition: false
+    preview:
+      path: 06_成片工程/雨后泥土味/director-remediation-v2-001/petrichor-remediation-v2-clean-preview.mp4
+      width: 540
+      height: 960
+      nominal_fps: 24
+      actual_duration_seconds: 46.833333
+      video_only: true
+      narration_included: false
+      subtitles_included: false
+      formal_mix_included: false
+    mechanism_a: 06_成片工程/雨后泥土味/director-remediation-v2-001/mechanism-a-v2.mp4
+    mechanism_b: 06_成片工程/雨后泥土味/director-remediation-v2-001/mechanism-b-v2.mp4
+    seedance:
+      model: doubao-seedance-2-0-fast-260128
+      calls_used: 4
+      hard_cap: 4
+      remaining_calls: 0
+      other_paid_video_models_called: false
+      cost: unknown
+      new_call_3_task_id: cgt-20260715230936-qwwsz
+      new_call_3_status: succeeded_discarded
+      new_call_4_task_id: cgt-20260715231939-bd75j
+      new_call_4_status: succeeded_used_but_visual_review_blocked
+    production_tests: 18_of_18_passed
+  independent_review:
+    independent_review_complete: true
+    reviewed_production_commit: 8b3b5bd4d97bf8e164b8d08fd8a68d50f6cff781
+    review_commit: 6d3aa60bb5fd9fe81d80004b29370c72a24730d5
+    reviewer_a:
+      conclusion: BLOCK
+      report: 06_成片工程/雨后泥土味/reviews/director-remediation-v2-001/contract-qa.md
+    reviewer_b:
+      conclusion: BLOCK
+      critical: 0
+      major: 7
+      minor: 3
+      note: 3
+      report: 06_成片工程/雨后泥土味/reviews/director-remediation-v2-001/visual-director-review.md
+    reviewer_c:
+      approve_seedance_mechanism_generation: false
+      approve_formal_composition: false
+      decision: 06_成片工程/雨后泥土味/reviews/director-remediation-v2-001/review-decision.yaml
+      summary: 06_成片工程/雨后泥土味/reviews/director-remediation-v2-001/review-summary.md
+    human_final_decision: pending
+    formal_composition_started: false
+  required_rework: [S01, S05, S06, S07, S09, S11, S12]
+  retained_or_limited: [S02, S03, S04, S08, S10, S13]
+  next_decision_only: ChatGPT and user decide whether to authorize a no-more-Seedance remediation task.
+  completion_commit: pending_recording

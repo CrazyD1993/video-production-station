@@ -1,7 +1,7 @@
 ---
 task_id: petrichor-director-remediation-v2-001
 revision: 2
-status: ready
+status: completed_with_blocks
 created_by: ChatGPT
 role: 总导演
 target_repo: CrazyD1993/video-production-station
@@ -9,14 +9,15 @@ target_branch: experiment/openmontage-pilot
 issued_from_review_commit: a6250d9287b2f44c0e6fe6376699c9d1c94080f9
 prior_production_commit: 0da86d05b1904adb9f221f073438c11268a05d44
 priority: P0
-production_complete: false
-production_commit: null
-independent_review_complete: false
-review_commit: null
+production_complete: true
+production_commit: 8b3b5bd4d97bf8e164b8d08fd8a68d50f6cff781
+independent_review_complete: true
+review_commit: 6d3aa60bb5fd9fe81d80004b29370c72a24730d5
+reviewer_c_approve_seedance_mechanism_generation: false
 reviewer_c_approve_formal_composition: false
-human_final_decision: authorize_constrained_remediation_v2
+human_final_decision: pending
 formal_composition_started: false
-completion_commit: null
+completion_commit: pending_recording
 ---
 
 # 雨后泥土味｜定向整改 V2 执行令
@@ -306,3 +307,15 @@ A/B形成结论前不得读取 Production 自评或对方报告。Reviewer B 必
 - 下一步只需要 ChatGPT 和用户判断的事项。
 
 完成并推送后立即停止，等待人工裁决。
+
+## 十三、本轮执行回填
+
+- Production commit：`8b3b5bd4d97bf8e164b8d08fd8a68d50f6cff781`
+- Review commit：`6d3aa60bb5fd9fe81d80004b29370c72a24730d5`
+- Reviewer A：`BLOCK`
+- Reviewer B：`BLOCK`
+- Reviewer C：不批准新增 Seedance，不批准正式合成。
+- Seedance：累计 `4/4`，剩余 `0`。
+- `human_final_decision: pending`
+- `formal_composition_started: false`
+- 完整回执：`00_项目总控/AI协作中继/CODEX_TO_CHATGPT.md`
