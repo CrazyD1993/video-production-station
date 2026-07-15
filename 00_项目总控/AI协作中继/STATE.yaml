@@ -1,9 +1,9 @@
-active_task_id: petrichor-asset-board-v1-001
+active_task_id: petrichor-review-agents-setup-001
 last_chatgpt_instruction_commit: null
 last_codex_response_commit: fe82d547692b9dd0322e9ae32e9de43e14e16bb1
 current_branch: experiment/openmontage-pilot
-project_stage: petrichor_asset_board_v1_ready_for_review
-blocking_gate: user_asset_board_review_and_missing_asset_selection
+project_stage: petrichor_asset_board_v1_independent_review_complete
+blocking_gate: formal_composition_blocked_by_visual_director_major_findings
 aircraft_window_pilot: paused_no_more_image_generation
 approved_topic: petrichor_rain_soil_smell
 production_mode: asset_board_only_no_full_video
@@ -314,7 +314,7 @@ full_video_40s_v3:
     output_sha256: 1db77197931d8146a9797dde633173712d47c66220236eb4a258e750b645784c
     limitation: clearer_than_v1_but_non_event_specific_visualization
 next_actor: User
-updated_at: "2026-07-15T12:35:00+08:00"
+updated_at: "2026-07-15T14:03:54+08:00"
 petrichor_asset_board_v1:
   task_id: petrichor-asset-board-v1-001
   status: completed_pending_human_review
@@ -357,3 +357,37 @@ petrichor_asset_board_v1:
   full_video_created: false
   formal_composition_gate: blocked_pending_missing_assets_and_human_review
   completion_commit: fe82d547692b9dd0322e9ae32e9de43e14e16bb1
+petrichor_asset_board_v1_review:
+  task_id: petrichor-review-agents-setup-001
+  status: completed
+  target_commit: fe82d547692b9dd0322e9ae32e9de43e14e16bb1
+  evidence_mode: isolated_git_commit_snapshot
+  uncommitted_workspace_used_as_evidence: false
+  reviewer_a:
+    role: Contract_QA
+    conclusion: PASS_WITH_CONDITIONS
+    report: 06_成片工程/雨后泥土味/reviews/asset-board-v1/contract-qa.md
+  reviewer_b:
+    role: Visual_Director
+    conclusion: BLOCK
+    report: 06_成片工程/雨后泥土味/reviews/asset-board-v1/visual-director-review.md
+  reviewer_c:
+    role: Review_Arbiter
+    decision: 06_成片工程/雨后泥土味/reviews/asset-board-v1/review-decision.yaml
+    summary: 06_成片工程/雨后泥土味/reviews/asset-board-v1/review-summary.md
+  seedance_mechanism_generation:
+    approved: true
+    scope: [S05, S07, S08, S09, S10, S11]
+    executed_this_round: false
+  formal_composition:
+    approved: false
+  required_assets:
+    - S01_real_raindrop_impact_on_dry_soil
+    - S05_S07_S11_continuous_mechanism_motion
+    - S12_same_ground_dry_to_wet_continuity
+    - S13_dynamic_awakened_land_ending
+  paid_model_calls: 0
+  production_assets_modified: false
+  new_preview_created: false
+  full_video_created: false
+  completion_commit: PENDING_COMMIT

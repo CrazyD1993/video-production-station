@@ -1,0 +1,79 @@
+target_commit: "fe82d547692b9dd0322e9ae32e9de43e14e16bb1"
+reviewer_a_conclusion: PASS_WITH_CONDITIONS
+reviewer_b_conclusion: BLOCK
+
+passed_items:
+  - item: "合同主体交付"
+    evidence: "13 个锁定镜头 S01-S13 连续无缺口，总时长 46.80 秒；旁白 WAV、完整时间戳、speech_rate: 0 与 narration_speed_changed: false 证据一致。"
+  - item: "真实母素材与授权记录"
+    evidence: "10 个真实代理均存在且 SHA-256 不同，复用均不超过 2 次；10 条外部记录的必填授权字段及本地路径完整。"
+  - item: "预览与越权检查"
+    evidence: "预览为 18.25 秒、540x960、24 fps、无声 H.264；未发现完整成片、字幕成片、正式混音或 Seedance/付费模型生成媒体。"
+  - item: "可保留的视觉基础"
+    evidence: "Reviewer B 认可 Earth Documentary / Soft Signal 的克制色板与标签方向；R01、R03 可正式保留，其余资产按 B 报告限制使用或替换。"
+
+blocking_items:
+  - id: B-MAJOR-1
+    shot_ids: [S01]
+    time_position: "00:00-00:01.20"
+    evidence: "当前仅有 R07 干裂土静帧，没有雨滴进入、撞击、溅起或土色变化。"
+    severity: MAJOR
+    recommendation: "补齐单颗雨滴撞击干土的真实微距动态，以撞击帧作为首个明确动作。"
+  - id: B-MAJOR-2
+    shot_ids: [S05, S07, S08, S09, S10, S11]
+    time_position: "00:08.70-00:12.32；00:17.10-00:35.06"
+    evidence: "P05、MA、MB 仍为静态草图或横移占位，与摄影段在颗粒、光线、景深和运动上断裂。"
+    severity: MAJOR
+    recommendation: "完成地表下潜、土粒空间、雨滴撞击、困气、气泡上升、破裂释放的连续动态，并统一真实纹理、景深与镜头运动。"
+  - id: B-MAJOR-3
+    shot_ids: [S08, S09, S10, S11]
+    time_position: "00:21.38-00:35.06"
+    evidence: "预览只横移展示标签，没有同一孔隙剖面中的实际状态变化，静音时因果链不能成立。"
+    severity: MAJOR
+    recommendation: "以同一空间的连续形态变化呈现四步因果，标签仅作辅助。"
+  - id: B-MAJOR-4
+    shot_ids: [S12]
+    time_position: "00:35.06-00:39.77"
+    evidence: "R07 与 R03 不是同一地表、景别和光线，预览也没有干到湿的变化。"
+    severity: MAJOR
+    recommendation: "补同一块土表从首滴落下到颜色加深、裂隙积水或表层松动的连续真实镜头。"
+  - id: B-MAJOR-5
+    shot_ids: [S13]
+    time_position: "00:39.77-00:46.80"
+    evidence: "R08 为阴暗雾林静帧，无拉远、雨水运动或光线回升，不能表达土地被唤醒。"
+    severity: MAJOR
+    recommendation: "替换为有滴水、雾气流动或亮度回升的真实动态林地，并由生命近景过渡到环境远景。"
+
+required_assets:
+  - "S01：真实单滴撞击干土微距动态（对应 B-MAJOR-1）。"
+  - "S05、S07-S11：同一视觉体系内、静音可理解的连续机制动态（对应 B-MAJOR-2/3）。"
+  - "S12：同一地表由干到湿的连续真实镜头（对应 B-MAJOR-4）。"
+  - "S13：具有内部运动和苏醒情绪的真实动态收束镜头（对应 B-MAJOR-5）；R08 必须替换。"
+
+deferred_items:
+  - id: A-CONDITION-1
+    shot_ids: [GLOBAL]
+    time_position: "全片"
+    evidence: "测试 required 列表要求 petrichor-asset-board-v1.svg，但快照无该文件且 .gitignore 排除它；正式 JPG/PDF 均存在。"
+    severity: MEDIUM
+    recommendation: "下一提交明确唯一文件契约：SVG 若必需则纳入快照，否则从 required 列表移除。此项不阻塞机制生成，但未解决前不能给无条件 PASS。"
+  - id: B-MINOR-1
+    shot_ids: [S02, S03, S04, S06, S13]
+    time_position: "00:01.20-00:08.70；00:12.32-00:17.10；00:39.77-00:46.80"
+    evidence: "绿叶、强反光石板、近黑湿土、暖褐干土在色彩、光线和景别上跳变。"
+    severity: MINOR
+    recommendation: "下一版预览统一低饱和、湿润、柔和散射光，并按表面雨滴、湿土、地下建立景别递进。"
+  - id: B-MINOR-2
+    shot_ids: [S02, S03, S06, S13]
+    time_position: "00:01.20-00:05.69；00:12.32-00:17.10；00:39.77-00:46.80"
+    evidence: "多张照片固定停留，主体无内部运动，累计形成 PPT 感。"
+    severity: MINOR
+    recommendation: "静帧仅作短过桥；S06 加局部吸附动作，S13 改真实动态，并在新预览中验证静态累计已受控。"
+
+approve_seedance_mechanism_generation: true
+approve_formal_composition: false
+
+reviewer_disagreement:
+  status: "范围不同，无事实冲突"
+  detail: "Reviewer A 确认合同主体合规但保留 SVG 契约条件；Reviewer B 判定视觉证据与动态完整性不足而 BLOCK。A 的 PASS_WITH_CONDITIONS 不覆盖或推翻 B 的视觉门禁。"
+  arbitration: "仅批准 S05、S07-S11 的 Seedance 机制动态补齐；该批准不代表生成结果已验收，也不批准正式合成。正式合成须在 B-MAJOR-1 至 B-MAJOR-5 全部关闭并由新预览证明后重新审核。"
