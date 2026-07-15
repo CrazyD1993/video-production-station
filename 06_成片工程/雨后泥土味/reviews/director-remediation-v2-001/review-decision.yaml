@@ -1,0 +1,95 @@
+target_commit: "8b3b5bd4d97bf8e164b8d08fd8a68d50f6cff781"
+reviewed_production_commit: "8b3b5bd4d97bf8e164b8d08fd8a68d50f6cff781"
+independent_review_complete: true
+reviewer_a_conclusion: BLOCK
+reviewer_b_conclusion: BLOCK
+human_final_decision: pending
+formal_composition_started: false
+
+passed_items:
+  - "S01–S13 共 13 镜的编号、顺序和名义起止时间与锁定合同一致，每镜状态均为允许枚举。"
+  - "必需交付、逐镜文件、manifest、dependencies、Seedance 日志与 QA 证据存在且可读；三份主交付媒体哈希一致并可完整解码。"
+  - "clean preview 只有视频流，未加入旁白、音频、字幕或正式混音；文件名、渲染文档和依赖声明均将其限定为动态验证预览，未发现越权正式合成。"
+  - "Seedance 累计 4/4 次已实际发生：前序 2 次加本轮 B1 的 2 次；调用模型、范围、规格、task id、状态、输出及采用/弃用理由有记录，未发现其他付费视频模型或越权镜头调用。"
+  - "S09/G04 与 S10/G02 都按原速裁切，没有 setpts 倍率、minterpolate 或显著重定时，速度比 1.000 符合 ±8% 门禁。"
+  - "R11 已从上轮的“申报但未使用”修正为 S01 的真实撞击运动参考层，代码实际读取 R11，清单与代码在这一点一致。"
+  - "S04/R14 已视觉通过“积聚—拉长—脱落”真实动作，可保留；R14 的实际文件、来源、下载日期和用途已记录，但许可条款链接仍需补齐。"
+  - "S08–S11 的背景/槽道连续性比上一版提升；S08 撞击与交接结构可限制保留并精修。"
+  - "S10/G02 的精确选段中，单一气泡在同一中央槽道内持续上升，方向、背景和尺度稳定，是机制 B 的连续性锚点。"
+  - "S03/R04 可作为呼吸点保留；S13/R13+R12 的真实运动和情绪成立，但两者都仍需后续节奏/色彩约束。"
+  - "声明依赖环境下生产测试 18/18 通过；该通过项不能消除 CQA-V2-01 指出的派生依赖递归计数盲点。"
+
+blocking_items:
+  - id: CQA-V2-01
+    severity: blocking
+    item: "PA/PB 派生 ID 隐藏了 R04/R05/R07/G02 等底层母素材的真实逐镜依赖和复用次数；清单与全部镜头 done 声明不相容，且现有复用测试因未沿派生关系递归计数而得到虚假的 <=2。"
+  - id: CQA-V2-02
+    severity: medium_requires_rereview
+    item: "G03 未采用候选的 CSV 列错位，导致 `usage_status=acquired_not_used` 没有在机器可读清单中成立，尽管调用日志本身仍证明真实调用和弃用原因。"
+  - id: CQA-V2-03
+    severity: medium_technical_condition
+    item: "clean preview 不是连续 CFR 24fps；共 1121 帧、时长 46.833333 秒，三处 PTS 间隔为正常帧间隔的两倍，因此不能严格判定为连续 24fps/46.80 秒通过；S04 实际 3.000 秒也与清单 3.01 秒不一致。"
+  - id: CQA-V2-04
+    severity: medium_compliance_condition
+    item: "R14 有素材页、许可名称、下载日期和用途，但缺少可核验的 Mixkit 许可条款直链、版本或日期化本地快照，无法独立复核具体授权。"
+  - id: M1
+    severity: major
+    item: "S01 当前 R07+R11 复合结果中没有普通观众可辨认的雨滴、撞击点、土粒/水花响应或即时变湿，开场核心事件未成立。"
+  - id: M2_M3_M4
+    severity: major
+    item: "S05 仍是硬矩形接片与青色竖管，未形成同一真实土层；S06 几乎全镜冻结，无“接近—附着—停留”；S07 仍像静态信息卡，无可见的“休眠—苏醒”。"
+  - id: M5
+    severity: major
+    item: "S09/G04 candidate-4 虽修正了开场已有气泡和总体方向问题，但水柱/水塞消失后气泡从画外突然进入，未呈现同一空气体积被包围、收缩并闭合成泡的连续因果。"
+  - id: M6
+    severity: major
+    item: "S11 只有气泡圆顶缓慢塌陷/消失，没有可见的短促破膜、向上细微滴或释放后的水面回落，无声解释不成立。"
+  - id: M7
+    severity: major
+    item: "S12 的橙金色亮斑、自发光与暖橙边缘更像发热/熔岩，而非沿裂隙的非均匀变暗、水膜和湿土反射。"
+
+required_assets:
+  - "S01：必须替换成静音下一眼可见的真实近景单点雨滴击土成片镜头，连续保留“落下—接触—土粒/水花响应”三阶段；R07/R11 可仅作纹理/运动参考。"
+  - "S05：以单一土壤剖面为母场景，使地表、孔隙和根系共享透视、光向和颗粒尺度，并让水路沿真实孔隙入渗。"
+  - "S06：在同一微观位置中可辨认的少量粒子“接近—附着—停留”状态变化，不得继续以冻结图片或单纯变色代替动作。"
+  - "S07：同一可辨认菌丝/菌落从收缩或暗淡状态，遇水后膨润并出现细微生长/代谢活动的连续动作；静音无字幕也须可读。"
+  - "S09：在现有硬上限下替换当前选段或补齐形成桥段，从可见空气腔开始，连续呈现水包围/挤压、边界闭合为同一气泡，并无缝进入已通过的 S10；G03 candidate-3 继续弃用。"
+  - "S11：保留同一气泡触面，补齐 2–4 帧清楚薄膜破裂、少量细小短程向上微滴和释放后轻微水面回落，不得使用大水柱、烟雾团或烟花式喷发。"
+  - "S12：保留同一裂纹底图，替换橙色自发光效果，让湿区沿裂隙边缘不规则变深、向土块内缓慢渗开，并补充低强度镜面反射与水膜。"
+  - "证据链：清单逐镜展开 R04/R05/R07/G02 等所有底层依赖，增加 `underlying_mother_asset_id` 与 `true_reuse_count`，复用测试须沿派生关系递归计数；超限时更换来源或先取得总导演书面新授权。"
+  - "机器可读记录：修正 G03 行的 CSV 列数与字段映射，设置 `usage_status=acquired_not_used`，并增加列数与状态枚举测试。"
+  - "技术预览：统一各段 PTS，重新输出连续 CFR 24fps clean preview，相邻帧 PTS 恒为 1/24 秒，总时长符合帧量化方案，并将 S04 实际 3.000 秒或相应帧量化值写回清单。"
+  - "R14 合规证据：补充 Mixkit 该素材许可条款直链、许可版本或日期化本地快照，同时保留“作者/上传者未公开”的明确不可得记录。"
+  - "复审证据：重新输出完整 clean preview，并提交逐镜中点、S01/S05–S12 加密联系表和 S08→S11 首尾连续性证据。"
+
+deferred_items:
+  - "N1：S02 的 R01+R09+R03 三份母素材可保留，在核心机制重做后统一白平衡、黑位、饱和度与冷湿高光，并用撞击方向/声音节奏对齐切点。"
+  - "N2：S08 的撞击与同景交接结构可限制保留；去描边、打破对称/直线槽壁、补充粒径差与局部浑浊可在 S09 形成桥段方案确定后同步精修，但正式合成前仍需完成。"
+  - "N3：S13 的 R13+R12 与长交叉淡化可保留；后续压低叶片黄绿饱和度、给雾林加入同系青绿，并以叶片摆动/雨滴滑落驱动淡化起点。"
+  - "T2：S03 可保留为约 1.875 秒呼吸点；若新预览仍显停滞，可缩短约 0.3–0.5 秒或加极轻雨滴/焦点变化。"
+
+approve_seedance_mechanism_generation: false
+seedance_mechanism_generation_gate:
+  calls_used: 4
+  hard_cap: 4
+  remaining_calls: 0
+  decision_scope: "additional_or_retry_seedance_generation"
+  reason: "Seedance 4/4 次硬上限已全部用完。现有视觉缺口不构成超限新增或重试调用的授权，不得再调用 Seedance。"
+  retained_outputs:
+    - "G03 candidate-3 继续弃用，不得恢复。"
+    - "G04 candidate-4 当前 S09 选段必须替换或补齐形成桥段，但不得通过新 Seedance 调用解决。"
+    - "G02 的 S10 精确选段保留为机制 B 连续性锚点。"
+
+approve_formal_composition: false
+formal_composition_gate:
+  reason: "Reviewer A 和 Reviewer B 均为 BLOCK。底层母素材可追溯性、G03 记录、CFR 24fps 时间戳、R14 许可证据以及 S01/S05–S07/S09/S11/S12 的核心视觉门槛尚未通过。"
+  reopen_requirements:
+    - "在新的不可变 production commit 中完成 blocking_items 和 required_assets，且不新增 Seedance 调用。"
+    - "新 clean preview 与证据包重新经 Reviewer A/B 独立审核，再交 Reviewer C 仲裁。"
+
+reviewer_disagreement:
+  has_material_disagreement: false
+  items:
+    - "A/B 的总结论完全一致：均为 BLOCK，当前生产包不得进入正式合成或发布确认。"
+    - "Reviewer A 确认 Seedance 4/4 调用、调用范围和速度门禁本身成立；Reviewer B 判定已生成的 G04/S09 选段仍存在视觉因果缺口。这是合同合规性与视觉可用性的范围差异，不是结论冲突。"
+    - "Reviewer A 关注清单、递归复用、时间戳和许可证据；Reviewer B 关注静音因果链、真实感与动作连续性。两类阻塞互补，都需保留。"
