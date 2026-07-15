@@ -1,0 +1,17 @@
+task_id: petrichor-director-remediation-v2-001
+revision: 2
+stage: production_complete_pending_independent_review
+preview_only: true
+formal_composition: false
+timeline_locked: true
+duration_target_seconds: 46.80
+resolution: 540x960
+frame_rate: 24
+audio_tracks: 0
+narration_added: false
+subtitles_added: false
+formal_mix_added: false
+seedance_total_calls: 4
+seedance_hard_limit: 4
+other_paid_model_calls: 0
+human_final_decision: pending

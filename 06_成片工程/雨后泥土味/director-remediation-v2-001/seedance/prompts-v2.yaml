@@ -1,0 +1,12 @@
+model: doubao-seedance-2-0-fast-260128
+shot_group: B1_S09_v2
+duration_seconds: 5
+ratio: "9:16"
+resolution: 720p
+generate_audio: false
+reference_frame:
+  file: ../mechanism-b-reference-pack-v2/bridge-start.png
+  api_role: reference_image
+  purpose: lock the exact sand geometry, waterline, central pore, bubble scale and top-left light of G02
+prompt: |
+  One continuous photoreal macro documentary view of exactly the same compact sand cross-section shown in the reference image: two fixed sand columns, one narrow central pore, the same horizontal waterline and the same restrained top-left light. Show the immediately preceding physical sequence inside that same pore. Water enters the narrow pore from above. The trapped air volume shrinks continuously as water closes around it. The air pocket becomes fully surrounded by water and closes into the same single bubble, at the same small scale and central position as the reference. End as that exact same single bubble begins to rise upward, ready to connect directly to the supplied G02 reference geometry. Fixed camera, no cuts, no new pore, no changing soil geometry, physically plausible surface tension, natural low-saturation earth colors. No arrows. No HUD. No fluorescent particles. No large bubble. No colored molecules, no science-fiction glow, no cartoon style, no text.

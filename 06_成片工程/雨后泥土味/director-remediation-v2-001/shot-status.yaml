@@ -1,0 +1,84 @@
+task_id: petrichor-director-remediation-v2-001
+revision: 2
+timeline_locked: true
+preview_only: true
+formal_composition: false
+shots:
+  - id: S01
+    start: 0.00
+    end: 1.20
+    status: done
+    evidence: work/shots/S01.mp4
+    note: "R07 干裂土与 R11 真实雨滴撞击运动匹配合成；撞击点、局部飞溅和表面响应可见。"
+  - id: S02
+    start: 1.20
+    end: 3.85
+    status: done
+    evidence: work/shots/S02.mp4
+    note: "R01 叶片、R09 石板、R03 湿土按锁定时长快切。"
+  - id: S03
+    start: 3.85
+    end: 5.69
+    status: done
+    evidence: work/shots/S03.mp4
+    note: "R04 湿润泥土近景，保留轻微推近与标题负空间。"
+  - id: S04
+    start: 5.69
+    end: 8.70
+    status: done
+    evidence: work/shots/S04.mp4
+    note: "R14 真实叶尖水滴连续出现聚集、拉长和脱落事件。"
+  - id: S05
+    start: 8.70
+    end: 12.32
+    status: done
+    evidence: work/shots/S05.mp4
+    note: "与 S06/S07 共用 soil-column-R05-v2 母场景；水膜沿裂隙下潜，入渗前沿可追踪。"
+  - id: S06
+    start: 12.32
+    end: 17.10
+    status: done
+    evidence: work/shots/S06.mp4
+    note: "同一土层空间中少量植物来源颗粒从游离态转为吸附到土粒表面。"
+  - id: S07
+    start: 17.10
+    end: 21.38
+    status: done
+    evidence: work/shots/S07.mp4
+    note: "同一土层空间中水分到达后菌丝轻微舒展；仅保留克制的土臭素 Geosmin 标签。"
+  - id: S08
+    start: 21.38
+    end: 24.30
+    status: done
+    evidence: work/shots/S08.mp4
+    note: "程序化接近与孔隙撞击发生在 G02 同一截面；镜尾回到无预存气泡的 B1 起始几何。"
+  - id: S09
+    start: 24.30
+    end: 27.35
+    status: done
+    evidence: work/shots/S09.mp4
+    note: "Seedance 第4次候选展示水进入、空气空间缩小、包围成泡并开始上升；末尾用9帧匹配过渡接 G02。"
+  - id: S10
+    start: 27.35
+    end: 30.50
+    status: done
+    evidence: work/shots/S10.mp4
+    note: "仅使用 G02 合格单气泡上升段，速度比例 1.000，未显著慢放。"
+  - id: S11
+    start: 30.50
+    end: 35.06
+    status: done
+    evidence: work/shots/S11.mp4
+    note: "在 G02 同一表面帧上程序化完成接触、短促膜破裂、极细微滴喷散和快速消退。"
+  - id: S12
+    start: 35.06
+    end: 39.77
+    status: done
+    evidence: work/shots/S12.mp4
+    note: "R07 同一裂纹几何内，多点撞击并沿裂缝和低洼区域异步、不规则湿润。"
+  - id: S13
+    start: 39.77
+    end: 46.80
+    status: done
+    evidence: work/shots/S13.mp4
+    note: "保留 R13 到 R12 的真实动态结构，统一饱和度、黑位、冷暖与结尾呼吸感。"

@@ -1,0 +1,30 @@
+{
+  "name": "mechanism-b-reference-pack-v2",
+  "source_asset": "../director-remediation-pass-001/seedance/outputs/B2_S10_S11-candidate-2.mp4",
+  "source_asset_id": "G02/B2",
+  "source_duration_seconds": 5.041667,
+  "geometry": "two compact sand columns separated by one narrow central pore",
+  "waterline": "horizontal near y=306/1280 with shallow meniscus",
+  "bubble": "one small transparent bubble centered in the same pore",
+  "light_direction": "soft top-left documentary macro light",
+  "motion_direction": "bubble rises vertically toward the same surface",
+  "s08_target": "finish impact and enter the central pore without changing geometry",
+  "bridge_frame": {
+    "file": "bridge-start.png",
+    "source_timecode_seconds": 0.0,
+    "sha256": "361749783e721d34e3504c4f33a68da1ee44689d992377e801f688aa1219e3b6"
+  },
+  "b1_prestate_first_frame": {
+    "file": "b1-prestate-first-frame.png",
+    "sha256": "84749111598185656e2e755c79c454d1577b62b1ad7572a4c2504f3c812d5799",
+    "derivation": "G02 bridge frame with the already-formed bubble locally removed; pore geometry and waterline preserved"
+  },
+  "frames": [
+    {"file": "rise-low.png", "source_timecode_seconds": 1.25},
+    {"file": "rise-mid.png", "source_timecode_seconds": 2.5},
+    {"file": "surface-contact.png", "source_timecode_seconds": 3.75},
+    {"file": "surface-after.png", "source_timecode_seconds": 4.75}
+  ],
+  "disallowed_prior_asset": "G01/B1_S09-candidate-1.mp4",
+  "use_rule": "B1 v2 must end directly connectable to bridge-start; S10 uses only the usable G02 rise segment."
+}

@@ -1,0 +1,14 @@
+{
+  "preview": {
+    "exit_code": 0,
+    "stderr": ""
+  },
+  "mechanism-a": {
+    "exit_code": 0,
+    "stderr": ""
+  },
+  "mechanism-b": {
+    "exit_code": 0,
+    "stderr": ""
+  }
+}

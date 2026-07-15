@@ -1,0 +1,13 @@
+model: doubao-seedance-2-0-fast-260128
+shot_group: B1_S09_v2_retry
+duration_seconds: 5
+ratio: "9:16"
+resolution: 720p
+generate_audio: false
+first_frame:
+  file: ../mechanism-b-reference-pack-v2/b1-prestate-first-frame.png
+  api_field: content[].image_url
+  role_omitted: true
+  purpose: start from the same G02 pore before a bubble exists
+prompt: |
+  Single continuous fixed-camera macro documentary shot. Preserve the exact two sand columns, narrow central pore, horizontal waterline, scale and top-left light in the supplied first frame. At 0-1 second, water enters downward from the waterline into that one central pore. At 1-2.5 seconds, the trapped air cavity visibly shortens and its volume shrinks as water closes around it from above and along both pore walls. At 2.5-4 seconds, the remaining air becomes fully surrounded by water and closes into one small transparent bubble low in the same pore. At 4-5 seconds, that same single bubble begins to rise only a short distance. End with the bubble low and centered, directly matching the start of G02. The four stages must all be visibly distinct. Physically plausible surface tension, stable soil geometry, natural low-saturation earth colors. No cut, no camera move, no new pore, no pre-existing bubble in the opening frame. No arrows. No HUD. No fluorescent particles. No large bubble. No colored molecules, no science-fiction glow, no text.

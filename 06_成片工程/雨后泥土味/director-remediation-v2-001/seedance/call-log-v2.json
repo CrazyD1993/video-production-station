@@ -1,0 +1,143 @@
+{
+  "model_scope": "S09 B1 remediation only; optional S11 only if programmatic path fails",
+  "hard_limit": 4,
+  "previous_calls": 2,
+  "new_calls": 2,
+  "total_calls": 4,
+  "calls": [
+    {
+      "call_number": 1,
+      "shot_group": "B1_S09_prior_discarded",
+      "task_id": "cgt-20260715200029-2bfck",
+      "status": "succeeded_discarded",
+      "model": "doubao-seedance-2-0-fast-260128",
+      "parameters": {
+        "ratio": "9:16",
+        "resolution": "720p",
+        "duration": 5,
+        "generate_audio": false,
+        "reference_frame_used": false
+      },
+      "output_path": "../director-remediation-pass-001/seedance/outputs/B1_S09-candidate-1.mp4",
+      "original_duration": 5.0,
+      "decision_reason": "G01/B1 was explicitly discarded by remediation v2 due to geometry and continuity failure.",
+      "cost": "unknown"
+    },
+    {
+      "call_number": 2,
+      "shot_group": "G02_B2_prior_retained_rise_only",
+      "task_id": "cgt-20260715200457-ct6d8",
+      "status": "succeeded_retained_partial",
+      "model": "doubao-seedance-2-0-fast-260128",
+      "parameters": {
+        "ratio": "9:16",
+        "resolution": "720p",
+        "duration": 5,
+        "generate_audio": false,
+        "reference_frame_used": false
+      },
+      "output_path": "../director-remediation-pass-001/seedance/outputs/B2_S10_S11-candidate-2.mp4",
+      "original_duration": 5.041667,
+      "decision_reason": "Retained only as G02 source for S10 bubble rise and the visual reference pack.",
+      "cost": "unknown"
+    },
+    {
+      "call_number": 3,
+      "created_at": "2026-07-15T15:09:31.750182+00:00",
+      "shot_group": "B1_S09_v2",
+      "task_id": "cgt-20260715230936-qwwsz",
+      "status": "succeeded",
+      "model": "doubao-seedance-2-0-fast-260128",
+      "parameters": {
+        "ratio": "9:16",
+        "resolution": "720p",
+        "duration": 5,
+        "generate_audio": false,
+        "reference_frame_used": true,
+        "reference_frame_api_field": "content[].role=reference_image",
+        "reference_frame_path": "mechanism-b-reference-pack-v2/bridge-start.png",
+        "reference_frame_sha256": "361749783e721d34e3504c4f33a68da1ee44689d992377e801f688aa1219e3b6"
+      },
+      "prompt": "One continuous photoreal macro documentary view of exactly the same compact sand cross-section shown in the reference image: two fixed sand columns, one narrow central pore, the same horizontal waterline and the same restrained top-left light. Show the immediately preceding physical sequence inside that same pore. Water enters the narrow pore from above. The trapped air volume shrinks continuously as water closes around it. The air pocket becomes fully surrounded by water and closes into the same single bubble, at the same small scale and central position as the reference. End as that exact same single bubble begins to rise upward, ready to connect directly to the supplied G02 reference geometry. Fixed camera, no cuts, no new pore, no changing soil geometry, physically plausible surface tension, natural low-saturation earth colors. No arrows. No HUD. No fluorescent particles. No large bubble. No colored molecules, no science-fiction glow, no cartoon style, no text.",
+      "output_path": "seedance/outputs/B1_S09_v2-candidate-3.mp4",
+      "original_duration": 5.041667,
+      "decision_reason": "First new call mandated by remediation V2: rebuild B1 before any optional retry or S11 call.",
+      "cost": "unknown",
+      "provider_response": {
+        "id": "cgt-20260715230936-qwwsz",
+        "model": "doubao-seedance-2-0-fast-260128",
+        "status": "succeeded",
+        "content": {
+          "video_url": "[redacted_after_download]"
+        },
+        "usage": {
+          "completion_tokens": 108900,
+          "total_tokens": 108900
+        },
+        "created_at": 1784128177,
+        "updated_at": 1784128319,
+        "seed": 69309,
+        "resolution": "720p",
+        "ratio": "9:16",
+        "duration": 5,
+        "framespersecond": 24,
+        "service_tier": "default",
+        "execution_expires_after": 172800,
+        "generate_audio": false,
+        "draft": false,
+        "priority": 0
+      },
+      "qa_decision": "rejected_retry_authorized",
+      "qa_reason": "Geometry and rise were stable, but the result began with an existing bubble and omitted water entry, air-volume shrinkage and enclosure."
+    },
+    {
+      "call_number": 4,
+      "created_at": "2026-07-15T15:19:34.229898+00:00",
+      "shot_group": "B1_S09_v2_retry",
+      "task_id": "cgt-20260715231939-bd75j",
+      "status": "succeeded",
+      "model": "doubao-seedance-2-0-fast-260128",
+      "parameters": {
+        "ratio": "9:16",
+        "resolution": "720p",
+        "duration": 5,
+        "generate_audio": false,
+        "reference_frame_used": true,
+        "reference_frame_api_field": "content[].image_url (role omitted; official first-frame form)",
+        "reference_frame_path": "mechanism-b-reference-pack-v2/b1-prestate-first-frame.png",
+        "reference_frame_sha256": "84749111598185656e2e755c79c454d1577b62b1ad7572a4c2504f3c812d5799"
+      },
+      "prompt": "Single continuous fixed-camera macro documentary shot. Preserve the exact two sand columns, narrow central pore, horizontal waterline, scale and top-left light in the supplied first frame. At 0-1 second, water enters downward from the waterline into that one central pore. At 1-2.5 seconds, the trapped air cavity visibly shortens and its volume shrinks as water closes around it from above and along both pore walls. At 2.5-4 seconds, the remaining air becomes fully surrounded by water and closes into one small transparent bubble low in the same pore. At 4-5 seconds, that same single bubble begins to rise only a short distance. End with the bubble low and centered, directly matching the start of G02. The four stages must all be visibly distinct. Physically plausible surface tension, stable soil geometry, natural low-saturation earth colors. No cut, no camera move, no new pore, no pre-existing bubble in the opening frame. No arrows. No HUD. No fluorescent particles. No large bubble. No colored molecules, no science-fiction glow, no text.",
+      "output_path": "seedance/outputs/B1_S09_v2-candidate-4.mp4",
+      "original_duration": 5.041667,
+      "decision_reason": "Final authorized call used only because candidate 3 omitted the three core pre-bubble stages.",
+      "qa_decision": "accepted_for_S09",
+      "qa_reason": "Shows water entry, a visibly shortening trapped-air cavity, enclosure into one small bubble and the beginning of the same bubble rise while preserving the G02 pore geometry.",
+      "cost": "unknown",
+      "provider_response": {
+        "id": "cgt-20260715231939-bd75j",
+        "model": "doubao-seedance-2-0-fast-260128",
+        "status": "succeeded",
+        "content": {
+          "video_url": "[redacted_after_download]"
+        },
+        "usage": {
+          "completion_tokens": 108900,
+          "total_tokens": 108900
+        },
+        "created_at": 1784128780,
+        "updated_at": 1784128960,
+        "seed": 88646,
+        "resolution": "720p",
+        "ratio": "9:16",
+        "duration": 5,
+        "framespersecond": 24,
+        "service_tier": "default",
+        "execution_expires_after": 172800,
+        "generate_audio": false,
+        "draft": false,
+        "priority": 0
+      }
+    }
+  ]
+}

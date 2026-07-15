@@ -1,0 +1,39 @@
+task_id: petrichor-director-remediation-v2-001
+render_entrypoint: render_remediation_v2.py
+timeline_source: shot-status.yaml
+mechanism_a:
+  scene_id: soil-column-R05-v2
+  shot_ids: [S05, S06, S07]
+  shared_camera: true
+  shared_light: true
+  source_layers:
+    - id: R04
+      path: ../asset-board-v1/assets/real-proxy/R04-pexels-7232905-wet-soil-macro.jpg
+      use: soil texture
+    - id: R05
+      path: ../asset-board-v1/assets/real-proxy/R05-pexels-12763908-tree-roots-soil.jpg
+      use: roots and soil structure
+    - id: R07
+      path: ../asset-board-v1/assets/real-proxy/R07-pexels-5597653-dry-cracked-soil.jpg
+      use: top surface texture
+  state_progression:
+    S05: water infiltration
+    S06: free particles attach to soil surfaces
+    S07: subtle microbial and mycelial recovery with restrained Geosmin label
+mechanism_b:
+  shot_ids: [S08, S09, S10, S11]
+  common_geometry: mechanism-b-reference-pack-v2/reference-pack.json
+  S08: programmatic approach and impact; exact pre-bubble handoff
+  S09: G04 accepted B1 plus 9-frame match transition to G02 bridge frame
+  S10: G02 bubble-rise segment at 1.000 speed
+  S11: programmatic surface contact, film rupture, fine aerosol and decay
+seedance:
+  log: seedance/call-log-v2.json
+  hard_limit: 4
+  total_calls: 4
+  other_paid_models_called: false
+audio:
+  narration_added: false
+  subtitles_added: false
+  formal_mix_added: false
+  preview_audio_tracks: 0
