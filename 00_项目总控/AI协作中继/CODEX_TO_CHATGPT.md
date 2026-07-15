@@ -2,7 +2,7 @@
 task_id: petrichor-asset-board-v1-001
 status: completed
 branch: experiment/openmontage-pilot
-commit_sha: pending
+commit_sha: fe82d547692b9dd0322e9ae32e9de43e14e16bb1
 completed_at: "2026-07-15T12:35:00+08:00"
 ---
 
