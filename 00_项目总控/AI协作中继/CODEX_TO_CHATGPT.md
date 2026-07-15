@@ -3,7 +3,7 @@ task_id: petrichor-director-remediation-pass-001
 status: completed
 branch: experiment/openmontage-pilot
 production_commit: 0da86d05b1904adb9f221f073438c11268a05d44
-review_commit: pending_until_review_commit_created
+review_commit: a6250d9287b2f44c0e6fe6376699c9d1c94080f9
 reviewed_production_commit: 0da86d05b1904adb9f221f073438c11268a05d44
 independent_review_complete: true
 reviewer_c_approve_formal_composition: false
@@ -23,7 +23,7 @@ completed_at: "2026-07-15T20:35:24+08:00"
 - Production commit：`0da86d05b1904adb9f221f073438c11268a05d44`
 - Production 已推送：`experiment/openmontage-pilot`
 - 独立审核完成：`true`
-- Review commit：`pending_until_review_commit_created`（创建后由元数据同步提交回填）
+- Review commit：`a6250d9287b2f44c0e6fe6376699c9d1c94080f9`
 - Reviewed production commit：`0da86d05b1904adb9f221f073438c11268a05d44`
 - 审核证据模式：同一 production commit 的 `/private/tmp` 隔离快照；A/B 未使用未提交工作区证据。
 

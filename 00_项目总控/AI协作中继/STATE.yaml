@@ -1,6 +1,6 @@
 active_task_id: petrichor-director-remediation-pass-001
 last_chatgpt_instruction_commit: 882da14c25d99e788c4fa8ea52434eda58f36adc
-last_codex_response_commit: pending_until_review_commit_created
+last_codex_response_commit: a6250d9287b2f44c0e6fe6376699c9d1c94080f9
 current_branch: experiment/openmontage-pilot
 project_stage: petrichor_director_remediation_independent_review_complete
 blocking_gate: formal_composition_blocked_by_contract_and_visual_review
@@ -433,7 +433,7 @@ petrichor_director_remediation_pass_001:
         path: 06_成片工程/雨后泥土味/director-remediation-pass-001/seedance/outputs/B2_S10_S11-candidate-2.mp4
   independent_review:
     independent_review_complete: true
-    review_commit: pending_until_review_commit_created
+    review_commit: a6250d9287b2f44c0e6fe6376699c9d1c94080f9
     reviewed_production_commit: 0da86d05b1904adb9f221f073438c11268a05d44
     reviewer_a:
       conclusion: BLOCK
@@ -453,4 +453,4 @@ petrichor_director_remediation_pass_001:
       summary: 06_成片工程/雨后泥土味/reviews/director-remediation-pass-001/review-summary.md
     human_final_decision: pending
   next_decision_only: ChatGPT decides whether to authorize a constrained remediation v2 and up to two remaining Seedance calls; do not approve formal composition yet.
-  completion_commit: pending_until_review_commit_created
+  completion_commit: a6250d9287b2f44c0e6fe6376699c9d1c94080f9

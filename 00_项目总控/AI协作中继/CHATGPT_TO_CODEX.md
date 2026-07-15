@@ -8,7 +8,7 @@ target_repo: CrazyD1993/video-production-station
 target_branch: experiment/openmontage-pilot
 issued_from_commit: 882da14c25d99e788c4fa8ea52434eda58f36adc
 priority: P0
-completion_commit: pending_until_review_commit_created
+completion_commit: a6250d9287b2f44c0e6fe6376699c9d1c94080f9
 ---
 
 # 总导演整改执行令（修订版 3）
@@ -234,5 +234,5 @@ human_final_decision: pending
 - 独立审核：完成；Reviewer A `BLOCK`，Reviewer B `BLOCK`
 - Reviewer C：允许最多 2 次定向 Seedance 新增/重试；不批准正式合成
 - `human_final_decision: pending`
-- Review commit：`pending_until_review_commit_created`，创建后由元数据同步提交回填
+- Review commit：`a6250d9287b2f44c0e6fe6376699c9d1c94080f9`
 - 完整回执：`00_项目总控/AI协作中继/CODEX_TO_CHATGPT.md`
