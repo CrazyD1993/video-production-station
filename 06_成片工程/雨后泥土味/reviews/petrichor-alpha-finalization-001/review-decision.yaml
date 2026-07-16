@@ -1,0 +1,90 @@
+task_id: petrichor-alpha-finalization-001
+target_commit: "4bccde9fb910ddfd0432f51e7a781fc6b76c78ab"
+reviewed_production_commit: "4bccde9fb910ddfd0432f51e7a781fc6b76c78ab"
+evidence_snapshot: "/private/tmp/petrichor-alpha-production-4bccde9"
+independent_review_complete: true
+reviewer_a_conclusion: BLOCK
+reviewer_b_conclusion: BLOCK
+human_final_decision: pending
+release_master_started: false
+
+passed_items:
+  - "Alpha 视频完整包含 S01–S13 共 13 镜、1123 帧；容器 46.800000 秒，视频为 720×1280、H.264/yuv420p、CFR 24fps，音频为 AAC 48kHz 双声道，完整解码通过。"
+  - "Alpha MP4 的 SHA-256 与 QA 记录一致；锁定旁白 WAV 的 SHA-256、PCM 48kHz 单声道与 45.937042 秒参数一致。"
+  - "旁白仅做 0.20 秒偏移、补齐、裁切、音量和平混，速度比为 1.000，无音频变速或动态处理。"
+  - "Alpha 存在非静音 AAC 双声道音轨，并烧录了 9 条来自锁定时间戳、统一后移 0.20 秒的临时审片字幕；这不等于 Reviewer B 已完成 1.0x 主观有声整片观看。"
+  - "Seedance 用户覆写后的累计硬上限为 10，前序 4 次加本轮调用 5–9 共 5 次，实际累计 9/10；日志中无第 10 次调用。"
+  - "本轮 Seedance 新调用仅覆盖 S01、机制 A 和 S12，模型、比例、分辨率、帧率与无模型音频参数符合边界，没有对禁止继续生成的 S09–S11 发起新调用。"
+  - "调用 5–9 的“先诊断，再修正”逐次闭环成立，无未诊断的追加重试；入选/拒绝记录和输出哈希可对应。"
+  - "逐镜画面源、已使用/未采用状态和递归派生关系已经可追溯，G05/G07 拒绝记录、G03 列修正与 R14 许可证据存在；环境声依赖为唯一明确例外。"
+  - "`mechanism-a-final.mp4` 与 `mechanism-b-final.mp4` 存在并有媒体哈希记录；生产合同测试 27/27 通过，但测试未覆盖环境声存在性/哈希，不能消除 A-01。"
+  - "S04/R14 的叶尖水滴积聚、拉长和脱落真实可信，可正式保留。"
+  - "S10/G02 的单一实体气泡在同一槽道内持续上升，可正式保留并作为 S09/S11 重做锚点。"
+  - "S03/R04 可正式保留为提问呼吸点；S13/R13+R12 的真实运动和结尾情绪成立，可保留并后续统一色调。"
+  - "S12/G09 已建立冷色、非均匀变暗和干湿共存，比前版改善；仅前段圆形湿点仍需轻后期精修。"
+  - "输出仍为 `petrichor-alpha-v1.mp4`，生产依赖声明中 `human_final_decision: pending`、`release_master_started: false`，未发现发布母版产物。"
+
+blocking_items:
+  - id: A-01
+    severity: blocking
+    item: "绑定生产提交缺失渲染代码和 dependencies.yaml 共同引用的 `temporary-validation-ambience.wav`；同时缺失该环境声的 SHA-256、来源/许可或项目自制证明，导致音频链无法从绑定提交完整复现。"
+  - id: B-WATCH-01
+    severity: blocking
+    item: "Reviewer B 未能从播放器取得首尾状态、1.0x 速率或可听证据，因此从头到尾 1.0x 有声整片观看未被独立证明；无法评价旁白音色、混音和主观音画节奏，该门禁本身阻塞发布批准。"
+  - id: B-MAJOR-S01
+    severity: major
+    item: "S01/G06 虽可见单滴落下、接触和圆形湿点，但没有可辨认的水冠、离地土粒或微滴，且约 1.241 倍压缩缩短了接触响应；不满足开场导演门槛。"
+  - id: B-MAJOR-S05_S06_S07
+    severity: major
+    item: "S05 未从地表沿裂隙进入土层；S06 无可追踪粒子完成“接近—附着—停留”且冻结约 4.17/4.78 秒；S07 无同一真实菌丝的吸水苏醒，反而以几何线框加重 PPT 感。"
+  - id: B-MAJOR-S08_S09_S11
+    severity: major
+    item: "S08 以白色椭圆描边和十字/折线符号代替实体撞击；S09 只有低对比椭圆线框且几乎全镜冻结，未从空气腔闭合成与 S10 匹配的同一气泡；S11 以半圆/星形线框代替破膜，无独立微滴和水面回落，且整镜冻结约 4.54 秒。"
+  - id: B-MAJOR-VISUAL-SYSTEM
+    severity: major
+    item: "S04→S05、S07→S08、S11→S12 三处在柔绿实拍、近黑根系、米黄对称 CGI 与暖棕裂土之间重置黑位、光向、景别和颗粒尺度，三段视觉系统仍然割裂。"
+
+required_assets:
+  - "环境声依赖：在新的 Production 修复提交中，将本 Alpha 混音实际使用的同一份 `temporary-validation-ambience.wav` 恢复到登记路径，补充 SHA-256、来源/许可或项目自制证明，并将存在性与哈希校验加入前置合同测试；不得以从最终混音中反向分离的近似音轨替代原始依赖。"
+  - "等价性与复核证据：修复音频依赖后重新执行全量渲染或等价性验证、完整解码和媒体 SHA，并交 Reviewer A 对新快照复核。"
+  - "S01：替换 G06 当前镜头，使静音正常速度下清楚呈现“落下—接触—4–8 帧土粒/小水花—不规则变湿”四阶段。"
+  - "S05：从同一地表沿裂隙向下移动，连续进入并落到 S06 的根土构图；不得再以直接硬切近黑根系代替入土。"
+  - "S06：在同一土粒表面用 2–3 个可追踪粒子完成“接近—附着—停留”，重做动作层并解除长时间冻结。"
+  - "S07：在同一真实菌丝/菌落上呈现吸水、变丰满和轻微活动，删除几何覆盖，使“苏醒”在静音无字幕下仍可读。"
+  - "S08：替换 PA08，用具有体积、折射和克制物理反应的实体水滴完成撞击，去除白色描边、十字和折线符号。"
+  - "S09：替换 PB09，连续展示水包围可见空气腔、闭合成同一实体气泡，并与 S10 的几何、大小和高光无缝衔接。"
+  - "S11：替换 PB11，保留同一气泡触面，补齐 2–4 帧破膜、3–6 枚实体微滴和 6–12 帧水面回落，并缩短长时间冻结镜头。"
+  - "三处桥接：对 S04→S05、S07→S08、S11→S12 重建动作匹配，统一冷湿高光、黑位、光向、景别与颗粒尺度。"
+  - "完整有声复审：在可验证播放器中对同一新快照 MP4 补做从头到尾 1.0x 有声观看，并使 Reviewer B 可独立评价旁白音色、混音和主观音画节奏。"
+
+deferred_items:
+  - "S02/R01+R09+R03 可限制使用；在核心阻塞解除后统一饱和度、景别、雨滴方向和动作切点，减少素材库快切感。"
+  - "S12/G09 可限制使用；保留冷色、非均匀和干湿共存，后续让前段湿点更贴合裂缝边缘和颗粒低点，弱化圆形蒙版/墨斑感。"
+  - "S13/R13+R12 可保留；后续统一近景墨绿与雾林灰白的青绿色调，并让淡化跟随叶片或雨丝动作。"
+  - "S03/R04 可按当前约 1.8 秒提问停顿正式保留；若后续 1.0x 整片观看仍感拖沓，再缩短 0.3–0.5 秒。"
+
+approve_seedance_tenth_call: false
+approve_seedance_mechanism_generation: false
+seedance_gate:
+  cumulative_hard_cap: 10
+  calls_already_used: 9
+  remaining_capacity: 1
+  decision_scope: "whether_to_authorize_the_remaining_tenth_call"
+  reason: "本轮仅做仲裁，不授权自动调用。存在第 10 次容量不等于已获得调用批准；Reviewer B 已将 S08–S09、S11 缺口归因为程序合成/剪辑问题，将三段割裂归因为剪辑、调色和镜头设计问题，本仲裁不将这些缺口转化为新的付费调用授权。"
+  authorization_requirement: "如后续确需使用剩余第 10 次，必须由人类在本仲裁之外单独、明确授权；本文件不得被解读为预授权。"
+
+approve_formal_composition: false
+approve_release_master: false
+formal_composition_and_release_gate:
+  reason: "Reviewer A 和 Reviewer B 均为 BLOCK。绑定提交的环境声依赖链不完整；Reviewer B 未能独立证明 1.0x 有声整片观看；S01、S05–S09、S11 及三处视觉桥接仍有 MAJOR 缺口。"
+  reopen_requirements:
+    - "在新的不可变 Production 修复提交中闭环 A-01，完成 required_assets 的视觉重做与桥接。"
+    - "Reviewer A 对新快照复核依赖可复现性；Reviewer B 在可验证播放器中完成同一 MP4 从头到尾 1.0x 有声观看并复核视觉门槛；随后再由 Reviewer C 仲裁。"
+
+reviewer_disagreement:
+  has_material_disagreement: false
+  items:
+    - "A/B 总结论一致：均为 BLOCK，不批准进入正式合成或发布母版。"
+    - "Reviewer A 确认 Alpha 存在非静音音轨、旁白技术链和基础音量检测；Reviewer B 未能在可验证播放器中独立完成从头到尾 1.0x 有声观看。前者是客观媒体/技术证据，后者是未满足的主观审听门禁，不是相互否定。"
+    - "Reviewer A 将 S01 判为硬阶段证据存在并明确保留视觉复核；Reviewer B 在逐帧视觉复核中认为土粒/水花响应不可辨认，必须替换。该范围差异不是冲突：合同阶段存在不等于导演视觉门槛通过，仲裁保留 Reviewer B 的必须替换结论。"
+    - "Reviewer A 的环境声依赖可复现性阻塞与 Reviewer B 的有声整片观看、静音可读性和视觉系统阻塞相互补充，均需保留。"
