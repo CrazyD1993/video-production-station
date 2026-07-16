@@ -8,7 +8,7 @@ target_branch: experiment/openmontage-pilot
 base_production_commit: 8b3b5bd4d97bf8e164b8d08fd8a68d50f6cff781
 base_review_commit: 6d3aa60bb5fd9fe81d80004b29370c72a24730d5
 priority: P0
-completion_commit: null
+completion_commit: 56943be3c13babaa0ecde313edff5b45d58416e7
 production_complete: true
 production_commit: 4bccde9fb910ddfd0432f51e7a781fc6b76c78ab
 independent_review_complete: true
