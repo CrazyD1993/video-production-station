@@ -1,7 +1,7 @@
 ---
 task_id: petrichor-alpha-finalization-001
 revision: 1
-status: ready
+status: completed_with_blocks
 created_by: ChatGPT
 role: 总导演
 target_branch: experiment/openmontage-pilot
@@ -9,6 +9,17 @@ base_production_commit: 8b3b5bd4d97bf8e164b8d08fd8a68d50f6cff781
 base_review_commit: 6d3aa60bb5fd9fe81d80004b29370c72a24730d5
 priority: P0
 completion_commit: null
+production_complete: true
+production_commit: 4bccde9fb910ddfd0432f51e7a781fc6b76c78ab
+independent_review_complete: true
+review_commit: af954871d7e1070f039a713884d75af581f8e12d
+reviewer_c_approve_seedance_tenth_call: false
+reviewer_c_approve_formal_composition: false
+reviewer_c_approve_release_master: false
+human_final_decision: pending
+release_master_started: false
+user_override_seedance_total_cap: 10
+seedance_calls_used: 9
 ---
 
 # 雨后泥土味｜成片 Alpha 收口任务

@@ -1,6 +1,7 @@
 task_id: petrichor-alpha-finalization-001
-stage: alpha_production_complete_pending_independent_review
-production_commit: pending
+stage: alpha_independent_review_complete_blocked
+production_commit: 4bccde9fb910ddfd0432f51e7a781fc6b76c78ab
+review_commit: af954871d7e1070f039a713884d75af581f8e12d
 timeline:
   nominal_seconds: 46.80
   fps: 24
@@ -27,8 +28,12 @@ seedance:
   rejected_assets: [G05, G07]
   additional_paid_models: 0
 review:
-  reviewer_a: pending
-  reviewer_b: pending
-  reviewer_c: pending
+  reviewer_a: BLOCK
+  reviewer_b: BLOCK
+  reviewer_c: complete
+  approve_seedance_tenth_call: false
+  approve_formal_composition: false
+  approve_release_master: false
+  normal_speed_audio_watch_verified_by_reviewer_b: false
 human_final_decision: pending
 release_master_started: false

@@ -1,516 +1,73 @@
-active_task_id: petrichor-director-remediation-v2-001
-last_chatgpt_instruction_commit: d8d20ce772f9100ba3f0ef6087b7c7c5b5d880a3
-last_codex_response_commit: 2eb2489ecff6bba7d52ef5e568157cfd345ce03b
+active_task_id: petrichor-alpha-finalization-001
 current_branch: experiment/openmontage-pilot
-project_stage: petrichor_director_remediation_v2_independent_review_complete
-blocking_gate: formal_composition_and_additional_seedance_blocked_by_review
-aircraft_window_pilot: paused_no_more_image_generation
+project_stage: petrichor_alpha_independent_review_complete_blocked
+blocking_gate: formal_composition_and_release_master_blocked_by_independent_review
 approved_topic: petrichor_rain_soil_smell
-production_mode: director_dynamic_validation_preview_only_no_formal_composition
-selected_keyframes:
-  TE-S01: TE-KF1-A
-  TE-S02: TE-KF2-A
-  TE-S03: TE-KF3-B
-seedance_handoff:
-  mode: hybrid_api_authorized_for_s03
-  prompts_ready: true
-  clean_first_frames_ready: true
-  generated_duration_seconds_each: 5
-  incoming_path: 08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/video-handoff/incoming
-seedance_api_attempt:
-  authorized_shot: TE-S03
-  requested_resolution: 720p
-  requested_duration_seconds: 4
-  requested_audio: false
-  fal_gateway: authentication_failed_before_generation
-  replicate_gateway: authentication_failed_before_generation
-  volcengine_ark_gateway: succeeded
-  source_config: local_time_echo_env
-  billed_generation: true
-  output_file: 08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/video-handoff/incoming/TE-S03-seedance-v1.mp4
-  output_sha256: 99df4e7a29d34094c561f64f11c11695eed4bbb9778029c0560a3ae443446728
-  actual_resolution: 720x1280
-  actual_duration_seconds: 4.041667
-  actual_fps: 24
-  audio_removed_after_generation: true
-expected_incoming_files:
-  - TE-S01-seedance-v1.mp4
-  - TE-S02-seedance-v1.mp4
-  - TE-S03-seedance-v1.mp4
-incoming_video_status:
-  TE-S01: received_and_visually_reviewed
-  TE-S02: received_and_visually_reviewed
-  TE-S03: generated_and_visually_reviewed
-visual_sample:
-  timeline_seconds:
-    TE-S01: [0.0, 3.2]
-    TE-S02: [3.2, 8.0]
-    TE-S03: [8.0, 12.0]
-  resolution: 1080x1920
-  fps: 30
-  audio_sample_rate_hz: 48000
-  visual_review_render:
-    status: created_and_verified
-    path: 08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/output/typhoon-eye-12s-visual-review.mp4
-    sha256: 558343a3b1d3ac9890a051c1c8c8353e58bd022119097643f3fb3a359d8de326
-    frames: 360
-    duration_seconds: 12.0
-  visual_review_render_v2:
-    status: created_and_verified
-    path: 08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/output/typhoon-eye-12s-visual-review-v2.mp4
-    sha256: 476b2375d3634802b5f0b3b85272da5b652909cbdffc118c8371ed271553cf66
-    frames: 360
-    duration_seconds: 12.0
-    fps_mode: cfr
-  packaged_review_render:
-    status: two_versions_created_and_verified
-    upload_to_github: false
-    contact_sheet: 08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/review-package/typhoon-eye-packaged-contact-sheet.jpg
-    version_A:
-      path: 08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/output/typhoon-eye-12s-packaged-A.mp4
-      voice_profile: verified_clone_restrained_suspense
-      sha256: 7f79920452c363a8b4560a50a9c7e0dfc2a2dcee02e792ab348ffd9c8ed869f8
-    version_B:
-      path: 08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/output/typhoon-eye-12s-packaged-B.mp4
-      voice_profile: volcengine_seed_tts_2_natural_female
-      sha256: 657ffaec58b3237d5dfc1c66682ab4f84387520bc3f5ad9edc1cd7eea291ece6
-    common_specs:
-      width: 1080
-      height: 1920
-      fps: 30
-      fps_mode: cfr
-      frames: 360
-      duration_seconds: 12.0
-      audio_sample_rate_hz: 48000
-voice_candidates:
-  restrained_suspense: generated_clone_voice_and_verified
-  natural_explanation: generated_seed_tts_2_and_verified
-selected_voice: B_volcengine_seed_tts_2_natural_female
-shots_requiring_regeneration: []
-full_video_25s:
-  status: created_and_verified
-  path: 08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/output/typhoon-eye-25s-packaged-B.mp4
-  upload_to_github: false
-  selected_voice: B_volcengine_seed_tts_2_natural_female
-  source_seedance_regenerated: false
-  sha256: 3645d91c14b8ca928c7dd4836bd7813519a9863f36ce9b25eb894a5a5421d46c
-  width: 1080
-  height: 1920
-  fps: 30
+production_mode: alpha_review_only_not_release_master
+
+commits:
+  relay_assignment: b9acea061ed1a8cab2615310cd43b12f025740ff
+  production: 4bccde9fb910ddfd0432f51e7a781fc6b76c78ab
+  review: af954871d7e1070f039a713884d75af581f8e12d
+  completion: null
+
+alpha:
+  path: 06_成片工程/雨后泥土味/petrichor-alpha-finalization-001/petrichor-alpha-v1.mp4
+  sha256: 0ef05f8da3e177a71aa4757e61b98a109399469b3e79110cbd47d91895fb289c
+  container_duration_seconds: 46.800000
+  video_track_duration_seconds: 46.791667
+  resolution: 720x1280
+  fps: 24
   fps_mode: cfr
-  frames: 750
-  duration_seconds: 25.0
+  video_frames: 1123
   video_codec: h264
   audio_codec: aac
   audio_sample_rate_hz: 48000
   audio_channels: 2
-  integrated_lufs: -15.6
-  true_peak_dbtp: -1.9
-  ending_voice_margin_seconds: 0.52
-  contact_sheet: 08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/review-package/typhoon-eye-25s-contact-sheet.jpg
-  ffprobe_record: 08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/review-package/typhoon-eye-25s-ffprobe.json
-full_video_25s_v2:
-  status: created_and_verified
-  revision_scope: structure_alignment_and_annotation_system_only
-  path: 08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/output/typhoon-eye-25s-packaged-B-v2.mp4
-  upload_to_github: false
-  source_seedance_regenerated: false
-  narration_text_changed: false
-  voice_regenerated: false
-  bgm_remixed: false
-  new_shots_added: false
-  sha256: 9adabff7816c9ea90294d338373817f4a47102fd23279bdee184e7584b9d9866
-  audio_stream_sha256: afb5122c96211519d0dd02d9eaef81b1dccec830db626cf239217316c1eae263
-  audio_stream_matches_v1: true
-  width: 1080
-  height: 1920
-  fps: 30
-  fps_mode: cfr
-  frames: 750
-  duration_seconds: 25.0
-  video_codec: h264
-  audio_codec: aac
-  audio_sample_rate_hz: 48000
-  audio_channels: 2
-  comparison_sheet: 08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/review-package/typhoon-eye-25s-v2-before-after.jpg
-  contact_sheet: 08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/review-package/typhoon-eye-25s-v2-contact-sheet.jpg
-  style_overview: 08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/review-package/annotation-style-overview.jpg
-  reusable_style_guide: 08_OpenMontage试验/共享组件/annotation-style-guide.md
-  reusable_tokens: 08_OpenMontage试验/共享组件/annotation-tokens.yaml
-github_review_package:
-  status: published
-  commit: b51ea9bec750ac14e7f0e538fdeb75a8f2d905b4
-manual_annotation_handoff:
-  status: created_and_verified
-  clean_base_path: 08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/output/typhoon-eye-25s-clean-base.mp4
-  clean_base_sha256: 6e70497193a039669c3a28b70034ed6d8f4da2583eb9be2f5afc61852b9b9c29
-  clean_base_upload_to_github: false
-  audio_stream_sha256: afb5122c96211519d0dd02d9eaef81b1dccec830db626cf239217316c1eae263
-  audio_stream_matches_approved_B: true
-  formal_captions_preserved: true
-  asset_directory: 08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/manual-annotation-handoff/assets
-  svg_asset_count: 8
-  transparent_png_asset_count: 8
-  prepositioned_to_video_coordinates: false
-  auto_eye_center_estimation_used: false
-  v4_generated: false
-  guide: 08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/manual-annotation-handoff/剪映人工定位说明.md
-arrow_geometry_repair:
-  status: created_and_verified
-  scope_seconds: [4.05, 14.70]
-  full_25_second_render_created: false
-  annotation_tokens_changed: false
-  tracking_changed: false
-  independent_flow_dots_removed: true
-  right_eyewall_generated_by_midline_mirror: true
-  maximum_flow_centerline_error_px: 0
-  geometry_validation: 08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/arrow-repair/geometry-validation.json
-  local_preview: 08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/arrow-repair/arrow-repair-4.05-14.70-preview.mp4
-  github_review_preview: 08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/arrow-repair/arrow-repair-4.05-14.70-preview-review.mp4
-  route_status: paused_superseded_by_natural_mechanism_preview
-natural_mechanism_preview:
-  status: approved_and_used_in_40s_hd_review
-  full_25_second_render_created: false
-  source_segment_replaced: true_in_40s_hd_review_only
-  narration_changed: false
-  captions_changed: false
-  bgm_changed: false
-  tracking_changed: false
-  provider: volcengine_ark
+  complete_decode: true
+  pts_continuous: true
+
+locked_narration:
+  path: 06_成片工程/雨后泥土味/tts-natural/petrichor-narration-natural.wav
+  sha256: 914a1728f12c87bff8f6f2fe607ab1708a5559a58ab0abb5d18cdb214a5f948e
+  speed_ratio: 1.000
+  offset_seconds: 0.200
+  regenerated: false
+  post_speed_change: false
+  dynamics_compression: false
+
+seedance:
   model: doubao-seedance-2-0-fast-260128
-  common_specs:
-    width: 720
-    height: 1280
-    fps: 24
-    duration_seconds: 4.041667
-    audio_present: false
-  shot_A:
-    purpose: eyewall_rising_motion
-    keyframe: 08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/mechanism-preview/keyframes/TE-MECH-A-eyewall-rise.png
-    preview: 08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/mechanism-preview/videos/TE-MECH-A-eyewall-rise-seedance-fast.mp4
-    sha256: d58e0ecbb7362060ca93d10d45cb7f078da05a857b9ffa0be396ab7e9f5f5724
-  shot_B:
-    purpose: eye_subsidence_and_cloud_suppression
-    keyframe: 08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/mechanism-preview/keyframes/TE-MECH-B-eye-subsidence.png
-    preview: 08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/mechanism-preview/videos/TE-MECH-B-eye-subsidence-seedance-fast.mp4
-    sha256: 37ef10a5f5678d3bb0b5f75c9dd12342c6d671eb30358cd28af7d79709502950
-full_video_40s_hd:
-  status: created_and_verified_pending_user_review
-  upload_to_github: false
-  path: 08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/output/typhoon-eye-40s-full-review-HD.mp4
-  sha256: c8eb7a388c16936245fb9c964e01f690dba83972bed6d5296f5a6f045d1ddac4
-  width: 1080
-  height: 1920
-  aspect_ratio: "9:16"
-  fps: 30
-  fps_mode: cfr
-  frames: 1254
-  duration_seconds: 41.8
-  video_codec: h264_high
-  video_bitrate_bps: 16246000
-  audio_codec: aac
-  audio_sample_rate_hz: 48000
-  audio_channels: 2
-  integrated_lufs: -16.1
-  true_peak_dbfs: -5.7
-  ending_voice_margin_seconds: 0.62
-  subtitle_exact_match: true
-  large_arrow_system_used: false
-  visually_inspected: true
-  fully_decoded: true
-full_video_40s_v2:
-  status: created_and_verified_pending_user_review
-  upload_to_github: false
-  path: 08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/output/typhoon-eye-40s-review-v2-1080x1920.mp4
-  sha256: c7c669436fd8ca0438bdf0e653a97f0d321d859e6b61bd2c5c7b047353f970bb
-  width: 1080
-  height: 1920
-  aspect_ratio: "9:16"
-  fps: 30
-  fps_mode: cfr
-  frames: 1254
-  duration_seconds: 41.8
-  video_codec: h264_high
-  pixel_format: yuv420p
-  audio_codec: aac
-  audio_sample_rate_hz: 48000
-  audio_channels: 2
-  subtitle_exact_match: true
-  subtitle_character_count: 234
-  old_seedance_shot_C_used: false
-  paid_model_calls: 0
-  programmatic_space_demo:
-    duration_seconds: 4.0
-    fixed_marker_count: 1
-    center_crossing_time_seconds: 1.9
-    center_crossing_error_px: 0.0
-    second_marker_present: false
-  audio_validation:
-    voice_mean_db: -22.3
-    environment_mean_db: -27.5
-    final_mix_mean_db: -18.6
-    final_tail_0_4_seconds_mean_db: -22.1
-    voice_non_silent: true
-    environment_non_silent: true
-    final_mix_non_silent: true
-    ending_tail_non_silent: true
-full_video_40s_v3:
-  status: created_and_verified_pending_user_review
-  upload_to_github: false
-  path: 08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/output/typhoon-eye-40s-review-v3-1080x1920.mp4
-  sha256: 3c059037d045e4f8d1effd5d0ec8f2e998ef1d1413be8eb16a3b88f992e53671
-  width: 1080
-  height: 1920
-  fps: 30
-  fps_mode: cfr
-  frames: 1254
-  duration_seconds: 41.8
-  video_codec: h264_high
-  pixel_format: yuv420p
-  audio_codec: aac
-  audio_sample_rate_hz: 48000
-  audio_channels: 2
-  integrated_lufs: -16.0
-  true_peak_dbfs: -5.7
-  subtitle_count: 24
-  subtitle_exact_match: true
-  paid_model_calls: 0
-  programmatic_space_demo:
-    timeline_seconds: [28.0, 32.0]
-    fixed_marker_count: 1
-    center_crossing_error_px: 0.0
-    stage_text_max_simultaneous: 1
-  audio_validation:
-    voice_mean_db: -22.3
-    environment_mean_db: -32.4
-    emotion_pad_mean_db: -37.0
-    final_mix_mean_db: -15.8
-    ending_tail_mean_db: -22.9
-  contact_sheet: 08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/output/v3-work/review/typhoon-eye-40s-v3-contact-sheet.jpg
-  voice:
-    resource_id: seed-tts-2.0
-    voice_id: zh_female_zhixingnv_uranus_bigtts
-    requested_format: pcm
-    sample_rate_hz: 48000
-    first_speech_rate: -2
-    first_duration_seconds: 51.786542
-    retry_speech_rate: 3
-    retry_duration_seconds: 48.918958
-    api_call_count: 2
-    usage_object_returned: false
-    final_tempo_factor: 1.066748
-    final_duration_seconds: 41.180438
-    final_path: 08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/output/typhoon-eye-40s-narration-final.wav
-    final_sha256: e2e844e90d44532d28f9e366e6e8d7f5796c02534a0d8404a4256da6e5ed4473
-  subtitles:
-    cue_count: 24
-    path: 08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/output/typhoon-eye-40s-subtitles.srt
-  shot_C:
-    provider: volcengine_ark
-    model: doubao-seedance-2-0-fast-260128
-    api_call_count: 2
-    selected_take: v2
-    output_path: 08_OpenMontage试验/三题并行钩子测试/台风眼12秒样片/output/typhoon-eye-shot-C-seedance-fast.mp4
-    output_sha256: 1db77197931d8146a9797dde633173712d47c66220236eb4a258e750b645784c
-    limitation: clearer_than_v1_but_non_event_specific_visualization
-next_actor: ChatGPT
-updated_at: "2026-07-15T20:35:24+08:00"
-petrichor_asset_board_v1:
-  task_id: petrichor-asset-board-v1-001
-  status: completed_pending_human_review
-  output_dir: 06_成片工程/雨后泥土味/asset-board-v1
-  locked_narration:
-    audio: 06_成片工程/雨后泥土味/tts-natural/petrichor-narration-natural.wav
-    timestamps: 06_成片工程/雨后泥土味/tts-natural/petrichor-narration-natural.timestamps.json
-    duration_seconds: 45.937042
-    regenerated: false
-    speed_changed: false
-    pauses_compressed: false
-  asset_inventory:
-    acquired_real_mother_asset_proxies: 10
-    acquired_video_proxies: 3
-    acquired_photo_proxies: 7
-    external_license_records_complete: true
-    platform: Pexels
-    license_page: https://www.pexels.com/license/
-  formal_dynamic_missing_shots: [S01, S05, S07, S08, S09, S10, S11, S12, S13]
-  mechanism_sketches:
-    A: 06_成片工程/雨后泥土味/asset-board-v1/mechanism/mechanism-a-geosmin-v1.png
-    B: 06_成片工程/雨后泥土味/asset-board-v1/mechanism/mechanism-b-aerosol-v1.png
-  board:
-    jpg: 06_成片工程/雨后泥土味/asset-board-v1/petrichor-asset-board-v1.jpg
-    pdf: 06_成片工程/雨后泥土味/asset-board-v1/petrichor-asset-board-v1.pdf
-  preview:
-    path: 06_成片工程/雨后泥土味/asset-board-v1/petrichor-asset-board-preview-v1.mp4
-    duration_seconds: 18.25
-    width: 540
-    height: 960
-    fps: 24
-    audio_streams: 0
-  rhythm_hold_plan:
-    executed: false
-    suggestions:
-      - S01_after_real_raindrop_impact_0.24s
-      - S11_after_bubble_pop_0.24s
-  paid_model_calls: 0
-  seedance_called: false
-  full_video_created: false
-  formal_composition_gate: blocked_pending_missing_assets_and_human_review
-  completion_commit: fe82d547692b9dd0322e9ae32e9de43e14e16bb1
-petrichor_asset_board_v1_review:
-  task_id: petrichor-review-agents-setup-001
-  status: completed
-  target_commit: fe82d547692b9dd0322e9ae32e9de43e14e16bb1
-  evidence_mode: isolated_git_commit_snapshot
-  uncommitted_workspace_used_as_evidence: false
-  reviewer_a:
-    role: Contract_QA
-    conclusion: PASS_WITH_CONDITIONS
-    report: 06_成片工程/雨后泥土味/reviews/asset-board-v1/contract-qa.md
-  reviewer_b:
-    role: Visual_Director
-    conclusion: BLOCK
-    report: 06_成片工程/雨后泥土味/reviews/asset-board-v1/visual-director-review.md
-  reviewer_c:
-    role: Review_Arbiter
-    decision: 06_成片工程/雨后泥土味/reviews/asset-board-v1/review-decision.yaml
-    summary: 06_成片工程/雨后泥土味/reviews/asset-board-v1/review-summary.md
-  seedance_mechanism_generation:
-    approved: true
-    scope: [S05, S07, S08, S09, S10, S11]
-    executed_this_round: false
-  formal_composition:
-    approved: false
-  required_assets:
-    - S01_real_raindrop_impact_on_dry_soil
-    - S05_S07_S11_continuous_mechanism_motion
-    - S12_same_ground_dry_to_wet_continuity
-    - S13_dynamic_awakened_land_ending
-  paid_model_calls: 0
-  production_assets_modified: false
-  new_preview_created: false
-  full_video_created: false
-  completion_commit: 79fc5cac28e8f0d8f3ee843ddbf5be6e7f12b97d
-petrichor_director_remediation_pass_001:
-  task_id: petrichor-director-remediation-pass-001
-  status: completed_with_formal_composition_blocked
-  evidence_mode: isolated_git_commit_snapshot
-  production:
-    production_complete: true
-    production_commit: 0da86d05b1904adb9f221f073438c11268a05d44
-    preview_only: true
-    formal_composition: false
-    output_dir: 06_成片工程/雨后泥土味/director-remediation-pass-001
-    preview:
-      path: 06_成片工程/雨后泥土味/director-remediation-pass-001/petrichor-director-remediation-preview-v1.mp4
-      duration_seconds: 46.8
-      width: 540
-      height: 960
-      fps: 24
-      video_codec: h264
-      audio_codec: aac
-      audio_sample_rate_hz: 48000
-      narration_included: false
-      temporary_ambience_only: true
-    shot_status_summary:
-      done: [S02, S03, S04, S05, S08, S09, S10, S12, S13]
-      partial: [S01, S06, S07, S11]
-      blocked: []
-    new_real_asset_proxies: [R11, R12, R13]
-    external_license_records_complete: true
-    seedance:
-      model: doubao-seedance-2-0-fast-260128
-      calls_used: 2
-      hard_cap: 4
-      cost: unknown
-      B1:
-        task_id: cgt-20260715200029-2bfck
-        status: succeeded
-        path: 06_成片工程/雨后泥土味/director-remediation-pass-001/seedance/outputs/B1_S09-candidate-1.mp4
-      B2:
-        task_id: cgt-20260715200457-ct6d8
-        status: succeeded
-        path: 06_成片工程/雨后泥土味/director-remediation-pass-001/seedance/outputs/B2_S10_S11-candidate-2.mp4
-  independent_review:
-    independent_review_complete: true
-    review_commit: a6250d9287b2f44c0e6fe6376699c9d1c94080f9
-    reviewed_production_commit: 0da86d05b1904adb9f221f073438c11268a05d44
-    reviewer_a:
-      conclusion: BLOCK
-      report: 06_成片工程/雨后泥土味/reviews/director-remediation-pass-001/contract-qa.md
-    reviewer_b:
-      conclusion: BLOCK
-      critical: 1
-      major: 9
-      minor: 2
-      note: 1
-      report: 06_成片工程/雨后泥土味/reviews/director-remediation-pass-001/visual-director-review.md
-    reviewer_c:
-      approve_seedance_mechanism_generation: true
-      maximum_additional_calls: 2
-      approve_formal_composition: false
-      decision: 06_成片工程/雨后泥土味/reviews/director-remediation-pass-001/review-decision.yaml
-      summary: 06_成片工程/雨后泥土味/reviews/director-remediation-pass-001/review-summary.md
-    human_final_decision: pending
-  next_decision_only: ChatGPT decides whether to authorize a constrained remediation v2 and up to two remaining Seedance calls; do not approve formal composition yet.
-  completion_commit: a6250d9287b2f44c0e6fe6376699c9d1c94080f9
-petrichor_director_remediation_v2_001:
-  task_id: petrichor-director-remediation-v2-001
-  revision: 2
-  status: completed_with_blocks
-  evidence_mode: isolated_git_commit_snapshot
-  production:
-    production_complete: true
-    production_commit: 8b3b5bd4d97bf8e164b8d08fd8a68d50f6cff781
-    output_dir: 06_成片工程/雨后泥土味/director-remediation-v2-001
-    preview_only: true
-    formal_composition: false
-    preview:
-      path: 06_成片工程/雨后泥土味/director-remediation-v2-001/petrichor-remediation-v2-clean-preview.mp4
-      width: 540
-      height: 960
-      nominal_fps: 24
-      actual_duration_seconds: 46.833333
-      video_only: true
-      narration_included: false
-      subtitles_included: false
-      formal_mix_included: false
-    mechanism_a: 06_成片工程/雨后泥土味/director-remediation-v2-001/mechanism-a-v2.mp4
-    mechanism_b: 06_成片工程/雨后泥土味/director-remediation-v2-001/mechanism-b-v2.mp4
-    seedance:
-      model: doubao-seedance-2-0-fast-260128
-      calls_used: 4
-      hard_cap: 4
-      remaining_calls: 0
-      other_paid_video_models_called: false
-      cost: unknown
-      new_call_3_task_id: cgt-20260715230936-qwwsz
-      new_call_3_status: succeeded_discarded
-      new_call_4_task_id: cgt-20260715231939-bd75j
-      new_call_4_status: succeeded_used_but_visual_review_blocked
-    production_tests: 18_of_18_passed
-  independent_review:
-    independent_review_complete: true
-    reviewed_production_commit: 8b3b5bd4d97bf8e164b8d08fd8a68d50f6cff781
-    review_commit: 6d3aa60bb5fd9fe81d80004b29370c72a24730d5
-    reviewer_a:
-      conclusion: BLOCK
-      report: 06_成片工程/雨后泥土味/reviews/director-remediation-v2-001/contract-qa.md
-    reviewer_b:
-      conclusion: BLOCK
-      critical: 0
-      major: 7
-      minor: 3
-      note: 3
-      report: 06_成片工程/雨后泥土味/reviews/director-remediation-v2-001/visual-director-review.md
-    reviewer_c:
-      approve_seedance_mechanism_generation: false
-      approve_formal_composition: false
-      decision: 06_成片工程/雨后泥土味/reviews/director-remediation-v2-001/review-decision.yaml
-      summary: 06_成片工程/雨后泥土味/reviews/director-remediation-v2-001/review-summary.md
-    human_final_decision: pending
-    formal_composition_started: false
-  required_rework: [S01, S05, S06, S07, S09, S11, S12]
-  retained_or_limited: [S02, S03, S04, S08, S10, S13]
-  next_decision_only: ChatGPT and user decide whether to authorize a no-more-Seedance remediation task.
-  completion_commit: 2eb2489ecff6bba7d52ef5e568157cfd345ce03b
+  cumulative_hard_cap: 10
+  previous_calls: 4
+  calls_this_round: 5
+  total_calls: 9
+  remaining_capacity: 1
+  tenth_call_used: false
+  tenth_call_authorized_by_reviewer_c: false
+  additional_paid_models_used: 0
+  adopted_assets: [G06, G08, G09]
+  rejected_assets: [G05, G07]
+  prompt_diagnosis_required_before_retry: true
+
+review:
+  evidence_snapshot: /private/tmp/petrichor-alpha-production-4bccde9
+  reviewer_a: BLOCK
+  reviewer_b: BLOCK
+  reviewer_c_complete: true
+  normal_speed_audio_watch_verified_by_reviewer_b: false
+  approve_seedance_tenth_call: false
+  approve_formal_composition: false
+  approve_release_master: false
+  reports_path: 06_成片工程/雨后泥土味/reviews/petrichor-alpha-finalization-001
+
+blocking_items:
+  - missing_original_ambience_dependency_and_provenance
+  - reviewer_b_normal_speed_audio_watch_not_independently_verified
+  - s01_impact_response_not_readable
+  - mechanism_a_s05_s07_not_silent_readable
+  - mechanism_b_s08_s09_s11_not_continuous_physical_readable
+  - mechanism_real_footage_bridges_visually_discontinuous
+
+human_final_decision: pending
+release_master_started: false

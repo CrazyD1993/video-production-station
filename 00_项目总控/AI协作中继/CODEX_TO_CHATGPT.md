@@ -1,130 +1,82 @@
 ---
-task_id: petrichor-director-remediation-v2-001
-revision: 2
+task_id: petrichor-alpha-finalization-001
+revision: 1
 status: completed_with_blocks
 branch: experiment/openmontage-pilot
-production_commit: 8b3b5bd4d97bf8e164b8d08fd8a68d50f6cff781
-review_commit: 6d3aa60bb5fd9fe81d80004b29370c72a24730d5
-reviewed_production_commit: 8b3b5bd4d97bf8e164b8d08fd8a68d50f6cff781
+production_commit: 4bccde9fb910ddfd0432f51e7a781fc6b76c78ab
+review_commit: af954871d7e1070f039a713884d75af581f8e12d
+reviewed_production_commit: 4bccde9fb910ddfd0432f51e7a781fc6b76c78ab
 independent_review_complete: true
-reviewer_c_approve_seedance_mechanism_generation: false
+reviewer_a_conclusion: BLOCK
+reviewer_b_conclusion: BLOCK
+reviewer_c_approve_seedance_tenth_call: false
 reviewer_c_approve_formal_composition: false
+reviewer_c_approve_release_master: false
 human_final_decision: pending
-formal_composition_started: false
-completion_commit: 2eb2489ecff6bba7d52ef5e568157cfd345ce03b
-updated_at: "2026-07-16T00:20:00+08:00"
+release_master_started: false
+completion_commit: null
+updated_at: "2026-07-16T14:56:03+08:00"
 ---
 
-# 执行摘要
+# 雨后泥土味｜Alpha 收口执行回执
 
-已按 UTF-8 修订版执行 `petrichor-director-remediation-v2-001`，完成 V2 动态验证生产包、不可变 Production 提交，以及基于该提交隔离快照的 Reviewer A/B/C 独立审核。
+## 结果摘要
 
-当前输出仍是 **46.80 秒动态验证预览（非成片）**。未加入旁白、字幕、音乐或正式混音；未重新生成或修改 TTS；正式合成未开始。
+已完成带锁定旁白、临时审片字幕与既有临时环境声的 46.80 秒 Alpha，并建立不可变 Production 提交与 Reviewer A/B/C 独立审核提交。
 
-审核结论：Reviewer A=`BLOCK`，Reviewer B=`BLOCK`，Reviewer C 不批准新增/重试 Seedance，也不批准正式合成。`human_final_decision` 保持 `pending`。
+用户执行中将 Seedance 项目累计上限从 4 次提高到 10 次，并要求生成失败时先判断提示词问题再修正。本轮新增 5 次，累计 9/10；每次都有明确问题、验证标准和接受/拒绝记录。第 10 次未调用，未使用其他付费模型。
 
-# 两阶段提交
+Reviewer A 与 Reviewer B 均为 `BLOCK`；Reviewer C 不批准自动使用剩余第 10 次 Seedance，不批准进入正式合成或发布母版。
 
-- Production commit：`8b3b5bd4d97bf8e164b8d08fd8a68d50f6cff781`
-- Review commit：`6d3aa60bb5fd9fe81d80004b29370c72a24730d5`
-- 审核证据：`/private/tmp/petrichor-v2-production-8b3b5bd`，由 Production commit 导出的隔离快照。
-- A/B 在独立结论形成前未读取 Production 自评、对方报告或未提交工作区。
-- 两个提交均已推送到 `experiment/openmontage-pilot`。
+## 两阶段提交
 
-# Production 交付
+- Production commit：`4bccde9fb910ddfd0432f51e7a781fc6b76c78ab`
+- Review commit：`af954871d7e1070f039a713884d75af581f8e12d`
+- 审核快照：`/private/tmp/petrichor-alpha-production-4bccde9`
+- 目标分支：`experiment/openmontage-pilot`
 
-- 输出目录：`06_成片工程/雨后泥土味/director-remediation-v2-001/`
-- 干净预览：`petrichor-remediation-v2-clean-preview.mp4`
-- 机制 A：`mechanism-a-v2.mp4`
-- 机制 B：`mechanism-b-v2.mp4`
+## Alpha 交付
+
+- 目录：`06_成片工程/雨后泥土味/petrichor-alpha-finalization-001/`
+- 成片 Alpha：`petrichor-alpha-v1.mp4`
+- 机制 A：`mechanism-a-final.mp4`
+- 机制 B：`mechanism-b-final.mp4`
+- 依赖清单：`asset-dependency-manifest.csv`、`dependencies.yaml`
+- 提示词诊断：`seedance/prompt-diagnosis.md`
+- 调用记录：`seedance/call-log-alpha.json`
 - QA：`qa/`
-- 素材清单：`asset-manifest-v2.csv`
-- 程序化依赖：`dependencies-v2.yaml`
-- Seedance 日志：`seedance/call-log-v2.json`
-- 逐镜状态：`shot-status.yaml`
-- 生产报告：`production-report.md`
 
-媒体实测：540×960、24fps 标称、H.264、仅视频流；预览容器时长 `46.833333` 秒。完整解码通过，三份主交付 SHA-256 已记录。
+## 技术实测
 
-# 逐镜 Production 申报与审核裁决
+- Alpha：H.264/AAC，720×1280，CFR 24fps，1123 视频帧，48kHz 双声道，容器 46.800000 秒。
+- Alpha SHA-256：`0ef05f8da3e177a71aa4757e61b98a109399469b3e79110cbd47d91895fb289c`。
+- 锁定旁白 SHA-256：`914a1728f12c87bff8f6f2fe607ab1708a5559a58ab0abb5d18cdb214a5f948e`。
+- 旁白速度比 `1.000`，只延后 `0.200` 秒；无 TTS 重生成、无变速、无响度压缩。
+- 三支主媒体完整解码通过；Alpha PTS 连续。
+- 合同测试：27/27 通过。
 
-Production 在提交时申报 S01—S13 全部 `done`。独立审核后，只有以下内容可直接或条件保留：
+## 提示词问题与修正
 
-- 可保留：S03/R04 呼吸点、S04/R14 真实叶尖脱落、S10/G02 单泡上升锚点。
-- 限制使用：S02、S08、S13；须后续调色、几何或衔接精修。
-- 必须替换/重做：S01、S05、S06、S07、S09、S11、S12。
+- S01 首次候选已有单滴、干土、接触和湿坑，但模型遗漏土粒/水花响应。R2 使用同一首帧，增加 0.55–1.10 秒硬时间窗和“不得直接消失成规则圆孔”约束；接触/变湿更清楚，但飞溅仍弱。归因为模型服从不足为主，剪辑加速为次。
+- 机制 A 首次候选出现均匀珠串、蓝色通道和白线。R2 改用真实根系土壤首帧，明确排除珠串/蓝通道/白线，并将入渗、附着、局部苏醒分成 0–3、3–7、7–10 秒。真实根土和早期入水成立，但中后段动作仍偏弱。
+- S12 旧程序版的暖橙发光容易读成熔岩/发热。新提示词锁定同一裂土构图，要求沿裂缝和低洼不规则冷色变深、保留干区，并禁止橙光/火/熔岩；已基本达成。
+- S08–S09、S11 的现有失败主要属于程序合成、镜头桥接和物理反馈不足，不是继续修改 Seedance 提示词就能解决。
 
-审核结论优先于 Production 自报状态，当前不得据 `shot-status.yaml` 的 `done` 进入正式合成。
+## 独立审核
 
-# 素材取舍
+- Reviewer A：`BLOCK`。绑定提交缺少实际混入的 `temporary-validation-ambience.wav`，且无该音源 SHA-256、来源/许可或项目自制证明，导致音频链无法从 Production commit 完整复现。
+- Reviewer B：`BLOCK`。S01 土粒/水花不可辨；S05–S07 入土、吸附、苏醒不可读；S08–S09/S11 仍以描边符号代替实体撞击、成泡和破膜微滴。由于本机 GUI 状态工具连续无返回，Reviewer B 未能独立证明 1.0× 有声整片观看门禁。
+- Reviewer C：保留 A/B 原结论，认定无实质性分歧。
 
-- R14 替换未能清楚证明脱落的 R02，S04 已通过“聚集—拉长—脱落”视觉检查。
-- R11 实际用于 S01，与 R07 以 22% 撞击运动参考层匹配合成；不再错误标记为未使用。
-- G03 / Seedance 第 3 次候选继续弃用：开场已有气泡，缺少入水、压缩、包围过程。
-- G04 / 第 4 次候选用于 S09，但 Reviewer B 仍判定气泡从画外出现，成泡因果链不连续。
-- G02 的 S10 原速上升段可保留，速度比例 `1.000`。
-- R14 授权记录仍缺 Mixkit 许可条款直链、版本或日期化快照，需补齐后复审。
+审核路径：`06_成片工程/雨后泥土味/reviews/petrichor-alpha-finalization-001/`
 
-# Seedance 真实调用
+## 门禁结果
 
-模型全部为 `doubao-seedance-2-0-fast-260128`，9:16、720p、5 秒、`generate_audio=false`，费用均为接口不可得的 `unknown`。
-
-1. `cgt-20260715200029-2bfck`：旧 G01，废弃。
-2. `cgt-20260715200457-ct6d8`：G02，仅保留 S10 上升段。
-3. `cgt-20260715230936-qwwsz`：G03，新 B1 首次调用，因缺少核心前置阶段而废弃。
-4. `cgt-20260715231939-bd75j`：G04，最终授权重试，Production 采用但视觉审核仍不通过。
-
-累计 `4/4`，剩余 `0`；未调用其他付费视频模型。Reviewer C 明确不批准新增或重试 Seedance。
-
-# 生产验证
-
-- `python -m unittest discover -s .../tests -v`：`18/18 PASS`。
-- 三份主交付 `ffmpeg -v error -i <file> -f null -`：全部完整解码、exit 0。
-- clean preview 流检查：只有 `video`，无旁白、音频、字幕或正式混音。
-- SHA-256：preview `97fb59fa...`；mechanism A `ff6cf2cb...`；mechanism B `e14b89d...`。
-- 敏感值扫描只命中代码中的环境变量名和函数参数，没有凭据值。
-
-生产测试通过不消除 Reviewer A 指出的测试盲点：现有复用测试没有沿 PA/PB 派生链递归计算底层母素材。
-
-# Reviewer A / Contract QA
-
-结论：`BLOCK`。
-
-1. PA/PB 派生 ID 隐藏 R04、R05、R07、G02 的真实逐镜依赖与复用次数。
-2. G03 的 `acquired_not_used` CSV 行列错位。
-3. clean preview 有 3 处双倍帧间隔，实际 1121 帧、46.833333 秒，不是严格连续 CFR 24fps。
-4. R14 缺可核验的许可条款直链/快照。
-
-报告：`06_成片工程/雨后泥土味/reviews/director-remediation-v2-001/contract-qa.md`
-
-# Reviewer B / Visual Director
-
-结论：`BLOCK`；`CRITICAL 0 / MAJOR 7 / MINOR 3 / NOTE 3`。
-
-主要阻塞：S01 撞击不可读；S05—S07 仍有拼贴、冻结和信息卡感；S09 成泡因果跳变；S11 破膜与气溶胶不可见；S12 橙色自发光更像发热/熔岩。
-
-报告：`06_成片工程/雨后泥土味/reviews/director-remediation-v2-001/visual-director-review.md`
-
-# Reviewer C / Review Arbiter
-
+- `approve_seedance_tenth_call: false`
 - `approve_seedance_mechanism_generation: false`
 - `approve_formal_composition: false`
+- `approve_release_master: false`
 - `human_final_decision: pending`
-- A/B 无实质性分歧，合同问题与视觉问题相互补充。
+- `release_master_started: false`
 
-裁决：
-
-- `06_成片工程/雨后泥土味/reviews/director-remediation-v2-001/review-decision.yaml`
-- `06_成片工程/雨后泥土味/reviews/director-remediation-v2-001/review-summary.md`
-
-# 下一步只需要 ChatGPT 和用户判断的事项
-
-决定是否授权一个**不再调用 Seedance**的新整改任务，范围只包括：
-
-1. 重做 S01、S05—S07、S09、S11、S12；
-2. 递归展开底层母素材与真实复用次数，修正 G03 CSV；
-3. 补 R14 许可条款证据；
-4. 输出 PTS 连续的 CFR 24fps 新预览；
-5. 重新建立 Production commit 并复跑 A/B/C。
-
-在人工新授权前立即停止；不得进入正式合成，不得追加模型调用。
+本轮已按任务结束并停止，未自动修复审核问题，未使用第 10 次 Seedance。
