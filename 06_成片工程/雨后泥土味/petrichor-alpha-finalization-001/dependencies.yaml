@@ -1,0 +1,29 @@
+task_id: petrichor-alpha-finalization-001
+timeline:
+  nominal_seconds: 46.80
+  video_frames: 1123
+  fps: 24
+  video_track_seconds: 46.791667
+audio:
+  narration_path: 06_成片工程/雨后泥土味/tts-natural/petrichor-narration-natural.wav
+  narration_sha256: 914a1728f12c87bff8f6f2fe607ab1708a5559a58ab0abb5d18cdb214a5f948e
+  narration_speed_ratio: 1.000
+  narration_offset_seconds: 0.200
+  ambience_path: 06_成片工程/雨后泥土味/director-remediation-pass-001/work/temporary-validation-ambience.wav
+  post_speed_change: false
+generation:
+  seedance_hard_total_calls: 10
+  seedance_inherited_calls: 4
+  paid_calls_this_round: 5
+  seedance_total_calls_after_round: 9
+  new_generated_model_assets: 5
+  adopted_generated_assets: [G06, G08, G09]
+scene_groups:
+  mechanism_a_continuous:
+    shots: [S05, S06, S07]
+    underlying_sources: [G08]
+  mechanism_b_continuous:
+    shots: [S09, S10, S11]
+    underlying_sources: [G02]
+human_final_decision: pending
+release_master_started: false

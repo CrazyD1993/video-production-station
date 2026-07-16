@@ -1,0 +1,34 @@
+task_id: petrichor-alpha-finalization-001
+stage: alpha_production_complete_pending_independent_review
+production_commit: pending
+timeline:
+  nominal_seconds: 46.80
+  fps: 24
+  frame_count: 1123
+  video_track_seconds: 46.791667
+  container_seconds: 46.800000
+media:
+  alpha: petrichor-alpha-v1.mp4
+  mechanism_a: mechanism-a-final.mp4
+  mechanism_b: mechanism-b-final.mp4
+audio:
+  locked_narration_speed_ratio: 1.000
+  locked_narration_offset_seconds: 0.200
+  post_speed_change: false
+  narration_regenerated: false
+seedance:
+  model: doubao-seedance-2-0-fast-260128
+  previous_calls: 4
+  calls_this_round: 5
+  total_calls: 9
+  hard_total_limit: 10
+  unused_capacity: 1
+  adopted_assets: [G06, G08, G09]
+  rejected_assets: [G05, G07]
+  additional_paid_models: 0
+review:
+  reviewer_a: pending
+  reviewer_b: pending
+  reviewer_c: pending
+human_final_decision: pending
+release_master_started: false

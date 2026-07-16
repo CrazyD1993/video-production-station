@@ -1,0 +1,28 @@
+{
+  "alpha_duration": "46.800000",
+  "alpha_streams": [
+    {
+      "index": 0,
+      "codec_name": "h264",
+      "codec_type": "video",
+      "width": 720,
+      "height": 1280,
+      "pix_fmt": "yuv420p",
+      "r_frame_rate": "24/1",
+      "avg_frame_rate": "24/1",
+      "nb_read_frames": "1123"
+    },
+    {
+      "index": 1,
+      "codec_name": "aac",
+      "codec_type": "audio",
+      "sample_rate": "48000",
+      "channels": 2,
+      "r_frame_rate": "0/0",
+      "avg_frame_rate": "0/0",
+      "nb_read_frames": "2194"
+    }
+  ],
+  "decode_all_ok": true,
+  "pts_continuous": true
+}

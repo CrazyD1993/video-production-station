@@ -1,0 +1,252 @@
+{
+  "task_id": "petrichor-alpha-finalization-001",
+  "authorization": "User override: total Seedance ceiling raised from 4 to 10",
+  "model": "doubao-seedance-2-0-fast-260128",
+  "hard_total_calls": 10,
+  "inherited_calls": 4,
+  "max_new_calls": 6,
+  "total_calls": 9,
+  "new_calls": 5,
+  "calls": [
+    {
+      "call_number": 5,
+      "created_at": "2026-07-16T05:10:03.924072+00:00",
+      "shot_group": "S01_SINGLE_DROP",
+      "prompt_revision": "alpha-r1-diagnosis-driven",
+      "task_id": "cgt-20260716131004-z5sgj",
+      "status": "succeeded",
+      "model": "doubao-seedance-2-0-fast-260128",
+      "parameters": {
+        "ratio": "9:16",
+        "resolution": "720p",
+        "duration": 5,
+        "generate_audio": false,
+        "first_frame_used": false,
+        "first_frame_path": null
+      },
+      "prompt": "Photoreal high-speed macro nature documentary, vertical 9:16, one continuous fixed side-view shot. The frame is filled with dry loose soil whose individual brown soil grains are clearly visible; it is not a puddle, stone, asphalt, or cracked clay plate. Within the first 1.2 seconds show one single water drop falling from above, the same drop making impact at one clear point, a short restrained splash with several real soil grains lifting, and an immediate dark wet spot spreading only around that impact point. After the event, hold on the same freshly wetted spot with a few grains settling. Natural cool overcast light, shallow depth of field, physically plausible gravity and scale, realistic transparent water. No rain shower, no second drop, no multiple ripple rings, no pre-existing puddle, no cut, no camera move, no slow floating drop, no oversized jelly drop, no text, no arrows, no HUD, no glow, no CGI or cartoon look.",
+      "output_path": "seedance/outputs/S01-single-drop-candidate.mp4",
+      "original_duration": 5.041667,
+      "cost": "unknown",
+      "qa_decision": "rejected_retry_authorized",
+      "decision_reason": "Single drop, dry soil, fall, contact and dark wet crater are visible, but the model omitted the requested lifted soil grains and restrained water splash. R2 is authorized with the same first frame and explicit 0.55-1.10 second motion windows.",
+      "provider_response": {
+        "id": "cgt-20260716131004-z5sgj",
+        "model": "doubao-seedance-2-0-fast-260128",
+        "status": "succeeded",
+        "content": {
+          "video_url": "[redacted_after_download]"
+        },
+        "usage": {
+          "completion_tokens": 108900,
+          "total_tokens": 108900
+        },
+        "created_at": 1784178604,
+        "updated_at": 1784178848,
+        "seed": 80032,
+        "resolution": "720p",
+        "ratio": "9:16",
+        "duration": 5,
+        "framespersecond": 24,
+        "service_tier": "default",
+        "execution_expires_after": 172800,
+        "generate_audio": false,
+        "draft": false,
+        "priority": 0
+      },
+      "output_sha256": "734dcf3f22b8612c83cd3d2a3dca6a315a06e1ed8283156a089e325e8d2a144f"
+    },
+    {
+      "call_number": 6,
+      "created_at": "2026-07-16T05:16:12.873825+00:00",
+      "shot_group": "S01_SINGLE_DROP_R2",
+      "prompt_revision": "alpha-r1-diagnosis-driven",
+      "task_id": "cgt-20260716131613-p6qhn",
+      "status": "succeeded",
+      "model": "doubao-seedance-2-0-fast-260128",
+      "parameters": {
+        "ratio": "9:16",
+        "resolution": "720p",
+        "duration": 5,
+        "generate_audio": false,
+        "first_frame_used": true,
+        "first_frame_path": "seedance/references/s01-r1-first-frame.jpg"
+      },
+      "prompt": "Photoreal high-speed macro nature documentary, vertical 9:16, one continuous fixed side-view shot beginning from the supplied dry loose soil frame. Individual brown soil grains must stay sharp and physically real. Timing is mandatory: at 0.00-0.20 seconds hold the empty dry soil; at 0.20-0.55 seconds one single transparent water drop falls from above toward one clear impact point; at 0.55-0.75 seconds that same drop contacts the soil and forms a low restrained water crown; at 0.75-1.10 seconds several separate real soil grains and a few tiny water droplets visibly travel upward and outward from that exact impact point; by 1.20 seconds a dark irregular wet patch is clearly visible around the impact point while the lifted grains settle. Hold the same wet patch afterward. The water drop must not simply vanish into a clean circular drilled hole. Show contact, splash response, moving soil grains, and wetting as four distinct continuous stages. Natural cool overcast light, shallow depth of field, realistic gravity, surface tension, scale and transparent water. No rain shower, no second drop, no puddle, no ripple rings, no stone, no asphalt, no cracked clay plate, no cut, no camera move, no oversized jelly drop, no explosion, no text, no arrows, no HUD, no glow, no CGI or cartoon look.",
+      "output_path": "seedance/outputs/S01-single-drop-candidate-r2.mp4",
+      "original_duration": 5.041667,
+      "cost": "unknown",
+      "qa_decision": "accepted_with_limitations",
+      "decision_reason": "R2 clearly shows one drop, dry granular soil, contact and immediate local wetting. The requested crown and lifted-grain response remain weak despite explicit timed prompting; no further S01 retry is authorized.",
+      "provider_response": {
+        "id": "cgt-20260716131613-p6qhn",
+        "model": "doubao-seedance-2-0-fast-260128",
+        "status": "succeeded",
+        "content": {
+          "video_url": "[redacted_after_download]"
+        },
+        "usage": {
+          "completion_tokens": 108900,
+          "total_tokens": 108900
+        },
+        "created_at": 1784178974,
+        "updated_at": 1784179110,
+        "seed": 79376,
+        "resolution": "720p",
+        "ratio": "9:16",
+        "duration": 5,
+        "framespersecond": 24,
+        "service_tier": "default",
+        "execution_expires_after": 172800,
+        "generate_audio": false,
+        "draft": false,
+        "priority": 0
+      },
+      "output_sha256": "bcb2be3a39e2d609dd7829404d4ff0fe126313fabe077640b64cf247d40f32e0"
+    },
+    {
+      "call_number": 7,
+      "created_at": "2026-07-16T05:19:27.182437+00:00",
+      "shot_group": "MECHANISM_A",
+      "prompt_revision": "alpha-r1-diagnosis-driven",
+      "task_id": "cgt-20260716131927-5fjwr",
+      "status": "succeeded",
+      "model": "doubao-seedance-2-0-fast-260128",
+      "parameters": {
+        "ratio": "9:16",
+        "resolution": "720p",
+        "duration": 10,
+        "generate_audio": false,
+        "first_frame_used": false,
+        "first_frame_path": null
+      },
+      "prompt": "One continuous photoreal macro documentary view of the exact same vertical natural soil cross-section, fixed camera, no cuts. Real dark-brown soil grains, a few fine roots and a very small amount of pale natural mycelia remain in the same positions. Phase 1: rainwater enters from the top and visibly follows several irregular existing pores downward; this is infiltration, with the real soil remaining dominant. Phase 2: a very small amount of subdued brown organic material travels inside the thin water film, approaches nearby soil grains, then adsorbs onto their surfaces and stops; show approach, attachment, and remaining attached. Phase 3: water reaches one local patch of previously still faint mycelia; the same mycelia gently hydrate, become slightly fuller and show only subtle local activity, while a few extremely fine neutral particles appear nearby. Natural cool damp earth palette, realistic microscopic documentary texture, stable geometry, restrained motion, no text, no labels, no arrows, no neon, no fluorescent color, no glowing bacteria, no science-fiction world, no rectangular collage, no cartoon microbes, no camera transition.",
+      "output_path": "seedance/outputs/mechanism-a-candidate.mp4",
+      "original_duration": 10.041667,
+      "cost": "unknown",
+      "qa_decision": "rejected_retry_authorized",
+      "decision_reason": "Continuity exists, but the result replaces natural soil with a uniform bead pack, a straight blue channel and white wire-like strands; adsorption is not readable. R2 is authorized with a real root-and-soil first frame and explicit artifact bans.",
+      "provider_response": {
+        "id": "cgt-20260716131927-5fjwr",
+        "model": "doubao-seedance-2-0-fast-260128",
+        "status": "succeeded",
+        "content": {
+          "video_url": "[redacted_after_download]"
+        },
+        "usage": {
+          "completion_tokens": 216900,
+          "total_tokens": 216900
+        },
+        "created_at": 1784179167,
+        "updated_at": 1784179352,
+        "seed": 87295,
+        "resolution": "720p",
+        "ratio": "9:16",
+        "duration": 10,
+        "framespersecond": 24,
+        "service_tier": "default",
+        "execution_expires_after": 172800,
+        "generate_audio": false,
+        "draft": false,
+        "priority": 0
+      },
+      "output_sha256": "9b9225fb1a4770ff80e0fe26c91230c00c877a233d29044a23c14178c7f52abc"
+    },
+    {
+      "call_number": 8,
+      "created_at": "2026-07-16T05:24:39.533495+00:00",
+      "shot_group": "MECHANISM_A_R2",
+      "prompt_revision": "alpha-r1-diagnosis-driven",
+      "task_id": "cgt-20260716132440-hxpfc",
+      "status": "succeeded",
+      "model": "doubao-seedance-2-0-fast-260128",
+      "parameters": {
+        "ratio": "9:16",
+        "resolution": "720p",
+        "duration": 10,
+        "generate_audio": false,
+        "first_frame_used": true,
+        "first_frame_path": "seedance/references/mechanism-a-first-frame.jpg"
+      },
+      "prompt": "One continuous photoreal macro nature documentary shot beginning from the supplied real root-and-soil first frame. Preserve the exact natural soil texture, irregular clumps, fine roots, root hairs, perspective and cool low light from that frame for the entire shot; fixed camera, no cuts and no scene replacement. Timing is mandatory. At 0-3 seconds, small amounts of rainwater enter from the upper edge and darken several existing irregular pore routes downward between the real clumps; never create one straight channel. At 3-7 seconds, a few tiny subdued brown organic specks move slowly within the thin water films, approach actual soil-grain surfaces, visibly attach to those surfaces and remain attached. At 7-10 seconds, water reaches one small local patch of fine pale root hairs and naturally faint mycelia; the same threads hydrate, become only slightly fuller and show restrained local activity, with several extremely fine neutral particles nearby. The real soil and roots must remain the dominant image. Physically plausible capillary water, natural dark-brown earth palette, stable geometry, documentary realism. No uniform round pellets, no bead pack, no straight central trench, no blue channel, no blue liquid, no white wire, no geometric tubes, no rectangular collage, no glowing organism, no neon, no fluorescent color, no text, no labels, no arrows, no HUD, no science-fiction look, no cartoon microbes, no camera transition.",
+      "output_path": "seedance/outputs/mechanism-a-candidate-r2.mp4",
+      "original_duration": 10.041667,
+      "cost": "unknown",
+      "qa_decision": "accepted_with_programmatic_completion",
+      "decision_reason": "R2 preserves real roots and irregular soil and shows early water entry/wetting without the R1 bead pack or blue channel. The adsorption and local mycelia wake remain too subtle, so deterministic restrained overlays will complete those stages; no further mechanism A retry is authorized.",
+      "provider_response": {
+        "id": "cgt-20260716132440-hxpfc",
+        "model": "doubao-seedance-2-0-fast-260128",
+        "status": "succeeded",
+        "content": {
+          "video_url": "[redacted_after_download]"
+        },
+        "usage": {
+          "completion_tokens": 216900,
+          "total_tokens": 216900
+        },
+        "created_at": 1784179480,
+        "updated_at": 1784179674,
+        "seed": 21415,
+        "resolution": "720p",
+        "ratio": "9:16",
+        "duration": 10,
+        "framespersecond": 24,
+        "service_tier": "default",
+        "execution_expires_after": 172800,
+        "generate_audio": false,
+        "draft": false,
+        "priority": 0
+      },
+      "output_sha256": "7715c9381d44dc820788b9eef5665366999d896f0c68aa90377203fb28371791"
+    },
+    {
+      "call_number": 9,
+      "created_at": "2026-07-16T05:29:57.355467+00:00",
+      "shot_group": "S12_FIRST_RAIN",
+      "prompt_revision": "alpha-r1-diagnosis-driven",
+      "task_id": "cgt-20260716132957-kfvxt",
+      "status": "succeeded",
+      "model": "doubao-seedance-2-0-fast-260128",
+      "parameters": {
+        "ratio": "9:16",
+        "resolution": "720p",
+        "duration": 5,
+        "generate_audio": false,
+        "first_frame_used": true,
+        "first_frame_path": "seedance/references/s12-first-frame.jpg"
+      },
+      "prompt": "Photoreal macro nature documentary using the same cracked soil composition from the supplied first frame, fixed camera and no cut. A gentle first rain begins on drought-dry earth. Water first gathers along crack edges and low depressions, then the soil darkens irregularly along those crack edges and around individual grains; the wetting spreads unevenly by capillary action rather than as a uniform color wipe. Add only restrained real water-film reflections in a few low areas. At the end, dry and wet areas coexist clearly in the same frame. Cool overcast natural light, realistic soil texture and water. No orange, no glow, no fire, no lava, no luminous cracks, no warm golden light, no uniform full-frame color change, no text, no arrows, no HUD, no fantasy or cartoon look.",
+      "output_path": "seedance/outputs/S12-first-rain-candidate.mp4",
+      "original_duration": 5.041667,
+      "cost": "unknown",
+      "qa_decision": "accepted",
+      "decision_reason": "Dense-frame QA confirms stable crack geometry, irregular cool darkening, restrained wet reflections, dry/wet coexistence and no orange or self-emissive glow. No S12 retry is authorized.",
+      "provider_response": {
+        "id": "cgt-20260716132957-kfvxt",
+        "model": "doubao-seedance-2-0-fast-260128",
+        "status": "succeeded",
+        "content": {
+          "video_url": "[redacted_after_download]"
+        },
+        "usage": {
+          "completion_tokens": 108900,
+          "total_tokens": 108900
+        },
+        "created_at": 1784179798,
+        "updated_at": 1784180052,
+        "seed": 64418,
+        "resolution": "720p",
+        "ratio": "9:16",
+        "duration": 5,
+        "framespersecond": 24,
+        "service_tier": "default",
+        "execution_expires_after": 172800,
+        "generate_audio": false,
+        "draft": false,
+        "priority": 0
+      },
+      "output_sha256": "6addc307c2ac69611d48d6912a4d968fa60ff19fe831beca90f3291b8b3a09a6"
+    }
+  ]
+}

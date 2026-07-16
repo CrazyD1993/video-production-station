@@ -1,0 +1,20 @@
+[
+  {
+    "asset": "alpha",
+    "exit_code": 0,
+    "stderr": "",
+    "full_decode_ok": true
+  },
+  {
+    "asset": "mechanism_a",
+    "exit_code": 0,
+    "stderr": "",
+    "full_decode_ok": true
+  },
+  {
+    "asset": "mechanism_b",
+    "exit_code": 0,
+    "stderr": "",
+    "full_decode_ok": true
+  }
+]

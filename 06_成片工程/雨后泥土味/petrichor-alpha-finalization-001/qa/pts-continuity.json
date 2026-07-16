@@ -1,0 +1,11 @@
+{
+  "frame_count": 1123,
+  "expected_frame_count": 1123,
+  "first_pts": 0.0,
+  "last_pts": 46.75,
+  "expected_delta": 0.041666666666666664,
+  "min_delta": 0.041665999999999315,
+  "max_delta": 0.04166700000000034,
+  "discontinuities": [],
+  "continuous_cfr_24": true
+}
