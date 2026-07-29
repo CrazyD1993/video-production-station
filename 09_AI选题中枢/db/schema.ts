@@ -1,0 +1,37 @@
+import { index, integer, sqliteTable, text } from "drizzle-orm/sqlite-core";
+
+export const topics = sqliteTable(
+  "topics",
+  {
+    id: text("id").primaryKey(),
+    title: text("title").notNull(),
+    hook: text("hook").notNull(),
+    angle: text("angle").notNull(),
+    category: text("category").notNull(),
+    status: text("status").notNull().default("radar"),
+    platforms: text("platforms").notNull().default("全平台"),
+    sourcePlatform: text("source_platform").notNull().default("自主策划"),
+    sourceName: text("source_name").notNull().default("私人选题系统"),
+    sourceUrl: text("source_url").notNull().default(""),
+    whyNow: text("why_now").notNull().default(""),
+    evidence: text("evidence").notNull().default(""),
+    shooting: text("shooting").notNull().default(""),
+    contentFormat: text("content_format").notNull().default("真人口播"),
+    risk: text("risk").notNull().default(""),
+    tags: text("tags").notNull().default(""),
+    scorePain: integer("score_pain").notNull().default(0),
+    scoreEvidence: integer("score_evidence").notNull().default(0),
+    scorePersona: integer("score_persona").notNull().default(0),
+    scoreRepeatability: integer("score_repeatability").notNull().default(0),
+    scoreTimeliness: integer("score_timeliness").notNull().default(0),
+    scoreEase: integer("score_ease").notNull().default(0),
+    scoreTotal: integer("score_total").notNull().default(0),
+    isPinned: integer("is_pinned", { mode: "boolean" }).notNull().default(false),
+    createdAt: text("created_at").notNull(),
+    updatedAt: text("updated_at").notNull(),
+  },
+  (table) => [
+    index("topics_status_score_idx").on(table.status, table.scoreTotal),
+    index("topics_updated_idx").on(table.updatedAt),
+  ],
+);
